@@ -149,11 +149,37 @@
                 </div>
 
                 <div id="main">
-                    <div id="home-head" style=background-image:url('mononoke.jpg')>
+                    <div id="home-head">
     <script>
         var menu = document.getElementById("menu")
         menu.className += " menu-color"
+
+        // Get arrays from YAML config via EJS
+        var desktopBackgrounds = ["background-image:url('images/background/mononoke.jpg')","background-image:url('images/background/landscape-1.jpg')","background-image:url('images/background/landscape-2.jpg')"];
+        var mobileBackgrounds  = ["background-image:url('cuteboy.jpg')","background-image:url('images/background/protrait-1.jpg')","background-image:url('images/background/protrait-2.jpg')","background-image:url('images/background/protrait-3.jpg')","background-image:url('images/background/protrait-4.jpg')","background-image:url('images/background/protrait-5.jpg')","background-image:url('images/background/protrait-6.jpg')"];
+
+        // Helper: pick random item
+        function randomBackground(arr) {
+            return arr[Math.floor(Math.random() * arr.length)];
+        }
+
+        var homeHead = document.getElementById("home-head");
+
+        function setBackground() {
+            if (window.innerWidth < 768) { // mobile threshold
+                homeHead.setAttribute("style", randomBackground(mobileBackgrounds));
+            } else {
+                homeHead.setAttribute("style", randomBackground(desktopBackgrounds));
+            }
+        }
+
+        // Initial set
+        setBackground();
+
+        // Optional: update on resize
+        window.addEventListener("resize", setBackground);
     </script>
+
      
     <div id="home-info" class="home-info" @click="home_click">
         <span class="loop"></span>
@@ -225,7 +251,7 @@
         
         <span class="tag">
             
-            <a href="/tags/hei" style=color:#ff7d73>
+            <a href="/tags/hei" style=color:#03a9f4>
                 hei
             </a>
         </span>
@@ -285,7 +311,7 @@
         
         <span class="tag">
             
-            <a href="/tags/greeting" style=color:#00bcd4>
+            <a href="/tags/greeting" style=color:#00a596>
                 greeting
             </a>
         </span>
@@ -362,14 +388,14 @@
         
         <span class="tag">
             
-            <a href="/tags/hello" style=color:#03a9f4>
+            <a href="/tags/hello" style=color:#00bcd4>
                 hello
             </a>
         </span>
         
         <span class="tag">
             
-            <a href="/tags/world" style=color:#00a596>
+            <a href="/tags/world" style=color:#ff7d73>
                 world
             </a>
         </span>
