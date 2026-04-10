@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 严宇泽
-subtitle: 'My place to share my thoughts.'
-description: 'I call my self “宇宙” since I was 12. '
+title: "Yuzhou's Playground"
+subtitle: 'Ciallo'
+description: 'I call myself "yuzhou" (宇宙) which means the universe, since I was 12. '
 keywords:
-author: 严宇泽
+author: Yam Yee Zhe 严宇泽
 language: en
 timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: http://yuzhou.my/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -45,6 +45,7 @@ relative_link: false
 future: true
 syntax_highlighter: highlight.js
 highlight:
+  enable: false
   line_number: true
   auto_detect: false
   tab_replace: ''
@@ -101,4 +102,14 @@ theme: hexo-theme-particle-master
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ''
+  type: git
+  repo: https://github.com/yuzhoumy/yuzhoumy.github.io.git
+  branch: main
+
+# Feed
+feed:
+  type: rss2
+  path: rss.xml
+  limit: 20
+  order_by: -date
+  autodiscovery: true

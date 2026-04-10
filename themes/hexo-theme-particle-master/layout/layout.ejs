@@ -1,14 +1,18 @@
 <% 
-    var pageTitle = config.title+' || '
-    if(page.title) pageTitle+=page.title;
-    else if(is_category()) pageTitle+=page.category;
-    else if(is_tag()) pageTitle+=page.tag;
-    else pageTitle+=config.subtitle;
+    var pageTitle = ' - Yuzhou å®‡å®™';
+    if(page.title) pageTitle=page.title + pageTitle;
+    else if(is_category()) pageTitle=page.category + pageTitle;
+    else if(is_tag()) pageTitle=page.tag + pageTitle;
+    else pageTitle=config.title;
     var layout = "index"
     if(is_home()){
         layout = "index"
     }else if(is_post()){
-        layout = "post"
+        layout = "single"
+    }else if(page.layout){
+        layout = page.layout
+    }else if(is_page()){
+        layout = "page"
     }else if(is_category() || page.title=="categories"){
         layout = "categories"
     }else if(is_tag() || page.title=="tags"){
@@ -25,8 +29,9 @@
 %>
 <!DOCTYPE html>
 <html lang="<%- config.language %> ">
-
+<link rel="stylesheet" href="<%- rootlink %>css/admonition.css">
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= pageTitle %></title>
@@ -58,9 +63,9 @@
                 style="width:400px;height:400px;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px#a3ddfb; text-align:center;opacity:1;transition:opacity 0.3s ease-out;">
                 <div>
                     <h2>LOADING...</h2>
-                    <p>加载过慢请开启缓存(浏览器默认开启)</p>
+                    <p>Please enable caching if loading is too slow (enabled by default in browsers).</p>
                     <div>
-                        <img src="<%- rootlink %>dancingkitty.gif" alt="loading">
+                        <img src="<%- rootlink %>images/loading.gif" alt="loading">
                     </div>
                 </div>
             </div>

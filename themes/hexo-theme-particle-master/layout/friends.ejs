@@ -1,0 +1,42 @@
+<% var rootlink = config.root; %>
+<link rel="stylesheet" href="<%- rootlink %>css/friends.css">
+<div id="home-posts-wrap">
+    <div id="home-posts">
+<div class="friends-page">
+    <div class="friends-hero">
+        <p class="friends-kicker">Friends</p>
+        <h1><%= page.title %></h1>
+        <% if (page.description) { %>
+        <p class="friends-description"><%= page.description %></p>
+        <% } %>
+    </div>
+    <% if (page.content && page.content.trim()) { %>
+    <div class="friends-copy content" v-pre>
+        <%- page.content %>
+    </div>
+    <% } %>
+    <% var friends = page.friends || []; %>
+    <% if (friends.length) { %>
+    <div class="friends-grid">
+        <% friends.forEach(function(friend) { %>
+        <a class="friend-card" href="<%- friend.url %>" target="_blank" rel="noopener noreferrer">
+            <div class="friend-card-image-wrap">
+                <img class="friend-card-image" src="<%- friend.avatar %>" alt="<%- friend.name %>">
+            </div>
+            <div class="friend-card-body">
+                <h2><%- friend.name %></h2>
+                <% if (friend.note) { %>
+                <p><%- friend.note %></p>
+                <% } %>
+            </div>
+        </a>
+        <% }); %>
+    </div>
+    <% } else { %>
+    <div class="friends-empty">
+        Add entries to the <code>friends</code> list in this page's front matter to show profile cards here.
+    </div>
+    <% } %>
+</div>
+    </div>
+</div>

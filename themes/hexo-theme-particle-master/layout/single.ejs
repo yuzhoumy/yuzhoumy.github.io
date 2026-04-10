@@ -1,24 +1,22 @@
 <% 
-var current = (page.current-1)*config.index_generator.per_page; 
 var rootlink = config.root;
 %>
-<% site.posts.slice(0+current,config.index_generator.per_page+current).forEach(function(post){ %>
+<div id="home-posts-wrap">
+    <div id="home-posts">
 <div class="post">
 
-    <a href="<%- rootlink %><%- post.path %>">
-        <h2>
-            <%- post.title %>
-        </h2>
-    </a>
+    <h2>
+        <%- page.title %>
+    </h2>
 
     <div class="category-and-date">
 
-        <% if(post.categories.data.length!=0){ %>
+        <% if(page.categories && page.categories.data.length!=0){ %>
         <span class="category">
-            <a href="<%- rootlink %>categories/<%= post.categories.data[0].name.replace(" ", "-") %>">
+            <a href="<%- rootlink %>categories/<%= page.categories.data[0].name.replace(" ", "-") %>">
                 <span class="icon">
                     <a-icon type="book" theme="filled" /></span>
-                <%- post.categories.data[0].name %>
+                <%- page.categories.data[0].name %>
             </a>
         </span>
         <% } %>
@@ -27,29 +25,22 @@ var rootlink = config.root;
             <span class="icon">
                 <a-icon type="calendar" theme="filled" />
             </span>
-            <%- date(post.date, 'YYYY/M/D') %>
+            <%- date(page.date, 'YYYY/M/D') %>
         </span>
 
     </div>
 
-    <div class="excerpt">
-        <div class="content" v-pre>
-            <% if(post.excerpt.length != 0){ %>
-            <%- post.excerpt %>
-            <% } %>
-            <% if(post.excerpt.length == 0){ %>
-            <%- post.content %>
-            <% } %>
-        </div>
+    <div class="content" v-pre>
+        <%- page.content %>
     </div>
 
     <div class="post-tags">
-        <% if(post.tags.data.length!=0){ %>
+        <% if(page.tags && page.tags.data.length!=0){ %>
         <span class="icon">
             <a-icon type="tags" theme="filled" />
         </span>
         <% } %>
-        <% post.tags.data.forEach(function(data){%>
+        <% page.tags.data.forEach(function(data){%>
         <span class="tag">
             <% 
             if(theme.style == "night"){
@@ -68,8 +59,6 @@ var rootlink = config.root;
         <% }) %>
     </div>
 
-    <a href="<%- rootlink %><%- post.path %> " class="go-post">
-        Read More
-    </a>
 </div>
-<% }); %>
+    </div>
+</div>

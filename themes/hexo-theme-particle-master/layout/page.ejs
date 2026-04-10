@@ -1,0 +1,29 @@
+<% 
+var rootlink = config.root;
+%>
+<div id="home-posts-wrap">
+    <div id="home-posts">
+<div class="post">
+
+    <h2>
+        <%- page.title %>
+    </h2>
+
+    <div class="category-and-date">
+
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            <%- date(page.date, 'YYYY/M/D') %>
+        </span>
+
+    </div>
+
+    <div class="content" v-pre>
+        <%- page.content %>
+    </div>
+
+</div>
+    </div>
+</div>
