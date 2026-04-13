@@ -1,0 +1,326 @@
+
+<!DOCTYPE html>
+<html lang="en ">
+<link rel="stylesheet" href="/css/admonition.css">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Yuzhou 宇宙</title>
+    <meta name="author" content="Yam Yee Zhe 严宇泽">
+    <meta name="description" content="I call myself "yuzhou" (宇宙) which means the universe, since I was 12.  ">
+    <meta name="keywords" content=" ">
+    <link rel="icon" href="/./images/avatar.png">
+    <link rel="stylesheet" href="/css/antd.min.css">
+    
+    <link rel="stylesheet" href="/css/full-theme.css">
+    
+    
+    <script src="/js/vue.js"></script>
+    <script src="/js/antd.min.js"></script>
+<meta name="generator" content="Hexo 8.1.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css" id="hexo-admonition-icon-injected">
+  <link rel="alternate" href="/rss.xml" title="Yuzhou's Playground" type="application/rss+xml">
+</head>
+
+<body>
+
+    <div id="loading"
+        style="height: 100vh; width: 100%; position: fixed;display: flex;z-index: 200; justify-content: space-between;">
+        <div id="loadleft" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div id="loadright" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div
+            style="position: fixed; height: 100vh; width: 100%;display: flex;justify-content: center;align-items: center;">
+            <div id="loadcontent"
+                style="width:400px;height:400px;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px#a3ddfb; text-align:center;opacity:1;transition:opacity 0.3s ease-out;">
+                <div>
+                    <h2>LOADING...</h2>
+                    <p>Please enable caching if loading is too slow (enabled by default in browsers).</p>
+                    <div>
+                        <img src="/images/loading.gif" alt="loading">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="layout">
+        <transition name="into">
+            <div v-show="show_page" style="display: none;">
+                <div id="menu_show">
+                     
+<nav id="menu">
+    <div class="desktop-menu">
+        <a href="/">
+            <span class="title">Yuzhou's Playground</span>
+        </a>
+        
+        <a href="/">
+            <span>
+                <a-icon type="home" theme="filled" />
+            </span>
+            <span>home</span>
+        </a>
+        
+        <a href="/about">
+            <span>
+                <a-icon type="idcard" theme="filled" />
+            </span>
+            <span>about</span>
+        </a>
+        
+        <a href="/archives">
+            <span>
+                <a-icon type="folder" theme="filled" />
+            </span>
+            <span>archives</span>
+        </a>
+        
+        <a href="/friends">
+            <span>
+                <a-icon type="heart" theme="filled" />
+            </span>
+            <span>friends</span>
+        </a>
+        
+        <a href="/categories/Music">
+            <span>
+                <a-icon type="book" theme="filled" />
+            </span>
+            <span>categories</span>
+        </a>
+        
+        <a href="/tags/English">
+            <span>
+                <a-icon type="tags" theme="filled" />
+            </span>
+            <span>tags</span>
+        </a>
+        
+    </div>
+
+    <div :class="'phone-menu ' + menu_show" id="phone-menu">
+        <div :class="'title'" @click="menu_show=!menu_show">
+            <span style="margin-right: 10px;">
+                <a-icon type="appstore" theme="filled" />
+            </span>
+            <span>Yuzhou's Playground</span>
+        </div>
+        <div class="items" v-show="menu_show">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="home" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">home</div>
+                </div>
+            </a>
+            
+            <a href="/about">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="idcard" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">about</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="folder" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">archives</div>
+                </div>
+            </a>
+            
+            <a href="/friends">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="heart" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">friends</div>
+                </div>
+            </a>
+            
+            <a href="/categories/Music">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="book" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">categories</div>
+                </div>
+            </a>
+            
+            <a href="/tags/English">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="tags" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">tags</div>
+                </div>
+            </a>
+            
+        </div>
+        <div class="curtain" v-show="menu_show"></div>
+    </div>
+
+</nav>
+
+                </div>
+
+                <div id="main">
+                    
+<div id="home-posts-wrap">
+    <div id="home-posts">
+<div class="post">
+
+    <h2>
+        About Me
+    </h2>
+
+    <div class="category-and-date">
+
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2026/1/19
+        </span>
+
+    </div>
+
+    <div class="content" v-pre>
+        <h3 id="English"><a href="#English" class="headerlink" title="English"></a><a href="#english">English</a></h3><h3 id="繁體中文"><a href="#繁體中文" class="headerlink" title="繁體中文"></a><a href="#traditional_chinese">繁體中文</a></h3><h3 id="简体中文"><a href="#简体中文" class="headerlink" title="简体中文"></a><a href="#simplified_chinese">简体中文</a></h3><h3 id="Bahasa-Melayu"><a href="#Bahasa-Melayu" class="headerlink" title="Bahasa Melayu"></a><a href="#malay">Bahasa Melayu</a></h3><p><img src="/../images/enfpwangwei.jpg" alt="Messy"></p>
+<h2 id="english">Yam Yee Zhe</h2>
+
+<p><code>12/6/2009</code><br><code>Gemini</code><br><code>ENFP</code><br><code>17</code><br><code>Boy</code><br><code>Heterosexual</code></p>
+<p>You can call me <strong>yuzhou</strong> as well.</p>
+<p>A Malaysian high school student who loves chatting, hardcore P-type personality.<br>I have a huge urge to share things (which is exactly why I’m making this blog).<br>Love abstract stuffs but don’t worry, my mental health is still perfectly fine.</p>
+<h3 id="Hobbies"><a href="#Hobbies" class="headerlink" title="Hobbies"></a>Hobbies</h3><p>I love <code>playing piano</code>. I used to record a lot of videos, and I’m thinking storing some recordings here.<br>I enjoy <code>programming</code>. Since I’ve written many plugins for Minecraft servers, the language I’m most familiar with now is Java…… but sometimes I make little projects just for fun (The second reason of making this blog).<br>I can’t sit still at home, so every 1-2 weeks I make sure <code>to go outdoors for a walk</code>. Doesn’t matter where, as long as I’m out XD.</p>
+<h3 id="Contact"><a href="#Contact" class="headerlink" title="Contact"></a>Contact</h3><p>Instagram: <a target="_blank" rel="noopener" href="http://instagram.com/yuzhou____">yuzhou____</a><br>Discord: <a target="_blank" rel="noopener" href="https://discord.com/users/709009923572498463">yuzhou_</a><br>Telegram: <a target="_blank" rel="noopener" href="https://t.me/yamyeezhe">@yamyeezhe</a><br>E-mail: <a href="mailto:&#x31;&#x40;&#x79;&#x75;&#122;&#104;&#111;&#x75;&#x2e;&#x6d;&#121;">1@yuzhou.my</a></p>
+<h3 id="Games"><a href="#Games" class="headerlink" title="Games"></a>Games</h3><ul>
+<li>Minecraft  <blockquote>
+<p>Been playing for 9 years. I’ve been both a builder and a server admin. There were lots of ups and downs. These days I still play single-player when I’m bored 。</p>
+</blockquote>
+</li>
+<li>Cities Skyline</li>
+</ul>
+<hr>
+<h2 id="traditional_chinese">严宇泽</h2>
+
+<p><code>12/6/2009</code><br><code>雙子座</code><br><code>ENFP</code><br><code>17</code><br><code>男</code><br><code>異性戀</code></p>
+<p>你也可以稱呼我為 <strong>宇宙</strong>。</p>
+<p>在觀馬來西亞中學生，喜歡聊天，重度P人，重度所愛腦。<br>分享欲很強（這也是為什麼我大費周章做部落格的原因）。<br>喜歡抽象但精神狀態依然良好。</p>
+<h3 id="愛好"><a href="#愛好" class="headerlink" title="愛好"></a>愛好</h3><p>我喜歡<code>彈琴</code>，以前錄過很多影片，正在考慮把之前錄的影片存放在這裡。<br>我也喜歡<code>寫程式</code>，由於之前為Minecraft伺服器寫了很多插件，現在最熟悉的語言應該是Java……但偶爾也會做一些小玩意給自己玩玩。<br>我在家裡是坐不住的，所以我每1~2禮拜會定期<code>到戶外走走</code>，不管去哪裡都好XD。</p>
+<h3 id="聯絡"><a href="#聯絡" class="headerlink" title="聯絡"></a>聯絡</h3><p>Instagram: <a target="_blank" rel="noopener" href="http://instagram.com/yuzhou____">yuzhou____</a><br>Discord: <a target="_blank" rel="noopener" href="https://discord.com/users/709009923572498463">yuzhou_</a><br>Telegram: <a target="_blank" rel="noopener" href="https://t.me/yamyeezhe">@yamyeezhe</a><br>E-mail: <a href="mailto:&#49;&#x40;&#x79;&#117;&#x7a;&#x68;&#111;&#x75;&#x2e;&#x6d;&#121;">1@yuzhou.my</a></p>
+<h3 id="遊戲"><a href="#遊戲" class="headerlink" title="遊戲"></a>遊戲</h3><ul>
+<li>Minecraft  <blockquote>
+<p>入坑9年，當過建築師也當過伺服主，有血有淚，現在偶爾還是會玩單機。</p>
+</blockquote>
+</li>
+<li>Cities Skyline</li>
+</ul>
+<hr>
+<h2 id="simplified_chinese">严宇泽</h2>
+
+<p><code>12/6/2009</code><br><code>双子座</code><br><code>ENFP</code><br><code>17</code><br><code>男</code><br><code>异性恋</code></p>
+<p>你亦或者可以叫我 <strong>宇宙</strong>。</p>
+<p>在读马来西亚中学生，喜欢聊天，重度P人，重度恋爱脑。<br>分享欲很强（这也是为什么我大费周章做部落格的原因）。<br>喜欢抽象但精神状态仍然良好。</p>
+<h3 id="爱好"><a href="#爱好" class="headerlink" title="爱好"></a>爱好</h3><p>我喜欢<code>弹琴</code>，以前录过很多影片，正在考虑把之前录的影片存放在这里。<br>我也喜欢<code>写程序</code>，由于之前为Minecraft服务器写了很多插件，现在最熟悉的语言应该是Java……但偶尔也会做一些小玩意给自己玩玩。<br>我在家里是坐不住的，所以我每1~2礼拜会定期<code>到户外走走</code>，不管去哪里都好XD。</p>
+<h3 id="联系"><a href="#联系" class="headerlink" title="联系"></a>联系</h3><p>Instagram: <a target="_blank" rel="noopener" href="http://instagram.com/yuzhou____">yuzhou____</a><br>Discord: <a target="_blank" rel="noopener" href="https://discord.com/users/709009923572498463">yuzhou_</a><br>Telegram: <a target="_blank" rel="noopener" href="https://t.me/yamyeezhe">@yamyeezhe</a><br>E-mail: <a href="mailto:&#49;&#x40;&#121;&#x75;&#x7a;&#104;&#x6f;&#117;&#x2e;&#109;&#121;">1@yuzhou.my</a></p>
+<h3 id="游戏"><a href="#游戏" class="headerlink" title="游戏"></a>游戏</h3><ul>
+<li>Minecraft  <blockquote>
+<p>入坑9年，当过建筑师也当过服务器主，有血有泪，现在偶尔还是会玩单机。</p>
+</blockquote>
+</li>
+<li>Cities Skyline</li>
+</ul>
+<hr>
+<h2 id="malay">Yam Yee Zhe</h2>
+
+<p><code>12/6/2009</code><br><code>Gemini</code><br><code>ENFP</code><br><code>17</code><br><code>Lelaki</code><br><code>Heteroseksual</code></p>
+<p>Anda juga boleh panggil saya <strong>yuzhou</strong>。</p>
+<p>Pelajar SMK warganegara Malaysia, suka berborak, dengan sifat personaliti jenis-P yang sangat kuat, sim cinta.<br>Keinginan untuk berkongsi sangat kuat (Itulah sebabnya saya wujudkan blog ini).<br>Suka benda yang lawak bodoh, tetapi kesihatan mental saya masih baik.</p>
+<h3 id="Minat"><a href="#Minat" class="headerlink" title="Minat"></a>Minat</h3><p>Saya suka <code>main piano</code>, pernah rekod banyak video dulu-dulu, tengah fikir untuk simpan semua perekodan dalam website ini.<br>Saya suka <code>mengaturcara</code>, Disebabkan saya pernah buat banyak plugin masa saya buka Minecraft server, bahasa pengaturcaraan yang paling saya mahir sekarang ialah Java…… tetapi kadang-kadang saya akan buat projek kecil-kecilan untuk hiburan saya sendiri sahaja.<br>Saya memang tak boleh duduk dekat rumah, jadi saya pastikan setiap 1-2 minggu saya akan <code>melepak</code>, walaupun melepak di mana-mana pun XD.</p>
+<h3 id="Hubung"><a href="#Hubung" class="headerlink" title="Hubung"></a>Hubung</h3><p>Instagram: <a target="_blank" rel="noopener" href="http://instagram.com/yuzhou____">yuzhou____</a><br>Discord: <a target="_blank" rel="noopener" href="https://discord.com/users/709009923572498463">yuzhou_</a><br>Telegram: <a target="_blank" rel="noopener" href="https://t.me/yamyeezhe">@yamyeezhe</a><br>E-mail: <a href="mailto:&#x31;&#64;&#x79;&#x75;&#x7a;&#104;&#x6f;&#x75;&#46;&#109;&#121;">1@yuzhou.my</a></p>
+<h3 id="Permainan"><a href="#Permainan" class="headerlink" title="Permainan"></a>Permainan</h3><ul>
+<li>Minecraft  <blockquote>
+<p>Dah main 9 tahun, pernah jadi jurubina dan ketua server, ada manis ada pahit. Sekarang masih saya ekapemain kadang-kadang.。</p>
+</blockquote>
+</li>
+<li>Cities Skyline</li>
+</ul>
+
+    </div>
+
+</div>
+    </div>
+</div>
+                     
+<footer id="footer">
+    <div class="footer-wrap">
+        <div>
+            © 2026 - 2026 Yuzhou&#39;s Playground
+            <span class="footer-icon">
+                <a-icon type="flag" theme="filled" /></span>
+            @Yam Yee Zhe 严宇泽
+        </div>
+        <div></div>
+        <div>Based on the <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo Engine</a> & <a
+                target="_blank" rel="noopener" href="https://github.com/korilin/hexo-theme-particle">Particle Theme</a></div>
+        
+    </div>
+
+</footer>
+
+<script src="/js/highlight.min.js"></script>
+<script src="/js/particle.js"></script>
+                </div>
+            </div>
+        </transition>
+    </div>
+
+    <script>
+    new Vue({
+        el: "#layout",
+        data: {
+            show_page: false,
+            onload_menu: false,
+            menu_show: false,
+            card_top: 100
+        },
+        created: function () {
+            var that = this
+            window.onload = function () {
+                that.show_page = true
+                document.getElementById("loadcontent").style.opacity = 0
+                setTimeout(function () {
+                    document.getElementById("loadleft").style.width = 0
+                    document.getElementById("loadright").style.width = 0
+                }, 300)
+                setTimeout(function () {
+                    document.getElementById("loading").style = "display:none"
+                }, 600)
+            }
+        },
+        mounted: function () {
+            var that = this
+            window.addEventListener('scroll', function (e) {
+                that.menu_show = false
+            })
+        },
+        methods: {
+            home_click: function () {
+                window.scrollTo({
+                    top: window.innerHeight - 80,
+                    behavior: "smooth",
+                });
+            }
+        }
+    })
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,341 @@
+
+<!DOCTYPE html>
+<html lang="en ">
+<link rel="stylesheet" href="/css/admonition.css">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>不自信詞語 - Yuzhou 宇宙</title>
+    <meta name="author" content="Yam Yee Zhe 严宇泽">
+    <meta name="description" content="I call myself "yuzhou" (宇宙) which means the universe, since I was 12.  ">
+    <meta name="keywords" content=" ">
+    <link rel="icon" href="/./images/avatar.png">
+    <link rel="stylesheet" href="/css/antd.min.css">
+    
+    <link rel="stylesheet" href="/css/full-theme.css">
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    
+    <script src="/js/vue.js"></script>
+    <script src="/js/antd.min.js"></script>
+<meta name="generator" content="Hexo 8.1.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css" id="hexo-admonition-icon-injected">
+  <link rel="alternate" href="/rss.xml" title="Yuzhou's Playground" type="application/rss+xml">
+</head>
+
+<body>
+
+    <div id="loading"
+        style="height: 100vh; width: 100%; position: fixed;display: flex;z-index: 200; justify-content: space-between;">
+        <div id="loadleft" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div id="loadright" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div
+            style="position: fixed; height: 100vh; width: 100%;display: flex;justify-content: center;align-items: center;">
+            <div id="loadcontent"
+                style="width:400px;height:400px;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px#a3ddfb; text-align:center;opacity:1;transition:opacity 0.3s ease-out;">
+                <div>
+                    <h2>LOADING...</h2>
+                    <p>Please enable caching if loading is too slow (enabled by default in browsers).</p>
+                    <div>
+                        <img src="/images/loading.gif" alt="loading">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="layout">
+        <transition name="into">
+            <div v-show="show_page" style="display: none;">
+                <div id="menu_show">
+                     
+<nav id="menu">
+    <div class="desktop-menu">
+        <a href="/">
+            <span class="title">Yuzhou's Playground</span>
+        </a>
+        
+        <a href="/">
+            <span>
+                <a-icon type="home" theme="filled" />
+            </span>
+            <span>home</span>
+        </a>
+        
+        <a href="/about">
+            <span>
+                <a-icon type="idcard" theme="filled" />
+            </span>
+            <span>about</span>
+        </a>
+        
+        <a href="/archives">
+            <span>
+                <a-icon type="folder" theme="filled" />
+            </span>
+            <span>archives</span>
+        </a>
+        
+        <a href="/friends">
+            <span>
+                <a-icon type="heart" theme="filled" />
+            </span>
+            <span>friends</span>
+        </a>
+        
+        <a href="/categories/Music">
+            <span>
+                <a-icon type="book" theme="filled" />
+            </span>
+            <span>categories</span>
+        </a>
+        
+        <a href="/tags/English">
+            <span>
+                <a-icon type="tags" theme="filled" />
+            </span>
+            <span>tags</span>
+        </a>
+        
+    </div>
+
+    <div :class="'phone-menu ' + menu_show" id="phone-menu">
+        <div :class="'title'" @click="menu_show=!menu_show">
+            <span style="margin-right: 10px;">
+                <a-icon type="appstore" theme="filled" />
+            </span>
+            <span>Yuzhou's Playground</span>
+        </div>
+        <div class="items" v-show="menu_show">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="home" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">home</div>
+                </div>
+            </a>
+            
+            <a href="/about">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="idcard" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">about</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="folder" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">archives</div>
+                </div>
+            </a>
+            
+            <a href="/friends">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="heart" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">friends</div>
+                </div>
+            </a>
+            
+            <a href="/categories/Music">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="book" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">categories</div>
+                </div>
+            </a>
+            
+            <a href="/tags/English">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="tags" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">tags</div>
+                </div>
+            </a>
+            
+        </div>
+        <div class="curtain" v-show="menu_show"></div>
+    </div>
+
+</nav>
+
+                </div>
+
+                <div id="main">
+                    
+<div id="home-posts-wrap">
+    <div id="home-posts">
+<div class="post">
+
+    <h2>
+        不自信詞語
+    </h2>
+
+    <div class="category-and-date">
+
+        
+        <span class="category">
+            <a href="/categories/Life">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" /></span>
+                Life
+            </a>
+        </span>
+        
+
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2026/3/30
+        </span>
+
+    </div>
+
+    <div class="content" v-pre>
+        <p><img src="/images/post/modal-words.jpg" alt="Modal Words"><br><small style="color: grey;">KSSM英文課本，79頁</small></p>
+<p>我發現我在説話時，常常會下意識地否認自己的觀點，並加上一些“不自信詞語”，就好像爲自己的言論加上免責聲明一樣：</p>
+<ul>
+<li>“走這一條路可以去到市區 —— <strong>應該</strong>吧。”  </li>
+<li>“我查了一下時間表，會議<strong>應該</strong>是在下午5點開始。”  </li>
+<li>“每個星期六，這個廣場都會舉辦大型活動 —— <strong>通常是這樣的</strong>。”</li>
+</ul>
+<hr>
+<h3 id="常見的不自信詞語"><a href="#常見的不自信詞語" class="headerlink" title="常見的不自信詞語"></a>常見的不自信詞語</h3><ul>
+<li>“可能”  </li>
+<li>“應該”  </li>
+<li>“雖然”  </li>
+<li>“看起來好像”  </li>
+<li>“我其實不是很專業啦，但是……”  </li>
+<li>“我也不太確定”  </li>
+<li>“我猜是這樣的”</li>
+</ul>
+<hr>
+<p>很顯然地，當我們在日常溝通時習慣使用“不自信詞語”之後，我們在別人心中的自信程度會大大降低。尤其是在小組裏面分工合作時，講話自信&#x2F;不自信會讓其他組員對你的信心差很多哦！</p>
+<p>試想想，如果你的組員在工作時眼神閃避，并且這樣子對你説話：“噢…… 應該這樣就可以了哦”，或者你問一句，他的答案中一定會帶“應該”這兩個字。即使他幹了很多活，你也會覺得他沒什麽料的樣子，對吧？</p>
+<hr>
+<p>用在寫部落格上也是一樣的道理，尤其是知識、討論類型的文章，作者的論點就會顯得沒有那麽有説服力了。</p>
+<p>最後，相比起其他人的文章，我的文章（尤其是之前的那幾篇）真的顯得有點欠缺自信，看來得改一改了呀！</p>
+
+    </div>
+
+    <div class="post-tags">
+        
+        <span class="icon">
+            <a-icon type="tags" theme="filled" />
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/Chinese" style=color:#ffa2c4>
+                Chinese
+            </a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/tags/Important" style=color:#ffa2c4>
+                Important
+            </a>
+        </span>
+        
+    </div>
+
+    <div id="gitalk-container"></div>
+
+</div>
+    </div>
+</div>
+                     
+<footer id="footer">
+    <div class="footer-wrap">
+        <div>
+            © 2026 - 2026 Yuzhou&#39;s Playground
+            <span class="footer-icon">
+                <a-icon type="flag" theme="filled" /></span>
+            @Yam Yee Zhe 严宇泽
+        </div>
+        <div></div>
+        <div>Based on the <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo Engine</a> & <a
+                target="_blank" rel="noopener" href="https://github.com/korilin/hexo-theme-particle">Particle Theme</a></div>
+        
+    </div>
+
+</footer>
+
+<script src="/js/highlight.min.js"></script>
+<script src="/js/particle.js"></script>
+                </div>
+            </div>
+        </transition>
+    </div>
+
+    <script>
+    new Vue({
+        el: "#layout",
+        data: {
+            show_page: false,
+            onload_menu: false,
+            menu_show: false,
+            card_top: 100
+        },
+        created: function () {
+            var that = this
+            window.onload = function () {
+                that.show_page = true
+                document.getElementById("loadcontent").style.opacity = 0
+                setTimeout(function () {
+                    document.getElementById("loadleft").style.width = 0
+                    document.getElementById("loadright").style.width = 0
+                }, 300)
+                setTimeout(function () {
+                    document.getElementById("loading").style = "display:none"
+                }, 600)
+            }
+        },
+        mounted: function () {
+            var that = this
+            window.addEventListener('scroll', function (e) {
+                that.menu_show = false
+            })
+        },
+        methods: {
+            home_click: function () {
+                window.scrollTo({
+                    top: window.innerHeight - 80,
+                    behavior: "smooth",
+                });
+            }
+        }
+    })
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+    const gitalk = new Gitalk({
+        clientID: 'Ov23liE3qUuVcTkWUTlO',
+        clientSecret: '73d13331643f00f83df432641af6a3d3e068b07e',
+        repo: 'blog-comments',      // The repository of store comments,
+        owner: 'yuzhoumy',
+        admin: ['yuzhoumy'],
+        language: 'en',
+        id: location.pathname,      // Ensure uniqueness and length less than 50
+        distractionFreeMode: true  // Facebook-like distraction free mode
+    })
+    gitalk.render('gitalk-container')
+</script>
+
+</body>
+
+</html>

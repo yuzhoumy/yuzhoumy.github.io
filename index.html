@@ -1,0 +1,678 @@
+
+<!DOCTYPE html>
+<html lang="en ">
+<link rel="stylesheet" href="/css/admonition.css">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuzhou&#39;s Playground</title>
+    <meta name="author" content="Yam Yee Zhe 严宇泽">
+    <meta name="description" content="I call myself "yuzhou" (宇宙) which means the universe, since I was 12.  ">
+    <meta name="keywords" content=" ">
+    <link rel="icon" href="/./images/avatar.png">
+    <link rel="stylesheet" href="/css/antd.min.css">
+    
+    <link rel="stylesheet" href="/css/full-theme.css">
+    
+    
+    <script src="/js/vue.js"></script>
+    <script src="/js/antd.min.js"></script>
+<meta name="generator" content="Hexo 8.1.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css" id="hexo-admonition-icon-injected">
+  <link rel="alternate" href="/rss.xml" title="Yuzhou's Playground" type="application/rss+xml">
+</head>
+
+<body>
+
+    <div id="loading"
+        style="height: 100vh; width: 100%; position: fixed;display: flex;z-index: 200; justify-content: space-between;">
+        <div id="loadleft" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div id="loadright" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div
+            style="position: fixed; height: 100vh; width: 100%;display: flex;justify-content: center;align-items: center;">
+            <div id="loadcontent"
+                style="width:400px;height:400px;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px#a3ddfb; text-align:center;opacity:1;transition:opacity 0.3s ease-out;">
+                <div>
+                    <h2>LOADING...</h2>
+                    <p>Please enable caching if loading is too slow (enabled by default in browsers).</p>
+                    <div>
+                        <img src="/images/loading.gif" alt="loading">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="layout">
+        <transition name="into">
+            <div v-show="show_page" style="display: none;">
+                <div id="menu_show">
+                     
+<nav id="menu">
+    <div class="desktop-menu">
+        <a href="/">
+            <span class="title">Yuzhou's Playground</span>
+        </a>
+        
+        <a href="/">
+            <span>
+                <a-icon type="home" theme="filled" />
+            </span>
+            <span>home</span>
+        </a>
+        
+        <a href="/about">
+            <span>
+                <a-icon type="idcard" theme="filled" />
+            </span>
+            <span>about</span>
+        </a>
+        
+        <a href="/archives">
+            <span>
+                <a-icon type="folder" theme="filled" />
+            </span>
+            <span>archives</span>
+        </a>
+        
+        <a href="/friends">
+            <span>
+                <a-icon type="heart" theme="filled" />
+            </span>
+            <span>friends</span>
+        </a>
+        
+        <a href="/categories/Music">
+            <span>
+                <a-icon type="book" theme="filled" />
+            </span>
+            <span>categories</span>
+        </a>
+        
+        <a href="/tags/English">
+            <span>
+                <a-icon type="tags" theme="filled" />
+            </span>
+            <span>tags</span>
+        </a>
+        
+    </div>
+
+    <div :class="'phone-menu ' + menu_show" id="phone-menu">
+        <div :class="'title'" @click="menu_show=!menu_show">
+            <span style="margin-right: 10px;">
+                <a-icon type="appstore" theme="filled" />
+            </span>
+            <span>Yuzhou's Playground</span>
+        </div>
+        <div class="items" v-show="menu_show">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="home" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">home</div>
+                </div>
+            </a>
+            
+            <a href="/about">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="idcard" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">about</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="folder" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">archives</div>
+                </div>
+            </a>
+            
+            <a href="/friends">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="heart" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">friends</div>
+                </div>
+            </a>
+            
+            <a href="/categories/Music">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="book" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">categories</div>
+                </div>
+            </a>
+            
+            <a href="/tags/English">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="tags" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">tags</div>
+                </div>
+            </a>
+            
+        </div>
+        <div class="curtain" v-show="menu_show"></div>
+    </div>
+
+</nav>
+
+                </div>
+
+                <div id="main">
+                    <div id="home-head" style=background-image:url('images/background/mononoke.jpg')>
+    <script>
+        var menu = document.getElementById("menu")
+        menu.className += " menu-color"
+    </script>
+     
+    <div id="home-info" class="home-info" @click="home_click">
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="info">
+            <div class="wrap">
+                <h1>Yuzhou's Playground</h1>
+                <h3>Ciallo</h3>
+                <h5>I call myself "yuzhou" (宇宙) which means the universe, since I was 12. </h5>
+            </div>
+        </span>
+    </div>
+     
+</div>
+
+
+
+<div id="home-posts-wrap" class=>
+    <div id="home-posts">
+
+        <div id="posts">
+            
+
+<div class="post">
+
+    <a href="/2026/04/09/scottish-bagpipe/">
+        <h2>
+            蘇格蘭風笛
+        </h2>
+    </a>
+
+    <div class="category-and-date">
+
+        
+        <span class="category">
+            <a href="/categories/Music">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" /></span>
+                Music
+            </a>
+        </span>
+        
+
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2026/4/9
+        </span>
+
+    </div>
+
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            
+            <p>覺得自己精神萎靡不振嗎？且聽我推坑給你的 <strong>蘇格蘭風笛</strong>！</p>
+<p><img src="/images/post/kenneth-mckay.jpg" alt="Kenneth McKay"><br><small style="color: grey;">勇敢的蘇格蘭高地士兵，Kenneth McKay。滑鐵盧戰役期間，McKay在法軍騎兵襲擊下，英勇地走到方陣外吹奏風笛以鼓舞士氣的情景。<a target="_blank" rel="noopener" href="https://www.reddit.com/r/BattlePaintings/s/JOHFpCZJUE">關於這張照片的Reddit貼文</a></small></p>
+<p>這是一個音色霸氣的樂器！既然都被拿來當蘇格蘭的軍鼓樂器了，其振興士氣的能力毋庸置疑。<br>至少在我身上，是非常有效的。我甚至把……</p>
+<ul>
+<li>電話鈴聲  </li>
+<li>鬧鐘</li>
+</ul>
+<p>換成了 <em>Hielan’ Laddie</em>。雖然每天早上6點半都會聽到這段音樂，但我在寫上面那段文字時，播放了這首音樂來聼，居然沒有感到一絲煩躁，很神奇吧！</p>
+<p>以下是一些我喜歡的曲目，和我的賞析，僅供參考~</p>
+<hr>
+<h2 id="Hielan’-Laddie"><a href="#Hielan’-Laddie" class="headerlink" title="Hielan’ Laddie"></a>Hielan’ Laddie</h2><p>（蘇格蘭風笛似乎是轉調樂器，但我不管了，我就按照自己聽到的音來）<br>（歡迎致郵到 <a href="mailto:&#x31;&#64;&#x79;&#117;&#x7a;&#104;&#x6f;&#x75;&#x2e;&#x6d;&#x79;">1@yuzhou.my</a> 糾正錯誤，我也想瞭解這個美妙的樂器）<br>這似乎是蘇格蘭風笛少有的降E調曲目，其他好像都是降B調。</p>
+<iframe width="100%" height="300" src="https://www.youtube.com/embed/KUIOtA8LPec?si=ZJHEag2e52qG9Usx" frameborder="0" allowfullscreen></iframe>
+
+<p>當Bass音B♭響起時，整個緊迫感就上來了。并且，這個音會持續到結尾，我認爲這是蘇格蘭風笛“消除雜念”以鼓舞士氣的關鍵。有點類似那種 <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=FwDfZDpP5Jc">播放單一頻率音頻的影片</a>，能讓人腦袋放空，我想是同一個原理吧。<br><img src="/images/post/hielan-laddie-1.png" alt="Hielan Laddie"></p>
+<p>另外，也有加上管樂和弦的版本（我就是拿這個來當鬧鐘的）：</p>
+<iframe width="100%" height="300" src="https://www.youtube.com/embed/ESsVydlq8cM?si=TytIZ-NAoSnld8m_" frameborder="0" allowfullscreen></iframe>
+
+<p>這個版本是不是聽起來音色更豐滿了呢？<br>我覺得呢，這個版本的<strong>下屬和弦</strong>起到了强烈的襯托作用。我們把Hielan’ Laddie的主旋律<strong>拆成一半</strong>來看好了。</p>
+<p>前半段的<strong>主和弦</strong>和<strong>屬和弦</strong>似乎在告訴你：<br><code>無論你現在是什麽狀態，請振作起來！</code><br><img src="/images/post/hielan-laddie-2.png" alt="Hielan Laddie"></p>
+<p>後半段的<strong>屬和弦</strong>的，再加上有點往下走的旋律，好像在説：<br><code>親愛的，你本來就該這樣！振作起來！</code><br><img src="/images/post/hielan-laddie-3.png" alt="Hielan Laddie"></p>
+<p>哦，如果Wiwi看到我的賞析，希望你不要生氣…… 我已經兩年沒碰過樂理了。</p>
+<hr>
+<h2 id="Scotland-The-Brave"><a href="#Scotland-The-Brave" class="headerlink" title="Scotland The Brave"></a>Scotland The Brave</h2><p>相較於 Hielan’ Laddie，Scotland The Brave 聽起來更加沉穩，仿佛聼見了蘇格蘭士兵在草原緩緩行軍。<br>在你認爲你不該休息的時候，請效仿蘇格蘭高地士兵，<strong>前進、前進、不擇一切手段地前進！！！</strong></p>
+<iframe width="100%" height="300" src="https://www.youtube.com/embed/nnG1oUkWBa8?si=IgxPW6P5rcYbO_B5" frameborder="0" allowfullscreen></iframe>
+
+<p>題外話：Massed Band的Slow March就和這首音樂聽起來一樣沉穩，太般配了！</p>
+<p>通常我喜歡在早上散步&#x2F;跑步的時候開來聼這首曲子，超級Chill的哦，它會帶給我猶如身處在森林之中的感覺。</p>
+<hr>
+<h2 id="Auld-Lang-Syne"><a href="#Auld-Lang-Syne" class="headerlink" title="Auld Lang Syne"></a>Auld Lang Syne</h2><p>Auld Lang Syne，譯爲《友誼地久天長》，大部分人都聽過。<br>但蘇格蘭風笛版本的 Auld Lang Syne 絕對是 Top 中之 Top，把原本的抒情歌變成了節奏感强烈、士氣昂昂、霸氣宏大的音樂，聽起來完全不一樣！<br>蘇格蘭的民謠，就應該用蘇格蘭當地的樂器演奏呀！</p>
+<iframe width="100%" height="300" src="https://www.youtube.com/embed/CXcM-70KztI?si=qc2dTKHX5IqoGkGL" frameborder="0" allowfullscreen></iframe>
+
+<p>而且，尤其在上面影片中的“特殊場合”，Auld Lang Syne聽起來讓人感慨萬分。</p>
+
+            
+        </div>
+    </div>
+
+    <div class="post-tags">
+        
+        <span class="icon">
+            <a-icon type="tags" theme="filled" />
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/Chinese" style=color:#03a9f4>
+                Chinese
+            </a>
+        </span>
+        
+    </div>
+
+    <a href="/2026/04/09/scottish-bagpipe/ " class="go-post">
+        Read More
+    </a>
+</div>
+
+<div class="post">
+
+    <a href="/2026/03/30/unconfindent-words/">
+        <h2>
+            不自信詞語
+        </h2>
+    </a>
+
+    <div class="category-and-date">
+
+        
+        <span class="category">
+            <a href="/categories/Life">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" /></span>
+                Life
+            </a>
+        </span>
+        
+
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2026/3/30
+        </span>
+
+    </div>
+
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            
+            <p><img src="/images/post/modal-words.jpg" alt="Modal Words"><br><small style="color: grey;">KSSM英文課本，79頁</small></p>
+<p>我發現我在説話時，常常會下意識地否認自己的觀點，並加上一些“不自信詞語”，就好像爲自己的言論加上免責聲明一樣：</p>
+<ul>
+<li>“走這一條路可以去到市區 —— <strong>應該</strong>吧。”  </li>
+<li>“我查了一下時間表，會議<strong>應該</strong>是在下午5點開始。”  </li>
+<li>“每個星期六，這個廣場都會舉辦大型活動 —— <strong>通常是這樣的</strong>。”</li>
+</ul>
+<hr>
+<h3 id="常見的不自信詞語"><a href="#常見的不自信詞語" class="headerlink" title="常見的不自信詞語"></a>常見的不自信詞語</h3><ul>
+<li>“可能”  </li>
+<li>“應該”  </li>
+<li>“雖然”  </li>
+<li>“看起來好像”  </li>
+<li>“我其實不是很專業啦，但是……”  </li>
+<li>“我也不太確定”  </li>
+<li>“我猜是這樣的”</li>
+</ul>
+<hr>
+<p>很顯然地，當我們在日常溝通時習慣使用“不自信詞語”之後，我們在別人心中的自信程度會大大降低。尤其是在小組裏面分工合作時，講話自信&#x2F;不自信會讓其他組員對你的信心差很多哦！</p>
+<p>試想想，如果你的組員在工作時眼神閃避，并且這樣子對你説話：“噢…… 應該這樣就可以了哦”，或者你問一句，他的答案中一定會帶“應該”這兩個字。即使他幹了很多活，你也會覺得他沒什麽料的樣子，對吧？</p>
+<hr>
+<p>用在寫部落格上也是一樣的道理，尤其是知識、討論類型的文章，作者的論點就會顯得沒有那麽有説服力了。</p>
+<p>最後，相比起其他人的文章，我的文章（尤其是之前的那幾篇）真的顯得有點欠缺自信，看來得改一改了呀！</p>
+
+            
+        </div>
+    </div>
+
+    <div class="post-tags">
+        
+        <span class="icon">
+            <a-icon type="tags" theme="filled" />
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/Chinese" style=color:#00bcd4>
+                Chinese
+            </a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/tags/Important" style=color:#ff7d73>
+                Important
+            </a>
+        </span>
+        
+    </div>
+
+    <a href="/2026/03/30/unconfindent-words/ " class="go-post">
+        Read More
+    </a>
+</div>
+
+<div class="post">
+
+    <a href="/2026/03/28/procrastination/">
+        <h2>
+            拖延症
+        </h2>
+    </a>
+
+    <div class="category-and-date">
+
+        
+        <span class="category">
+            <a href="/categories/Life">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" /></span>
+                Life
+            </a>
+        </span>
+        
+
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2026/3/28
+        </span>
+
+    </div>
+
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            
+            <div class="admonition info"><p class="admonition-title"><span class="mdi mdi-information-outline admonition-icon"></span>BlogBlog 同樂會</p><div class="admonition-content">
+
+<p>這是我的<a target="_blank" rel="noopener" href="https://blogblog.club/party/">「BlogBlog 同樂會 - 2026 年 4 月」</a>的投稿文章。本月主題是<a target="_blank" rel="noopener" href="https://www.wen-lab.tw/blogblog-party-productivity/">「生產力」</a>，由 <a target="_blank" rel="noopener" href="https://www.wen-lab.tw/author/wen/">Wen</a> 主持。如果你有自己的部落格，歡迎一起來參加！</p>
+</div></div>
+
+<p><img src="/images/blog-background.png" alt="Background"></p>
+<p>我的時間是<strong>液態</strong>的。<br>Google Calendar 中的排程看起來整齊又精美。但是，我真的能在指定的時間完成他嗎？我的 To-do 任務就像在波濤的水中翻滾的石子，流來~ 流去~ 最後和一開始預定的時間越差越遠。</p>
+<p>經過我對自己的審視，拖延症的原因不外乎就那幾個……</p>
+<hr>
+<h3 id="短視頻"><a href="#短視頻" class="headerlink" title="短視頻"></a>短視頻</h3><p>這絕對是最大的因素。</p>
+<p>我十分認同 Wiwi 所揭示的 <a target="_blank" rel="noopener" href="https://wiwi.blog/blog/virus#%E6%9C%80%E6%96%B0%E7%9A%84%E7%97%85%E6%AF%92%E7%A4%BE%E7%BE%A4%E5%AA%92%E9%AB%94%E5%92%8C%E7%9F%AD%E5%BD%B1%E9%9F%B3">社交媒體&#x2F;短視頻對人類的危害</a>。</p>
+<p>是的，我的拖延症是自小就有，但我以前只對不喜歡的事情拖延啊！<br>記得14歲時，當我第一次下載 Instagram 時，我并未察覺任何異樣，只把他當作和 Facebook 一樣的社交軟體來看待。殊不知就是從這個時候開始，我再也回不去以前的自己了。</p>
+<p>在沉迷短視頻之前，我是 <strong>不想做</strong> ，而現在卻是 <strong>想做但是無法執行</strong>。我的意志從此失去了自由，也就是從這個開始，時間變成液態的了。</p>
+<hr>
+<h3 id="完美主義"><a href="#完美主義" class="headerlink" title="完美主義"></a>完美主義</h3><p>如果擺在我眼前的是數理功課和語文功課，我一定會選前者。<br>我對寫作的完美主義尤其嚴重。你絕對不會想到，我平均寫一篇作文要3個小時，blog要2個小時！我會反復推敲我的句子，一定要100%完美才行。</p>
+<p>當然，這是寫作的必要程序，需要通過磨練可以繼續增强效率，多多寫作就行啦。</p>
+<hr>
+<h3 id="外界因素"><a href="#外界因素" class="headerlink" title="外界因素"></a>外界因素</h3><p>在我自己一個人待在家一整天後，如果這時候朋友邀約我去聚會…… 我仿佛感受到體内的E人基因在震動，實在是很難拒絕誘惑。<br>另外，我不擅長拒絕，即使我不太想去，我大可能還是會答應。</p>
+<hr>
+<h3 id="情緒"><a href="#情緒" class="headerlink" title="情緒"></a>情緒</h3><p>每當有人問我爲什麽不開心？我總會回答不知道，就是莫名其妙的情緒風暴而已。<br>但我現在大致明白是怎麽回事了：我的情緒就像雪球一樣，會從一個小小的雪球開始越滾越大，最後碾過所有我在 Google Calendar 中設定好的日程。</p>
+<p>我是比較敏感的人，每個小小的事情（例如被人嗆了、或是刷到負能量重的視頻），都是小小的雪球。通常在接下來一整天内我會看什麽都不爽，結果當然就是負面情緒逐漸湧現了。</p>
+<hr>
+<h3 id="睡眠"><a href="#睡眠" class="headerlink" title="睡眠"></a>睡眠</h3><p>睡眠的重要性是毋庸置疑的。<br>很遺憾的，報復性睡眠拖延是最難打破的惡性循環。説來慚愧，自從開始熬夜過後，除了生病之外不曾在12點半之前睡過。</p>
+<p>我的睡眠拖延挺奇怪的，不到一個臨界時間（必須睡覺的時間），腦袋都會很凌亂，完全不想關燈。就我而言，要想在某一天突然早睡的話，需要花費大量意志力對抗。因此我的早睡計劃通常無法撐過三天XD。</p>
+<hr>
+<h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>雖然這篇文章的負能量有點重，讀起來像一隻魯蛇的抱怨，但我還是會多多改進的！</p>
+
+            
+        </div>
+    </div>
+
+    <div class="post-tags">
+        
+        <span class="icon">
+            <a-icon type="tags" theme="filled" />
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/Chinese" style=color:#00bcd4>
+                Chinese
+            </a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/tags/Important" style=color:#00bcd4>
+                Important
+            </a>
+        </span>
+        
+    </div>
+
+    <a href="/2026/03/28/procrastination/ " class="go-post">
+        Read More
+    </a>
+</div>
+
+
+             
+<link rel="stylesheet" href="/css/admonition.css">
+<div class="page-current">
+
+    <div class="prev">
+        
+    </div>
+
+    <div class="page-index">
+
+        
+
+        <span class="current">
+            1
+        </span>
+
+        
+        <span>
+            <a href="/page/2/">
+                <span class="page-num">
+                    2
+                </span>
+            </a>
+            
+            <a href="/page/3">
+                <span class="page-num">
+                    3
+                </span>
+            </a>
+            
+
+            
+
+        </span>
+        
+
+    </div>
+
+    <div class="next">
+        
+        <a href="/page/2/ ">
+            <span class="page-num">
+                <a-icon type="caret-right" theme="filled" />
+            </span>
+        </a>
+        
+    </div>
+
+</div>
+
+        </div>
+    </div>
+    
+    <div id="home-card">
+        <a-affix :offset-top="card_top">
+    <a-card class="card-style" style="width: 300px">
+        <div class="avatar">
+            <img src="./images/profile_picture.jpg " alt="å¤´åƒ">
+        </div>
+        <div class="name">
+            Yam Yee Zhe 严宇泽
+        </div>
+        <div class="descriptions">
+            
+            <div class="description">
+                A Malaysian high school student, currently 17 years old.
+            </div>
+            
+            <div class="description">
+                I will share my thoughts and daily life here.
+            </div>
+            
+        </div>
+        <div class="icon-links">
+            
+            <span class="icon-link">
+                <a target="_blank" rel="noopener" href="https://discord.com/users/709009923572498463">
+
+                    
+                    <img width="18px" height="18px" src="./images/icon/discord.svg" alt="discord">
+                    
+                </a>
+            </span>
+            
+            <span class="icon-link">
+                <a target="_blank" rel="noopener" href="https://github.com/yuzhoumy">
+
+                    
+                    <img width="18px" height="18px" src="./images/icon/github.png" alt="github">
+                    
+                </a>
+            </span>
+            
+            <span class="icon-link">
+                <a target="_blank" rel="noopener" href="https://www.instagram.com/yuzhou____/">
+
+                    
+                    <img width="18px" height="18px" src="./images/icon/instagram.svg" alt="instagram">
+                    
+                </a>
+            </span>
+            
+            <span class="icon-link">
+                <a target="_blank" rel="noopener" href="https://t.me/yamyeezhe">
+
+                    
+                    <img width="18px" height="18px" src="./images/icon/telegram.svg" alt="telegram">
+                    
+                </a>
+            </span>
+            
+            <span class="icon-link">
+                <a href="mailto:1@yuzhou.my">
+
+                    
+                    <img width="18px" height="18px" src="./images/icon/mail.svg" alt="mail">
+                    
+                </a>
+            </span>
+            
+        </div>
+        <div class="friend-links">
+            
+            <div class="friend-link">
+                <a href="/about">
+                    More about me
+                </a>
+            </div>
+            
+        </div>
+    </a-card>
+</a-affix>
+
+    </div>
+    
+</div>
+                     
+<footer id="footer">
+    <div class="footer-wrap">
+        <div>
+            © 2026 - 2026 Yuzhou&#39;s Playground
+            <span class="footer-icon">
+                <a-icon type="flag" theme="filled" /></span>
+            @Yam Yee Zhe 严宇泽
+        </div>
+        <div></div>
+        <div>Based on the <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo Engine</a> & <a
+                target="_blank" rel="noopener" href="https://github.com/korilin/hexo-theme-particle">Particle Theme</a></div>
+        
+    </div>
+
+</footer>
+
+<script src="/js/highlight.min.js"></script>
+<script src="/js/particle.js"></script>
+                </div>
+            </div>
+        </transition>
+    </div>
+
+    <script>
+    new Vue({
+        el: "#layout",
+        data: {
+            show_page: false,
+            onload_menu: false,
+            menu_show: false,
+            card_top: 100
+        },
+        created: function () {
+            var that = this
+            window.onload = function () {
+                that.show_page = true
+                document.getElementById("loadcontent").style.opacity = 0
+                setTimeout(function () {
+                    document.getElementById("loadleft").style.width = 0
+                    document.getElementById("loadright").style.width = 0
+                }, 300)
+                setTimeout(function () {
+                    document.getElementById("loading").style = "display:none"
+                }, 600)
+            }
+        },
+        mounted: function () {
+            var that = this
+            window.addEventListener('scroll', function (e) {
+                that.menu_show = false
+            })
+        },
+        methods: {
+            home_click: function () {
+                window.scrollTo({
+                    top: window.innerHeight - 80,
+                    behavior: "smooth",
+                });
+            }
+        }
+    })
+</script>
+
+</body>
+
+</html>

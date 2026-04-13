@@ -1,0 +1,344 @@
+
+<!DOCTYPE html>
+<html lang="en ">
+<link rel="stylesheet" href="/css/admonition.css">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>拖延症 - Yuzhou 宇宙</title>
+    <meta name="author" content="Yam Yee Zhe 严宇泽">
+    <meta name="description" content="I call myself "yuzhou" (宇宙) which means the universe, since I was 12.  ">
+    <meta name="keywords" content=" ">
+    <link rel="icon" href="/./images/avatar.png">
+    <link rel="stylesheet" href="/css/antd.min.css">
+    
+    <link rel="stylesheet" href="/css/full-theme.css">
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    
+    <script src="/js/vue.js"></script>
+    <script src="/js/antd.min.js"></script>
+<meta name="generator" content="Hexo 8.1.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css" id="hexo-admonition-icon-injected">
+  <link rel="alternate" href="/rss.xml" title="Yuzhou's Playground" type="application/rss+xml">
+</head>
+
+<body>
+
+    <div id="loading"
+        style="height: 100vh; width: 100%; position: fixed;display: flex;z-index: 200; justify-content: space-between;">
+        <div id="loadleft" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div id="loadright" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div
+            style="position: fixed; height: 100vh; width: 100%;display: flex;justify-content: center;align-items: center;">
+            <div id="loadcontent"
+                style="width:400px;height:400px;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px#a3ddfb; text-align:center;opacity:1;transition:opacity 0.3s ease-out;">
+                <div>
+                    <h2>LOADING...</h2>
+                    <p>Please enable caching if loading is too slow (enabled by default in browsers).</p>
+                    <div>
+                        <img src="/images/loading.gif" alt="loading">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="layout">
+        <transition name="into">
+            <div v-show="show_page" style="display: none;">
+                <div id="menu_show">
+                     
+<nav id="menu">
+    <div class="desktop-menu">
+        <a href="/">
+            <span class="title">Yuzhou's Playground</span>
+        </a>
+        
+        <a href="/">
+            <span>
+                <a-icon type="home" theme="filled" />
+            </span>
+            <span>home</span>
+        </a>
+        
+        <a href="/about">
+            <span>
+                <a-icon type="idcard" theme="filled" />
+            </span>
+            <span>about</span>
+        </a>
+        
+        <a href="/archives">
+            <span>
+                <a-icon type="folder" theme="filled" />
+            </span>
+            <span>archives</span>
+        </a>
+        
+        <a href="/friends">
+            <span>
+                <a-icon type="heart" theme="filled" />
+            </span>
+            <span>friends</span>
+        </a>
+        
+        <a href="/categories/Music">
+            <span>
+                <a-icon type="book" theme="filled" />
+            </span>
+            <span>categories</span>
+        </a>
+        
+        <a href="/tags/English">
+            <span>
+                <a-icon type="tags" theme="filled" />
+            </span>
+            <span>tags</span>
+        </a>
+        
+    </div>
+
+    <div :class="'phone-menu ' + menu_show" id="phone-menu">
+        <div :class="'title'" @click="menu_show=!menu_show">
+            <span style="margin-right: 10px;">
+                <a-icon type="appstore" theme="filled" />
+            </span>
+            <span>Yuzhou's Playground</span>
+        </div>
+        <div class="items" v-show="menu_show">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="home" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">home</div>
+                </div>
+            </a>
+            
+            <a href="/about">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="idcard" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">about</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="folder" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">archives</div>
+                </div>
+            </a>
+            
+            <a href="/friends">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="heart" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">friends</div>
+                </div>
+            </a>
+            
+            <a href="/categories/Music">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="book" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">categories</div>
+                </div>
+            </a>
+            
+            <a href="/tags/English">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="tags" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">tags</div>
+                </div>
+            </a>
+            
+        </div>
+        <div class="curtain" v-show="menu_show"></div>
+    </div>
+
+</nav>
+
+                </div>
+
+                <div id="main">
+                    
+<div id="home-posts-wrap">
+    <div id="home-posts">
+<div class="post">
+
+    <h2>
+        拖延症
+    </h2>
+
+    <div class="category-and-date">
+
+        
+        <span class="category">
+            <a href="/categories/Life">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" /></span>
+                Life
+            </a>
+        </span>
+        
+
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2026/3/28
+        </span>
+
+    </div>
+
+    <div class="content" v-pre>
+        <div class="admonition info"><p class="admonition-title"><span class="mdi mdi-information-outline admonition-icon"></span>BlogBlog 同樂會</p><div class="admonition-content">
+
+<p>這是我的<a target="_blank" rel="noopener" href="https://blogblog.club/party/">「BlogBlog 同樂會 - 2026 年 4 月」</a>的投稿文章。本月主題是<a target="_blank" rel="noopener" href="https://www.wen-lab.tw/blogblog-party-productivity/">「生產力」</a>，由 <a target="_blank" rel="noopener" href="https://www.wen-lab.tw/author/wen/">Wen</a> 主持。如果你有自己的部落格，歡迎一起來參加！</p>
+</div></div>
+
+<p><img src="/images/blog-background.png" alt="Background"></p>
+<p>我的時間是<strong>液態</strong>的。<br>Google Calendar 中的排程看起來整齊又精美。但是，我真的能在指定的時間完成他嗎？我的 To-do 任務就像在波濤的水中翻滾的石子，流來~ 流去~ 最後和一開始預定的時間越差越遠。</p>
+<p>經過我對自己的審視，拖延症的原因不外乎就那幾個……</p>
+<hr>
+<h3 id="短視頻"><a href="#短視頻" class="headerlink" title="短視頻"></a>短視頻</h3><p>這絕對是最大的因素。</p>
+<p>我十分認同 Wiwi 所揭示的 <a target="_blank" rel="noopener" href="https://wiwi.blog/blog/virus#%E6%9C%80%E6%96%B0%E7%9A%84%E7%97%85%E6%AF%92%E7%A4%BE%E7%BE%A4%E5%AA%92%E9%AB%94%E5%92%8C%E7%9F%AD%E5%BD%B1%E9%9F%B3">社交媒體&#x2F;短視頻對人類的危害</a>。</p>
+<p>是的，我的拖延症是自小就有，但我以前只對不喜歡的事情拖延啊！<br>記得14歲時，當我第一次下載 Instagram 時，我并未察覺任何異樣，只把他當作和 Facebook 一樣的社交軟體來看待。殊不知就是從這個時候開始，我再也回不去以前的自己了。</p>
+<p>在沉迷短視頻之前，我是 <strong>不想做</strong> ，而現在卻是 <strong>想做但是無法執行</strong>。我的意志從此失去了自由，也就是從這個開始，時間變成液態的了。</p>
+<hr>
+<h3 id="完美主義"><a href="#完美主義" class="headerlink" title="完美主義"></a>完美主義</h3><p>如果擺在我眼前的是數理功課和語文功課，我一定會選前者。<br>我對寫作的完美主義尤其嚴重。你絕對不會想到，我平均寫一篇作文要3個小時，blog要2個小時！我會反復推敲我的句子，一定要100%完美才行。</p>
+<p>當然，這是寫作的必要程序，需要通過磨練可以繼續增强效率，多多寫作就行啦。</p>
+<hr>
+<h3 id="外界因素"><a href="#外界因素" class="headerlink" title="外界因素"></a>外界因素</h3><p>在我自己一個人待在家一整天後，如果這時候朋友邀約我去聚會…… 我仿佛感受到體内的E人基因在震動，實在是很難拒絕誘惑。<br>另外，我不擅長拒絕，即使我不太想去，我大可能還是會答應。</p>
+<hr>
+<h3 id="情緒"><a href="#情緒" class="headerlink" title="情緒"></a>情緒</h3><p>每當有人問我爲什麽不開心？我總會回答不知道，就是莫名其妙的情緒風暴而已。<br>但我現在大致明白是怎麽回事了：我的情緒就像雪球一樣，會從一個小小的雪球開始越滾越大，最後碾過所有我在 Google Calendar 中設定好的日程。</p>
+<p>我是比較敏感的人，每個小小的事情（例如被人嗆了、或是刷到負能量重的視頻），都是小小的雪球。通常在接下來一整天内我會看什麽都不爽，結果當然就是負面情緒逐漸湧現了。</p>
+<hr>
+<h3 id="睡眠"><a href="#睡眠" class="headerlink" title="睡眠"></a>睡眠</h3><p>睡眠的重要性是毋庸置疑的。<br>很遺憾的，報復性睡眠拖延是最難打破的惡性循環。説來慚愧，自從開始熬夜過後，除了生病之外不曾在12點半之前睡過。</p>
+<p>我的睡眠拖延挺奇怪的，不到一個臨界時間（必須睡覺的時間），腦袋都會很凌亂，完全不想關燈。就我而言，要想在某一天突然早睡的話，需要花費大量意志力對抗。因此我的早睡計劃通常無法撐過三天XD。</p>
+<hr>
+<h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>雖然這篇文章的負能量有點重，讀起來像一隻魯蛇的抱怨，但我還是會多多改進的！</p>
+
+    </div>
+
+    <div class="post-tags">
+        
+        <span class="icon">
+            <a-icon type="tags" theme="filled" />
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/Chinese" style=color:#00a596>
+                Chinese
+            </a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/tags/Important" style=color:#03a9f4>
+                Important
+            </a>
+        </span>
+        
+    </div>
+
+    <div id="gitalk-container"></div>
+
+</div>
+    </div>
+</div>
+                     
+<footer id="footer">
+    <div class="footer-wrap">
+        <div>
+            © 2026 - 2026 Yuzhou&#39;s Playground
+            <span class="footer-icon">
+                <a-icon type="flag" theme="filled" /></span>
+            @Yam Yee Zhe 严宇泽
+        </div>
+        <div></div>
+        <div>Based on the <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo Engine</a> & <a
+                target="_blank" rel="noopener" href="https://github.com/korilin/hexo-theme-particle">Particle Theme</a></div>
+        
+    </div>
+
+</footer>
+
+<script src="/js/highlight.min.js"></script>
+<script src="/js/particle.js"></script>
+                </div>
+            </div>
+        </transition>
+    </div>
+
+    <script>
+    new Vue({
+        el: "#layout",
+        data: {
+            show_page: false,
+            onload_menu: false,
+            menu_show: false,
+            card_top: 100
+        },
+        created: function () {
+            var that = this
+            window.onload = function () {
+                that.show_page = true
+                document.getElementById("loadcontent").style.opacity = 0
+                setTimeout(function () {
+                    document.getElementById("loadleft").style.width = 0
+                    document.getElementById("loadright").style.width = 0
+                }, 300)
+                setTimeout(function () {
+                    document.getElementById("loading").style = "display:none"
+                }, 600)
+            }
+        },
+        mounted: function () {
+            var that = this
+            window.addEventListener('scroll', function (e) {
+                that.menu_show = false
+            })
+        },
+        methods: {
+            home_click: function () {
+                window.scrollTo({
+                    top: window.innerHeight - 80,
+                    behavior: "smooth",
+                });
+            }
+        }
+    })
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+    const gitalk = new Gitalk({
+        clientID: 'Ov23liE3qUuVcTkWUTlO',
+        clientSecret: '73d13331643f00f83df432641af6a3d3e068b07e',
+        repo: 'blog-comments',      // The repository of store comments,
+        owner: 'yuzhoumy',
+        admin: ['yuzhoumy'],
+        language: 'en',
+        id: location.pathname,      // Ensure uniqueness and length less than 50
+        distractionFreeMode: true  // Facebook-like distraction free mode
+    })
+    gitalk.render('gitalk-container')
+</script>
+
+</body>
+
+</html>

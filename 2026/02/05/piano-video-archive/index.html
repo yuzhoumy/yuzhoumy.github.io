@@ -1,0 +1,332 @@
+
+<!DOCTYPE html>
+<html lang="en ">
+<link rel="stylesheet" href="/css/admonition.css">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piano video archive - Yuzhou 宇宙</title>
+    <meta name="author" content="Yam Yee Zhe 严宇泽">
+    <meta name="description" content="I call myself "yuzhou" (宇宙) which means the universe, since I was 12.  ">
+    <meta name="keywords" content=" ">
+    <link rel="icon" href="/./images/avatar.png">
+    <link rel="stylesheet" href="/css/antd.min.css">
+    
+    <link rel="stylesheet" href="/css/full-theme.css">
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    
+    <script src="/js/vue.js"></script>
+    <script src="/js/antd.min.js"></script>
+<meta name="generator" content="Hexo 8.1.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css" id="hexo-admonition-icon-injected">
+  <link rel="alternate" href="/rss.xml" title="Yuzhou's Playground" type="application/rss+xml">
+</head>
+
+<body>
+
+    <div id="loading"
+        style="height: 100vh; width: 100%; position: fixed;display: flex;z-index: 200; justify-content: space-between;">
+        <div id="loadleft" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div id="loadright" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div
+            style="position: fixed; height: 100vh; width: 100%;display: flex;justify-content: center;align-items: center;">
+            <div id="loadcontent"
+                style="width:400px;height:400px;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px#a3ddfb; text-align:center;opacity:1;transition:opacity 0.3s ease-out;">
+                <div>
+                    <h2>LOADING...</h2>
+                    <p>Please enable caching if loading is too slow (enabled by default in browsers).</p>
+                    <div>
+                        <img src="/images/loading.gif" alt="loading">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="layout">
+        <transition name="into">
+            <div v-show="show_page" style="display: none;">
+                <div id="menu_show">
+                     
+<nav id="menu">
+    <div class="desktop-menu">
+        <a href="/">
+            <span class="title">Yuzhou's Playground</span>
+        </a>
+        
+        <a href="/">
+            <span>
+                <a-icon type="home" theme="filled" />
+            </span>
+            <span>home</span>
+        </a>
+        
+        <a href="/about">
+            <span>
+                <a-icon type="idcard" theme="filled" />
+            </span>
+            <span>about</span>
+        </a>
+        
+        <a href="/archives">
+            <span>
+                <a-icon type="folder" theme="filled" />
+            </span>
+            <span>archives</span>
+        </a>
+        
+        <a href="/friends">
+            <span>
+                <a-icon type="heart" theme="filled" />
+            </span>
+            <span>friends</span>
+        </a>
+        
+        <a href="/categories/Music">
+            <span>
+                <a-icon type="book" theme="filled" />
+            </span>
+            <span>categories</span>
+        </a>
+        
+        <a href="/tags/English">
+            <span>
+                <a-icon type="tags" theme="filled" />
+            </span>
+            <span>tags</span>
+        </a>
+        
+    </div>
+
+    <div :class="'phone-menu ' + menu_show" id="phone-menu">
+        <div :class="'title'" @click="menu_show=!menu_show">
+            <span style="margin-right: 10px;">
+                <a-icon type="appstore" theme="filled" />
+            </span>
+            <span>Yuzhou's Playground</span>
+        </div>
+        <div class="items" v-show="menu_show">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="home" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">home</div>
+                </div>
+            </a>
+            
+            <a href="/about">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="idcard" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">about</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="folder" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">archives</div>
+                </div>
+            </a>
+            
+            <a href="/friends">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="heart" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">friends</div>
+                </div>
+            </a>
+            
+            <a href="/categories/Music">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="book" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">categories</div>
+                </div>
+            </a>
+            
+            <a href="/tags/English">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="tags" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">tags</div>
+                </div>
+            </a>
+            
+        </div>
+        <div class="curtain" v-show="menu_show"></div>
+    </div>
+
+</nav>
+
+                </div>
+
+                <div id="main">
+                    
+<div id="home-posts-wrap">
+    <div id="home-posts">
+<div class="post">
+
+    <h2>
+        Piano video archive
+    </h2>
+
+    <div class="category-and-date">
+
+        
+        <span class="category">
+            <a href="/categories/Music">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" /></span>
+                Music
+            </a>
+        </span>
+        
+
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2026/2/5
+        </span>
+
+    </div>
+
+    <div class="content" v-pre>
+        <p><img src="/images/blog-background.png" alt="Background"></p>
+<p>Here is a list of videos of me playing the piano. I recorded most of them between 2021 and 2023.<br>The list is arranged according to the date each video was originally recorded.<br>Some videos are not included because the quality is poor, unclear or the recording is incomplete.</p>
+<hr>
+<h3 id="Nocturne-Op-9-No-2"><a href="#Nocturne-Op-9-No-2" class="headerlink" title="Nocturne Op. 9, No. 2"></a>Nocturne Op. 9, No. 2</h3><p><code>Frédéric François Chopin : Nocturne Op. 9, No. 2</code><br><code>Recorded 7/10/2021</code><br><video width="320" height="180" src="/images/piano-video-archive/chopin-nocturne-2.mp4" controls></video></p>
+<h3 id="Reverie"><a href="#Reverie" class="headerlink" title="Rêverie"></a>Rêverie</h3><p><code>Achille Claude Debussy : Rêverie (L, 76)</code><br><code>Recorded 31/10/2021</code><br><video width="320" height="180" src="/images/piano-video-archive/reverie.mp4" controls></video></p>
+<h3 id="1eme-Gymnopedies"><a href="#1eme-Gymnopedies" class="headerlink" title="1ème Gymnopédies"></a>1ème Gymnopédies</h3><p><code>Erik Satie : Trois Gymnopédies - I. Lent et douloureux</code><br><code>Recorded 4/11/2021</code><br><video width="320" height="180" src="/images/piano-video-archive/gymnopedie-1.mp4" controls></video></p>
+<h3 id="Suite-Bergamasque-Prelude"><a href="#Suite-Bergamasque-Prelude" class="headerlink" title="Suite Bergamasque : Prélude"></a>Suite Bergamasque : Prélude</h3><p><code>Achille Claude Debussy : Suite bergamasque (L. 75) - I. Prélude</code><br><code>Recorded 5/11/2021</code><br><video width="320" height="180" src="/images/piano-video-archive/suite-bergamasque-prelude.mp4" controls></video></p>
+<h3 id="2eme-Gymnopedies"><a href="#2eme-Gymnopedies" class="headerlink" title="2ème Gymnopédies"></a>2ème Gymnopédies</h3><p><code>Erik Satie : Trois Gymnopédies - II. Lent et triste</code><br><code>Recorded 11/11/2021</code><br><video width="320" height="180" src="/images/piano-video-archive/gymnopedie-2.mp4" controls></video></p>
+<h3 id="Moonlight-Sonata-1st-movement"><a href="#Moonlight-Sonata-1st-movement" class="headerlink" title="Moonlight Sonata 1st movement"></a>Moonlight Sonata 1st movement</h3><p><code>Ludwig Van Beethoven : Piano Sonata No. 14 &quot;Quasi una fantasia&quot; - I. Adagio sostenuto</code><br><code>Recorded 20/11/2021</code><br><video width="320" height="180" src="/images/piano-video-archive/moonlight-sonata-1.mp4" controls></video></p>
+<h3 id="Danseuses-De-Delphes"><a href="#Danseuses-De-Delphes" class="headerlink" title="Danseuses De Delphes"></a>Danseuses De Delphes</h3><p><code>Achille Claude Debussy : Préludes, Livre 1 (L. 125) - I. Danseuses de Delphes: Lent et grave</code><br><code>Recorded 2/12/2021</code><br><video width="320" height="180" src="/images/piano-video-archive/danseuses-de-delphes.mp4" controls></video></p>
+<h3 id="Notturno-Op-54-No-4"><a href="#Notturno-Op-54-No-4" class="headerlink" title="Notturno Op. 54, No. 4"></a>Notturno Op. 54, No. 4</h3><p><code>Grieg, Edward : Notturno, Op. 54, No. 4</code><br><code>Recorded 13/12/2021</code><br><video width="320" height="180" src="/images/piano-video-archive/grieg.mp4" controls></video></p>
+<h3 id="Premiere-Arabesque"><a href="#Premiere-Arabesque" class="headerlink" title="Première Arabesque"></a>Première Arabesque</h3><p><code>Achille Claude Debussy : Deux arabesques (L. 74) - I. Andantino con moto</code><br><code>Recorded 30/12/2021</code><br><video width="320" height="180" src="/images/piano-video-archive/arabesque-1.mp4" controls></video></p>
+<h3 id="La-Fille-aux-cheveux-de-lin"><a href="#La-Fille-aux-cheveux-de-lin" class="headerlink" title="La Fille aux cheveux de lin"></a>La Fille aux cheveux de lin</h3><p><code>Achille Claude Debussy : Préludes, Livre 1 (L. 125) - VIII. La Fille aux cheveux de lin: Très calme et doucement expressif</code><br><code>Recorded 30/12/2021</code><br><video width="320" height="180" src="/images/piano-video-archive/la-fille-aux-cheveux-de-lin.mp4" controls></video></p>
+<h3 id="2eme-Gnossienne"><a href="#2eme-Gnossienne" class="headerlink" title="2ème Gnossienne"></a>2ème Gnossienne</h3><p><code>Erik Satie : Trois Gnossiennes - II. Avec étonnement</code><br><code>Recorded 22/1/2021</code><br><video width="320" height="180" src="/images/piano-video-archive/gnossienne-2.mp4" controls></video></p>
+<h3 id="Nocturne-Op-20-No-1"><a href="#Nocturne-Op-20-No-1" class="headerlink" title="Nocturne Op. 20, No. 1"></a>Nocturne Op. 20, No. 1</h3><p><code>Frédéric François Chopin : Nocturne Op. 20, No. 1</code><br><code>Recorded 14/2/2021</code><br><video width="320" height="180" src="/images/piano-video-archive/chopin-nocturne-op20-no1.mp4" controls></video></p>
+<h3 id="Wet-Hands"><a href="#Wet-Hands" class="headerlink" title="Wet Hands"></a>Wet Hands</h3><p><code>C418 : Minecraft Volume Alpha - XIII. Wet Hands</code><br><code>Recorded 20/2/2022</code><br><video width="320" height="180" src="/images/piano-video-archive/wet-hands.mp4" controls></video></p>
+<h3 id="Pathetique-Sonata-2nd-movement"><a href="#Pathetique-Sonata-2nd-movement" class="headerlink" title="Pathétique Sonata 2nd movement"></a>Pathétique Sonata 2nd movement</h3><p><code>Ludwig Van Beethoven : Piano Sonata No. 8 &quot;Pathétique&quot; - II. Adagio cantabile</code><br><code>Recorded 21/5/2021</code><br><video width="320" height="180" src="/images/piano-video-archive/pathetique-mvt-2.mp4" controls></video></p>
+<h3 id="Pavane-for-a-Dead-Princess"><a href="#Pavane-for-a-Dead-Princess" class="headerlink" title="Pavane for a Dead Princess"></a>Pavane for a Dead Princess</h3><p><code>Maurice Ravel : Pavane pour une infante défunte</code><br><code>Recorded 12/6/2022</code><br><video width="320" height="180" src="/images/piano-video-archive/pavane-pour-une-infante-defunte.mp4" controls></video></p>
+<h3 id="Game-of-Thrones-Theme"><a href="#Game-of-Thrones-Theme" class="headerlink" title="Game of Thrones Theme"></a>Game of Thrones Theme</h3><p><code>Ramin Djawadi : Game of Thrones Theme</code><br><code>Recorded 23/7/2022</code><br><video width="320" height="180" src="/images/piano-video-archive/game-of-thrones.mp4" controls></video></p>
+<h3 id="Prelude-in-C-major-from-The-Well-Tempered-Clavier-Book-1"><a href="#Prelude-in-C-major-from-The-Well-Tempered-Clavier-Book-1" class="headerlink" title="Prelude in C major, from The Well-Tempered Clavier Book 1"></a>Prelude in C major, from The Well-Tempered Clavier Book 1</h3><p><code>Johann Sebastian Bach : Das Wohltemperierte Klavier, Band I: Präludium in C-Dur, BWV846</code><br><code>Recorded 27/8/2022</code><br><video width="320" height="180" src="/images/piano-video-archive/well-tempered-clavier-1.mp4" controls></video></p>
+<h3 id="Canon-in-D"><a href="#Canon-in-D" class="headerlink" title="Canon in D"></a>Canon in D</h3><p><code>Johann Pachelbel : Kanon in D-Dur</code><br><code>Recorded 8/10/2022</code><br><video width="320" height="180" src="/images/piano-video-archive/canon-in-d.mp4" controls></video></p>
+
+    </div>
+
+    <div class="post-tags">
+        
+        <span class="icon">
+            <a-icon type="tags" theme="filled" />
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/English" style=color:#ffa2c4>
+                English
+            </a>
+        </span>
+        
+    </div>
+
+    <div id="gitalk-container"></div>
+
+</div>
+    </div>
+</div>
+                     
+<footer id="footer">
+    <div class="footer-wrap">
+        <div>
+            © 2026 - 2026 Yuzhou&#39;s Playground
+            <span class="footer-icon">
+                <a-icon type="flag" theme="filled" /></span>
+            @Yam Yee Zhe 严宇泽
+        </div>
+        <div></div>
+        <div>Based on the <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo Engine</a> & <a
+                target="_blank" rel="noopener" href="https://github.com/korilin/hexo-theme-particle">Particle Theme</a></div>
+        
+    </div>
+
+</footer>
+
+<script src="/js/highlight.min.js"></script>
+<script src="/js/particle.js"></script>
+                </div>
+            </div>
+        </transition>
+    </div>
+
+    <script>
+    new Vue({
+        el: "#layout",
+        data: {
+            show_page: false,
+            onload_menu: false,
+            menu_show: false,
+            card_top: 100
+        },
+        created: function () {
+            var that = this
+            window.onload = function () {
+                that.show_page = true
+                document.getElementById("loadcontent").style.opacity = 0
+                setTimeout(function () {
+                    document.getElementById("loadleft").style.width = 0
+                    document.getElementById("loadright").style.width = 0
+                }, 300)
+                setTimeout(function () {
+                    document.getElementById("loading").style = "display:none"
+                }, 600)
+            }
+        },
+        mounted: function () {
+            var that = this
+            window.addEventListener('scroll', function (e) {
+                that.menu_show = false
+            })
+        },
+        methods: {
+            home_click: function () {
+                window.scrollTo({
+                    top: window.innerHeight - 80,
+                    behavior: "smooth",
+                });
+            }
+        }
+    })
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+    const gitalk = new Gitalk({
+        clientID: 'Ov23liE3qUuVcTkWUTlO',
+        clientSecret: '73d13331643f00f83df432641af6a3d3e068b07e',
+        repo: 'blog-comments',      // The repository of store comments,
+        owner: 'yuzhoumy',
+        admin: ['yuzhoumy'],
+        language: 'en',
+        id: location.pathname,      // Ensure uniqueness and length less than 50
+        distractionFreeMode: true  // Facebook-like distraction free mode
+    })
+    gitalk.render('gitalk-container')
+</script>
+
+</body>
+
+</html>
