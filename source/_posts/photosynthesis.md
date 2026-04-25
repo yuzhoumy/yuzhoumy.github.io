@@ -16,3 +16,6 @@ author: Yam Yee Zhe 严宇泽
 ## KSSM中五生物第二課：葉子
 Credit to our grand lecturer: Sam Eu Qang
 Instagram : [samq709_2009](https://instagram.com/samq709_2009)
+
+
+<video src="/images/posts/photosynthesis.mp4" controls></video>

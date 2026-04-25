@@ -2,7 +2,9 @@
 title: Piano video archive
 date: 2026-02-05 12:10:55
 categories: [Archive]
-tags: [English]
+tags: 
+    - Music
+    - English
 author: Yam Yee Zhe 严宇泽
 ---
 
