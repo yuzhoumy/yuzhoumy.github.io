@@ -56,7 +56,7 @@ menu:
     icon:
       name: book
       theme: filled
-    src: /categories/Music # å½“ä½ çš„åšå®¢rootä¸ä¸º '/'ï¼Œè€Œæ˜¯å…¶å®ƒæ—¶ï¼Œä¾‹å¦‚ '/like/'
+    src: /categories/Life # å½“ä½ çš„åšå®¢rootä¸ä¸º '/'ï¼Œè€Œæ˜¯å…¶å®ƒæ—¶ï¼Œä¾‹å¦‚ '/like/'
   tags:
     icon:
       name: tags
