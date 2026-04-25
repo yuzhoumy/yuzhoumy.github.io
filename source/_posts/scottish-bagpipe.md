@@ -2,9 +2,10 @@
 title: 蘇格蘭風笛
 date: 2026-04-09 09:51:16
 categories: 
-    - Music
+    - Life
 tags: 
     - Chinese
+    - Music
 ---
 
 覺得自己精神萎靡不振嗎？且聽我推坑給你的 **蘇格蘭風笛**！
