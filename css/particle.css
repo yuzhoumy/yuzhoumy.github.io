@@ -439,7 +439,7 @@ a {
 }
 .friends-page .friends-description {
   max-width: 720px;
-  margin: 16px auto 0;
+  margin: 16px 0 0;
   font-size: 17px;
   line-height: 1.8;
   color: #4f6470;
@@ -497,7 +497,6 @@ a {
   color: #537080;
   line-height: 1.6;
   font-size: 14px;
-  text-align: center;
 }
 .friends-page .friends-empty {
   padding: 24px;
