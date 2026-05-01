@@ -18,4 +18,4 @@ Credit to our grand lecturer: Sam Eu Qang
 Instagram : [samq709_2009](https://instagram.com/samq709_2009)
 
 
-<video src="/images/posts/photosynthesis.mp4" controls></video>
+<video src="/images/post/photosynthesis.mp4" controls></video>
