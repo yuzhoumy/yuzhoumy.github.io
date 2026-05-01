@@ -47,6 +47,9 @@
     <% }else{ %>
     <link rel="stylesheet" href="<%- rootlink %>css/full-theme.css">
     <% } %>
+    <% if(theme.gitalk && theme.gitalk.enable && is_post()){ %>
+    <link rel="stylesheet" href="<%- rootlink %>css/gitalk.min.css">
+    <% } %>
     <script src="<%- rootlink %>js/vue.js"></script>
     <script src="<%- rootlink %>js/antd.min.js"></script>
 </head>

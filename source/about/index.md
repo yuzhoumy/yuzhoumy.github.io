@@ -41,8 +41,9 @@ E-mail: [1@yuzhou.my](mailto:1@yuzhou.my)
 ### Games
 
 - Minecraft  
-> Been playing for 9 years. I’ve been both a builder and a server admin. There were lots of ups and downs. These days I still play single-player when I'm bored (ง •̀_•́)ง
+> Been playing for 9 years. I’ve been both a builder and a server admin. There were lots of ups and downs. These days I still play single-player when I'm bored.
 - Cities Skyline
+- Planet Coaster 2
 
 ---
 
@@ -77,8 +78,9 @@ E-mail: [1@yuzhou.my](mailto:1@yuzhou.my)
 ### 遊戲
 
 - Minecraft  
-> 入坑9年，當過建築師也當過伺服主，有血有淚，現在偶爾還是會玩單機(ง •̀_•́)ง
+> 入坑9年，當過建築師也當過伺服主，有血有淚，現在偶爾還是會玩單機。
 - Cities Skyline
+- Planet Coaster 2
 
 ---
 
@@ -113,8 +115,9 @@ E-mail: [1@yuzhou.my](mailto:1@yuzhou.my)
 ### 游戏
 
 - Minecraft  
-> 入坑9年，当过建筑师也当过服务器主，有血有泪，现在偶尔还是会玩单机(ง •̀_•́)ง
+> 入坑9年，当过建筑师也当过服务器主，有血有泪，现在偶尔还是会玩单机。
 - Cities Skyline
+- Planet Coaster 2
 
 ---
 
@@ -149,5 +152,6 @@ E-mail: [1@yuzhou.my](mailto:1@yuzhou.my)
 ### Permainan
 
 - Minecraft  
-> Dah main 9 tahun, pernah jadi jurubina dan ketua server, ada manis ada pahit. Sekarang masih saya ekapemain kadang-kadang.(ง •̀_•́)ง
+> Dah main 9 tahun, pernah jadi jurubina dan ketua server, ada manis ada pahit. Sekarang masih saya ekapemain kadang-kadang。
 - Cities Skyline
+- Planet Coaster 2
