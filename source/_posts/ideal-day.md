@@ -11,6 +11,7 @@ author: Yam Yee Zhe 严宇泽
 
 我今年17歲，是高中生，不知從何時開始，我便幾乎完全地將自己沉浸在學業之中，不再思考自己的未來了。  
 對我這個鮮少瞳景未來的人來説，若你問我“理想的生活”是什麽？我的腦袋是空蕩蕩的…… 因此，我就從比較近的地方，“理想的周末”，開始説起吧！
+
 !!! note "BlogBlog 同樂會"
     這是我的<a href="https://blogblog.club/party/">「BlogBlog 同樂會 - 2026 年 3 月」</a>的投稿文章。本月主題是<a href="https://alexhsu.com/perfect-days">「理想的日常」</a>，由 <a href="https://alexhsu.com/">Alex Hsu</a> 主持。如果你有自己的部落格，歡迎一起來參加！
 

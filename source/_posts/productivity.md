@@ -7,7 +7,7 @@ tags:
     - Chinese
     - Important
 ---
-!!! "BlogBlog 同樂會"
+!!! note "BlogBlog 同樂會"
     這是我的<a href="https://blogblog.club/party/">「BlogBlog 同樂會 - 2026 年 4 月」</a>的投稿文章。本月主題是<a href="https://www.wen-lab.tw/blogblog-party-productivity/">「生產力」</a>，由 <a href="https://www.wen-lab.tw/author/wen/">Wen</a> 主持。如果你有自己的部落格，歡迎一起來參加！
 
 請原諒我的孤陋寡聞，我對“生產力”這三個字其實挺陌生的，所以這篇文章中，我會把他當作“效率”來理解。  
