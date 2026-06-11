@@ -7,8 +7,8 @@ tags:
     - Chinese
     - Important
 ---
-!!! note "BlogBlog 同樂會"
-    這是我的<a href="https://blogblog.club/party/">「BlogBlog 同樂會 - 2026 年 4 月」</a>的投稿文章。本月主題是<a href="https://www.wen-lab.tw/blogblog-party-productivity/">「生產力」</a>，由 <a href="https://www.wen-lab.tw/author/wen/">Wen</a> 主持。如果你有自己的部落格，歡迎一起來參加！
+> BlogBlog 同樂會
+這是我的 [「BlogBlog 同樂會 - 2026 年 4 月」](https://blogblog.club/party/) 的投稿文章。本月主題是 [「生產力」](https://www.wen-lab.tw/blogblog-party-productivity/) ， [Wen](https://www.wen-lab.tw/author/wen/) 如果你有自己的部落格，歡迎一起來參加！
 
 請原諒我的孤陋寡聞，我對“生產力”這三個字其實挺陌生的，所以這篇文章中，我會把他當作“效率”來理解。  
 作爲學生，我是近兩年（16歲開始）才開始重視生產力的，因爲 [SPM](https://zh.wikipedia.org/wiki/%E9%A6%AC%E4%BE%86%E8%A5%BF%E4%BA%9E%E6%95%99%E8%82%B2%E6%96%87%E6%86%91) 快到了嘛。

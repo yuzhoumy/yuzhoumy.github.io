@@ -5,8 +5,8 @@ categories: [Life]
 tags: [Chinese, Important]
 author: Yam Yee Zhe 严宇泽
 ---
-!!! note "BlogBlog 同樂會"
-    這是我的<a href="https://blogblog.club/party/">「BlogBlog 同樂會 - 2026 年 4 月」</a>的投稿文章。本月主題是<a href="https://www.wen-lab.tw/blogblog-party-productivity/">「生產力」</a>，由 <a href="https://www.wen-lab.tw/author/wen/">Wen</a> 主持。如果你有自己的部落格，歡迎一起來參加！
+> BlogBlog 同樂會
+這是我的 [「BlogBlog 同樂會 - 2026 年 4 月」](https://blogblog.club/party/) 的投稿文章。本月主題是 [「生產力」](https://www.wen-lab.tw/blogblog-party-productivity/)，由 [Wen](https://www.wen-lab.tw/author/wen/) 主持。如果你有自己的部落格，歡迎一起來參加！
 
 ![Background](/images/blog-background.png)
 
