@@ -8,8 +8,6 @@ tags:
 author: Yam Yee Zhe 严宇泽
 ---
 
-![Background](/images/blog-background.png)
-
 Here is a list of videos of me playing the piano. I recorded most of them between 2021 and 2023.  
 The list is arranged according to the date each video was originally recorded.  
 Some videos are not included because the quality is poor, unclear or the recording is incomplete.

@@ -8,8 +8,6 @@ author: Yam Yee Zhe 严宇泽
 > BlogBlog 同樂會
 這是我的 [「BlogBlog 同樂會 - 2026 年 4 月」](https://blogblog.club/party/) 的投稿文章。本月主題是 [「生產力」](https://www.wen-lab.tw/blogblog-party-productivity/)，由 [Wen](https://www.wen-lab.tw/author/wen/) 主持。如果你有自己的部落格，歡迎一起來參加！
 
-![Background](/images/blog-background.png)
-
 我的時間是**液態**的。  
 Google Calendar 中的排程看起來整齊又精美。但是，我真的能在指定的時間完成他嗎？我的 To-do 任務就像在波濤的水中翻滾的石子，流來~ 流去~ 最後和一開始預定的時間越差越遠。
 

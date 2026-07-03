@@ -6,8 +6,6 @@ tags: [English]
 author: Yam Yee Zhe 严宇泽
 ---
 
-![Background](/images/blog-background.png)
-
 # Fotosintesis: Penerangan dalam bahasa Cina
 # Photosynthesis: Explained in Chinese
 # 光合作用中文解釋
