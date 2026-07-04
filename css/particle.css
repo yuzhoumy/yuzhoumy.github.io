@@ -774,10 +774,18 @@ a {
 .content h5 {
   text-align: left !important;
   margin: 18px 0;
+  color: text-font;
 }
 .content a {
   color: default-link;
   text-decoration: none;
+}
+.content h1 a.headerlink,
+.content h2 a.headerlink,
+.content h3 a.headerlink,
+.content h4 a.headerlink,
+.content h5 a.headerlink {
+  color: inherit;
 }
 .content b,
 .content strong {
