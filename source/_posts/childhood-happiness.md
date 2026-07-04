@@ -1,8 +1,10 @@
 ---
 title: 小時候的快樂，純粹是當時什麽都不知道而已
 date: 2026-04-25 15:27:37
-categories: [Life]
-tags: [Chinese]
+categories: 
+  - Life
+tags: 
+  - Chinese
 author: Yam Yee Zhe 严宇泽
 ---
 
