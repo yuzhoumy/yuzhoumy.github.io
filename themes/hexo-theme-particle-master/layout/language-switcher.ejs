@@ -1,0 +1,10 @@
+﻿<% var languageVariants = language_variants(page); %>
+<% if(languageVariants.length > 1){ %>
+<nav class="language-switcher" aria-label="Post language">
+    <% languageVariants.forEach(function(language){ %>
+    <a class="language-button <%- language.active ? 'active' : '' %>" href="<%- language.url %>" hreflang="<%- language.lang %>">
+        <%- language.label %>
+    </a>
+    <% }) %>
+</nav>
+<% } %>
