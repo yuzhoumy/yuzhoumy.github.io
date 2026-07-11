@@ -9,6 +9,9 @@ tags:
 
 > 这是我的[“BlogBlog 同乐会 - 2026 年 7 月 ”](https://blogblog.club/party/) 的投稿文章。本月主题是[“有趣的小知识或冷门概念”](https://shuaixin.cc/Fun-Fact/)，由[刘昕](https://www.google.com/search?q=https://shuaixin.cc/)主持。如果你有自己的部落格，欢迎一起来参加！
 
+![吉兰丹皮影戏](/images/post/wayang-kulit-kelantan.jpg)
+这是吉兰丹皮影戏，由爪哇人传入吉兰丹，是满者伯夷帝国扩展版图的结果。
+
 # Wes Mangan?
 
 说起 Java，大部分人都会想到程序语言，或者是 Minecraft。但在世界的另一端，在硅谷的背面，**爪哇语（Basa Jawa/Javanese）** 是印尼一门超过 8000 万人使用的语言哦！
