@@ -1,5 +1,6 @@
 ---
 title: 真正的 Java
+date: 2026-07-12 03:14:00
 categories:
   - Culture
 tags:
