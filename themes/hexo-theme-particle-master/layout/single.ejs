@@ -1,4 +1,4 @@
-﻿<% 
+<%
 var rootlink = config.root;
 %>
 <div id="home-posts-wrap">
@@ -30,11 +30,18 @@ var rootlink = config.root;
 
     </div>
 
-    <%- include("language-switcher") %>
-
     <div class="content" v-pre>
         <%- page.content %>
     </div>
+
+    <% var postVariants = post_language_entries(page); %>
+    <% if(postVariants.length > 1){ %>
+    <div class="post-language-warning" data-post-unsupported-warning style="display:none">
+        <div class="warning-title" data-i18n="post.unsupportedTitle">This version is not available in your selected language.</div>
+        <p class="warning-description" data-i18n="post.unsupportedDescription">Try one of the available variants below.</p>
+        <ul class="warning-links" data-post-variant-links></ul>
+    </div>
+    <% } %>
 
     <div class="post-tags">
         <% if(page.tags && page.tags.data.length!=0){ %>

@@ -4,10 +4,10 @@
     <div id="home-posts">
 <div class="friends-page">
     <div class="friends-hero">
-        <p class="friends-kicker">Friends</p>
-        <h1><%= page.title %></h1>
+        <p class="friends-kicker" data-i18n="friends.kicker">Friends</p>
+        <h1 data-i18n="friends.pageTitle"><%= page.title %></h1>
         <% if (page.description) { %>
-        <p class="friends-description"><%= page.description %></p>
+        <p class="friends-description" data-i18n="friends.pageDescription"><%= page.description %></p>
         <% } %>
     </div>
     <% if (page.content && page.content.trim()) { %>
@@ -33,7 +33,7 @@
         <% }); %>
     </div>
     <% } else { %>
-    <div class="friends-empty">
+    <div class="friends-empty" data-i18n="friends.empty">
         Add entries to the <code>friends</code> list in this page's front matter to show profile cards here.
     </div>
     <% } %>

@@ -41,7 +41,7 @@
         <% posts.forEach(function(post){ %>
         <% var postKey = post_group_key(post); if(seenPosts[postKey]) return; seenPosts[postKey] = true; post = primary_post_variant(post); %>
         <a-timeline>
-            <a-timeline-item color="#a5c2f5">
+            <a-timeline-item data-post-card data-post-langs="<%- post_language_entries(post).map(function(variant){ return variant.lang; }).join(' ') %>" color="#a5c2f5">
                 <a-card hoverable>
                     <div class="item-time"><%- date(post.date, 'YYYY/M/D', 'en') %></div>
                     <%- include('post-title-variants', { post: post }) %>

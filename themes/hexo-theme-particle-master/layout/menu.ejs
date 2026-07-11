@@ -9,9 +9,21 @@
             <span>
                 <a-icon type="<%- theme.menu[key].icon.name %>" theme="<%- theme.menu[key].icon.theme %>" />
             </span>
-            <span><%=key%></span>
+            <span data-i18n="nav.<%- key %>"><%=key%></span>
         </a>
         <% }); %>
+        <div class="global-language-menu" data-language-menu>
+            <button class="global-language-trigger" type="button" data-language-trigger aria-expanded="false">
+                <span class="global-language-current" data-language-current>English</span>
+                <span class="global-language-caret"></span>
+            </button>
+            <div class="global-language-dropdown" role="menu">
+                <button class="global-language-option" type="button" value="en" data-language-option>English</button>
+                <button class="global-language-option" type="button" value="zh-TW" data-language-option>繁體中文</button>
+                <button class="global-language-option" type="button" value="zh-CN" data-language-option>简体中文</button>
+                <button class="global-language-option" type="button" value="my" data-language-option>Bahasa Melayu</button>
+            </div>
+        </div>
     </div>
 
     <div :class="'phone-menu ' + menu_show" id="phone-menu">
@@ -28,10 +40,22 @@
                     <div style="min-width:20px; max-width:50px; width: 10%">
                         <a-icon type="<%- theme.menu[key].icon.name %>" theme="<%- theme.menu[key].icon.theme %>" />
                     </div>
-                    <div style="min-width:100px;max-width: 150%;width: 20%;"><%=key%></div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;" data-i18n="nav.<%- key %>"><%=key%></div>
                 </div>
             </a>
             <% }); %>
+            <div class="mobile-language-options" data-language-menu>
+                <button class="global-language-trigger" type="button" data-language-trigger aria-expanded="false">
+                    <span class="global-language-current" data-language-current>English</span>
+                    <span class="global-language-caret"></span>
+                </button>
+                <div class="global-language-dropdown" role="menu">
+                    <button class="global-language-option" type="button" value="en" data-language-option>English</button>
+                    <button class="global-language-option" type="button" value="zh-TW" data-language-option>繁體中文</button>
+                    <button class="global-language-option" type="button" value="zh-CN" data-language-option>简体中文</button>
+                    <button class="global-language-option" type="button" value="my" data-language-option>Bahasa Melayu</button>
+                </div>
+            </div>
         </div>
         <div class="curtain" v-show="menu_show"></div>
     </div>

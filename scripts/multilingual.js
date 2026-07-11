@@ -368,3 +368,20 @@ hexo.extend.helper.register('post_group_key', function postGroupKey(post) {
   if (!source || source.type !== 'post') return (post && (post.source || post.path || post._id)) || '';
   return source.key;
 });
+hexo.extend.helper.register('language_route_map', function languageRouteMap(item) {
+  const source = parseLangSource(item && item.source);
+  if (!source) return {};
+
+  const entries = source.type === 'post'
+    ? groupForPost(hexo, source)
+    : groupForPage(this.site, source);
+
+  return entries.reduce((result, entry) => {
+    result[entry.source.lang] = url_for.call(this, languageUrlFor(entry.item, entry.source));
+    return result;
+  }, {});
+});
+
+hexo.extend.helper.register('post_langs', function postLangs(post) {
+  return postVariantEntries(hexo, post).map(entry => entry.lang).join(' ');
+});

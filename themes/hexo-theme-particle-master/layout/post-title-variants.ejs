@@ -1,12 +1,8 @@
 <% var titleVariants = post_title_variants(post); %>
-<div class="post-title-variants">
-    <% titleVariants.forEach(function(variant, index){ %>
-    <a class="post-title-variant <%- index === 0 ? 'primary' : 'secondary' %>" href="<%- variant.url %>" hreflang="<%- variant.lang %>">
-        <% if(index === 0){ %>
+<div class="post-title-variants" data-title-variants data-post-langs="<%- titleVariants.map(function(variant){ return variant.lang; }).join(' ') %>">
+    <% titleVariants.forEach(function(variant){ %>
+    <a class="post-title-variant" href="<%- variant.url %>" hreflang="<%- variant.lang %>" data-lang-content="<%- variant.lang %>">
         <h3><%- variant.title %></h3>
-        <% } else { %>
-        <div class="alternate-title"><%- variant.title %></div>
-        <% } %>
     </a>
     <% }) %>
 </div>

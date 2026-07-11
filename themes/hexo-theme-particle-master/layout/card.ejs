@@ -7,8 +7,8 @@
             <%- config.author %>
         </div>
         <div class="descriptions">
-            <% theme.card.description.forEach(function(desc){ %>
-            <div class="description">
+            <% theme.card.description.forEach(function(desc, index){ %>
+            <div class="description" data-i18n="card.description<%- index + 1 %>">
                 <%- desc %>
             </div>
             <% }) %>
@@ -31,7 +31,7 @@
         <div class="friend-links">
             <% Object.keys(theme.card.friend_links).forEach(function(key){ %>
             <div class="friend-link">
-                <a href="<%- theme.card.friend_links[key] %>">
+                <a href="<%- theme.card.friend_links[key] %>" data-i18n="card.friendLink">
                     <%- key %>
                 </a>
             </div>

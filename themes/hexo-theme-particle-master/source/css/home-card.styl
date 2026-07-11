@@ -2,6 +2,13 @@
     position relative
     width 300px
     top 100px
+    transition opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease
+
+    &.home-card-hidden
+        opacity 0
+        visibility hidden
+        pointer-events none
+        transform translateY(12px)
 
     .card-style
         border-radius 10px

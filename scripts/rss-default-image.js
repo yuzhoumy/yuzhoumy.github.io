@@ -1,6 +1,6 @@
 ﻿'use strict';
 
-const DEFAULT_IMAGE_DESCRIPTION = '<p><img src="/images/blog-background.png" alt="Blog background"></p>';
+const DEFAULT_IMAGE_DESCRIPTION = '';
 
 function hasImage(data) {
   return Boolean(

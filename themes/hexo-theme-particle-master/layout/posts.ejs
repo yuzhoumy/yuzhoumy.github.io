@@ -1,21 +1,14 @@
 <%
-var current = (page.current - 1) * config.index_generator.per_page;
 var rootlink = config.root;
 var homePosts = [];
 site.posts.forEach(function(post){
     if (is_primary_post_variant(post)) homePosts.push(post);
 });
 %>
-<div class="feed-language-switcher" data-feed-language-switcher>
-    <button type="button" class="language-button active" data-lang="en">English</button>
-    <button type="button" class="language-button" data-lang="zh-TW">繁體中文</button>
-    <button type="button" class="language-button" data-lang="zh-CN">简体中文</button>
-    <button type="button" class="language-button" data-lang="my">Bahasa Melayu</button>
-</div>
-
+<div data-feed-list data-page-number="<%- page.current %>" data-per-page="<%- config.index_generator.per_page %>">
 <% homePosts.forEach(function(post){ %>
 <% var variants = post_language_entries(post); %>
-<div class="post" data-feed-post>
+<div class="post" data-feed-post data-post-langs="<%- variants.map(function(variant){ return variant.lang; }).join(' ') %>" style="display:none">
 
     <div class="feed-post-title">
         <% variants.forEach(function(variant){ %>
@@ -85,77 +78,10 @@ site.posts.forEach(function(post){
     </div>
 
     <% variants.forEach(function(variant){ %>
-    <a href="<%- variant.url %>" class="go-post" data-lang-content="<%- variant.lang %>">
+    <a href="<%- variant.url %>" class="go-post" data-lang-content="<%- variant.lang %>" data-i18n="ui.readMore">
         Read More
     </a>
     <% }) %>
 </div>
 <% }); %>
-
-<script>
-(function () {
-    var supported = ['en', 'zh-TW', 'zh-CN', 'my'];
-    var params = new URLSearchParams(window.location.search);
-    var currentLang = params.get('lang') || localStorage.getItem('feedLang') || 'en';
-    if (supported.indexOf(currentLang) === -1) currentLang = 'en';
-
-    var perPage = <%- config.index_generator.per_page %>;
-    var pageNumber = <%- page.current %>;
-
-    function supportsLang(post, lang) {
-        return !!post.querySelector('[data-lang-content="' + lang + '"]');
-    }
-
-    function setPaginationLang(lang) {
-        document.querySelectorAll('.page-current a').forEach(function (link) {
-            var url = new URL(link.getAttribute('href'), window.location.origin);
-            url.searchParams.set('lang', lang);
-            link.setAttribute('href', url.pathname + url.search + url.hash);
-        });
-    }
-
-    function setLang(lang) {
-        currentLang = supported.indexOf(lang) === -1 ? 'en' : lang;
-        localStorage.setItem('feedLang', currentLang);
-        document.querySelectorAll('[data-feed-language-switcher] .language-button').forEach(function (button) {
-            button.classList.toggle('active', button.getAttribute('data-lang') === currentLang);
-        });
-        var matchingPosts = Array.prototype.filter.call(document.querySelectorAll('[data-feed-post]'), function (post) {
-            return supportsLang(post, currentLang);
-        });
-        var start = (pageNumber - 1) * perPage;
-        var end = start + perPage;
-
-        document.querySelectorAll('[data-feed-post]').forEach(function (post) {
-            var index = matchingPosts.indexOf(post);
-            var showPost = index >= start && index < end;
-            post.classList.toggle('feed-post-visible', showPost);
-            post.style.display = showPost ? '' : 'none';
-            post.querySelectorAll('[data-lang-content]').forEach(function (node) {
-                node.style.display = showPost && node.getAttribute('data-lang-content') === currentLang ? 'block' : 'none';
-            });
-        });
-        setPaginationLang(currentLang);
-    }
-
-    document.addEventListener('click', function (event) {
-        var button = event.target.closest('[data-feed-language-switcher] .language-button');
-        if (!button) return;
-
-        event.preventDefault();
-        var lang = button.getAttribute('data-lang');
-        var url = new URL(window.location.href);
-        url.searchParams.set('lang', lang);
-        window.history.replaceState({}, '', url.pathname + url.search + url.hash);
-        setLang(lang);
-    });
-
-    setLang(currentLang);
-    window.addEventListener('load', function () {
-        setLang(currentLang);
-    });
-    setTimeout(function () {
-        setLang(currentLang);
-    }, 0);
-})();
-</script>
+</div>
