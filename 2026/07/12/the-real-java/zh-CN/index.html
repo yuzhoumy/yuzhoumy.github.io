@@ -1,0 +1,707 @@
+
+<!DOCTYPE html>
+<html lang="en ">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>真正的 Java - Yuzhou 宇宙</title>
+    <meta name="author" content="Yuzhou 宇宙">
+    <meta name="description" content="I call myself "yuzhou" (宇宙) which means the universe, since I was 12.  ">
+    <meta name="keywords" content=" ">
+    <script>
+    window.YZ_LANGUAGE = {
+        supported: ['en', 'zh-TW', 'zh-CN', 'my'],
+        labels: {
+            en: 'English',
+            'zh-TW': '\u7e41\u9ad4\u4e2d\u6587',
+            'zh-CN': '\u7b80\u4f53\u4e2d\u6587',
+            my: 'Bahasa Melayu'
+        },
+        routeMap: {"zh-TW":"/2026/07/12/the-real-java/","zh-CN":"/2026/07/12/the-real-java/zh-CN/"},
+        translations: {
+            en: {
+                'nav.home': 'Home',
+                'nav.about': 'About',
+                'nav.archives': 'Archives',
+                'nav.friends': 'Friends',
+                'nav.categories': 'Categories',
+                'nav.tags': 'Tags',
+                'home.subtitle': 'Hello',
+                'home.description': 'I call myself "yuzhou" (宇宙) which means the universe, since I was 12. ',
+                'card.description1': 'A Malaysian high school student, currently 17 years old.',
+                'card.description2': 'I will share my thoughts and daily life here.',
+                'friends.kicker': 'Friends',
+                'friends.pageTitle': '真正的 Java',
+                'friends.pageDescription': '',
+                'friends.empty': 'Add entries to the <code>friends</code> list in this page\'s front matter to show profile cards here.',
+                'footer.basedOn': 'Based on the',
+                'footer.icp': '备案号',
+                'card.friendLink': 'More about me',
+                'ui.readMore': 'Read More',
+                'ui.loading': 'LOADING...',
+                'ui.cacheHint': 'Please enable caching if loading is too slow (enabled by default in browsers).',
+                'post.unsupportedTitle': 'This version is not available in your selected language.',
+                'post.unsupportedDescription': 'Try one of the available variants below.'
+            },
+            'zh-TW': {
+                'nav.home': '\u9996\u9801',
+                'nav.about': '\u95dc\u65bc',
+                'nav.archives': '\u6b78\u6a94',
+                'nav.friends': '\u53cb\u93c8',
+                'nav.categories': '\u5206\u985e',
+                'nav.tags': '\u6a19\u7c64',
+                'home.subtitle': '歡迎來到我的小宇宙~',
+                'home.description': '我從12歲開始稱自己為「宇宙」',
+                'card.description1': '一位馬來西亞高中生，目前 17 歲。',
+                'card.description2': '我會把日常想法和生活點滴分享在這裡。',
+                'friends.kicker': '朋友們',
+                'friends.pageTitle': '友站鏈接',
+                'friends.pageDescription': '一個我喜歡在網路上認識的朋友們的小角落。',
+                'friends.empty': '在這個頁面的 front matter 中新增 <code>friends</code> 條目，就能在這裡顯示好友卡片。',
+                'footer.basedOn': '基於',
+                'footer.icp': '備案號',
+                'card.friendLink': '關於我',
+                'ui.readMore': '\u95b1\u8b80\u66f4\u591a',
+                'ui.loading': '\u8f09\u5165\u4e2d...',
+                'ui.cacheHint': '\u5982\u679c\u8f09\u5165\u592a\u6162\uff0c\u8acb\u555f\u7528\u700f\u89bd\u5668\u5feb\u53d6\u3002'
+            },
+            'zh-CN': {
+                'nav.home': '\u9996\u9875',
+                'nav.about': '\u5173\u4e8e',
+                'nav.archives': '\u5f52\u6863',
+                'nav.friends': '\u53cb\u94fe',
+                'nav.categories': '\u5206\u7c7b',
+                'nav.tags': '\u6807\u7b7e',
+                'home.subtitle': '欢迎来到我的小宇宙~',
+                'home.description': '我从12岁开始称自己为「宇宙」',
+                'card.description1': '一位马来西亚高中生，目前 17 岁。',
+                'card.description2': '我会把日常想法和生活点滴分享在这里。',
+                'friends.kicker': '朋友们',
+                'friends.pageTitle': '友站链接',
+                'friends.pageDescription': '一个我喜欢在网络上认识的朋友们的小角落。',
+                'friends.empty': '在这个页面的 front matter 中新增 <code>friends</code> 条目，就能在这里显示好友卡片。',
+                'footer.basedOn': '基于',
+                'footer.icp': '备案号',
+                'card.friendLink': '关于我',
+                'ui.readMore': '\u9605\u8bfb\u66f4\u591a',
+                'ui.loading': '\u52a0\u8f7d\u4e2d...',
+                'ui.cacheHint': '\u5982\u679c\u52a0\u8f7d\u592a\u6162\uff0c\u8bf7\u542f\u7528\u6d4f\u89c8\u5668\u7f13\u5b58\u3002'
+            },
+            my: {
+                'nav.home': 'Laman Utama',
+                'nav.about': 'Tentang',
+                'nav.archives': 'Arkib',
+                'nav.friends': 'Rakan',
+                'nav.categories': 'Kategori',
+                'nav.tags': 'Tag',
+                'home.subtitle': 'Selamat datang ke ruang saya',
+                'home.description': 'Kongsi kehidupan, pemikiran, dan catatan harian saya.',
+                'card.description1': 'Seorang pelajar sekolah menengah Malaysia, berusia 17 tahun.',
+                'card.description2': 'Saya akan berkongsi kehidupan harian dan pemikiran saya di sini.',
+                'friends.kicker': 'Rakan',
+                'friends.pageTitle': 'Profil Rakan',
+                'friends.pageDescription': 'Sudut kecil untuk orang yang saya suka kenali di internet.',
+                'friends.empty': 'Tambah entri <code>friends</code> dalam front matter halaman ini untuk memaparkan kad profil di sini.',
+                'footer.basedOn': 'Berasaskan',
+                'footer.icp': 'No. Pendaftaran',
+                'card.friendLink': 'Lebih tentang saya',
+                'ui.readMore': 'Baca Lagi',
+                'ui.loading': 'MEMUATKAN...',
+                'ui.cacheHint': 'Sila aktifkan cache jika laman dimuatkan terlalu perlahan.',
+                'post.unsupportedTitle': 'Versi ini tidak tersedia dalam bahasa pilihan anda.',
+                'post.unsupportedDescription': 'Sila pilih versi yang tersedia di bawah.'
+            }
+        }
+    };
+
+    (function () {
+        var state = window.YZ_LANGUAGE;
+        var supported = state.supported;
+        var params = new URLSearchParams(window.location.search);
+        var queryLang = params.get('lang');
+        var lang = supported.indexOf(queryLang) !== -1 ? queryLang : localStorage.getItem('user-lang');
+        if (supported.indexOf(lang) === -1) lang = 'en';
+        if (supported.indexOf(queryLang) !== -1) localStorage.setItem('user-lang', lang);
+        else if (!localStorage.getItem('user-lang')) localStorage.setItem('user-lang', lang);
+        document.documentElement.setAttribute('lang', lang);
+
+        var routeMap = state.routeMap || {};
+        var target = routeMap[lang];
+        var path = window.location.pathname.replace(/\/+$/, '/') || '/';
+        var hasLangSuffix = /\/(en|zh-TW|zh-CN|my)\/?$/.test(path);
+        var shouldRedirect = target && (supported.indexOf(queryLang) !== -1 || !hasLangSuffix);
+        if (shouldRedirect) {
+            var link = document.createElement('a');
+            link.href = target;
+            var targetPath = link.pathname.replace(/\/+$/, '/') || '/';
+            if (targetPath !== path) {
+                window.location.replace(target + window.location.hash);
+            }
+        }
+    })();
+    </script>
+    <link rel="icon" href="/./images/avatar.png">
+    <link rel="stylesheet" href="/css/antd.min.css">
+    
+    <link rel="stylesheet" href="/css/full-theme.css">
+    
+    
+    <link rel="stylesheet" href="/css/gitalk.min.css">
+    
+    <script src="/js/vue.js"></script>
+    <script src="/js/antd.min.js"></script>
+<meta name="generator" content="Hexo 8.1.1"><link rel="alternate" href="/rss.xml" title="Yuzhou's Playground" type="application/rss+xml">
+<link rel="alternate" href="/rss-en.xml" title="Yuzhou's Playground English" type="application/rss+xml">
+<link rel="alternate" href="/rss-zh-tw.xml" title="Yuzhou's Playground 繁體中文" type="application/rss+xml">
+<link rel="alternate" href="/rss-zh-cn.xml" title="Yuzhou's Playground 简体中文" type="application/rss+xml">
+<link rel="alternate" href="/rss-my.xml" title="Yuzhou's Playground Bahasa Melayu" type="application/rss+xml">
+</head>
+
+<body>
+
+    <div id="loading"
+        style="height: 100vh; width: 100%; position: fixed;display: flex;z-index: 200; justify-content: space-between;">
+        <div id="loadleft" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div id="loadright" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div
+            style="position: fixed; height: 100vh; width: 100%;display: flex;justify-content: center;align-items: center;">
+            <div id="loadcontent"
+                style="width:400px;height:400px;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px#a3ddfb; text-align:center;opacity:1;transition:opacity 0.3s ease-out;">
+                <div>
+                    <h2 data-i18n="ui.loading">LOADING...</h2>
+                    <p data-i18n="ui.cacheHint">Please enable caching if loading is too slow (enabled by default in browsers).</p>
+                    <div>
+                        <img src="/images/loading.gif" alt="loading">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="layout">
+        <transition name="into">
+            <div v-show="show_page" style="display: none;">
+                <div id="menu_show">
+                     
+<nav id="menu">
+    <div class="desktop-menu">
+        <a href="/">
+            <span class="title">Yuzhou's Playground</span>
+        </a>
+        
+        <a href="/">
+            <span>
+                <a-icon type="home" theme="filled" />
+            </span>
+            <span data-i18n="nav.home">home</span>
+        </a>
+        
+        <a href="/about">
+            <span>
+                <a-icon type="idcard" theme="filled" />
+            </span>
+            <span data-i18n="nav.about">about</span>
+        </a>
+        
+        <a href="/archives">
+            <span>
+                <a-icon type="folder" theme="filled" />
+            </span>
+            <span data-i18n="nav.archives">archives</span>
+        </a>
+        
+        <a href="/friends">
+            <span>
+                <a-icon type="heart" theme="filled" />
+            </span>
+            <span data-i18n="nav.friends">friends</span>
+        </a>
+        
+        <a href="/categories/Life">
+            <span>
+                <a-icon type="book" theme="filled" />
+            </span>
+            <span data-i18n="nav.categories">categories</span>
+        </a>
+        
+        <a href="/tags/Self">
+            <span>
+                <a-icon type="tags" theme="filled" />
+            </span>
+            <span data-i18n="nav.tags">tags</span>
+        </a>
+        
+        <div class="global-language-menu" data-language-menu>
+            <button class="global-language-trigger" type="button" data-language-trigger aria-expanded="false">
+                <span class="global-language-current" data-language-current>English</span>
+                <span class="global-language-caret"></span>
+            </button>
+            <div class="global-language-dropdown" role="menu">
+                <button class="global-language-option" type="button" value="en" data-language-option>English</button>
+                <button class="global-language-option" type="button" value="zh-TW" data-language-option>繁體中文</button>
+                <button class="global-language-option" type="button" value="zh-CN" data-language-option>简体中文</button>
+                <button class="global-language-option" type="button" value="my" data-language-option>Bahasa Melayu</button>
+            </div>
+        </div>
+    </div>
+
+    <div :class="'phone-menu ' + menu_show" id="phone-menu">
+        <div :class="'title'" @click="menu_show=!menu_show">
+            <span style="margin-right: 10px;">
+                <a-icon type="appstore" theme="filled" />
+            </span>
+            <span>Yuzhou's Playground</span>
+        </div>
+        <div class="items" v-show="menu_show">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="home" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;" data-i18n="nav.home">home</div>
+                </div>
+            </a>
+            
+            <a href="/about">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="idcard" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;" data-i18n="nav.about">about</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="folder" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;" data-i18n="nav.archives">archives</div>
+                </div>
+            </a>
+            
+            <a href="/friends">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="heart" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;" data-i18n="nav.friends">friends</div>
+                </div>
+            </a>
+            
+            <a href="/categories/Life">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="book" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;" data-i18n="nav.categories">categories</div>
+                </div>
+            </a>
+            
+            <a href="/tags/Self">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="tags" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;" data-i18n="nav.tags">tags</div>
+                </div>
+            </a>
+            
+            <div class="mobile-language-options" data-language-menu>
+                <button class="global-language-trigger" type="button" data-language-trigger aria-expanded="false">
+                    <span class="global-language-current" data-language-current>English</span>
+                    <span class="global-language-caret"></span>
+                </button>
+                <div class="global-language-dropdown" role="menu">
+                    <button class="global-language-option" type="button" value="en" data-language-option>English</button>
+                    <button class="global-language-option" type="button" value="zh-TW" data-language-option>繁體中文</button>
+                    <button class="global-language-option" type="button" value="zh-CN" data-language-option>简体中文</button>
+                    <button class="global-language-option" type="button" value="my" data-language-option>Bahasa Melayu</button>
+                </div>
+            </div>
+        </div>
+        <div class="curtain" v-show="menu_show"></div>
+    </div>
+
+</nav>
+                </div>
+
+                <div id="main">
+                    
+<div id="home-posts-wrap">
+    <div id="home-posts">
+<div class="post">
+
+    <h2>
+        真正的 Java
+    </h2>
+
+    <div class="category-and-date">
+
+        
+        <span class="category">
+            <a href="/categories/Culture">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" /></span>
+                Culture
+            </a>
+        </span>
+        
+
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2026/7/12
+        </span>
+
+    </div>
+
+    <div class="content" v-pre>
+        <blockquote>
+<p>这是我的<a target="_blank" rel="noopener" href="https://blogblog.club/party/">“BlogBlog 同乐会 - 2026 年 7 月 ”</a> 的投稿文章。本月主题是<a target="_blank" rel="noopener" href="https://shuaixin.cc/Fun-Fact/">“有趣的小知识或冷门概念”</a>，由<a target="_blank" rel="noopener" href="https://www.google.com/search?q=https://shuaixin.cc/">刘昕</a>主持。如果你有自己的部落格，欢迎一起来参加！</p>
+</blockquote>
+<h1 id="Wes-Mangan"><a href="#Wes-Mangan" class="headerlink" title="Wes Mangan?"></a>Wes Mangan?</h1><p>说起 Java，大部分人都会想到程序语言，或者是 Minecraft。但在世界的另一端，在硅谷的背面，<strong>爪哇语（Basa Jawa&#x2F;Javanese）</strong> 是印尼一门超过 8000 万人使用的语言哦！</p>
+<p>爪哇语主要由爪哇人使用。虽然我居住在马来西亚，但身边不少马来朋友都是爪哇裔后代，便多多少少接触到爪哇文化了。<br>Wes mangan，在爪哇语中是呷饱没的意思，恭喜你学会了你的第一句爪哇话啦~</p>
+<h3 id="灭绝危机"><a href="#灭绝危机" class="headerlink" title="灭绝危机"></a>灭绝危机</h3><p>虽然爪哇语拥有 8000 万使用者，但它<strong>不是任何国家的官方语言</strong>！这是为什么呢？<br>在 1945 年印尼独立运动之时，开国总统苏加诺担下了要统一全国的重任。统一的第一步，就是要统一语言。</p>
+<p>但是印尼，可是拥有 17000 个岛屿，700 种语言，1945 年就有 7400 万人口的超复杂国家。如果选用接近一半人口使用的语言——爪哇语，那么非爪哇族的人肯定会超不爽，凭什么少数要服从多数？为了防止种族冲突，苏加诺做出了惊人的决定——使用当时仅有超少人用的语言——廖内马来语设为国语。由于对所有人来说都是外语，反而达成了公平。从此，爪哇语就失去官方地位了……</p>
+<p>冷知识 1：犹如 Java 中公私分明的函数一样，爪哇语也有一套<strong>阶级系统</strong>。爪哇语主要分为三个主要阶层：</p>
+<ul>
+<li>Ngoko（粗语）用于同龄人、同辈对晚辈</li>
+<li>Madya（中性语）用于陌生人</li>
+<li>Krama（高雅语）用于晚辈对长辈、下级对上级<br>这三种阶层的爪哇语，可是连基本词汇都不一样，所以我认为会爪哇语的人都超强，相当于一次学了三门语言。例如“吃”这个字，对朋友说是“mangan”，对长辈必须用“dahar”；“你”对朋友使用是“kowe”，对长辈使用是“panjenengan”。想用爪哇语聊天，你必须时刻掂量对方的身份，用错一个词汇都是极大的冒犯。这种见人说人话，见鬼说鬼话的体系，实在是太繁杂了，也是爪哇语没有成为印尼国语的原因之一。</li>
+</ul>
+<p>冷知识 2：新加坡将英语设为核心行政与工作语言，是为了平衡三大民族之间的隔阂，亦是同理。</p>
+<h3 id="真正的-JavaScript"><a href="#真正的-JavaScript" class="headerlink" title="真正的 JavaScript"></a>真正的 JavaScript</h3><p>除了可以用拉丁字书写之外，爪哇语也有自己独特又优美的文字！它叫做 Aksara Jawa 或 Hanacaraka</p>
+<p>世界上绝大多数文字的字母表，比如拉丁字的 A, B, C, D…… 没有任何连贯的意义。<br>有趣的是，爪哇语的 20 个核心字母竟然可以组成一首<strong>五言绝句</strong>！</p>
+<p>《Hanacaraka》是一首悲壮的史诗，普遍上认为与<a target="_blank" rel="noopener" href="https://id.wikipedia.org/wiki/Aksara_Jawa#Pengurutan">阿吉 · 萨卡的传奇有关</a>。</p>
+<blockquote>
+<p>ꦲꦤꦕꦫꦏ<br>Hana Caraka<br>有两个使者<br>ꦢꦠꦱꦮꦭ<br>Data Sawala<br>他们之间意见不合<br>ꦥꦝꦗꦪꦚ<br>Padha Jayanya<br>他们的力量旗鼓相当，不相上下<br>ꦩꦒꦧꦛꦔ<br>Maga Bathanga<br>最终双双战死，留下两具尸体</p>
+</blockquote>
+<h1 id="Java-的音乐"><a href="#Java-的音乐" class="headerlink" title="Java 的音乐"></a>Java 的音乐</h1><p>甘美兰（Gamelan，意为合奏）是爪哇人的传统乐器，也是印尼历史最悠久的乐器。甘美兰的音调和西方乐器完全不同，并没有统一的标准音调，因此<strong>世界上没有任何两个音准相同的甘美兰</strong>。</p>
+<p>冷知识：德布西在 1889 年的巴黎博览会时，爪哇甘美兰给了他巨大的启发，在他的作品 <a target="_blank" rel="noopener" href="https://youtu.be/R-YcnPXY2yE">Estampes</a> 中的 Pagodes 乐章尤为明显。</p>
+<h3 id="那么-Java（程序语言）为什么会叫-Java-呢？"><a href="#那么-Java（程序语言）为什么会叫-Java-呢？" class="headerlink" title="那么 Java（程序语言）为什么会叫 Java 呢？"></a>那么 Java（程序语言）为什么会叫 Java 呢？</h3><p>起初，创始人原本想要把它命名为“Oak”，因为创始人门口正对着一颗橡树。然而，在准备商业化推广时，发现 Oak 这个名字早就被注册了，被迫改名。此时，又因为创作团队人们对一种来自爪哇岛上的咖啡情有独钟，便决定将之命名为 Java。</p>
+<h3 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h3><p>我不是爪哇人，如果有任何错误欢迎寄信到 <a href="mailto:&#x31;&#64;&#121;&#x75;&#x7a;&#104;&#111;&#117;&#46;&#x6d;&#x79;">1@yuzhou.my</a> 指正:)。由于想写的冷知识太多，所以我把一些和标题没有什么关系的话题都写在了冷知识里面，希望这样子读起来不会太乱。</p>
+<p>last 冷知识：大家耳熟能详的猫屎咖啡（麝香猫咖啡）也是从爪哇岛上来的哦~</p>
+
+    </div>
+
+    
+    
+    <div class="post-language-warning" data-post-unsupported-warning style="display:none">
+        <div class="warning-title" data-i18n="post.unsupportedTitle">This version is not available in your selected language.</div>
+        <p class="warning-description" data-i18n="post.unsupportedDescription">Try one of the available variants below.</p>
+        <ul class="warning-links" data-post-variant-links></ul>
+    </div>
+    
+
+    <div class="post-tags">
+        
+        <span class="icon">
+            <a-icon type="tags" theme="filled" />
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/Indonesian" style=color:#ff7d73>
+                Indonesian
+            </a>
+        </span>
+        
+    </div>
+
+    <div class="post-comments">
+        <div id="gitalk-container"></div>
+    </div>
+
+</div>
+    </div>
+</div>
+                     
+<footer id="footer">
+    <div class="footer-wrap">
+        <div>
+            © 2026 - 2026 Yuzhou&#39;s Playground
+            <span class="footer-icon">
+                <a-icon type="flag" theme="filled" /></span>
+            @Yuzhou 宇宙
+        </div>
+        <div></div>
+        <div>
+            <span data-i18n="footer.basedOn">Based on the</span>
+            <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo Engine</a> &
+            <a target="_blank" rel="noopener" href="https://github.com/korilin/hexo-theme-particle">Particle Theme</a>
+        </div>
+        
+    </div>
+
+</footer>
+
+<script src="/js/highlight.min.js"></script>
+<script src="/js/particle.js"></script>
+                </div>
+            </div>
+        </transition>
+    </div>
+
+    <script>
+    new Vue({
+        el: "#layout",
+        data: {
+            show_page: false,
+            onload_menu: false,
+            menu_show: false,
+            card_top: 100
+        },
+        created: function () {
+            var that = this
+            window.onload = function () {
+                that.show_page = true
+                document.getElementById("loadcontent").style.opacity = 0
+                setTimeout(function () {
+                    document.getElementById("loadleft").style.width = 0
+                    document.getElementById("loadright").style.width = 0
+                }, 300)
+                setTimeout(function () {
+                    document.getElementById("loading").style = "display:none"
+                }, 600)
+            }
+        },
+        mounted: function () {
+            var that = this
+            window.addEventListener('scroll', function (e) {
+                that.menu_show = false
+            })
+        },
+        methods: {
+            home_click: function () {
+                window.scrollTo({
+                    top: window.innerHeight - 80,
+                    behavior: "smooth",
+                });
+            }
+        }
+    })
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+    const gitalk = new Gitalk({
+        clientID: 'Ov23liE3qUuVcTkWUTlO',
+        clientSecret: '73d13331643f00f83df432641af6a3d3e068b07e',
+        repo: 'blog-comments',      // The repository of store comments,
+        owner: 'yuzhoumy',
+        admin: ['yuzhoumy'],
+        language: 'en',
+        id: location.pathname,      // Ensure uniqueness and length less than 50
+        distractionFreeMode: true  // Facebook-like distraction free mode
+    })
+    gitalk.render('gitalk-container')
+</script>
+
+<script>
+(function () {
+    var state = window.YZ_LANGUAGE || {};
+    var supported = state.supported || ['en', 'zh-TW', 'zh-CN', 'my'];
+    var labels = state.labels || { en: 'English', 'zh-TW': '繁體中文', 'zh-CN': '简体中文', my: 'Bahasa Melayu' };
+    var translations = state.translations || {};
+
+    function normalizeLang(lang) {
+        return supported.indexOf(lang) !== -1 ? lang : 'en';
+    }
+
+    function currentLang() {
+        return normalizeLang(localStorage.getItem('user-lang') || 'en');
+    }
+
+    function routeForLang(lang) {
+        return (state.routeMap || {})[lang];
+    }
+
+    function normalizedPath(url) {
+        var link = document.createElement('a');
+        link.href = url;
+        return link.pathname.replace(/\/+$/, '/') || '/';
+    }
+
+    function redirectToLangRoute(lang) {
+        var target = routeForLang(lang);
+        if (!target) return false;
+        if (normalizedPath(target) === (window.location.pathname.replace(/\/+$/, '/') || '/')) return false;
+        window.location.href = target + window.location.hash;
+        return true;
+    }
+
+    function setUrlLang(lang) {
+        var url = new URL(window.location.href);
+        url.searchParams.set('lang', lang);
+        window.history.replaceState({}, '', url.pathname + url.search + url.hash);
+    }
+
+    function setPaginationLang(lang) {
+        document.querySelectorAll('.page-current a').forEach(function (link) {
+            var url = new URL(link.getAttribute('href'), window.location.origin);
+            url.searchParams.set('lang', lang);
+            link.setAttribute('href', url.pathname + url.search + url.hash);
+        });
+    }
+
+    function hasLang(node, lang) {
+        return (node.getAttribute('data-post-langs') || '').split(/\s+/).indexOf(lang) !== -1;
+    }
+
+    function applyTranslations(lang) {
+        var dictionary = translations[lang] || translations.en || {};
+        document.querySelectorAll('[data-i18n]').forEach(function (node) {
+            var key = node.getAttribute('data-i18n');
+            if (!dictionary[key]) return;
+            if (dictionary[key].indexOf('<') !== -1) {
+                node.innerHTML = dictionary[key];
+            } else {
+                node.textContent = dictionary[key];
+            }
+        });
+        document.querySelectorAll('[data-language-current]').forEach(function (node) {
+            node.textContent = labels[lang] || lang;
+        });
+        document.querySelectorAll('[data-language-trigger]').forEach(function (node) {
+            node.setAttribute('aria-label', labels[lang] || lang);
+        });
+    }
+
+    function applyLangContent(root, lang, forceBlock) {
+        root.querySelectorAll('[data-lang-content]').forEach(function (node) {
+            node.style.display = node.getAttribute('data-lang-content') === lang ? (forceBlock || 'block') : 'none';
+        });
+    }
+
+    function applyHome(lang) {
+        var feed = document.querySelector('[data-feed-list]');
+        if (!feed) return;
+
+        var perPage = parseInt(feed.getAttribute('data-per-page'), 10) || 10;
+        var pageNumber = parseInt(feed.getAttribute('data-page-number'), 10) || 1;
+        var matchingPosts = Array.prototype.filter.call(feed.querySelectorAll('[data-feed-post]'), function (post) {
+            return hasLang(post, lang);
+        });
+        var start = (pageNumber - 1) * perPage;
+        var end = start + perPage;
+
+        feed.querySelectorAll('[data-feed-post]').forEach(function (post) {
+            var index = matchingPosts.indexOf(post);
+            var showPost = index >= start && index < end;
+            post.style.display = showPost ? '' : 'none';
+            applyLangContent(post, lang, 'block');
+        });
+    }
+
+    function applyVariantLists(lang) {
+        document.querySelectorAll('[data-post-card]').forEach(function (entry) {
+            var hasActiveTitle = hasLang(entry, lang);
+            entry.style.display = hasActiveTitle ? '' : 'none';
+            applyLangContent(entry, lang, 'block');
+        });
+
+        document.querySelectorAll('[data-title-variants]').forEach(function (group) {
+            applyLangContent(group, lang, 'block');
+        });
+    }
+
+    function updateUnsupportedWarning(lang) {
+        var warning = document.querySelector('[data-post-unsupported-warning]');
+        if (!warning) return;
+
+        var routeMap = state.routeMap || {};
+        var variantList = Object.keys(routeMap).filter(function (variantLang) {
+            return Boolean(routeMap[variantLang]);
+        });
+        var supportedForPage = Boolean(routeMap[lang]);
+
+        warning.style.display = supportedForPage || variantList.length === 0 ? 'none' : '';
+        if (!warning.style.display || warning.style.display === 'none') return;
+
+        var links = warning.querySelector('[data-post-variant-links]');
+        if (!links) return;
+
+        links.innerHTML = variantList.map(function (variantLang) {
+            var href = routeMap[variantLang];
+            return '<li><a href="' + href + '">' + (labels[variantLang] || variantLang) + '</a></li>';
+        }).join('');
+    }
+
+    function applyLanguage(lang) {
+        lang = normalizeLang(lang);
+        localStorage.setItem('user-lang', lang);
+        document.documentElement.setAttribute('lang', lang);
+        applyTranslations(lang);
+        applyHome(lang);
+        applyVariantLists(lang);
+        updateUnsupportedWarning(lang);
+        setPaginationLang(lang);
+    }
+
+    function switchLanguage(lang) {
+        lang = normalizeLang(lang);
+        localStorage.setItem('user-lang', lang);
+        if (redirectToLangRoute(lang)) return;
+        setUrlLang(lang);
+        applyLanguage(lang);
+    }
+
+    document.addEventListener('click', function (event) {
+        var trigger = event.target.closest('[data-language-trigger]');
+        if (trigger) {
+            event.preventDefault();
+            var menu = trigger.closest('[data-language-menu]');
+            if (!menu) return;
+            var isOpen = menu.classList.contains('is-open');
+            document.querySelectorAll('[data-language-menu].is-open').forEach(function (item) {
+                item.classList.remove('is-open');
+            });
+            if (!isOpen) {
+                menu.classList.add('is-open');
+            }
+            document.querySelectorAll('[data-language-trigger]').forEach(function (button) {
+                button.setAttribute('aria-expanded', String(menu.classList.contains('is-open')));
+            });
+            return;
+        }
+
+        var option = event.target.closest('[data-language-option]');
+        if (option) {
+            event.preventDefault();
+            switchLanguage(option.getAttribute('value') || option.value);
+            document.querySelectorAll('[data-language-menu].is-open').forEach(function (item) {
+                item.classList.remove('is-open');
+            });
+            return;
+        }
+
+        if (!event.target.closest('[data-language-menu]')) {
+            document.querySelectorAll('[data-language-menu].is-open').forEach(function (item) {
+                item.classList.remove('is-open');
+            });
+        }
+    });
+
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') {
+            document.querySelectorAll('[data-language-menu].is-open').forEach(function (item) {
+                item.classList.remove('is-open');
+            });
+        }
+    });
+
+    window.yuzhouApplyLanguage = applyLanguage;
+    applyLanguage(currentLang());
+    window.addEventListener('load', function () {
+        applyLanguage(currentLang());
+    });
+})();
+</script>
+</body>
+
+</html>

@@ -6,9 +6,24 @@
     <description>Hello</description>
     <language>zh-TW</language>
     <copyright>All rights reserved 2026, Yuzhou 宇宙</copyright>
-    <lastBuildDate>Sat, 11 Jul 2026 11:46:27 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 11 Jul 2026 19:14:29 GMT</lastBuildDate>
     <generator>Hexo</generator>
     <atom:link href="http://yuzhou.my/rss-zh-tw.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>真正的 Java</title>
+      <link>http://yuzhou.my/2026/07/12/the-real-java/</link>
+      <description>
+        <![CDATA[<blockquote>
+<p>這是我的<a href="https://blogblog.club/party/">「BlogBlog 同樂會 - 2026 年 7 月 」</a> 的投稿文章。本月主題是<a href="https://shuaixin.cc/Fun-Fact]]>
+      </description>
+      <author>Yuzhou 宇宙</author>
+      <category domain="http://yuzhou.my/categories/Culture/">Culture</category>
+      <category domain="http://yuzhou.my/tags/Indonesian/">Indonesian</category>
+      <pubDate>Sat, 11 Jul 2026 19:14:00 GMT</pubDate>
+      <content:encoded>
+        <![CDATA[<blockquote><p>這是我的<a href="https://blogblog.club/party/">「BlogBlog 同樂會 - 2026 年 7 月 」</a> 的投稿文章。本月主題是<a href="https://shuaixin.cc/Fun-Fact/">「有趣的小知識或冷門概念」</a>，由<a href="https://shuaixin.cc/">劉昕</a>主持。如果你有自己的部落格，歡迎一起來參加！</p></blockquote><h1 id="Wes-Mangan"><a href="#Wes-Mangan" class="headerlink" title="Wes Mangan?"></a>Wes Mangan?</h1><p>説起 Java，大部分人都會想到程式語言，或者是Minecraft。但在世界的另一端，在硅谷的背面，<strong>爪哇語（Basa Jawa&#x2F;Javanese）</strong> 是印尼一門超過8000萬人使用的語言哦！</p><p>爪哇語主要由爪哇人使用。雖然我居住在馬來西亞，但身邊不少馬來朋友都是爪哇裔後代，便多多少少接觸到爪哇文化了。<br>Wes mangan，在爪哇語中是呷飽沒的意思，恭喜你學會了你的第一句爪哇話啦~</p><h3 id="滅絕危機"><a href="#滅絕危機" class="headerlink" title="滅絕危機"></a>滅絕危機</h3><p>雖然爪哇語擁有8000萬使用者，但它<strong>不是任何國家的官方語言</strong>！這是爲什麽呢？<br>在1945年印尼獨立運動之時，開國總統蘇加諾擔下了要統一全國的重任。統一的第一步，就是要統一語言。</p><p><img src="/images/post/indonesia-map.png" alt="印尼的地圖"></p><p>但是印尼，可是擁有17000個島嶼，700種語言，1945年就有7400萬人口的超複雜國家。如果選用接近一半人口使用的語言——爪哇語，那麽非爪哇族的人肯定會超不爽，憑什麽少數要服從多數？爲了防止種族衝突，蘇加諾做出了驚人的決定——使用當時僅有超少人用的語言——廖内馬來語設爲國語。由於對所有人來説都是外語，反而達成了公平。從此，爪哇語就失去官方地位了……</p><p>冷知識1：猶如 Java 中公私分明的函數一樣，爪哇語也有一套<strong>階級系統</strong>。爪哇語主要分爲三個主要階層：</p><ul><li>Ngoko（粗語）用於同齡人、同輩對晚輩</li><li>Madya（中性語）用於陌生人</li><li>Krama（高雅語）用於晚輩對長輩、下級對上級<br>這三種階層的爪哇語，可是連基本詞匯都不一樣，所以我認爲會爪哇語的人都超强，相當於一次學了三門語言。例如“吃”這個字，對朋友說是“mangan”，對長輩必須用“dahar”；“你”對朋友使用是“kowe”，對長輩使用是“panjenengan”。想用爪哇語聊天，你必須時刻掂量對方的身份，用錯一個詞匯都是極大的冒犯。這種見人説人話，見鬼說鬼話的體系，實在是太繁雜了，也是爪哇語沒有成爲印尼國語的原因之一。</li></ul><p>冷知識2：新加坡將英語設爲核心行政與工作語言，是爲了平衡三大民族之間的隔閡，亦是同理。</p><h3 id="真正的-JavaScript"><a href="#真正的-JavaScript" class="headerlink" title="真正的 JavaScript"></a>真正的 JavaScript</h3><p>除了可以用拉丁字書寫之外，爪哇語也有自己獨特又優美的文字！它叫做Aksara Jawa或Hanacaraka</p><p><img src="/images/post/javanese-font.jpg" alt="爪哇文字"></p><p>世界上絕大多數文字的字母表，比如拉丁字的A, B, C, D…… 都沒有任何連貫的意義。<br>有趣的是，爪哇語的20個核心字母竟然可以組成一首<strong>五言絕句</strong>！</p><p><img src="/images/post/hanacaraka.jpg" alt="hanacaraka"></p><p>《Hanacaraka》是一首悲壯的史詩，普遍上認爲與<a href="https://id.wikipedia.org/wiki/Aksara_Jawa#Pengurutan">阿吉 · 薩卡的傳奇有關</a>。</p><blockquote><p>ꦲꦤꦕꦫꦏ<br>Hana Caraka<br>有兩個使者<br>ꦢꦠꦱꦮꦭ<br>Data Sawala<br>他們之間意見不合<br>ꦥꦝꦗꦪꦚ<br>Padha Jayanya<br>他們的力量旗鼓相當，不相上下<br>ꦩꦒꦧꦛꦔ<br>Maga Bathanga<br>最終雙雙戰死，留下兩具尸體</p></blockquote><h1 id="Java-的音樂"><a href="#Java-的音樂" class="headerlink" title="Java 的音樂"></a>Java 的音樂</h1><p>甘美蘭（Gamelan，意為合奏）是爪哇人的傳統樂器，也是印尼歷史最悠久的樂器。甘美蘭的音調和西方樂器完全不同，并沒有統一的標準音調，因此<strong>世界上沒有任何兩個音準相同的甘美蘭</strong>。</p><iframe width="100%" height="400" src="https://www.youtube.com/embed/p3HwqqiVxbE" frameborder="0" allowfullscreen></iframe><p>冷知識：徳布西在1889年的巴黎博覽會時，爪哇甘美蘭給了他巨大的啓發，在他的作品 <a href="https://youtu.be/R-YcnPXY2yE">Estampes</a> 中的 Pagodes 樂章尤爲明顯。</p><h3 id="那麽-Java（程式語言）爲什麽會叫-Java-呢？"><a href="#那麽-Java（程式語言）爲什麽會叫-Java-呢？" class="headerlink" title="那麽 Java（程式語言）爲什麽會叫 Java 呢？"></a>那麽 Java（程式語言）爲什麽會叫 Java 呢？</h3><p>起初，創始人原本想要把它命名爲“Oak”，因爲創始人門口正對著一顆橡樹。然而，在准備商業化推廣時，發現Oak這個名字早就被注冊了，被迫改名。此時，又因爲創作團隊人們對一種來自爪哇島上的咖啡情有獨鍾，便決定將之命名爲Java。</p><h3 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h3><p>我不是爪哇人，如果有任何錯誤歡迎寄信到<a href="mailto:&#49;&#x40;&#121;&#117;&#122;&#104;&#111;&#117;&#x2e;&#x6d;&#121;">1@yuzhou.my</a>指正:)。由於想寫的冷知識太多，所以我把一些和標題沒有什麽關係的話題都寫在了冷知識裏面，希望這樣子讀起來不會太亂。</p><p>last冷知識：大家耳熟能詳的貓屎咖啡（麝香貓咖啡）也是從爪哇島上來的哦~</p>]]>
+      </content:encoded>
+    </item>
     <item>
       <title>小時候的快樂，純粹是當時什麽都不知道而已</title>
       <link>http://yuzhou.my/2026/04/25/childhood-happiness/</link>
@@ -18,7 +33,8 @@
       </description>
       <author>Yuzhou 宇宙</author>
       <category domain="http://yuzhou.my/categories/Life/">Life</category>
-      <category domain="http://yuzhou.my/tags/Chinese/">Chinese</category>
+      <category domain="http://yuzhou.my/tags/Childhood/">Childhood</category>
+      <category domain="http://yuzhou.my/tags/Happiness/">Happiness</category>
       <pubDate>Sat, 25 Apr 2026 07:27:37 GMT</pubDate>
       <content:encoded>
         <![CDATA[<p>大約在我五歲的某個傍晚，老爸突然叫上我，説要到馬六甲的醫院，要留宿馬六甲三天兩夜。我蹦蹦跳跳地就走上車了，也許是開夜車的關係，路途上我並沒有什麽清晰的回憶。</p><p>第一天晚上，天很暗了我們才去洗澡。小時候的我對部分電器很敏感（那時候好像最害怕洗衣機），一打開熱水器我就嚇哭了…… 那個花灑居然上面有五顔六色的LED燈，而且還像迪廳的氛圍燈一樣會一直變顔色！！！最後還是在我記得那是個雨夜，窗外的雨嘩啦啦地下，窗戶被濺得滿是水滴，但酒店裏很溫暖。後來第二天，我們才轉去另一家酒店，那裏的花灑終於能讓年幼的我安心洗澡了。</p><p>另外一個仍有零星記憶的畫面，就是第二天在超市買手信的時候。當時我、老爸和叔叔買了一些水果（這也是我鮮少關於叔叔的記憶），然後我們就到醫院探望奶奶。她虛弱地躺在病床上，身穿藍白相間的病服，微笑看著我。<br>但對小時候的我來説，探望并不是這次行程的重點。因爲那時的我只要有機會放假，能夠去住酒店我就已經很開心了。</p><p>前幾天才知道，奶奶當時得了<strong>乳腺癌</strong>。</p><p>我想同個時期，同個事件，老爸的回憶會很不一樣吧。</p>]]>
@@ -32,7 +48,7 @@
       </description>
       <author>Yuzhou 宇宙</author>
       <category domain="http://yuzhou.my/categories/Archive/">Archive</category>
-      <category domain="http://yuzhou.my/tags/English/">English</category>
+      <category domain="http://yuzhou.my/tags/Study-Stuff/">Study Stuff</category>
       <pubDate>Sun, 12 Apr 2026 04:10:55 GMT</pubDate>
       <content:encoded>
         <![CDATA[<h1 id="光合作用中文解釋"><a href="#光合作用中文解釋" class="headerlink" title="光合作用中文解釋"></a>光合作用中文解釋</h1><h3 id="KSSM中五生物第二課：葉子"><a href="#KSSM中五生物第二課：葉子" class="headerlink" title="KSSM中五生物第二課：葉子"></a>KSSM中五生物第二課：葉子</h3><p>講師: Sam Eu Qang<br>Instagram : <a href="https://instagram.com/samq709_2009">samq709_2009</a></p><p><video width="100%" height="300" src="/images/post/photosynthesis.mp4" controls></video></p>]]>
@@ -46,12 +62,11 @@
 <p><img src="/images/post/kenneth-mckay.jpg" alt="Kenneth McKay"><br><small style="color]]>
       </description>
       <author>Yuzhou 宇宙</author>
-      <category domain="http://yuzhou.my/categories/Life/">Life</category>
-      <category domain="http://yuzhou.my/tags/Chinese/">Chinese</category>
+      <category domain="http://yuzhou.my/categories/Culture/">Culture</category>
       <category domain="http://yuzhou.my/tags/Music/">Music</category>
       <pubDate>Thu, 09 Apr 2026 01:51:16 GMT</pubDate>
       <content:encoded>
-        <![CDATA[<p>覺得自己精神萎靡不振嗎？且聽我推坑給你的 <strong>蘇格蘭風笛</strong>！</p><p><img src="/images/post/kenneth-mckay.jpg" alt="Kenneth McKay"><br><small style="color: grey;">勇敢的蘇格蘭高地士兵，Kenneth McKay。滑鐵盧戰役期間，McKay在法軍騎兵襲擊下，英勇地走到方陣外吹奏風笛以鼓舞士氣的情景。<a href="https://www.reddit.com/r/BattlePaintings/s/JOHFpCZJUE">關於這張照片的Reddit貼文</a></small></p><p>這是一個音色霸氣的樂器！既然都被拿來當蘇格蘭的軍鼓樂器了，其振興士氣的能力毋庸置疑。<br>至少在我身上，是非常有效的。我甚至把……</p><ul><li>電話鈴聲  </li><li>鬧鐘</li></ul><p>換成了 <em>Hielan’ Laddie</em>。雖然每天早上6點半都會聽到這段音樂，但我在寫上面那段文字時，播放了這首音樂來聼，居然沒有感到一絲煩躁，很神奇吧！</p><p>以下是一些我喜歡的曲目，和我的賞析，僅供參考~</p><hr><h2 id="Hielan’-Laddie"><a href="#Hielan’-Laddie" class="headerlink" title="Hielan’ Laddie"></a>Hielan’ Laddie</h2><p>（蘇格蘭風笛似乎是轉調樂器，但我不管了，我就按照自己聽到的音來）<br>（歡迎致郵到 <a href="mailto:&#49;&#64;&#x79;&#117;&#122;&#104;&#x6f;&#x75;&#x2e;&#x6d;&#121;">1@yuzhou.my</a> 糾正錯誤，我也想瞭解這個美妙的樂器）<br>這似乎是蘇格蘭風笛少有的降E調曲目，其他好像都是降B調。</p><iframe width="100%" height="300" src="https://www.youtube.com/embed/KUIOtA8LPec?si=ZJHEag2e52qG9Usx" frameborder="0" allowfullscreen></iframe><p>當Bass音B♭響起時，整個緊迫感就上來了。并且，這個音會持續到結尾，我認爲這是蘇格蘭風笛“消除雜念”以鼓舞士氣的關鍵。有點類似那種 <a href="https://www.youtube.com/watch?v=FwDfZDpP5Jc">播放單一頻率音頻的影片</a>，能讓人腦袋放空，我想是同一個原理吧。<br><img src="/images/post/hielan-laddie-1.png" alt="Hielan Laddie"></p><p>另外，也有加上管樂和弦的版本（我就是拿這個來當鬧鐘的）：</p><iframe width="100%" height="300" src="https://www.youtube.com/embed/ESsVydlq8cM?si=TytIZ-NAoSnld8m_" frameborder="0" allowfullscreen></iframe><p>這個版本是不是聽起來音色更豐滿了呢？<br>我覺得呢，這個版本的<strong>下屬和弦</strong>起到了强烈的襯托作用。我們把Hielan’ Laddie的主旋律<strong>拆成一半</strong>來看好了。</p><p>前半段的<strong>主和弦</strong>和<strong>屬和弦</strong>似乎在告訴你：<br><code>無論你現在是什麽狀態，請振作起來！</code><br><img src="/images/post/hielan-laddie-2.png" alt="Hielan Laddie"></p><p>後半段的<strong>屬和弦</strong>的，再加上有點往下走的旋律，好像在説：<br><code>親愛的，你本來就該這樣！振作起來！</code><br><img src="/images/post/hielan-laddie-3.png" alt="Hielan Laddie"></p><p>哦，如果Wiwi看到我的賞析，希望你不要生氣…… 我已經兩年沒碰過樂理了。</p><hr><h2 id="Scotland-The-Brave"><a href="#Scotland-The-Brave" class="headerlink" title="Scotland The Brave"></a>Scotland The Brave</h2><p>相較於 Hielan’ Laddie，Scotland The Brave 聽起來更加沉穩，仿佛聼見了蘇格蘭士兵在草原緩緩行軍。<br>在你認爲你不該休息的時候，請效仿蘇格蘭高地士兵，<strong>前進、前進、不擇一切手段地前進！！！</strong></p><iframe width="100%" height="300" src="https://www.youtube.com/embed/nnG1oUkWBa8?si=IgxPW6P5rcYbO_B5" frameborder="0" allowfullscreen></iframe><p>題外話：Massed Band的Slow March就和這首音樂聽起來一樣沉穩，太般配了！</p><p>通常我喜歡在早上散步&#x2F;跑步的時候開來聼這首曲子，超級Chill的哦，它會帶給我猶如身處在森林之中的感覺。</p><hr><h2 id="Auld-Lang-Syne"><a href="#Auld-Lang-Syne" class="headerlink" title="Auld Lang Syne"></a>Auld Lang Syne</h2><p>Auld Lang Syne，譯爲《友誼地久天長》，大部分人都聽過。<br>但蘇格蘭風笛版本的 Auld Lang Syne 絕對是 Top 中之 Top，把原本的抒情歌變成了節奏感强烈、士氣昂昂、霸氣宏大的音樂，聽起來完全不一樣！<br>蘇格蘭的民謠，就應該用蘇格蘭當地的樂器演奏呀！</p><iframe width="100%" height="300" src="https://www.youtube.com/embed/CXcM-70KztI?si=qc2dTKHX5IqoGkGL" frameborder="0" allowfullscreen></iframe><p>而且，尤其在上面影片中的“特殊場合”，Auld Lang Syne聽起來讓人感慨萬分。</p>]]>
+        <![CDATA[<p>覺得自己精神萎靡不振嗎？且聽我推坑給你的 <strong>蘇格蘭風笛</strong>！</p><p><img src="/images/post/kenneth-mckay.jpg" alt="Kenneth McKay"><br><small style="color: grey;">勇敢的蘇格蘭高地士兵，Kenneth McKay。滑鐵盧戰役期間，McKay在法軍騎兵襲擊下，英勇地走到方陣外吹奏風笛以鼓舞士氣的情景。<a href="https://www.reddit.com/r/BattlePaintings/s/JOHFpCZJUE">關於這張照片的Reddit貼文</a></small></p><p>這是一個音色霸氣的樂器！既然都被拿來當蘇格蘭的軍鼓樂器了，其振興士氣的能力毋庸置疑。<br>至少在我身上，是非常有效的。我甚至把……</p><ul><li>電話鈴聲  </li><li>鬧鐘</li></ul><p>換成了 <em>Hielan’ Laddie</em>。雖然每天早上6點半都會聽到這段音樂，但我在寫上面那段文字時，播放了這首音樂來聼，居然沒有感到一絲煩躁，很神奇吧！</p><p>以下是一些我喜歡的曲目，和我的賞析，僅供參考~</p><hr><h2 id="Hielan’-Laddie"><a href="#Hielan’-Laddie" class="headerlink" title="Hielan’ Laddie"></a>Hielan’ Laddie</h2><p>（蘇格蘭風笛似乎是轉調樂器，但我不管了，我就按照自己聽到的音來）<br>（歡迎致郵到 <a href="mailto:&#49;&#64;&#x79;&#117;&#122;&#104;&#x6f;&#117;&#x2e;&#x6d;&#121;">1@yuzhou.my</a> 糾正錯誤，我也想瞭解這個美妙的樂器）<br>這似乎是蘇格蘭風笛少有的降E調曲目，其他好像都是降B調。</p><iframe width="100%" height="300" src="https://www.youtube.com/embed/KUIOtA8LPec?si=ZJHEag2e52qG9Usx" frameborder="0" allowfullscreen></iframe><p>當Bass音B♭響起時，整個緊迫感就上來了。并且，這個音會持續到結尾，我認爲這是蘇格蘭風笛“消除雜念”以鼓舞士氣的關鍵。有點類似那種 <a href="https://www.youtube.com/watch?v=FwDfZDpP5Jc">播放單一頻率音頻的影片</a>，能讓人腦袋放空，我想是同一個原理吧。<br><img src="/images/post/hielan-laddie-1.png" alt="Hielan Laddie"></p><p>另外，也有加上管樂和弦的版本（我就是拿這個來當鬧鐘的）：</p><iframe width="100%" height="300" src="https://www.youtube.com/embed/ESsVydlq8cM?si=TytIZ-NAoSnld8m_" frameborder="0" allowfullscreen></iframe><p>這個版本是不是聽起來音色更豐滿了呢？<br>我覺得呢，這個版本的<strong>下屬和弦</strong>起到了强烈的襯托作用。我們把Hielan’ Laddie的主旋律<strong>拆成一半</strong>來看好了。</p><p>前半段的<strong>主和弦</strong>和<strong>屬和弦</strong>似乎在告訴你：<br><code>無論你現在是什麽狀態，請振作起來！</code><br><img src="/images/post/hielan-laddie-2.png" alt="Hielan Laddie"></p><p>後半段的<strong>屬和弦</strong>的，再加上有點往下走的旋律，好像在説：<br><code>親愛的，你本來就該這樣！振作起來！</code><br><img src="/images/post/hielan-laddie-3.png" alt="Hielan Laddie"></p><p>哦，如果Wiwi看到我的賞析，希望你不要生氣…… 我已經兩年沒碰過樂理了。</p><hr><h2 id="Scotland-The-Brave"><a href="#Scotland-The-Brave" class="headerlink" title="Scotland The Brave"></a>Scotland The Brave</h2><p>相較於 Hielan’ Laddie，Scotland The Brave 聽起來更加沉穩，仿佛聼見了蘇格蘭士兵在草原緩緩行軍。<br>在你認爲你不該休息的時候，請效仿蘇格蘭高地士兵，<strong>前進、前進、不擇一切手段地前進！！！</strong></p><iframe width="100%" height="300" src="https://www.youtube.com/embed/nnG1oUkWBa8?si=IgxPW6P5rcYbO_B5" frameborder="0" allowfullscreen></iframe><p>題外話：Massed Band的Slow March就和這首音樂聽起來一樣沉穩，太般配了！</p><p>通常我喜歡在早上散步&#x2F;跑步的時候開來聼這首曲子，超級Chill的哦，它會帶給我猶如身處在森林之中的感覺。</p><hr><h2 id="Auld-Lang-Syne"><a href="#Auld-Lang-Syne" class="headerlink" title="Auld Lang Syne"></a>Auld Lang Syne</h2><p>Auld Lang Syne，譯爲《友誼地久天長》，大部分人都聽過。<br>但蘇格蘭風笛版本的 Auld Lang Syne 絕對是 Top 中之 Top，把原本的抒情歌變成了節奏感强烈、士氣昂昂、霸氣宏大的音樂，聽起來完全不一樣！<br>蘇格蘭的民謠，就應該用蘇格蘭當地的樂器演奏呀！</p><iframe width="100%" height="300" src="https://www.youtube.com/embed/CXcM-70KztI?si=qc2dTKHX5IqoGkGL" frameborder="0" allowfullscreen></iframe><p>而且，尤其在上面影片中的“特殊場合”，Auld Lang Syne聽起來讓人感慨萬分。</p>]]>
       </content:encoded>
     </item>
     <item>
@@ -63,8 +78,7 @@
       </description>
       <author>Yuzhou 宇宙</author>
       <category domain="http://yuzhou.my/categories/Life/">Life</category>
-      <category domain="http://yuzhou.my/tags/Chinese/">Chinese</category>
-      <category domain="http://yuzhou.my/tags/Important/">Important</category>
+      <category domain="http://yuzhou.my/tags/Self/">Self</category>
       <pubDate>Mon, 30 Mar 2026 07:36:33 GMT</pubDate>
       <content:encoded>
         <![CDATA[<p><img src="/images/post/modal-words.jpg" alt="Modal Words"><br><small style="color: grey;">KSSM英文課本，79頁</small></p><p>我發現我在説話時，常常會下意識地否認自己的觀點，並加上一些“不自信詞語”，就好像爲自己的言論加上免責聲明一樣：</p><ul><li>“走這一條路可以去到市區 —— <strong>應該</strong>吧。”  </li><li>“我查了一下時間表，會議<strong>應該</strong>是在下午5點開始。”  </li><li>“每個星期六，這個廣場都會舉辦大型活動 —— <strong>通常是這樣的</strong>。”</li></ul><hr><h3 id="常見的不自信詞語"><a href="#常見的不自信詞語" class="headerlink" title="常見的不自信詞語"></a>常見的不自信詞語</h3><ul><li>“可能”  </li><li>“應該”  </li><li>“雖然”  </li><li>“看起來好像”  </li><li>“我其實不是很專業啦，但是……”  </li><li>“我也不太確定”  </li><li>“我猜是這樣的”</li></ul><hr><p>很顯然地，當我們在日常溝通時習慣使用“不自信詞語”之後，我們在別人心中的自信程度會大大降低。尤其是在小組裏面分工合作時，講話自信&#x2F;不自信會讓其他組員對你的信心差很多哦！</p><p>試想想，如果你的組員在工作時眼神閃避，并且這樣子對你説話：“噢…… 應該這樣就可以了哦”，或者你問一句，他的答案中一定會帶“應該”這兩個字。即使他幹了很多活，你也會覺得他沒什麽料的樣子，對吧？</p><hr><p>用在寫部落格上也是一樣的道理，尤其是知識、討論類型的文章，作者的論點就會顯得沒有那麽有説服力了。</p><p>最後，相比起其他人的文章，我的文章（尤其是之前的那幾篇）真的顯得有點欠缺自信，看來得改一改了呀！</p>]]>
@@ -79,8 +93,8 @@
       </description>
       <author>Yuzhou 宇宙</author>
       <category domain="http://yuzhou.my/categories/Life/">Life</category>
-      <category domain="http://yuzhou.my/tags/Chinese/">Chinese</category>
-      <category domain="http://yuzhou.my/tags/Important/">Important</category>
+      <category domain="http://yuzhou.my/tags/Procrastination/">Procrastination</category>
+      <category domain="http://yuzhou.my/tags/Self/">Self</category>
       <pubDate>Sat, 28 Mar 2026 00:01:16 GMT</pubDate>
       <content:encoded>
         <![CDATA[<blockquote><p>BlogBlog 同樂會<br>這是我的 <a href="https://blogblog.club/party/">「BlogBlog 同樂會 - 2026 年 4 月」</a> 的投稿文章。本月主題是 <a href="https://www.wen-lab.tw/blogblog-party-productivity/">「生產力」</a>，由 <a href="https://www.wen-lab.tw/author/wen/">Wen</a> 主持。如果你有自己的部落格，歡迎一起來參加！</p></blockquote><p>我的時間是<strong>液態</strong>的。<br>Google Calendar 中的排程看起來整齊又精美。但是，我真的能在指定的時間完成他嗎？我的 To-do 任務就像在波濤的水中翻滾的石子，流來~ 流去~ 最後和一開始預定的時間越差越遠。</p><p>經過我對自己的審視，拖延症的原因不外乎就那幾個……</p><hr><h3 id="短視頻"><a href="#短視頻" class="headerlink" title="短視頻"></a>短視頻</h3><p>這絕對是最大的因素。</p><p>我十分認同 Wiwi 所揭示的 <a href="https://wiwi.blog/blog/virus#%E6%9C%80%E6%96%B0%E7%9A%84%E7%97%85%E6%AF%92%E7%A4%BE%E7%BE%A4%E5%AA%92%E9%AB%94%E5%92%8C%E7%9F%AD%E5%BD%B1%E9%9F%B3">社交媒體&#x2F;短視頻對人類的危害</a>。</p><p>是的，我的拖延症是自小就有，但我以前只對不喜歡的事情拖延啊！<br>記得14歲時，當我第一次下載 Instagram 時，我并未察覺任何異樣，只把他當作和 Facebook 一樣的社交軟體來看待。殊不知就是從這個時候開始，我再也回不去以前的自己了。</p><p>在沉迷短視頻之前，我是 <strong>不想做</strong> ，而現在卻是 <strong>想做但是無法執行</strong>。我的意志從此失去了自由，也就是從這個開始，時間變成液態的了。</p><hr><h3 id="完美主義"><a href="#完美主義" class="headerlink" title="完美主義"></a>完美主義</h3><p>如果擺在我眼前的是數理功課和語文功課，我一定會選前者。<br>我對寫作的完美主義尤其嚴重。你絕對不會想到，我平均寫一篇作文要3個小時，blog要2個小時！我會反復推敲我的句子，一定要100%完美才行。</p><p>當然，這是寫作的必要程序，需要通過磨練可以繼續增强效率，多多寫作就行啦。</p><hr><h3 id="外界因素"><a href="#外界因素" class="headerlink" title="外界因素"></a>外界因素</h3><p>在我自己一個人待在家一整天後，如果這時候朋友邀約我去聚會…… 我仿佛感受到體内的E人基因在震動，實在是很難拒絕誘惑。<br>另外，我不擅長拒絕，即使我不太想去，我大可能還是會答應。</p><hr><h3 id="情緒"><a href="#情緒" class="headerlink" title="情緒"></a>情緒</h3><p>每當有人問我爲什麽不開心？我總會回答不知道，就是莫名其妙的情緒風暴而已。<br>但我現在大致明白是怎麽回事了：我的情緒就像雪球一樣，會從一個小小的雪球開始越滾越大，最後碾過所有我在 Google Calendar 中設定好的日程。</p><p>我是比較敏感的人，每個小小的事情（例如被人嗆了、或是刷到負能量重的視頻），都是小小的雪球。通常在接下來一整天内我會看什麽都不爽，結果當然就是負面情緒逐漸湧現了。</p><hr><h3 id="睡眠"><a href="#睡眠" class="headerlink" title="睡眠"></a>睡眠</h3><p>睡眠的重要性是毋庸置疑的。<br>很遺憾的，報復性睡眠拖延是最難打破的惡性循環。説來慚愧，自從開始熬夜過後，除了生病之外不曾在12點半之前睡過。</p><p>我的睡眠拖延挺奇怪的，不到一個臨界時間（必須睡覺的時間），腦袋都會很凌亂，完全不想關燈。就我而言，要想在某一天突然早睡的話，需要花費大量意志力對抗。因此我的早睡計劃通常無法撐過三天XD。</p><hr><h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>雖然這篇文章的負能量有點重，讀起來像一隻魯蛇的抱怨，但我還是會多多改進的！</p>]]>
@@ -95,8 +109,9 @@
       </description>
       <author>Yuzhou 宇宙</author>
       <category domain="http://yuzhou.my/categories/Life/">Life</category>
-      <category domain="http://yuzhou.my/tags/Chinese/">Chinese</category>
-      <category domain="http://yuzhou.my/tags/Important/">Important</category>
+      <category domain="http://yuzhou.my/tags/Procrastination/">Procrastination</category>
+      <category domain="http://yuzhou.my/tags/Self/">Self</category>
+      <category domain="http://yuzhou.my/tags/Productivity/">Productivity</category>
       <pubDate>Thu, 26 Mar 2026 21:55:50 GMT</pubDate>
       <content:encoded>
         <![CDATA[<blockquote><p>BlogBlog 同樂會<br>這是我的 <a href="https://blogblog.club/party/">「BlogBlog 同樂會 - 2026 年 4 月」</a> 的投稿文章。本月主題是 <a href="https://www.wen-lab.tw/blogblog-party-productivity/">「生產力」</a> ， <a href="https://www.wen-lab.tw/author/wen/">Wen</a> 如果你有自己的部落格，歡迎一起來參加！</p></blockquote><p>請原諒我的孤陋寡聞，我對“生產力”這三個字其實挺陌生的，所以這篇文章中，我會把他當作“效率”來理解。<br>作爲學生，我是近兩年（16歲開始）才開始重視生產力的，因爲 <a href="https://zh.wikipedia.org/wiki/%E9%A6%AC%E4%BE%86%E8%A5%BF%E4%BA%9E%E6%95%99%E8%82%B2%E6%96%87%E6%86%91">SPM</a> 快到了嘛。</p><p>説到底，提升生產力 &#x3D; 提升效率 &#x3D; 對抗 <a href="/2026/03/28/procrastination">拖延症</a>。<br>經過我這幾年的摸爬滾打，以下是我平時對抗拖延症的方法……</p><hr><h2 id="生產力工具"><a href="#生產力工具" class="headerlink" title="生產力工具"></a>生產力工具</h2><p>用來規劃時間的工具應該都算吧？</p><h3 id="筆記本"><a href="#筆記本" class="headerlink" title="筆記本"></a>筆記本</h3><p>2025年開始，我准備了一本用來寫日程的筆記本。有兩個原因：</p><ol><li>我是想把要做的東西寫下來，這樣我就不會忘記。  </li><li>我想要把自己一天裏所有做過的事情記錄下來（算是一種特殊癖好吧？），這樣子以後回看會很有成就感。</li></ol><p><img src="/images/post/notebook.jpg" alt="Notebook"></p><p>然而，我幾乎都是斷斷續續地記錄，堅持不了幾天。我會連續一兩天做 To-do list，但隔幾天又不寫了，然後等待下次讓我打開筆記本的契機。<br>今年，我也開了一本新的筆記本，但只用了一點點。因爲在大約兩周前，一個 Google 產品，打開了我的新世界……</p><h3 id="Google-Calendar"><a href="#Google-Calendar" class="headerlink" title="Google Calendar"></a>Google Calendar</h3><p>當我第一次打開 Google Calendar 的時候，内心 OS：這不是我夢寐以求的排程表嗎！<br>所有補習時間、朋友聚會、假期，只需要養成每天早上打開 Google Calendar 的習慣就不怕忘記！比起我那潦草又凌亂的筆記本，實在是整齊太多了！</p><p><img src="/images/post/google-calendar.png" alt="Google Calendar"></p><p>OK，現在“健忘症”的問題解決了，但真正的大魔王“拖延症”仍然死死地捆綁著我……</p><hr><h2 id="和朋友一起學習"><a href="#和朋友一起學習" class="headerlink" title="和朋友一起學習"></a>和朋友一起學習</h2><p>這是一個好方法！我通常會去圖書館，雖然在外面的干擾要略高於自己安靜的房間，但與朋友互相監督可以大大增加專注力。</p><p>舉一個例子好了：在家裏學習的時候，我常常只是打開手機看一下訊息，然後就進入短視頻的世界 doomscroll 到不知天地爲何物了。<br>但和朋友一起的話，他給我使一個眼神，我就可以意識到自己的意識正在被劫持，並趕緊關掉手機。</p><p>不僅如此，圖書館的氛圍會降低我的啓動困難。大家都在學習，冷氣也開到位了，不可能不被這麽讚的環境帶動吧？自然而然就會翻開書本啦~</p><p><img src="/images/post/Activation-Energy.jpg" alt="Activation Energy"></p>]]>
@@ -110,7 +125,7 @@
       </description>
       <author>Yuzhou 宇宙</author>
       <category domain="http://yuzhou.my/categories/Life/">Life</category>
-      <category domain="http://yuzhou.my/tags/Chinese/">Chinese</category>
+      <category domain="http://yuzhou.my/tags/Happiness/">Happiness</category>
       <pubDate>Thu, 26 Mar 2026 07:27:37 GMT</pubDate>
       <content:encoded>
         <![CDATA[<p><img src="/images/post/alimuthuahock.jpg" alt="Ali Muthu &amp; Ah Hock"><br><small style="color: grey;">Ali, Muthu &amp; Ah Hock, Dang Wangi店</small></p><p>我今年17歲，是高中生，不知從何時開始，我便幾乎完全地將自己沉浸在學業之中，不再思考自己的未來了。<br>對我這個鮮少瞳景未來的人來説，若你問我“理想的生活”是什麽？我的腦袋是空蕩蕩的…… 因此，我就從比較近的地方，“理想的周末”，開始説起吧！</p><blockquote><p>BlogBlog 同樂會<br>這是我的 <a href="https://blogblog.club/party/">「BlogBlog 同樂會 - 2026 年 3 月」</a> 的投稿文章。本月主題是 <a href="https://alexhsu.com/perfect-days">「理想的日常」</a>，由 <a href="https://alexhsu.com/">Alex Hsu</a> 主持。如果你有自己的部落格，歡迎一起來參加！</p></blockquote><hr><h2 id="一日之計在於晨"><a href="#一日之計在於晨" class="headerlink" title="一日之計在於晨"></a>一日之計在於晨</h2><p>周末就應該早早起床啊！<br>每當我周末睡到11點多的時候，我接下來一整天都會超級 down 的，接下來一整天也做不好什麽事情。</p><p>早上七點起來和朋友一起去散步&#x2F;跑步，看著外面的風景，心情一下子就變得很好了。再去咖啡店吃個早餐，享受血糖飆升的快感。這樣的早晨多麽有活力呢。</p><p>另外，由於我本身不喜歡（其實是太菜了）籃球、羽球之類的競技體育，所以周末早上的運動時間對我顯得格外重要了。</p><hr><h2 id="一周最快樂的時刻"><a href="#一周最快樂的時刻" class="headerlink" title="一周最快樂的時刻"></a>一周最快樂的時刻</h2><p>周末的下午被連續六個小時的物理、化學、生物 <strong>補習</strong> 填滿了，但仔細想了想，這可能是我一周裏最快樂的六個小時。因爲滿足了一下三點：</p><ul><li><strong>和朋友在一起</strong>：有和朋友一起聊天的機會（我還是有認真上課的！）。  </li><li><strong>不會拖延</strong>：平時如果在家一個人的話，儘管是一件小事我也可以拖延到不知天地爲何物，完全失去了對時間的支配，真的太痛苦了。  </li><li><strong>放鬆</strong>：補習班沒有上學的那種緊迫感。課間的時候常常會下樓買東西帶上去，一邊聽課一邊吃，實在是太享受了！</li></ul><p>另外最重要的，這些本來就是我喜歡的科目啊 XD。<br>如果換成連續六個小時的語文課的話，抱歉…… 我會暈倒。</p><hr><h2 id="自由的支配自己的時間"><a href="#自由的支配自己的時間" class="headerlink" title="自由的支配自己的時間"></a>自由的支配自己的時間</h2><p>上文有提到我很拖延，因此我是一個非常需要被約束的人。<br>上學天的時候，在學校學習動力的慣性使我回到家後仍然可以完成該做的事情。<br>但一到周末，情況就不一樣了，堆積如山的課業總會拖到最後一分鐘，結果可想而知——熬夜趕工。</p><p>如果沒能完成設定好的日程，我會陷入焦慮的無限循環，美好的心情就這樣子被毀掉了，這一點都不理想。</p><hr><h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>我沒有太多物質上的需求，除了吃飽穿暖之外，只要快快樂樂、無憂無慮就行了。<br>對我而言，快樂的源泉是充實的生活，而充實的生活源自自律。</p><p>看了一下 <a href="https://alexhsu.com/perfect-days">其他人的理想日常</a>，不少人都希望自己可以好好操盤自己的時間呢。<br>希望大家都可以在自律的路上越走越遠吧！</p>]]>
@@ -126,7 +141,6 @@
       </description>
       <author>Yuzhou 宇宙</author>
       <category domain="http://yuzhou.my/categories/Archive/">Archive</category>
-      <category domain="http://yuzhou.my/tags/English/">English</category>
       <category domain="http://yuzhou.my/tags/Music/">Music</category>
       <pubDate>Thu, 05 Feb 2026 04:10:55 GMT</pubDate>
       <content:encoded>
