@@ -2,7 +2,7 @@
 title: Photosynthesis
 date: 2026-04-12 12:10:55
 categories: [Archive]
-tags: [English]
+tags: [Study Stuff]
 author: Yuzhou
 ---
 

@@ -2,7 +2,7 @@
 title: 理想的周末
 date: 2026-03-26 15:27:37
 categories: [Life]
-tags: [Chinese]
+tags: [Happiness]
 author: Yuzhou
 ---
 

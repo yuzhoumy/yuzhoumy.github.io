@@ -2,9 +2,8 @@
 title: 蘇格蘭風笛
 date: 2026-04-09 09:51:16
 categories: 
-    - Life
+    - Culture
 tags: 
-    - Chinese
     - Music
 ---
 

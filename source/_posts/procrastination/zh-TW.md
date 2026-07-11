@@ -2,7 +2,7 @@
 title: 拖延症
 date: 2026-03-28 08:01:16
 categories: [Life]
-tags: [Chinese, Important]
+tags: [Procrastination, Self]
 author: Yuzhou
 ---
 > BlogBlog 同樂會

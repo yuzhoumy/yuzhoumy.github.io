@@ -3,9 +3,7 @@ title: 生產力——與拖延症的博弈
 date: 2026-03-27 05:55:50
 categories: 
     - Life
-tags: 
-    - Chinese
-    - Important
+tags: [Procrastination, Self, Productivity]
 ---
 > BlogBlog 同樂會
 這是我的 [「BlogBlog 同樂會 - 2026 年 4 月」](https://blogblog.club/party/) 的投稿文章。本月主題是 [「生產力」](https://www.wen-lab.tw/blogblog-party-productivity/) ， [Wen](https://www.wen-lab.tw/author/wen/) 如果你有自己的部落格，歡迎一起來參加！

@@ -2,7 +2,6 @@
 title: We support RSS now!
 date: 2026-03-10 15:53:05
 categories: [Update]
-tags: [English]
 author: Yam Yee Zhe 严宇泽
 ---
 

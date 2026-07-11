@@ -61,7 +61,7 @@ menu:
     icon:
       name: tags
       theme: filled
-    src: /tags/English
+    src: /tags/Self
 
 # side info card
 card:
