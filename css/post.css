@@ -29,3 +29,30 @@
 .article .content {
   margin: 50px 0;
 }
+.article .post-language-warning {
+  margin: 24px 0 32px;
+  padding: 16px 18px;
+  border-left: 4px solid #f0b429;
+  border-radius: 10px;
+  background: rgba(240,180,41,0.14);
+  color: text-font;
+}
+.article .post-language-warning .warning-title {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+.article .post-language-warning .warning-description {
+  margin: 0 0 8px;
+  color: #7a5a00;
+}
+.article .post-language-warning .warning-links {
+  margin: 0;
+  padding-left: 18px;
+}
+.article .post-language-warning .warning-links li {
+  margin: 4px 0;
+}
+.article .post-language-warning .warning-links a {
+  color: #8c5b00;
+  font-weight: 600;
+}

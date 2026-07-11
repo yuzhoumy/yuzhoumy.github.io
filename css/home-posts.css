@@ -17,6 +17,12 @@
   color: posts-title;
   text-decoration: none;
 }
+#home-posts [data-lang-content] {
+  display: none;
+}
+#home-posts [data-lang-content="en"] {
+  display: block;
+}
 #home-posts .post {
   position: relative;
   border-radius: 20px;

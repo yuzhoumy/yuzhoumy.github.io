@@ -9,6 +9,138 @@
     <meta name="author" content="Yuzhou 宇宙">
     <meta name="description" content="I call myself "yuzhou" (宇宙) which means the universe, since I was 12.  ">
     <meta name="keywords" content=" ">
+    <script>
+    window.YZ_LANGUAGE = {
+        supported: ['en', 'zh-TW', 'zh-CN', 'my'],
+        labels: {
+            en: 'English',
+            'zh-TW': '\u7e41\u9ad4\u4e2d\u6587',
+            'zh-CN': '\u7b80\u4f53\u4e2d\u6587',
+            my: 'Bahasa Melayu'
+        },
+        routeMap: {},
+        translations: {
+            en: {
+                'nav.home': 'Home',
+                'nav.about': 'About',
+                'nav.archives': 'Archives',
+                'nav.friends': 'Friends',
+                'nav.categories': 'Categories',
+                'nav.tags': 'Tags',
+                'home.subtitle': 'Hello',
+                'home.description': 'I call myself "yuzhou" (宇宙) which means the universe, since I was 12. ',
+                'card.description1': 'A Malaysian high school student, currently 17 years old.',
+                'card.description2': 'I will share my thoughts and daily life here.',
+                'friends.kicker': 'Friends',
+                'friends.pageTitle': 'Friends',
+                'friends.pageDescription': '',
+                'friends.empty': 'Add entries to the <code>friends</code> list in this page\'s front matter to show profile cards here.',
+                'footer.basedOn': 'Based on the',
+                'footer.icp': '备案号',
+                'card.friendLink': 'More about me',
+                'ui.readMore': 'Read More',
+                'ui.loading': 'LOADING...',
+                'ui.cacheHint': 'Please enable caching if loading is too slow (enabled by default in browsers).',
+                'post.unsupportedTitle': 'This version is not available in your selected language.',
+                'post.unsupportedDescription': 'Try one of the available variants below.'
+            },
+            'zh-TW': {
+                'nav.home': '\u9996\u9801',
+                'nav.about': '\u95dc\u65bc',
+                'nav.archives': '\u6b78\u6a94',
+                'nav.friends': '\u53cb\u93c8',
+                'nav.categories': '\u5206\u985e',
+                'nav.tags': '\u6a19\u7c64',
+                'home.subtitle': '歡迎來到我的小宇宙',
+                'home.description': '分享生活、想法和學習紀錄。',
+                'card.description1': '一位馬來西亞高中生，目前 17 歲。',
+                'card.description2': '我會把日常想法和生活點滴分享在這裡。',
+                'friends.kicker': '朋友們',
+                'friends.pageTitle': '朋友資料',
+                'friends.pageDescription': '一個我喜歡在網路上認識的朋友們的小角落。',
+                'friends.empty': '在這個頁面的 front matter 中新增 <code>friends</code> 條目，就能在這裡顯示好友卡片。',
+                'footer.basedOn': '基於',
+                'footer.icp': '備案號',
+                'card.friendLink': '更多關於我',
+                'ui.readMore': '\u95b1\u8b80\u66f4\u591a',
+                'ui.loading': '\u8f09\u5165\u4e2d...',
+                'ui.cacheHint': '\u5982\u679c\u8f09\u5165\u592a\u6162\uff0c\u8acb\u555f\u7528\u700f\u89bd\u5668\u5feb\u53d6\u3002'
+            },
+            'zh-CN': {
+                'nav.home': '\u9996\u9875',
+                'nav.about': '\u5173\u4e8e',
+                'nav.archives': '\u5f52\u6863',
+                'nav.friends': '\u53cb\u94fe',
+                'nav.categories': '\u5206\u7c7b',
+                'nav.tags': '\u6807\u7b7e',
+                'home.subtitle': '欢迎来到我的小宇宙',
+                'home.description': '分享生活、想法和学习记录。',
+                'card.description1': '一位马来西亚高中生，目前 17 岁。',
+                'card.description2': '我会把日常想法和生活点滴分享在这里。',
+                'friends.kicker': '朋友们',
+                'friends.pageTitle': '朋友资料',
+                'friends.pageDescription': '一个我喜欢在网络上认识的朋友们的小角落。',
+                'friends.empty': '在这个页面的 front matter 中新增 <code>friends</code> 条目，就能在这里显示好友卡片。',
+                'footer.basedOn': '基于',
+                'footer.icp': '备案号',
+                'card.friendLink': '更多关于我',
+                'ui.readMore': '\u9605\u8bfb\u66f4\u591a',
+                'ui.loading': '\u52a0\u8f7d\u4e2d...',
+                'ui.cacheHint': '\u5982\u679c\u52a0\u8f7d\u592a\u6162\uff0c\u8bf7\u542f\u7528\u6d4f\u89c8\u5668\u7f13\u5b58\u3002'
+            },
+            my: {
+                'nav.home': 'Laman Utama',
+                'nav.about': 'Tentang',
+                'nav.archives': 'Arkib',
+                'nav.friends': 'Rakan',
+                'nav.categories': 'Kategori',
+                'nav.tags': 'Tag',
+                'home.subtitle': 'Selamat datang ke ruang saya',
+                'home.description': 'Kongsi kehidupan, pemikiran, dan catatan harian saya.',
+                'card.description1': 'Seorang pelajar sekolah menengah Malaysia, berusia 17 tahun.',
+                'card.description2': 'Saya akan berkongsi kehidupan harian dan pemikiran saya di sini.',
+                'friends.kicker': 'Rakan',
+                'friends.pageTitle': 'Profil Rakan',
+                'friends.pageDescription': 'Sudut kecil untuk orang yang saya suka kenali di internet.',
+                'friends.empty': 'Tambah entri <code>friends</code> dalam front matter halaman ini untuk memaparkan kad profil di sini.',
+                'footer.basedOn': 'Berasaskan',
+                'footer.icp': 'No. Pendaftaran',
+                'card.friendLink': 'Lebih tentang saya',
+                'ui.readMore': 'Baca Lagi',
+                'ui.loading': 'MEMUATKAN...',
+                'ui.cacheHint': 'Sila aktifkan cache jika laman dimuatkan terlalu perlahan.',
+                'post.unsupportedTitle': 'Versi ini tidak tersedia dalam bahasa pilihan anda.',
+                'post.unsupportedDescription': 'Sila pilih versi yang tersedia di bawah.'
+            }
+        }
+    };
+
+    (function () {
+        var state = window.YZ_LANGUAGE;
+        var supported = state.supported;
+        var params = new URLSearchParams(window.location.search);
+        var queryLang = params.get('lang');
+        var lang = supported.indexOf(queryLang) !== -1 ? queryLang : localStorage.getItem('user-lang');
+        if (supported.indexOf(lang) === -1) lang = 'en';
+        if (supported.indexOf(queryLang) !== -1) localStorage.setItem('user-lang', lang);
+        else if (!localStorage.getItem('user-lang')) localStorage.setItem('user-lang', lang);
+        document.documentElement.setAttribute('lang', lang);
+
+        var routeMap = state.routeMap || {};
+        var target = routeMap[lang];
+        var path = window.location.pathname.replace(/\/+$/, '/') || '/';
+        var hasLangSuffix = /\/(en|zh-TW|zh-CN|my)\/?$/.test(path);
+        var shouldRedirect = target && (supported.indexOf(queryLang) !== -1 || !hasLangSuffix);
+        if (shouldRedirect) {
+            var link = document.createElement('a');
+            link.href = target;
+            var targetPath = link.pathname.replace(/\/+$/, '/') || '/';
+            if (targetPath !== path) {
+                window.location.replace(target + window.location.hash);
+            }
+        }
+    })();
+    </script>
     <link rel="icon" href="/./images/avatar.png">
     <link rel="stylesheet" href="/css/antd.min.css">
     
@@ -18,6 +150,10 @@
     <script src="/js/vue.js"></script>
     <script src="/js/antd.min.js"></script>
 <meta name="generator" content="Hexo 8.1.1"><link rel="alternate" href="/rss.xml" title="Yuzhou's Playground" type="application/rss+xml">
+<link rel="alternate" href="/rss-en.xml" title="Yuzhou's Playground English" type="application/rss+xml">
+<link rel="alternate" href="/rss-zh-tw.xml" title="Yuzhou's Playground 繁體中文" type="application/rss+xml">
+<link rel="alternate" href="/rss-zh-cn.xml" title="Yuzhou's Playground 简体中文" type="application/rss+xml">
+<link rel="alternate" href="/rss-my.xml" title="Yuzhou's Playground Bahasa Melayu" type="application/rss+xml">
 </head>
 
 <body>
@@ -31,8 +167,8 @@
             <div id="loadcontent"
                 style="width:400px;height:400px;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px#a3ddfb; text-align:center;opacity:1;transition:opacity 0.3s ease-out;">
                 <div>
-                    <h2>LOADING...</h2>
-                    <p>Please enable caching if loading is too slow (enabled by default in browsers).</p>
+                    <h2 data-i18n="ui.loading">LOADING...</h2>
+                    <p data-i18n="ui.cacheHint">Please enable caching if loading is too slow (enabled by default in browsers).</p>
                     <div>
                         <img src="/images/loading.gif" alt="loading">
                     </div>
@@ -56,44 +192,56 @@
             <span>
                 <a-icon type="home" theme="filled" />
             </span>
-            <span>home</span>
+            <span data-i18n="nav.home">home</span>
         </a>
         
         <a href="/about">
             <span>
                 <a-icon type="idcard" theme="filled" />
             </span>
-            <span>about</span>
+            <span data-i18n="nav.about">about</span>
         </a>
         
         <a href="/archives">
             <span>
                 <a-icon type="folder" theme="filled" />
             </span>
-            <span>archives</span>
+            <span data-i18n="nav.archives">archives</span>
         </a>
         
         <a href="/friends">
             <span>
                 <a-icon type="heart" theme="filled" />
             </span>
-            <span>friends</span>
+            <span data-i18n="nav.friends">friends</span>
         </a>
         
         <a href="/categories/Life">
             <span>
                 <a-icon type="book" theme="filled" />
             </span>
-            <span>categories</span>
+            <span data-i18n="nav.categories">categories</span>
         </a>
         
         <a href="/tags/English">
             <span>
                 <a-icon type="tags" theme="filled" />
             </span>
-            <span>tags</span>
+            <span data-i18n="nav.tags">tags</span>
         </a>
         
+        <div class="global-language-menu" data-language-menu>
+            <button class="global-language-trigger" type="button" data-language-trigger aria-expanded="false">
+                <span class="global-language-current" data-language-current>English</span>
+                <span class="global-language-caret"></span>
+            </button>
+            <div class="global-language-dropdown" role="menu">
+                <button class="global-language-option" type="button" value="en" data-language-option>English</button>
+                <button class="global-language-option" type="button" value="zh-TW" data-language-option>繁體中文</button>
+                <button class="global-language-option" type="button" value="zh-CN" data-language-option>简体中文</button>
+                <button class="global-language-option" type="button" value="my" data-language-option>Bahasa Melayu</button>
+            </div>
+        </div>
     </div>
 
     <div :class="'phone-menu ' + menu_show" id="phone-menu">
@@ -110,7 +258,7 @@
                     <div style="min-width:20px; max-width:50px; width: 10%">
                         <a-icon type="home" theme="filled" />
                     </div>
-                    <div style="min-width:100px;max-width: 150%;width: 20%;">home</div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;" data-i18n="nav.home">home</div>
                 </div>
             </a>
             
@@ -119,7 +267,7 @@
                     <div style="min-width:20px; max-width:50px; width: 10%">
                         <a-icon type="idcard" theme="filled" />
                     </div>
-                    <div style="min-width:100px;max-width: 150%;width: 20%;">about</div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;" data-i18n="nav.about">about</div>
                 </div>
             </a>
             
@@ -128,7 +276,7 @@
                     <div style="min-width:20px; max-width:50px; width: 10%">
                         <a-icon type="folder" theme="filled" />
                     </div>
-                    <div style="min-width:100px;max-width: 150%;width: 20%;">archives</div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;" data-i18n="nav.archives">archives</div>
                 </div>
             </a>
             
@@ -137,7 +285,7 @@
                     <div style="min-width:20px; max-width:50px; width: 10%">
                         <a-icon type="heart" theme="filled" />
                     </div>
-                    <div style="min-width:100px;max-width: 150%;width: 20%;">friends</div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;" data-i18n="nav.friends">friends</div>
                 </div>
             </a>
             
@@ -146,7 +294,7 @@
                     <div style="min-width:20px; max-width:50px; width: 10%">
                         <a-icon type="book" theme="filled" />
                     </div>
-                    <div style="min-width:100px;max-width: 150%;width: 20%;">categories</div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;" data-i18n="nav.categories">categories</div>
                 </div>
             </a>
             
@@ -155,16 +303,27 @@
                     <div style="min-width:20px; max-width:50px; width: 10%">
                         <a-icon type="tags" theme="filled" />
                     </div>
-                    <div style="min-width:100px;max-width: 150%;width: 20%;">tags</div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;" data-i18n="nav.tags">tags</div>
                 </div>
             </a>
             
+            <div class="mobile-language-options" data-language-menu>
+                <button class="global-language-trigger" type="button" data-language-trigger aria-expanded="false">
+                    <span class="global-language-current" data-language-current>English</span>
+                    <span class="global-language-caret"></span>
+                </button>
+                <div class="global-language-dropdown" role="menu">
+                    <button class="global-language-option" type="button" value="en" data-language-option>English</button>
+                    <button class="global-language-option" type="button" value="zh-TW" data-language-option>繁體中文</button>
+                    <button class="global-language-option" type="button" value="zh-CN" data-language-option>简体中文</button>
+                    <button class="global-language-option" type="button" value="my" data-language-option>Bahasa Melayu</button>
+                </div>
+            </div>
         </div>
         <div class="curtain" v-show="menu_show"></div>
     </div>
 
 </nav>
-
                 </div>
 
                 <div id="main">
@@ -182,8 +341,8 @@
         <span class="info">
             <div class="wrap">
                 <h1>Yuzhou's Playground</h1>
-                <h3>Ciallo</h3>
-                <h5>I call myself "yuzhou" (宇宙) which means the universe, since I was 12. </h5>
+                <h3 data-i18n="home.subtitle">Hello</h3>
+                <h5 data-i18n="home.description">I call myself "yuzhou" (宇宙) which means the universe, since I was 12. </h5>
             </div>
         </span>
     </div>
@@ -197,14 +356,18 @@
 
         <div id="posts">
             
+<div data-feed-list data-page-number="1" data-per-page="10">
 
-<div class="post">
 
-    <a href="/2026/04/25/childhood-happiness/">
-        <h2>
-            小時候的快樂，純粹是當時什麽都不知道而已
-        </h2>
-    </a>
+<div class="post" data-feed-post data-post-langs="zh-TW" style="display:none">
+
+    <div class="feed-post-title">
+        
+        <a href="/2026/04/25/childhood-happiness/" data-lang-content="zh-TW">
+            <h2>小時候的快樂，純粹是當時什麽都不知道而已</h2>
+        </a>
+        
+    </div>
 
     <div class="category-and-date">
 
@@ -228,7 +391,8 @@
     </div>
 
     <div class="excerpt">
-        <div class="content" v-pre>
+        
+        <div class="content" v-pre data-lang-content="zh-TW">
             
             
             <p>大約在我五歲的某個傍晚，老爸突然叫上我，説要到馬六甲的醫院，要留宿馬六甲三天兩夜。我蹦蹦跳跳地就走上車了，也許是開夜車的關係，路途上我並沒有什麽清晰的回憶。</p>
@@ -239,6 +403,7 @@
 
             
         </div>
+        
     </div>
 
     <div class="post-tags">
@@ -250,25 +415,42 @@
         
         <span class="tag">
             
-            <a href="/tags/Chinese" style=color:#ff7d73>
+            <a href="/tags/Chinese" style=color:#00bcd4>
                 Chinese
             </a>
         </span>
         
     </div>
 
-    <a href="/2026/04/25/childhood-happiness/ " class="go-post">
+    
+    <a href="/2026/04/25/childhood-happiness/" class="go-post" data-lang-content="zh-TW" data-i18n="ui.readMore">
         Read More
     </a>
+    
 </div>
 
-<div class="post">
 
-    <a href="/2026/04/12/photosynthesis/">
-        <h2>
-            Photosynthesis
-        </h2>
-    </a>
+<div class="post" data-feed-post data-post-langs="en zh-TW zh-CN my" style="display:none">
+
+    <div class="feed-post-title">
+        
+        <a href="/2026/04/12/photosynthesis/" data-lang-content="en">
+            <h2>Photosynthesis</h2>
+        </a>
+        
+        <a href="/2026/04/12/photosynthesis/zh-TW/" data-lang-content="zh-TW">
+            <h2>光合作用</h2>
+        </a>
+        
+        <a href="/2026/04/12/photosynthesis/zh-CN/" data-lang-content="zh-CN">
+            <h2>光合作用</h2>
+        </a>
+        
+        <a href="/2026/04/12/photosynthesis/my/" data-lang-content="my">
+            <h2>Fotosintesis</h2>
+        </a>
+        
+    </div>
 
     <div class="category-and-date">
 
@@ -292,14 +474,43 @@
     </div>
 
     <div class="excerpt">
-        <div class="content" v-pre>
+        
+        <div class="content" v-pre data-lang-content="en">
             
             
-            <h1 id="Fotosintesis-Penerangan-dalam-bahasa-Cina"><a href="#Fotosintesis-Penerangan-dalam-bahasa-Cina" class="headerlink" title="Fotosintesis: Penerangan dalam bahasa Cina"></a>Fotosintesis: Penerangan dalam bahasa Cina</h1><h1 id="Photosynthesis-Explained-in-Chinese"><a href="#Photosynthesis-Explained-in-Chinese" class="headerlink" title="Photosynthesis: Explained in Chinese"></a>Photosynthesis: Explained in Chinese</h1><h1 id="光合作用中文解釋"><a href="#光合作用中文解釋" class="headerlink" title="光合作用中文解釋"></a>光合作用中文解釋</h1><h2 id="KSSM-Biologi-Tingkatan-5-Bab-2-Daun"><a href="#KSSM-Biologi-Tingkatan-5-Bab-2-Daun" class="headerlink" title="KSSM Biologi Tingkatan 5 Bab 2: Daun"></a>KSSM Biologi Tingkatan 5 Bab 2: Daun</h2><h2 id="KSSM-Biology-Form-5-Chapter-2-Leaf"><a href="#KSSM-Biology-Form-5-Chapter-2-Leaf" class="headerlink" title="KSSM Biology Form 5 Chapter 2: Leaf"></a>KSSM Biology Form 5 Chapter 2: Leaf</h2><h2 id="KSSM中五生物第二課：葉子"><a href="#KSSM中五生物第二課：葉子" class="headerlink" title="KSSM中五生物第二課：葉子"></a>KSSM中五生物第二課：葉子</h2><p>Credit to our grand lecturer: Sam Eu Qang<br>Instagram : <a target="_blank" rel="noopener" href="https://instagram.com/samq709_2009">samq709_2009</a></p>
+            <h1 id="Photosynthesis-Explained-in-Chinese"><a href="#Photosynthesis-Explained-in-Chinese" class="headerlink" title="Photosynthesis: Explained in Chinese"></a>Photosynthesis: Explained in Chinese</h1><h3 id="KSSM-Biology-Form-5-Chapter-2-Leaf"><a href="#KSSM-Biology-Form-5-Chapter-2-Leaf" class="headerlink" title="KSSM Biology Form 5 Chapter 2: Leaf"></a>KSSM Biology Form 5 Chapter 2: Leaf</h3><p>Credit to our grand lecturer: Sam Eu Qang<br>Instagram : <a target="_blank" rel="noopener" href="https://instagram.com/samq709_2009">samq709_2009</a></p>
 <p><video width="100%" height="300" src="/images/post/photosynthesis.mp4" controls></video></p>
 
             
         </div>
+        
+        <div class="content" v-pre data-lang-content="zh-TW">
+            
+            
+            <h1 id="光合作用中文解釋"><a href="#光合作用中文解釋" class="headerlink" title="光合作用中文解釋"></a>光合作用中文解釋</h1><h3 id="KSSM中五生物第二課：葉子"><a href="#KSSM中五生物第二課：葉子" class="headerlink" title="KSSM中五生物第二課：葉子"></a>KSSM中五生物第二課：葉子</h3><p>講師: Sam Eu Qang<br>Instagram : <a target="_blank" rel="noopener" href="https://instagram.com/samq709_2009">samq709_2009</a></p>
+<p><video width="100%" height="300" src="/images/post/photosynthesis.mp4" controls></video></p>
+
+            
+        </div>
+        
+        <div class="content" v-pre data-lang-content="zh-CN">
+            
+            
+            <h1 id="光合作用中文解释"><a href="#光合作用中文解释" class="headerlink" title="光合作用中文解释"></a>光合作用中文解释</h1><h3 id="KSSM中五生物第二课：叶子"><a href="#KSSM中五生物第二课：叶子" class="headerlink" title="KSSM中五生物第二课：叶子"></a>KSSM中五生物第二课：叶子</h3><p>讲师: Sam Eu Qang<br>Instagram : <a target="_blank" rel="noopener" href="https://instagram.com/samq709_2009">samq709_2009</a></p>
+<p><video width="100%" height="300" src="/images/post/photosynthesis.mp4" controls></video></p>
+
+            
+        </div>
+        
+        <div class="content" v-pre data-lang-content="my">
+            
+            
+            <h1 id="Fotosintesis-Penerangan-dalam-bahasa-Cina"><a href="#Fotosintesis-Penerangan-dalam-bahasa-Cina" class="headerlink" title="Fotosintesis: Penerangan dalam bahasa Cina"></a>Fotosintesis: Penerangan dalam bahasa Cina</h1><h3 id="KSSM-Biologi-Tingkatan-5-Bab-2-Daun"><a href="#KSSM-Biologi-Tingkatan-5-Bab-2-Daun" class="headerlink" title="KSSM Biologi Tingkatan 5 Bab 2: Daun"></a>KSSM Biologi Tingkatan 5 Bab 2: Daun</h3><p>Penceramah yang dihormati: Sam Eu Qang<br>Instagram : <a target="_blank" rel="noopener" href="https://instagram.com/samq709_2009">samq709_2009</a></p>
+<p><video width="100%" height="300" src="/images/post/photosynthesis.mp4" controls></video></p>
+
+            
+        </div>
+        
     </div>
 
     <div class="post-tags">
@@ -311,25 +522,42 @@
         
         <span class="tag">
             
-            <a href="/tags/English" style=color:#00bcd4>
+            <a href="/tags/English" style=color:#00a596>
                 English
             </a>
         </span>
         
     </div>
 
-    <a href="/2026/04/12/photosynthesis/ " class="go-post">
+    
+    <a href="/2026/04/12/photosynthesis/" class="go-post" data-lang-content="en" data-i18n="ui.readMore">
         Read More
     </a>
+    
+    <a href="/2026/04/12/photosynthesis/zh-TW/" class="go-post" data-lang-content="zh-TW" data-i18n="ui.readMore">
+        Read More
+    </a>
+    
+    <a href="/2026/04/12/photosynthesis/zh-CN/" class="go-post" data-lang-content="zh-CN" data-i18n="ui.readMore">
+        Read More
+    </a>
+    
+    <a href="/2026/04/12/photosynthesis/my/" class="go-post" data-lang-content="my" data-i18n="ui.readMore">
+        Read More
+    </a>
+    
 </div>
 
-<div class="post">
 
-    <a href="/2026/04/09/scottish-bagpipe/">
-        <h2>
-            蘇格蘭風笛
-        </h2>
-    </a>
+<div class="post" data-feed-post data-post-langs="zh-TW" style="display:none">
+
+    <div class="feed-post-title">
+        
+        <a href="/2026/04/09/scottish-bagpipe/" data-lang-content="zh-TW">
+            <h2>蘇格蘭風笛</h2>
+        </a>
+        
+    </div>
 
     <div class="category-and-date">
 
@@ -353,7 +581,8 @@
     </div>
 
     <div class="excerpt">
-        <div class="content" v-pre>
+        
+        <div class="content" v-pre data-lang-content="zh-TW">
             
             
             <p>覺得自己精神萎靡不振嗎？且聽我推坑給你的 <strong>蘇格蘭風笛</strong>！</p>
@@ -366,7 +595,7 @@
 <p>換成了 <em>Hielan’ Laddie</em>。雖然每天早上6點半都會聽到這段音樂，但我在寫上面那段文字時，播放了這首音樂來聼，居然沒有感到一絲煩躁，很神奇吧！</p>
 <p>以下是一些我喜歡的曲目，和我的賞析，僅供參考~</p>
 <hr>
-<h2 id="Hielan’-Laddie"><a href="#Hielan’-Laddie" class="headerlink" title="Hielan’ Laddie"></a>Hielan’ Laddie</h2><p>（蘇格蘭風笛似乎是轉調樂器，但我不管了，我就按照自己聽到的音來）<br>（歡迎致郵到 <a href="mailto:&#x31;&#64;&#121;&#117;&#122;&#104;&#x6f;&#x75;&#x2e;&#109;&#x79;">1@yuzhou.my</a> 糾正錯誤，我也想瞭解這個美妙的樂器）<br>這似乎是蘇格蘭風笛少有的降E調曲目，其他好像都是降B調。</p>
+<h2 id="Hielan’-Laddie"><a href="#Hielan’-Laddie" class="headerlink" title="Hielan’ Laddie"></a>Hielan’ Laddie</h2><p>（蘇格蘭風笛似乎是轉調樂器，但我不管了，我就按照自己聽到的音來）<br>（歡迎致郵到 <a href="mailto:&#49;&#64;&#x79;&#117;&#122;&#104;&#x6f;&#x75;&#x2e;&#x6d;&#121;">1@yuzhou.my</a> 糾正錯誤，我也想瞭解這個美妙的樂器）<br>這似乎是蘇格蘭風笛少有的降E調曲目，其他好像都是降B調。</p>
 <iframe width="100%" height="300" src="https://www.youtube.com/embed/KUIOtA8LPec?si=ZJHEag2e52qG9Usx" frameborder="0" allowfullscreen></iframe>
 
 <p>當Bass音B♭響起時，整個緊迫感就上來了。并且，這個音會持續到結尾，我認爲這是蘇格蘭風笛“消除雜念”以鼓舞士氣的關鍵。有點類似那種 <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=FwDfZDpP5Jc">播放單一頻率音頻的影片</a>，能讓人腦袋放空，我想是同一個原理吧。<br><img src="/images/post/hielan-laddie-1.png" alt="Hielan Laddie"></p>
@@ -391,6 +620,7 @@
 
             
         </div>
+        
     </div>
 
     <div class="post-tags">
@@ -402,32 +632,37 @@
         
         <span class="tag">
             
-            <a href="/tags/Chinese" style=color:#03a9f4>
+            <a href="/tags/Chinese" style=color:#00bcd4>
                 Chinese
             </a>
         </span>
         
         <span class="tag">
             
-            <a href="/tags/Music" style=color:#00a596>
+            <a href="/tags/Music" style=color:#00bcd4>
                 Music
             </a>
         </span>
         
     </div>
 
-    <a href="/2026/04/09/scottish-bagpipe/ " class="go-post">
+    
+    <a href="/2026/04/09/scottish-bagpipe/" class="go-post" data-lang-content="zh-TW" data-i18n="ui.readMore">
         Read More
     </a>
+    
 </div>
 
-<div class="post">
 
-    <a href="/2026/03/30/unconfident-words/">
-        <h2>
-            不自信詞語
-        </h2>
-    </a>
+<div class="post" data-feed-post data-post-langs="zh-TW" style="display:none">
+
+    <div class="feed-post-title">
+        
+        <a href="/2026/03/30/unconfident-words/" data-lang-content="zh-TW">
+            <h2>不自信詞語</h2>
+        </a>
+        
+    </div>
 
     <div class="category-and-date">
 
@@ -451,7 +686,8 @@
     </div>
 
     <div class="excerpt">
-        <div class="content" v-pre>
+        
+        <div class="content" v-pre data-lang-content="zh-TW">
             
             
             <p><img src="/images/post/modal-words.jpg" alt="Modal Words"><br><small style="color: grey;">KSSM英文課本，79頁</small></p>
@@ -480,6 +716,7 @@
 
             
         </div>
+        
     </div>
 
     <div class="post-tags">
@@ -491,32 +728,37 @@
         
         <span class="tag">
             
-            <a href="/tags/Chinese" style=color:#00a596>
+            <a href="/tags/Chinese" style=color:#00bcd4>
                 Chinese
             </a>
         </span>
         
         <span class="tag">
             
-            <a href="/tags/Important" style=color:#ff7d73>
+            <a href="/tags/Important" style=color:#ffa2c4>
                 Important
             </a>
         </span>
         
     </div>
 
-    <a href="/2026/03/30/unconfident-words/ " class="go-post">
+    
+    <a href="/2026/03/30/unconfident-words/" class="go-post" data-lang-content="zh-TW" data-i18n="ui.readMore">
         Read More
     </a>
+    
 </div>
 
-<div class="post">
 
-    <a href="/2026/03/28/procrastination/">
-        <h2>
-            拖延症
-        </h2>
-    </a>
+<div class="post" data-feed-post data-post-langs="zh-TW" style="display:none">
+
+    <div class="feed-post-title">
+        
+        <a href="/2026/03/28/procrastination/" data-lang-content="zh-TW">
+            <h2>拖延症</h2>
+        </a>
+        
+    </div>
 
     <div class="category-and-date">
 
@@ -540,7 +782,8 @@
     </div>
 
     <div class="excerpt">
-        <div class="content" v-pre>
+        
+        <div class="content" v-pre data-lang-content="zh-TW">
             
             
             <blockquote>
@@ -569,6 +812,7 @@
 
             
         </div>
+        
     </div>
 
     <div class="post-tags">
@@ -580,32 +824,37 @@
         
         <span class="tag">
             
-            <a href="/tags/Chinese" style=color:#ff7d73>
+            <a href="/tags/Chinese" style=color:#03a9f4>
                 Chinese
             </a>
         </span>
         
         <span class="tag">
             
-            <a href="/tags/Important" style=color:#ff7d73>
+            <a href="/tags/Important" style=color:#00bcd4>
                 Important
             </a>
         </span>
         
     </div>
 
-    <a href="/2026/03/28/procrastination/ " class="go-post">
+    
+    <a href="/2026/03/28/procrastination/" class="go-post" data-lang-content="zh-TW" data-i18n="ui.readMore">
         Read More
     </a>
+    
 </div>
 
-<div class="post">
 
-    <a href="/2026/03/27/productivity/">
-        <h2>
-            生產力——與拖延症的博弈
-        </h2>
-    </a>
+<div class="post" data-feed-post data-post-langs="zh-TW" style="display:none">
+
+    <div class="feed-post-title">
+        
+        <a href="/2026/03/27/productivity/" data-lang-content="zh-TW">
+            <h2>生產力——與拖延症的博弈</h2>
+        </a>
+        
+    </div>
 
     <div class="category-and-date">
 
@@ -629,7 +878,8 @@
     </div>
 
     <div class="excerpt">
-        <div class="content" v-pre>
+        
+        <div class="content" v-pre data-lang-content="zh-TW">
             
             
             <blockquote>
@@ -657,6 +907,7 @@
 
             
         </div>
+        
     </div>
 
     <div class="post-tags">
@@ -668,32 +919,37 @@
         
         <span class="tag">
             
-            <a href="/tags/Chinese" style=color:#ffa2c4>
+            <a href="/tags/Chinese" style=color:#ff7d73>
                 Chinese
             </a>
         </span>
         
         <span class="tag">
             
-            <a href="/tags/Important" style=color:#03a9f4>
+            <a href="/tags/Important" style=color:#ff7d73>
                 Important
             </a>
         </span>
         
     </div>
 
-    <a href="/2026/03/27/productivity/ " class="go-post">
+    
+    <a href="/2026/03/27/productivity/" class="go-post" data-lang-content="zh-TW" data-i18n="ui.readMore">
         Read More
     </a>
+    
 </div>
 
-<div class="post">
 
-    <a href="/2026/03/26/ideal-day/">
-        <h2>
-            理想的周末
-        </h2>
-    </a>
+<div class="post" data-feed-post data-post-langs="zh-TW" style="display:none">
+
+    <div class="feed-post-title">
+        
+        <a href="/2026/03/26/ideal-day/" data-lang-content="zh-TW">
+            <h2>理想的周末</h2>
+        </a>
+        
+    </div>
 
     <div class="category-and-date">
 
@@ -717,7 +973,8 @@
     </div>
 
     <div class="excerpt">
-        <div class="content" v-pre>
+        
+        <div class="content" v-pre data-lang-content="zh-TW">
             
             
             <p><img src="/images/post/alimuthuahock.jpg" alt="Ali Muthu &amp; Ah Hock"><br><small style="color: grey;">Ali, Muthu &amp; Ah Hock, Dang Wangi店</small></p>
@@ -746,6 +1003,7 @@
 
             
         </div>
+        
     </div>
 
     <div class="post-tags">
@@ -757,25 +1015,30 @@
         
         <span class="tag">
             
-            <a href="/tags/Chinese" style=color:#ffa2c4>
+            <a href="/tags/Chinese" style=color:#03a9f4>
                 Chinese
             </a>
         </span>
         
     </div>
 
-    <a href="/2026/03/26/ideal-day/ " class="go-post">
+    
+    <a href="/2026/03/26/ideal-day/" class="go-post" data-lang-content="zh-TW" data-i18n="ui.readMore">
         Read More
     </a>
+    
 </div>
 
-<div class="post">
 
-    <a href="/2026/03/10/we-support-rss-now/">
-        <h2>
-            We support RSS now!
-        </h2>
-    </a>
+<div class="post" data-feed-post data-post-langs="en" style="display:none">
+
+    <div class="feed-post-title">
+        
+        <a href="/2026/03/10/we-support-rss-now/" data-lang-content="en">
+            <h2>We support RSS now!</h2>
+        </a>
+        
+    </div>
 
     <div class="category-and-date">
 
@@ -799,7 +1062,8 @@
     </div>
 
     <div class="excerpt">
-        <div class="content" v-pre>
+        
+        <div class="content" v-pre data-lang-content="en">
             
             
             <p>Now you can subscribe this blog by using RSS. The RSS link is <a target="_blank" rel="noopener" href="https://yuzhou.life/rss.xml">https://yuzhou.life/rss.xml</a>.</p>
@@ -807,6 +1071,7 @@
 
             
         </div>
+        
     </div>
 
     <div class="post-tags">
@@ -818,25 +1083,42 @@
         
         <span class="tag">
             
-            <a href="/tags/English" style=color:#00a596>
+            <a href="/tags/English" style=color:#ff7d73>
                 English
             </a>
         </span>
         
     </div>
 
-    <a href="/2026/03/10/we-support-rss-now/ " class="go-post">
+    
+    <a href="/2026/03/10/we-support-rss-now/" class="go-post" data-lang-content="en" data-i18n="ui.readMore">
         Read More
     </a>
+    
 </div>
 
-<div class="post">
 
-    <a href="/2026/02/05/piano-video-archive/">
-        <h2>
-            Piano video archive
-        </h2>
-    </a>
+<div class="post" data-feed-post data-post-langs="en zh-TW zh-CN my" style="display:none">
+
+    <div class="feed-post-title">
+        
+        <a href="/2026/02/05/piano-video-archive/" data-lang-content="en">
+            <h2>Piano video archive</h2>
+        </a>
+        
+        <a href="/2026/02/05/piano-video-archive/zh-TW/" data-lang-content="zh-TW">
+            <h2>鋼琴影片列表</h2>
+        </a>
+        
+        <a href="/2026/02/05/piano-video-archive/zh-CN/" data-lang-content="zh-CN">
+            <h2>钢琴影片列表</h2>
+        </a>
+        
+        <a href="/2026/02/05/piano-video-archive/my/" data-lang-content="my">
+            <h2>Arkib video piano</h2>
+        </a>
+        
+    </div>
 
     <div class="category-and-date">
 
@@ -860,7 +1142,8 @@
     </div>
 
     <div class="excerpt">
-        <div class="content" v-pre>
+        
+        <div class="content" v-pre data-lang-content="en">
             
             
             <p>Here is a list of videos of me playing the piano. I recorded most of them between 2021 and 2023.<br>The list is arranged according to the date each video was originally recorded.<br>Some videos are not included because the quality is poor, unclear or the recording is incomplete.</p>
@@ -886,6 +1169,88 @@
 
             
         </div>
+        
+        <div class="content" v-pre data-lang-content="zh-TW">
+            
+            
+            <p>這裏收藏了許多我彈鋼琴的影片，大部分是在2021 ~ 2023左右錄的。<br>所有影片根據錄製時間排序。<br>有一些影片由於畫質受損，音質不佳沒有被放進來。</p>
+<hr>
+<h3 id="Nocturne-Op-9-No-2"><a href="#Nocturne-Op-9-No-2" class="headerlink" title="Nocturne Op. 9, No. 2"></a>Nocturne Op. 9, No. 2</h3><p><code>Frédéric François Chopin : Nocturne Op. 9, No. 2</code><br><code>Recorded 7/10/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/chopin-nocturne-2.mp4" controls></video></p>
+<h3 id="Reverie"><a href="#Reverie" class="headerlink" title="Rêverie"></a>Rêverie</h3><p><code>Achille Claude Debussy : Rêverie (L, 76)</code><br><code>Recorded 31/10/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/reverie.mp4" controls></video></p>
+<h3 id="1eme-Gymnopedies"><a href="#1eme-Gymnopedies" class="headerlink" title="1ème Gymnopédies"></a>1ème Gymnopédies</h3><p><code>Erik Satie : Trois Gymnopédies - I. Lent et douloureux</code><br><code>Recorded 4/11/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/gymnopedie-1.mp4" controls></video></p>
+<h3 id="Suite-Bergamasque-Prelude"><a href="#Suite-Bergamasque-Prelude" class="headerlink" title="Suite Bergamasque : Prélude"></a>Suite Bergamasque : Prélude</h3><p><code>Achille Claude Debussy : Suite bergamasque (L. 75) - I. Prélude</code><br><code>Recorded 5/11/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/suite-bergamasque-prelude.mp4" controls></video></p>
+<h3 id="2eme-Gymnopedies"><a href="#2eme-Gymnopedies" class="headerlink" title="2ème Gymnopédies"></a>2ème Gymnopédies</h3><p><code>Erik Satie : Trois Gymnopédies - II. Lent et triste</code><br><code>Recorded 11/11/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/gymnopedie-2.mp4" controls></video></p>
+<h3 id="Moonlight-Sonata-1st-movement"><a href="#Moonlight-Sonata-1st-movement" class="headerlink" title="Moonlight Sonata 1st movement"></a>Moonlight Sonata 1st movement</h3><p><code>Ludwig Van Beethoven : Piano Sonata No. 14 &quot;Quasi una fantasia&quot; - I. Adagio sostenuto</code><br><code>Recorded 20/11/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/moonlight-sonata-1.mp4" controls></video></p>
+<h3 id="Danseuses-De-Delphes"><a href="#Danseuses-De-Delphes" class="headerlink" title="Danseuses De Delphes"></a>Danseuses De Delphes</h3><p><code>Achille Claude Debussy : Préludes, Livre 1 (L. 125) - I. Danseuses de Delphes: Lent et grave</code><br><code>Recorded 2/12/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/danseuses-de-delphes.mp4" controls></video></p>
+<h3 id="Notturno-Op-54-No-4"><a href="#Notturno-Op-54-No-4" class="headerlink" title="Notturno Op. 54, No. 4"></a>Notturno Op. 54, No. 4</h3><p><code>Grieg, Edward : Notturno, Op. 54, No. 4</code><br><code>Recorded 13/12/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/grieg.mp4" controls></video></p>
+<h3 id="Premiere-Arabesque"><a href="#Premiere-Arabesque" class="headerlink" title="Première Arabesque"></a>Première Arabesque</h3><p><code>Achille Claude Debussy : Deux arabesques (L. 74) - I. Andantino con moto</code><br><code>Recorded 30/12/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/arabesque-1.mp4" controls></video></p>
+<h3 id="La-Fille-aux-cheveux-de-lin"><a href="#La-Fille-aux-cheveux-de-lin" class="headerlink" title="La Fille aux cheveux de lin"></a>La Fille aux cheveux de lin</h3><p><code>Achille Claude Debussy : Préludes, Livre 1 (L. 125) - VIII. La Fille aux cheveux de lin: Très calme et doucement expressif</code><br><code>Recorded 30/12/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/la-fille-aux-cheveux-de-lin.mp4" controls></video></p>
+<h3 id="2eme-Gnossienne"><a href="#2eme-Gnossienne" class="headerlink" title="2ème Gnossienne"></a>2ème Gnossienne</h3><p><code>Erik Satie : Trois Gnossiennes - II. Avec étonnement</code><br><code>Recorded 22/1/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/gnossienne-2.mp4" controls></video></p>
+<h3 id="Nocturne-Op-20-No-1"><a href="#Nocturne-Op-20-No-1" class="headerlink" title="Nocturne Op. 20, No. 1"></a>Nocturne Op. 20, No. 1</h3><p><code>Frédéric François Chopin : Nocturne Op. 20, No. 1</code><br><code>Recorded 14/2/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/chopin-nocturne-op20-no1.mp4" controls></video></p>
+<h3 id="Wet-Hands"><a href="#Wet-Hands" class="headerlink" title="Wet Hands"></a>Wet Hands</h3><p><code>C418 : Minecraft Volume Alpha - XIII. Wet Hands</code><br><code>Recorded 20/2/2022</code><br><video width="100%" height="300" src="/images/piano-video-archive/wet-hands.mp4" controls></video></p>
+<h3 id="Pathetique-Sonata-2nd-movement"><a href="#Pathetique-Sonata-2nd-movement" class="headerlink" title="Pathétique Sonata 2nd movement"></a>Pathétique Sonata 2nd movement</h3><p><code>Ludwig Van Beethoven : Piano Sonata No. 8 &quot;Pathétique&quot; - II. Adagio cantabile</code><br><code>Recorded 21/5/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/pathetique-mvt-2.mp4" controls></video></p>
+<h3 id="Pavane-for-a-Dead-Princess"><a href="#Pavane-for-a-Dead-Princess" class="headerlink" title="Pavane for a Dead Princess"></a>Pavane for a Dead Princess</h3><p><code>Maurice Ravel : Pavane pour une infante défunte</code><br><code>Recorded 12/6/2022</code><br><video width="100%" height="300" src="/images/piano-video-archive/pavane-pour-une-infante-defunte.mp4" controls></video></p>
+<h3 id="Game-of-Thrones-Theme"><a href="#Game-of-Thrones-Theme" class="headerlink" title="Game of Thrones Theme"></a>Game of Thrones Theme</h3><p><code>Ramin Djawadi : Game of Thrones Theme</code><br><code>Recorded 23/7/2022</code><br><video width="100%" height="300" src="/images/piano-video-archive/game-of-thrones.mp4" controls></video></p>
+<h3 id="Prelude-in-C-major-from-The-Well-Tempered-Clavier-Book-1"><a href="#Prelude-in-C-major-from-The-Well-Tempered-Clavier-Book-1" class="headerlink" title="Prelude in C major, from The Well-Tempered Clavier Book 1"></a>Prelude in C major, from The Well-Tempered Clavier Book 1</h3><p><code>Johann Sebastian Bach : Das Wohltemperierte Klavier, Band I: Präludium in C-Dur, BWV846</code><br><code>Recorded 27/8/2022</code><br><video width="100%" height="300" src="/images/piano-video-archive/well-tempered-clavier-1.mp4" controls></video></p>
+<h3 id="Canon-in-D"><a href="#Canon-in-D" class="headerlink" title="Canon in D"></a>Canon in D</h3><p><code>Johann Pachelbel : Kanon in D-Dur</code><br><code>Recorded 8/10/2022</code><br><video width="100%" height="300" src="/images/piano-video-archive/canon-in-d.mp4" controls></video></p>
+
+            
+        </div>
+        
+        <div class="content" v-pre data-lang-content="zh-CN">
+            
+            
+            <p>这里收藏了许多我弹钢琴的影片，大部分是在2021 ~ 2023左右录的。<br>所有影片根据录制日期排序。<br>有一些影片由于画质受损、音质不佳没有被放进来。</p>
+<hr>
+<h3 id="Nocturne-Op-9-No-2"><a href="#Nocturne-Op-9-No-2" class="headerlink" title="Nocturne Op. 9, No. 2"></a>Nocturne Op. 9, No. 2</h3><p><code>Frédéric François Chopin : Nocturne Op. 9, No. 2</code><br><code>Recorded 7/10/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/chopin-nocturne-2.mp4" controls></video></p>
+<h3 id="Reverie"><a href="#Reverie" class="headerlink" title="Rêverie"></a>Rêverie</h3><p><code>Achille Claude Debussy : Rêverie (L, 76)</code><br><code>Recorded 31/10/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/reverie.mp4" controls></video></p>
+<h3 id="1eme-Gymnopedies"><a href="#1eme-Gymnopedies" class="headerlink" title="1ème Gymnopédies"></a>1ème Gymnopédies</h3><p><code>Erik Satie : Trois Gymnopédies - I. Lent et douloureux</code><br><code>Recorded 4/11/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/gymnopedie-1.mp4" controls></video></p>
+<h3 id="Suite-Bergamasque-Prelude"><a href="#Suite-Bergamasque-Prelude" class="headerlink" title="Suite Bergamasque : Prélude"></a>Suite Bergamasque : Prélude</h3><p><code>Achille Claude Debussy : Suite bergamasque (L. 75) - I. Prélude</code><br><code>Recorded 5/11/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/suite-bergamasque-prelude.mp4" controls></video></p>
+<h3 id="2eme-Gymnopedies"><a href="#2eme-Gymnopedies" class="headerlink" title="2ème Gymnopédies"></a>2ème Gymnopédies</h3><p><code>Erik Satie : Trois Gymnopédies - II. Lent et triste</code><br><code>Recorded 11/11/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/gymnopedie-2.mp4" controls></video></p>
+<h3 id="Moonlight-Sonata-1st-movement"><a href="#Moonlight-Sonata-1st-movement" class="headerlink" title="Moonlight Sonata 1st movement"></a>Moonlight Sonata 1st movement</h3><p><code>Ludwig Van Beethoven : Piano Sonata No. 14 &quot;Quasi una fantasia&quot; - I. Adagio sostenuto</code><br><code>Recorded 20/11/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/moonlight-sonata-1.mp4" controls></video></p>
+<h3 id="Danseuses-De-Delphes"><a href="#Danseuses-De-Delphes" class="headerlink" title="Danseuses De Delphes"></a>Danseuses De Delphes</h3><p><code>Achille Claude Debussy : Préludes, Livre 1 (L. 125) - I. Danseuses de Delphes: Lent et grave</code><br><code>Recorded 2/12/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/danseuses-de-delphes.mp4" controls></video></p>
+<h3 id="Notturno-Op-54-No-4"><a href="#Notturno-Op-54-No-4" class="headerlink" title="Notturno Op. 54, No. 4"></a>Notturno Op. 54, No. 4</h3><p><code>Grieg, Edward : Notturno, Op. 54, No. 4</code><br><code>Recorded 13/12/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/grieg.mp4" controls></video></p>
+<h3 id="Premiere-Arabesque"><a href="#Premiere-Arabesque" class="headerlink" title="Première Arabesque"></a>Première Arabesque</h3><p><code>Achille Claude Debussy : Deux arabesques (L. 74) - I. Andantino con moto</code><br><code>Recorded 30/12/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/arabesque-1.mp4" controls></video></p>
+<h3 id="La-Fille-aux-cheveux-de-lin"><a href="#La-Fille-aux-cheveux-de-lin" class="headerlink" title="La Fille aux cheveux de lin"></a>La Fille aux cheveux de lin</h3><p><code>Achille Claude Debussy : Préludes, Livre 1 (L. 125) - VIII. La Fille aux cheveux de lin: Très calme et doucement expressif</code><br><code>Recorded 30/12/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/la-fille-aux-cheveux-de-lin.mp4" controls></video></p>
+<h3 id="2eme-Gnossienne"><a href="#2eme-Gnossienne" class="headerlink" title="2ème Gnossienne"></a>2ème Gnossienne</h3><p><code>Erik Satie : Trois Gnossiennes - II. Avec étonnement</code><br><code>Recorded 22/1/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/gnossienne-2.mp4" controls></video></p>
+<h3 id="Nocturne-Op-20-No-1"><a href="#Nocturne-Op-20-No-1" class="headerlink" title="Nocturne Op. 20, No. 1"></a>Nocturne Op. 20, No. 1</h3><p><code>Frédéric François Chopin : Nocturne Op. 20, No. 1</code><br><code>Recorded 14/2/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/chopin-nocturne-op20-no1.mp4" controls></video></p>
+<h3 id="Wet-Hands"><a href="#Wet-Hands" class="headerlink" title="Wet Hands"></a>Wet Hands</h3><p><code>C418 : Minecraft Volume Alpha - XIII. Wet Hands</code><br><code>Recorded 20/2/2022</code><br><video width="100%" height="300" src="/images/piano-video-archive/wet-hands.mp4" controls></video></p>
+<h3 id="Pathetique-Sonata-2nd-movement"><a href="#Pathetique-Sonata-2nd-movement" class="headerlink" title="Pathétique Sonata 2nd movement"></a>Pathétique Sonata 2nd movement</h3><p><code>Ludwig Van Beethoven : Piano Sonata No. 8 &quot;Pathétique&quot; - II. Adagio cantabile</code><br><code>Recorded 21/5/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/pathetique-mvt-2.mp4" controls></video></p>
+<h3 id="Pavane-for-a-Dead-Princess"><a href="#Pavane-for-a-Dead-Princess" class="headerlink" title="Pavane for a Dead Princess"></a>Pavane for a Dead Princess</h3><p><code>Maurice Ravel : Pavane pour une infante défunte</code><br><code>Recorded 12/6/2022</code><br><video width="100%" height="300" src="/images/piano-video-archive/pavane-pour-une-infante-defunte.mp4" controls></video></p>
+<h3 id="Game-of-Thrones-Theme"><a href="#Game-of-Thrones-Theme" class="headerlink" title="Game of Thrones Theme"></a>Game of Thrones Theme</h3><p><code>Ramin Djawadi : Game of Thrones Theme</code><br><code>Recorded 23/7/2022</code><br><video width="100%" height="300" src="/images/piano-video-archive/game-of-thrones.mp4" controls></video></p>
+<h3 id="Prelude-in-C-major-from-The-Well-Tempered-Clavier-Book-1"><a href="#Prelude-in-C-major-from-The-Well-Tempered-Clavier-Book-1" class="headerlink" title="Prelude in C major, from The Well-Tempered Clavier Book 1"></a>Prelude in C major, from The Well-Tempered Clavier Book 1</h3><p><code>Johann Sebastian Bach : Das Wohltemperierte Klavier, Band I: Präludium in C-Dur, BWV846</code><br><code>Recorded 27/8/2022</code><br><video width="100%" height="300" src="/images/piano-video-archive/well-tempered-clavier-1.mp4" controls></video></p>
+<h3 id="Canon-in-D"><a href="#Canon-in-D" class="headerlink" title="Canon in D"></a>Canon in D</h3><p><code>Johann Pachelbel : Kanon in D-Dur</code><br><code>Recorded 8/10/2022</code><br><video width="100%" height="300" src="/images/piano-video-archive/canon-in-d.mp4" controls></video></p>
+
+            
+        </div>
+        
+        <div class="content" v-pre data-lang-content="my">
+            
+            
+            <p>Yang berikut ialah senarai video saya main piano. Saya merekodkan kebanyakannya semasa 2021~2023.<br>Senarai ini disusun mengikut tarikh perekodan video.<br>Ada beberapa video yang tidak tersenarai kerana kualiti yang rendah, tidak jelas ataupun sudah rosak.</p>
+<hr>
+<h3 id="Nocturne-Op-9-No-2"><a href="#Nocturne-Op-9-No-2" class="headerlink" title="Nocturne Op. 9, No. 2"></a>Nocturne Op. 9, No. 2</h3><p><code>Frédéric François Chopin : Nocturne Op. 9, No. 2</code><br><code>Recorded 7/10/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/chopin-nocturne-2.mp4" controls></video></p>
+<h3 id="Reverie"><a href="#Reverie" class="headerlink" title="Rêverie"></a>Rêverie</h3><p><code>Achille Claude Debussy : Rêverie (L, 76)</code><br><code>Recorded 31/10/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/reverie.mp4" controls></video></p>
+<h3 id="1eme-Gymnopedies"><a href="#1eme-Gymnopedies" class="headerlink" title="1ème Gymnopédies"></a>1ème Gymnopédies</h3><p><code>Erik Satie : Trois Gymnopédies - I. Lent et douloureux</code><br><code>Recorded 4/11/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/gymnopedie-1.mp4" controls></video></p>
+<h3 id="Suite-Bergamasque-Prelude"><a href="#Suite-Bergamasque-Prelude" class="headerlink" title="Suite Bergamasque : Prélude"></a>Suite Bergamasque : Prélude</h3><p><code>Achille Claude Debussy : Suite bergamasque (L. 75) - I. Prélude</code><br><code>Recorded 5/11/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/suite-bergamasque-prelude.mp4" controls></video></p>
+<h3 id="2eme-Gymnopedies"><a href="#2eme-Gymnopedies" class="headerlink" title="2ème Gymnopédies"></a>2ème Gymnopédies</h3><p><code>Erik Satie : Trois Gymnopédies - II. Lent et triste</code><br><code>Recorded 11/11/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/gymnopedie-2.mp4" controls></video></p>
+<h3 id="Moonlight-Sonata-1st-movement"><a href="#Moonlight-Sonata-1st-movement" class="headerlink" title="Moonlight Sonata 1st movement"></a>Moonlight Sonata 1st movement</h3><p><code>Ludwig Van Beethoven : Piano Sonata No. 14 &quot;Quasi una fantasia&quot; - I. Adagio sostenuto</code><br><code>Recorded 20/11/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/moonlight-sonata-1.mp4" controls></video></p>
+<h3 id="Danseuses-De-Delphes"><a href="#Danseuses-De-Delphes" class="headerlink" title="Danseuses De Delphes"></a>Danseuses De Delphes</h3><p><code>Achille Claude Debussy : Préludes, Livre 1 (L. 125) - I. Danseuses de Delphes: Lent et grave</code><br><code>Recorded 2/12/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/danseuses-de-delphes.mp4" controls></video></p>
+<h3 id="Notturno-Op-54-No-4"><a href="#Notturno-Op-54-No-4" class="headerlink" title="Notturno Op. 54, No. 4"></a>Notturno Op. 54, No. 4</h3><p><code>Grieg, Edward : Notturno, Op. 54, No. 4</code><br><code>Recorded 13/12/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/grieg.mp4" controls></video></p>
+<h3 id="Premiere-Arabesque"><a href="#Premiere-Arabesque" class="headerlink" title="Première Arabesque"></a>Première Arabesque</h3><p><code>Achille Claude Debussy : Deux arabesques (L. 74) - I. Andantino con moto</code><br><code>Recorded 30/12/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/arabesque-1.mp4" controls></video></p>
+<h3 id="La-Fille-aux-cheveux-de-lin"><a href="#La-Fille-aux-cheveux-de-lin" class="headerlink" title="La Fille aux cheveux de lin"></a>La Fille aux cheveux de lin</h3><p><code>Achille Claude Debussy : Préludes, Livre 1 (L. 125) - VIII. La Fille aux cheveux de lin: Très calme et doucement expressif</code><br><code>Recorded 30/12/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/la-fille-aux-cheveux-de-lin.mp4" controls></video></p>
+<h3 id="2eme-Gnossienne"><a href="#2eme-Gnossienne" class="headerlink" title="2ème Gnossienne"></a>2ème Gnossienne</h3><p><code>Erik Satie : Trois Gnossiennes - II. Avec étonnement</code><br><code>Recorded 22/1/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/gnossienne-2.mp4" controls></video></p>
+<h3 id="Nocturne-Op-20-No-1"><a href="#Nocturne-Op-20-No-1" class="headerlink" title="Nocturne Op. 20, No. 1"></a>Nocturne Op. 20, No. 1</h3><p><code>Frédéric François Chopin : Nocturne Op. 20, No. 1</code><br><code>Recorded 14/2/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/chopin-nocturne-op20-no1.mp4" controls></video></p>
+<h3 id="Wet-Hands"><a href="#Wet-Hands" class="headerlink" title="Wet Hands"></a>Wet Hands</h3><p><code>C418 : Minecraft Volume Alpha - XIII. Wet Hands</code><br><code>Recorded 20/2/2022</code><br><video width="100%" height="300" src="/images/piano-video-archive/wet-hands.mp4" controls></video></p>
+<h3 id="Pathetique-Sonata-2nd-movement"><a href="#Pathetique-Sonata-2nd-movement" class="headerlink" title="Pathétique Sonata 2nd movement"></a>Pathétique Sonata 2nd movement</h3><p><code>Ludwig Van Beethoven : Piano Sonata No. 8 &quot;Pathétique&quot; - II. Adagio cantabile</code><br><code>Recorded 21/5/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/pathetique-mvt-2.mp4" controls></video></p>
+<h3 id="Pavane-for-a-Dead-Princess"><a href="#Pavane-for-a-Dead-Princess" class="headerlink" title="Pavane for a Dead Princess"></a>Pavane for a Dead Princess</h3><p><code>Maurice Ravel : Pavane pour une infante défunte</code><br><code>Recorded 12/6/2022</code><br><video width="100%" height="300" src="/images/piano-video-archive/pavane-pour-une-infante-defunte.mp4" controls></video></p>
+<h3 id="Game-of-Thrones-Theme"><a href="#Game-of-Thrones-Theme" class="headerlink" title="Game of Thrones Theme"></a>Game of Thrones Theme</h3><p><code>Ramin Djawadi : Game of Thrones Theme</code><br><code>Recorded 23/7/2022</code><br><video width="100%" height="300" src="/images/piano-video-archive/game-of-thrones.mp4" controls></video></p>
+<h3 id="Prelude-in-C-major-from-The-Well-Tempered-Clavier-Book-1"><a href="#Prelude-in-C-major-from-The-Well-Tempered-Clavier-Book-1" class="headerlink" title="Prelude in C major, from The Well-Tempered Clavier Book 1"></a>Prelude in C major, from The Well-Tempered Clavier Book 1</h3><p><code>Johann Sebastian Bach : Das Wohltemperierte Klavier, Band I: Präludium in C-Dur, BWV846</code><br><code>Recorded 27/8/2022</code><br><video width="100%" height="300" src="/images/piano-video-archive/well-tempered-clavier-1.mp4" controls></video></p>
+<h3 id="Canon-in-D"><a href="#Canon-in-D" class="headerlink" title="Canon in D"></a>Canon in D</h3><p><code>Johann Pachelbel : Kanon in D-Dur</code><br><code>Recorded 8/10/2022</code><br><video width="100%" height="300" src="/images/piano-video-archive/canon-in-d.mp4" controls></video></p>
+
+            
+        </div>
+        
     </div>
 
     <div class="post-tags">
@@ -897,25 +1262,40 @@
         
         <span class="tag">
             
-            <a href="/tags/English" style=color:#ff7d73>
+            <a href="/tags/English" style=color:#00a596>
                 English
             </a>
         </span>
         
         <span class="tag">
             
-            <a href="/tags/Music" style=color:#ff7d73>
+            <a href="/tags/Music" style=color:#00a596>
                 Music
             </a>
         </span>
         
     </div>
 
-    <a href="/2026/02/05/piano-video-archive/ " class="go-post">
+    
+    <a href="/2026/02/05/piano-video-archive/" class="go-post" data-lang-content="en" data-i18n="ui.readMore">
         Read More
     </a>
+    
+    <a href="/2026/02/05/piano-video-archive/zh-TW/" class="go-post" data-lang-content="zh-TW" data-i18n="ui.readMore">
+        Read More
+    </a>
+    
+    <a href="/2026/02/05/piano-video-archive/zh-CN/" class="go-post" data-lang-content="zh-CN" data-i18n="ui.readMore">
+        Read More
+    </a>
+    
+    <a href="/2026/02/05/piano-video-archive/my/" class="go-post" data-lang-content="my" data-i18n="ui.readMore">
+        Read More
+    </a>
+    
 </div>
 
+</div>
 
              
 <div class="page-current">
@@ -933,10 +1313,28 @@
         </span>
 
         
+        <span>
+            <a href="/page/2/">
+                <span class="page-num">
+                    2
+                </span>
+            </a>
+            
+
+            
+
+        </span>
+        
 
     </div>
 
     <div class="next">
+        
+        <a href="/page/2/ ">
+            <span class="page-num">
+                <a-icon type="caret-right" theme="filled" />
+            </span>
+        </a>
         
     </div>
 
@@ -956,11 +1354,11 @@
         </div>
         <div class="descriptions">
             
-            <div class="description">
+            <div class="description" data-i18n="card.description1">
                 A Malaysian high school student, currently 17 years old.
             </div>
             
-            <div class="description">
+            <div class="description" data-i18n="card.description2">
                 I will share my thoughts and daily life here.
             </div>
             
@@ -1016,7 +1414,7 @@
         <div class="friend-links">
             
             <div class="friend-link">
-                <a href="/about">
+                <a href="/about" data-i18n="card.friendLink">
                     More about me
                 </a>
             </div>
@@ -1038,8 +1436,11 @@
             @Yuzhou 宇宙
         </div>
         <div></div>
-        <div>Based on the <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo Engine</a> & <a
-                target="_blank" rel="noopener" href="https://github.com/korilin/hexo-theme-particle">Particle Theme</a></div>
+        <div>
+            <span data-i18n="footer.basedOn">Based on the</span>
+            <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo Engine</a> &
+            <a target="_blank" rel="noopener" href="https://github.com/korilin/hexo-theme-particle">Particle Theme</a>
+        </div>
         
     </div>
 
@@ -1092,6 +1493,206 @@
     })
 </script>
 
+<script>
+(function () {
+    var state = window.YZ_LANGUAGE || {};
+    var supported = state.supported || ['en', 'zh-TW', 'zh-CN', 'my'];
+    var labels = state.labels || { en: 'English', 'zh-TW': '繁體中文', 'zh-CN': '简体中文', my: 'Bahasa Melayu' };
+    var translations = state.translations || {};
+
+    function normalizeLang(lang) {
+        return supported.indexOf(lang) !== -1 ? lang : 'en';
+    }
+
+    function currentLang() {
+        return normalizeLang(localStorage.getItem('user-lang') || 'en');
+    }
+
+    function routeForLang(lang) {
+        return (state.routeMap || {})[lang];
+    }
+
+    function normalizedPath(url) {
+        var link = document.createElement('a');
+        link.href = url;
+        return link.pathname.replace(/\/+$/, '/') || '/';
+    }
+
+    function redirectToLangRoute(lang) {
+        var target = routeForLang(lang);
+        if (!target) return false;
+        if (normalizedPath(target) === (window.location.pathname.replace(/\/+$/, '/') || '/')) return false;
+        window.location.href = target + window.location.hash;
+        return true;
+    }
+
+    function setUrlLang(lang) {
+        var url = new URL(window.location.href);
+        url.searchParams.set('lang', lang);
+        window.history.replaceState({}, '', url.pathname + url.search + url.hash);
+    }
+
+    function setPaginationLang(lang) {
+        document.querySelectorAll('.page-current a').forEach(function (link) {
+            var url = new URL(link.getAttribute('href'), window.location.origin);
+            url.searchParams.set('lang', lang);
+            link.setAttribute('href', url.pathname + url.search + url.hash);
+        });
+    }
+
+    function hasLang(node, lang) {
+        return (node.getAttribute('data-post-langs') || '').split(/\s+/).indexOf(lang) !== -1;
+    }
+
+    function applyTranslations(lang) {
+        var dictionary = translations[lang] || translations.en || {};
+        document.querySelectorAll('[data-i18n]').forEach(function (node) {
+            var key = node.getAttribute('data-i18n');
+            if (!dictionary[key]) return;
+            if (dictionary[key].indexOf('<') !== -1) {
+                node.innerHTML = dictionary[key];
+            } else {
+                node.textContent = dictionary[key];
+            }
+        });
+        document.querySelectorAll('[data-language-current]').forEach(function (node) {
+            node.textContent = labels[lang] || lang;
+        });
+        document.querySelectorAll('[data-language-trigger]').forEach(function (node) {
+            node.setAttribute('aria-label', labels[lang] || lang);
+        });
+    }
+
+    function applyLangContent(root, lang, forceBlock) {
+        root.querySelectorAll('[data-lang-content]').forEach(function (node) {
+            node.style.display = node.getAttribute('data-lang-content') === lang ? (forceBlock || 'block') : 'none';
+        });
+    }
+
+    function applyHome(lang) {
+        var feed = document.querySelector('[data-feed-list]');
+        if (!feed) return;
+
+        var perPage = parseInt(feed.getAttribute('data-per-page'), 10) || 10;
+        var pageNumber = parseInt(feed.getAttribute('data-page-number'), 10) || 1;
+        var matchingPosts = Array.prototype.filter.call(feed.querySelectorAll('[data-feed-post]'), function (post) {
+            return hasLang(post, lang);
+        });
+        var start = (pageNumber - 1) * perPage;
+        var end = start + perPage;
+
+        feed.querySelectorAll('[data-feed-post]').forEach(function (post) {
+            var index = matchingPosts.indexOf(post);
+            var showPost = index >= start && index < end;
+            post.style.display = showPost ? '' : 'none';
+            applyLangContent(post, lang, 'block');
+        });
+    }
+
+    function applyVariantLists(lang) {
+        document.querySelectorAll('[data-post-card]').forEach(function (entry) {
+            var hasActiveTitle = hasLang(entry, lang);
+            entry.style.display = hasActiveTitle ? '' : 'none';
+            applyLangContent(entry, lang, 'block');
+        });
+
+        document.querySelectorAll('[data-title-variants]').forEach(function (group) {
+            applyLangContent(group, lang, 'block');
+        });
+    }
+
+    function updateUnsupportedWarning(lang) {
+        var warning = document.querySelector('[data-post-unsupported-warning]');
+        if (!warning) return;
+
+        var routeMap = state.routeMap || {};
+        var variantList = Object.keys(routeMap).filter(function (variantLang) {
+            return Boolean(routeMap[variantLang]);
+        });
+        var supportedForPage = Boolean(routeMap[lang]);
+
+        warning.style.display = supportedForPage || variantList.length === 0 ? 'none' : '';
+        if (!warning.style.display || warning.style.display === 'none') return;
+
+        var links = warning.querySelector('[data-post-variant-links]');
+        if (!links) return;
+
+        links.innerHTML = variantList.map(function (variantLang) {
+            var href = routeMap[variantLang];
+            return '<li><a href="' + href + '">' + (labels[variantLang] || variantLang) + '</a></li>';
+        }).join('');
+    }
+
+    function applyLanguage(lang) {
+        lang = normalizeLang(lang);
+        localStorage.setItem('user-lang', lang);
+        document.documentElement.setAttribute('lang', lang);
+        applyTranslations(lang);
+        applyHome(lang);
+        applyVariantLists(lang);
+        updateUnsupportedWarning(lang);
+        setPaginationLang(lang);
+    }
+
+    function switchLanguage(lang) {
+        lang = normalizeLang(lang);
+        localStorage.setItem('user-lang', lang);
+        if (redirectToLangRoute(lang)) return;
+        setUrlLang(lang);
+        applyLanguage(lang);
+    }
+
+    document.addEventListener('click', function (event) {
+        var trigger = event.target.closest('[data-language-trigger]');
+        if (trigger) {
+            event.preventDefault();
+            var menu = trigger.closest('[data-language-menu]');
+            if (!menu) return;
+            var isOpen = menu.classList.contains('is-open');
+            document.querySelectorAll('[data-language-menu].is-open').forEach(function (item) {
+                item.classList.remove('is-open');
+            });
+            if (!isOpen) {
+                menu.classList.add('is-open');
+            }
+            document.querySelectorAll('[data-language-trigger]').forEach(function (button) {
+                button.setAttribute('aria-expanded', String(menu.classList.contains('is-open')));
+            });
+            return;
+        }
+
+        var option = event.target.closest('[data-language-option]');
+        if (option) {
+            event.preventDefault();
+            switchLanguage(option.getAttribute('value') || option.value);
+            document.querySelectorAll('[data-language-menu].is-open').forEach(function (item) {
+                item.classList.remove('is-open');
+            });
+            return;
+        }
+
+        if (!event.target.closest('[data-language-menu]')) {
+            document.querySelectorAll('[data-language-menu].is-open').forEach(function (item) {
+                item.classList.remove('is-open');
+            });
+        }
+    });
+
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') {
+            document.querySelectorAll('[data-language-menu].is-open').forEach(function (item) {
+                item.classList.remove('is-open');
+            });
+        }
+    });
+
+    window.yuzhouApplyLanguage = applyLanguage;
+    applyLanguage(currentLang());
+    window.addEventListener('load', function () {
+        applyLanguage(currentLang());
+    });
+})();
+</script>
 </body>
 
 </html>

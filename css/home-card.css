@@ -2,6 +2,13 @@
   position: relative;
   width: 300px;
   top: 100px;
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+}
+#home-card.home-card-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(12px);
 }
 #home-card .card-style {
   border-radius: 10px;
@@ -33,7 +40,7 @@
 #home-card .card-style .icon-links {
   width: 85%;
   margin: 10px auto;
-  padding: 8px 15px;
+  padding: 8px 5px;
   border-top: #cdcdcd solid 1px;
   border-bottom: #cdcdcd solid 1px;
 }

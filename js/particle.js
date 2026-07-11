@@ -1,4 +1,13 @@
 var barLocal = document.documentElement.scrollTop
+
+function updateHomeCardVisibility() {
+    var card = document.getElementById("home-card")
+    if (!card) return
+
+    var shouldHide = window.scrollY < 120
+    card.classList.toggle("home-card-hidden", shouldHide)
+}
+
 window.addEventListener('scroll', function (e) {
     var newLocal = document.documentElement.scrollTop
     var menu = document.getElementById("menu")
@@ -21,8 +30,13 @@ window.addEventListener('scroll', function (e) {
             footer.style = "top:70px"
         }
     }
+    updateHomeCardVisibility()
     barLocal = newLocal
 })
+
+window.addEventListener('load', updateHomeCardVisibility)
+document.addEventListener('DOMContentLoaded', updateHomeCardVisibility)
+updateHomeCardVisibility()
 
 
 hljs.initHighlightingOnLoad();

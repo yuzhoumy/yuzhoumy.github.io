@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Redirecting...</title>
+</head>
+<body>
+<script>
+(function () {
+  var pattern = /^[a-z]{2}(?:-[A-Z]{2})?$/;
+  var path = window.location.pathname.replace(/\/+$/, '');
+  var parts = path.split('/');
+  var last = parts[parts.length - 1];
+  if (pattern.test(last)) {
+    parts.pop();
+    var fallback = parts.join('/') + '/';
+    window.location.replace(fallback + window.location.search + window.location.hash);
+    return;
+  }
+  window.location.replace("/" + window.location.search + window.location.hash);
+})();
+</script>
+</body>
+</html>
