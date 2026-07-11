@@ -1,7 +1,8 @@
-﻿'use strict';
+'use strict';
 
 const { createSha1Hash, Permalink, slugize, url_for } = require('hexo-util');
 const pathUtil = require('path');
+const moment = require('moment-timezone');
 
 const LANG_ORDER = ['en', 'zh-TW', 'zh-CN', 'my'];
 const LANG_LABELS = {
@@ -272,6 +273,27 @@ hexo.extend.generator.register('multilingual_aliases', function multilingualAlia
   return routes;
 });
 
+function resolveDateLocale(ctx, locale) {
+  const lang = locale || ctx.page.lang || ctx.page.language || ctx.config.language;
+  if (!lang) return 'en';
+  if (lang === 'my') return 'ms';
+  return String(lang).toLowerCase().replace('_', '-');
+}
+
+hexo.extend.helper.register('date', function dateHelper(date, format, locale) {
+  const { config } = this;
+  const momentDate = date == null
+    ? moment()
+    : (moment.isMoment(date) ? date : moment(date));
+  const targetLocale = resolveDateLocale(this, locale);
+
+  if (targetLocale) {
+    momentDate.locale(targetLocale);
+  }
+
+  return momentDate.format(format || config.date_format);
+});
+
 hexo.extend.helper.register('language_variants', function languageVariants(item) {
   const source = parseLangSource(item && item.source);
   if (!source) return [];
@@ -288,4 +310,61 @@ hexo.extend.helper.register('language_variants', function languageVariants(item)
     url: url_for.call(this, languageUrlFor(entry.item, entry.source)),
     active: entry.source.lang === source.lang
   }));
+});
+function postVariantEntries(hexo, post) {
+  const source = parseLangSource(post && post.source);
+  if (!source || source.type !== 'post') return [];
+
+  return groupForPost(hexo, source).map(entry => ({
+    item: entry.item,
+    lang: entry.source.lang,
+    label: LANG_LABELS[entry.source.lang] || entry.source.lang,
+    url: languageUrlFor(entry.item, entry.source),
+    title: entry.item.title
+  }));
+}
+
+hexo.extend.helper.register('post_language_entries', function postLanguageEntries(post) {
+  return postVariantEntries(hexo, post).map(entry => ({
+    lang: entry.lang,
+    label: entry.label,
+    url: url_for.call(this, entry.url),
+    title: entry.title,
+    date: entry.item.date,
+    categories: entry.item.categories,
+    tags: entry.item.tags,
+    excerpt: entry.item.excerpt,
+    content: entry.item.content
+  }));
+});
+
+hexo.extend.helper.register('is_primary_post_variant', function isPrimaryPostVariant(post) {
+  const source = parseLangSource(post && post.source);
+  if (!source || source.type !== 'post') return true;
+  return defaultEntry(groupForPost(hexo, source)).source.lang === source.lang;
+});
+
+hexo.extend.helper.register('post_title_variants', function postTitleVariants(post) {
+  return postVariantEntries(hexo, post).map(entry => ({
+    lang: entry.lang,
+    label: entry.label,
+    url: url_for.call(this, entry.url),
+    title: entry.title
+  }));
+});
+function primaryPostFor(hexo, post) {
+  const source = parseLangSource(post && post.source);
+  if (!source || source.type !== 'post') return post;
+  const group = groupForPost(hexo, source);
+  return group.length ? defaultEntry(group).item : post;
+}
+
+hexo.extend.helper.register('primary_post_variant', function primaryPostVariant(post) {
+  return primaryPostFor(hexo, post);
+});
+
+hexo.extend.helper.register('post_group_key', function postGroupKey(post) {
+  const source = parseLangSource(post && post.source);
+  if (!source || source.type !== 'post') return (post && (post.source || post.path || post._id)) || '';
+  return source.key;
 });

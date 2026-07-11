@@ -1,5 +1,5 @@
 ---
-title: Piano video archive
+title: Arkib video piano
 date: 2026-02-05 12:10:55
 categories: 
     - Archive
@@ -9,9 +9,9 @@ tags:
 author: Yuzhou
 ---
 
-Here is a list of videos of me playing the piano. I recorded most of them between 2021 and 2023.  
-The list is arranged according to the date each video was originally recorded.  
-Some videos are not included because the quality is poor, unclear or the recording is incomplete.
+Yang berikut ialah senarai video saya main piano. Saya merekodkan kebanyakannya semasa 2021~2023.  
+Senarai ini disusun mengikut tarikh perekodan video.  
+Ada beberapa video yang tidak tersenarai kerana kualiti yang rendah, tidak jelas ataupun sudah rosak.
 
 ---
 

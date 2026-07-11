@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Yuzhou's Playground</title>
+    <link>http://yuzhou.my/</link>
+    <description>Yuzhou's personal blog</description>
+    <language>en</language>
+    <copyright>All rights reserved 2026, Yuzhou 宇宙</copyright>
+    <lastBuildDate>Tue, 11 July 2026 00:00:00 GMT</lastBuildDate>
+    <generator>Static</generator>
+    <atom:link href="http://yuzhou.my/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Welcome to Yuzhou's Playground</title>
+      <link>http://yuzhou.my/</link>
+      <guid>http://yuzhou.my/rss.xml</guid>
+      <description><![CDATA[<h1>Welcome to Yuzhou's Playground</h1><br>This is my personal blog where I share my thoughts. Visit website <a href="http://yuzhou.my/">yuzhou.my</a> to explore more.<br> You can subscribe to the RSS feed to stay updated!<br><hr>Choose a language-specific RSS feed: <ul><li><a href="http://yuzhou.my/rss-en.xml">Yuzhou's Playground English</a></li><li><a href="http://yuzhou.my/rss-zh-tw.xml">Yuzhou's Playground 繁體中文</a></li><li><a href="http://yuzhou.my/rss-zh-cn.xml">Yuzhou's Playground 简体中文</a></li><li><a href="http://yuzhou.my/rss-my.xml">Yuzhou's Playground Bahasa Melayu</a></li></ul>]]></description>
+      <pubDate>Tue, 11 Jul 2026 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>Choose a language-specific RSS feed:</p><ul><li><a href="http://yuzhou.my/rss-en.xml">Yuzhou's Playground English</a></li><li><a href="http://yuzhou.my/rss-zh-tw.xml">Yuzhou's Playground 繁體中文</a></li><li><a href="http://yuzhou.my/rss-zh-cn.xml">Yuzhou's Playground 简体中文</a></li><li><a href="http://yuzhou.my/rss-my.xml">Yuzhou's Playground Bahasa Melayu</a></li></ul>]]></content:encoded>
+    </item>
+  </channel>
+</rss>

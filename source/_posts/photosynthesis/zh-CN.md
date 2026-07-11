@@ -1,14 +1,14 @@
 ---
-title: Photosynthesis
+title: 光合作用
 date: 2026-04-12 12:10:55
 categories: [Archive]
 tags: [English]
 author: Yuzhou
 ---
 
-# Photosynthesis: Explained in Chinese
-### KSSM Biology Form 5 Chapter 2: Leaf
-Credit to our grand lecturer: Sam Eu Qang
+# 光合作用中文解释
+### KSSM中五生物第二课：叶子
+讲师: Sam Eu Qang
 Instagram : [samq709_2009](https://instagram.com/samq709_2009)
 
 

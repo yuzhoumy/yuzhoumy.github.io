@@ -1,6 +1,6 @@
 <% var rootlink = config.root %> 
 <div class="categories-tags">
-    <% var posts = [];%>
+    <% var posts = []; var seenPosts = {};%>
     <div class="all-s">
         <% site.categories.data.forEach(function(category){ %>
         <% 
@@ -35,13 +35,12 @@
     </div>
     <div id="archives">
         <% posts.forEach(function(post){ %>
+        <% var postKey = post_group_key(post); if(seenPosts[postKey]) return; seenPosts[postKey] = true; post = primary_post_variant(post); %>
         <a-timeline>
-            <a-timeline-item timestamp="<%- date(post.date, 'YYYY/M/D') %>" placement="top" color="#a5c2f5">
+            <a-timeline-item timestamp="<%- date(post.date, 'YYYY/M/D', 'en') %>" placement="top" color="#a5c2f5">
                 <a-card hoverable>
-                    <div class="item-time"><%- date(post.date, 'YYYY/M/D') %></div>
-                    <a href="<%- rootlink %><%- post.path %>">
-                        <h3><%= post.title %></h3>
-                    </a>
+                    <div class="item-time"><%- date(post.date, 'YYYY/M/D', 'en') %></div>
+                    <%- include('post-title-variants', { post: post }) %>
                     <div class="info">
                         <% if(post.categories && post.categories.data.length!=0){ %>
                         <span class="category">

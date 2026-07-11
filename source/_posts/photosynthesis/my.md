@@ -1,14 +1,14 @@
 ---
-title: Photosynthesis
+title: Fotosintesis
 date: 2026-04-12 12:10:55
 categories: [Archive]
 tags: [English]
 author: Yuzhou
 ---
 
-# Photosynthesis: Explained in Chinese
-### KSSM Biology Form 5 Chapter 2: Leaf
-Credit to our grand lecturer: Sam Eu Qang
+# Fotosintesis: Penerangan dalam bahasa Cina
+### KSSM Biologi Tingkatan 5 Bab 2: Daun
+Penceramah yang dihormati: Sam Eu Qang
 Instagram : [samq709_2009](https://instagram.com/samq709_2009)
 
 

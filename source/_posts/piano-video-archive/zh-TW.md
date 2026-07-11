@@ -1,5 +1,5 @@
 ---
-title: Piano video archive
+title: 鋼琴影片列表
 date: 2026-02-05 12:10:55
 categories: 
     - Archive
@@ -9,9 +9,9 @@ tags:
 author: Yuzhou
 ---
 
-Here is a list of videos of me playing the piano. I recorded most of them between 2021 and 2023.  
-The list is arranged according to the date each video was originally recorded.  
-Some videos are not included because the quality is poor, unclear or the recording is incomplete.
+這裏收藏了許多我彈鋼琴的影片，大部分是在2021 ~ 2023左右錄的。
+所有影片根據錄製時間排序。
+有一些影片由於畫質受損，音質不佳沒有被放進來。
 
 ---
 

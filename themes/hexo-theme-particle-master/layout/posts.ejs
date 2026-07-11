@@ -1,15 +1,29 @@
-<% 
-var current = (page.current-1)*config.index_generator.per_page; 
+<%
+var current = (page.current - 1) * config.index_generator.per_page;
 var rootlink = config.root;
+var homePosts = [];
+site.posts.forEach(function(post){
+    if (is_primary_post_variant(post)) homePosts.push(post);
+});
 %>
-<% site.posts.slice(0+current,config.index_generator.per_page+current).forEach(function(post){ %>
-<div class="post">
+<div class="feed-language-switcher" data-feed-language-switcher>
+    <button type="button" class="language-button active" data-lang="en">English</button>
+    <button type="button" class="language-button" data-lang="zh-TW">繁體中文</button>
+    <button type="button" class="language-button" data-lang="zh-CN">简体中文</button>
+    <button type="button" class="language-button" data-lang="my">Bahasa Melayu</button>
+</div>
 
-    <a href="<%- rootlink %><%- post.path %>">
-        <h2>
-            <%- post.title %>
-        </h2>
-    </a>
+<% homePosts.forEach(function(post){ %>
+<% var variants = post_language_entries(post); %>
+<div class="post" data-feed-post>
+
+    <div class="feed-post-title">
+        <% variants.forEach(function(variant){ %>
+        <a href="<%- variant.url %>" data-lang-content="<%- variant.lang %>">
+            <h2><%- variant.title %></h2>
+        </a>
+        <% }) %>
+    </div>
 
     <div class="category-and-date">
 
@@ -27,20 +41,22 @@ var rootlink = config.root;
             <span class="icon">
                 <a-icon type="calendar" theme="filled" />
             </span>
-            <%- date(post.date, 'YYYY/M/D') %>
+            <%- date(post.date, 'YYYY/M/D', 'en') %>
         </span>
 
     </div>
 
     <div class="excerpt">
-        <div class="content" v-pre>
-            <% if(post.excerpt.length != 0){ %>
-            <%- post.excerpt %>
+        <% variants.forEach(function(variant){ %>
+        <div class="content" v-pre data-lang-content="<%- variant.lang %>">
+            <% if(variant.excerpt && variant.excerpt.length != 0){ %>
+            <%- variant.excerpt %>
             <% } %>
-            <% if(post.excerpt.length == 0){ %>
-            <%- post.content %>
+            <% if(!variant.excerpt || variant.excerpt.length == 0){ %>
+            <%- variant.content %>
             <% } %>
         </div>
+        <% }) %>
     </div>
 
     <div class="post-tags">
@@ -51,7 +67,7 @@ var rootlink = config.root;
         <% } %>
         <% post.tags.data.forEach(function(data){%>
         <span class="tag">
-            <% 
+            <%
             if(theme.style == "night"){
                 var color = ['color:#607d8b', 'color:#6484be', 'color:#006674','color:#016a99']
             }else if(theme.style == "maiden"){
@@ -68,8 +84,78 @@ var rootlink = config.root;
         <% }) %>
     </div>
 
-    <a href="<%- rootlink %><%- post.path %> " class="go-post">
+    <% variants.forEach(function(variant){ %>
+    <a href="<%- variant.url %>" class="go-post" data-lang-content="<%- variant.lang %>">
         Read More
     </a>
+    <% }) %>
 </div>
 <% }); %>
+
+<script>
+(function () {
+    var supported = ['en', 'zh-TW', 'zh-CN', 'my'];
+    var params = new URLSearchParams(window.location.search);
+    var currentLang = params.get('lang') || localStorage.getItem('feedLang') || 'en';
+    if (supported.indexOf(currentLang) === -1) currentLang = 'en';
+
+    var perPage = <%- config.index_generator.per_page %>;
+    var pageNumber = <%- page.current %>;
+
+    function supportsLang(post, lang) {
+        return !!post.querySelector('[data-lang-content="' + lang + '"]');
+    }
+
+    function setPaginationLang(lang) {
+        document.querySelectorAll('.page-current a').forEach(function (link) {
+            var url = new URL(link.getAttribute('href'), window.location.origin);
+            url.searchParams.set('lang', lang);
+            link.setAttribute('href', url.pathname + url.search + url.hash);
+        });
+    }
+
+    function setLang(lang) {
+        currentLang = supported.indexOf(lang) === -1 ? 'en' : lang;
+        localStorage.setItem('feedLang', currentLang);
+        document.querySelectorAll('[data-feed-language-switcher] .language-button').forEach(function (button) {
+            button.classList.toggle('active', button.getAttribute('data-lang') === currentLang);
+        });
+        var matchingPosts = Array.prototype.filter.call(document.querySelectorAll('[data-feed-post]'), function (post) {
+            return supportsLang(post, currentLang);
+        });
+        var start = (pageNumber - 1) * perPage;
+        var end = start + perPage;
+
+        document.querySelectorAll('[data-feed-post]').forEach(function (post) {
+            var index = matchingPosts.indexOf(post);
+            var showPost = index >= start && index < end;
+            post.classList.toggle('feed-post-visible', showPost);
+            post.style.display = showPost ? '' : 'none';
+            post.querySelectorAll('[data-lang-content]').forEach(function (node) {
+                node.style.display = showPost && node.getAttribute('data-lang-content') === currentLang ? 'block' : 'none';
+            });
+        });
+        setPaginationLang(currentLang);
+    }
+
+    document.addEventListener('click', function (event) {
+        var button = event.target.closest('[data-feed-language-switcher] .language-button');
+        if (!button) return;
+
+        event.preventDefault();
+        var lang = button.getAttribute('data-lang');
+        var url = new URL(window.location.href);
+        url.searchParams.set('lang', lang);
+        window.history.replaceState({}, '', url.pathname + url.search + url.hash);
+        setLang(lang);
+    });
+
+    setLang(currentLang);
+    window.addEventListener('load', function () {
+        setLang(currentLang);
+    });
+    setTimeout(function () {
+        setLang(currentLang);
+    }, 0);
+})();
+</script>

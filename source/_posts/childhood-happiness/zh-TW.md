@@ -5,7 +5,7 @@ categories:
   - Life
 tags: 
   - Chinese
-author: Yam Yee Zhe 严宇泽
+author: Yuzhou
 ---
 
 大約在我五歲的某個傍晚，老爸突然叫上我，説要到馬六甲的醫院，要留宿馬六甲三天兩夜。我蹦蹦跳跳地就走上車了，也許是開夜車的關係，路途上我並沒有什麽清晰的回憶。

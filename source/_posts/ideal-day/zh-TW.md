@@ -3,7 +3,7 @@ title: 理想的周末
 date: 2026-03-26 15:27:37
 categories: [Life]
 tags: [Chinese]
-author: Yam Yee Zhe 严宇泽
+author: Yuzhou
 ---
 
 ![Ali Muthu & Ah Hock](/images/post/alimuthuahock.jpg)  

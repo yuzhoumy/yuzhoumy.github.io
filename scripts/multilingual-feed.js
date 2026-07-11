@@ -1,4 +1,4 @@
-﻿'use strict';
+'use strict';
 
 const { generateRssFeed } = require('feedsmith');
 const { encodeURL, full_url_for, gravatar, url_for } = require('hexo-util');
@@ -9,6 +9,8 @@ const FEEDS = [
   { lang: 'zh-CN', rssLang: 'zh-CN', path: 'rss-zh-cn.xml', title: "Yuzhou's Playground 简体中文" },
   { lang: 'my', rssLang: 'ms', path: 'rss-my.xml', title: "Yuzhou's Playground Bahasa Melayu" }
 ];
+const DEFAULT_FEED = { path: 'rss.xml', title: "Yuzhou's Playground" };
+const EMPTY_FEED_DATE = new Date('2026-03-10T00:00:00.000Z');
 const FALLBACK_LANGS = ['en', 'zh-TW', 'zh-CN', 'my'];
 const LANG_PATTERN = /^[a-z]{2}(?:-[A-Z]{2})?$/;
 
@@ -68,14 +70,16 @@ function groupPosts(posts) {
 }
 
 function pickVariant(group, targetLang) {
-  return (group.find(entry => entry.lang === targetLang)
-    || group.find(entry => entry.lang === 'en')
-    || group[0]).post;
+  const variant = group.find(entry => entry.lang === targetLang);
+  return variant ? variant.post : null;
 }
 
 function selectPosts(posts, targetLang, feedConfig) {
   const grouped = groupPosts(toArray(posts));
-  let selected = grouped.map(group => pickVariant(group, targetLang)).sort(byDateDesc);
+  let selected = grouped
+    .map(group => pickVariant(group, targetLang))
+    .filter(Boolean)
+    .sort(byDateDesc);
 
   if (feedConfig.limit) selected = selected.slice(0, feedConfig.limit);
   return selected;
@@ -115,17 +119,25 @@ function itemCategories(post) {
   return items.map(item => ({ name: item.name, domain: item.permalink }));
 }
 
+function siteUrlFor(hexo) {
+  let siteUrl = hexo.config.url;
+  if (siteUrl[siteUrl.length - 1] !== '/') siteUrl += '/';
+  return siteUrl;
+}
+
+function feedIcon(hexo) {
+  const { feed: feedConfig, email } = hexo.config;
+  if (feedConfig.icon) return full_url_for.call(hexo, feedConfig.icon);
+  if (email) return gravatar(email);
+  return '';
+}
+
 function feedMeta(hexo, feed, posts) {
   const { config } = hexo;
-  const { feed: feedConfig, email } = config;
+  const { feed: feedConfig } = config;
   const currentYear = new Date().getFullYear();
-  let siteUrl = config.url;
-  if (siteUrl[siteUrl.length - 1] !== '/') siteUrl += '/';
-
-  let icon = '';
-  if (feedConfig.icon) icon = full_url_for.call(hexo, feedConfig.icon);
-  else if (email) icon = gravatar(email);
-
+  const siteUrl = siteUrlFor(hexo);
+  const icon = feedIcon(hexo);
   const newest = posts[0];
 
   return {
@@ -138,7 +150,7 @@ function feedMeta(hexo, feed, posts) {
     language: feed.rssLang,
     author: { name: config.author, email: config.email },
     copyright: config.author && `All rights reserved ${currentYear}, ${config.author}`,
-    updated: newest.updated ? newest.updated.toDate() : newest.date.toDate()
+    updated: newest ? (newest.updated ? newest.updated.toDate() : newest.date.toDate()) : EMPTY_FEED_DATE
   };
 }
 
@@ -185,7 +197,8 @@ function renderFeed(hexo, feed, posts) {
 function rssAutodiscovery(data) {
   if (data.match(/type=['|"]?application\/(atom|rss)\+xml['|"]?/i)) return;
 
-  const tags = FEEDS.map(feed => `<link rel="alternate" href="${url_for.call(this, feed.path)}" title="${feed.title}" type="application/rss+xml">`).join('\n');
+  const feeds = [DEFAULT_FEED, ...FEEDS];
+  const tags = feeds.map(feed => `<link rel="alternate" href="${url_for.call(this, feed.path)}" title="${feed.title}" type="application/rss+xml">`).join('\n');
   return data.replace(/<head>(?!<\/head>).+?<\/head>/s, str => str.replace('</head>', `${tags}\n</head>`));
 }
 
@@ -196,7 +209,6 @@ hexo.extend.generator.register('rss2', function multilingualRssGenerator(locals)
 
   FEEDS.forEach(feed => {
     const posts = selectPosts(locals.posts, feed.lang, hexo.config.feed);
-    if (!posts.length) return;
 
     routes.push({
       path: feed.path,
