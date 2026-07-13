@@ -120,16 +120,19 @@
         var supported = state.supported;
         var params = new URLSearchParams(window.location.search);
         var queryLang = params.get('lang');
-        var lang = supported.indexOf(queryLang) !== -1 ? queryLang : localStorage.getItem('user-lang');
+        var routeMap = state.routeMap || {};
+        var path = window.location.pathname.replace(/\/+$/, '/') || '/';
+        var pathLangMatch = path.match(/\/(en|zh-TW|zh-CN|my)\/?$/);
+        var pathLang = pathLangMatch ? pathLangMatch[1] : null;
+        var lang = supported.indexOf(queryLang) !== -1 ? queryLang : (pathLang || localStorage.getItem('user-lang') || 'en');
         if (supported.indexOf(lang) === -1) lang = 'en';
         if (supported.indexOf(queryLang) !== -1) localStorage.setItem('user-lang', lang);
+        else if (pathLang) localStorage.setItem('user-lang', lang);
         else if (!localStorage.getItem('user-lang')) localStorage.setItem('user-lang', lang);
         document.documentElement.setAttribute('lang', lang);
 
-        var routeMap = state.routeMap || {};
         var target = routeMap[lang];
-        var path = window.location.pathname.replace(/\/+$/, '/') || '/';
-        var hasLangSuffix = /\/(en|zh-TW|zh-CN|my)\/?$/.test(path);
+        var hasLangSuffix = Boolean(pathLang);
         var shouldRedirect = target && (supported.indexOf(queryLang) !== -1 || !hasLangSuffix);
         if (shouldRedirect) {
             var link = document.createElement('a');
@@ -355,7 +358,7 @@
 <p>你也可以稱呼我為 <strong>宇宙</strong>。</p>
 <p>在觀馬來西亞中學生，喜歡聊天，重度P人，重度所愛腦。<br>分享欲很強（這也是為什麼我大費周章做博客的原因）。<br>喜歡抽象但精神狀態依然良好。</p>
 <h3 id="愛好"><a href="#愛好" class="headerlink" title="愛好"></a>愛好</h3><p>我喜歡<code>彈琴</code>，以前錄過很多影片，正在考慮把之前錄的影片存放在這裡。<br>我也喜歡<code>寫程式</code>，由於之前為Minecraft伺服器寫了很多插件，現在最熟悉的語言應該是Java……但偶爾也會做一些小玩意給自己玩玩。<br>我在家裡是坐不住的，所以我每1~2禮拜會定期<code>到戶外走走</code>，不管去哪裡都好XD。</p>
-<h3 id="聯絡"><a href="#聯絡" class="headerlink" title="聯絡"></a>聯絡</h3><p>Instagram: <a target="_blank" rel="noopener" href="http://instagram.com/yuzhou____">yuzhou____</a><br>Discord: <a target="_blank" rel="noopener" href="https://discord.com/users/709009923572498463">yuzhou_</a><br>Telegram: <a target="_blank" rel="noopener" href="https://t.me/yamyeezhe">@yamyeezhe</a><br>E-mail: <a href="mailto:&#x31;&#64;&#x79;&#x75;&#122;&#x68;&#111;&#x75;&#x2e;&#109;&#x79;">1@yuzhou.my</a></p>
+<h3 id="聯絡"><a href="#聯絡" class="headerlink" title="聯絡"></a>聯絡</h3><p>Instagram: <a target="_blank" rel="noopener" href="http://instagram.com/yuzhou____">yuzhou____</a><br>Discord: <a target="_blank" rel="noopener" href="https://discord.com/users/709009923572498463">yuzhou_</a><br>Telegram: <a target="_blank" rel="noopener" href="https://t.me/yamyeezhe">@yamyeezhe</a><br>E-mail: <a href="mailto:&#49;&#64;&#121;&#117;&#122;&#x68;&#111;&#x75;&#x2e;&#109;&#x79;">1@yuzhou.my</a></p>
 <h3 id="遊戲"><a href="#遊戲" class="headerlink" title="遊戲"></a>遊戲</h3><ul>
 <li>Minecraft  <blockquote>
 <p>入坑9年，當過建築師也當過伺服主，有血有淚，現在偶爾還是會玩單機。</p>

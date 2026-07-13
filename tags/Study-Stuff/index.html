@@ -120,16 +120,19 @@
         var supported = state.supported;
         var params = new URLSearchParams(window.location.search);
         var queryLang = params.get('lang');
-        var lang = supported.indexOf(queryLang) !== -1 ? queryLang : localStorage.getItem('user-lang');
+        var routeMap = state.routeMap || {};
+        var path = window.location.pathname.replace(/\/+$/, '/') || '/';
+        var pathLangMatch = path.match(/\/(en|zh-TW|zh-CN|my)\/?$/);
+        var pathLang = pathLangMatch ? pathLangMatch[1] : null;
+        var lang = supported.indexOf(queryLang) !== -1 ? queryLang : (pathLang || localStorage.getItem('user-lang') || 'en');
         if (supported.indexOf(lang) === -1) lang = 'en';
         if (supported.indexOf(queryLang) !== -1) localStorage.setItem('user-lang', lang);
+        else if (pathLang) localStorage.setItem('user-lang', lang);
         else if (!localStorage.getItem('user-lang')) localStorage.setItem('user-lang', lang);
         document.documentElement.setAttribute('lang', lang);
 
-        var routeMap = state.routeMap || {};
         var target = routeMap[lang];
-        var path = window.location.pathname.replace(/\/+$/, '/') || '/';
-        var hasLangSuffix = /\/(en|zh-TW|zh-CN|my)\/?$/.test(path);
+        var hasLangSuffix = Boolean(pathLang);
         var shouldRedirect = target && (supported.indexOf(queryLang) !== -1 || !hasLangSuffix);
         if (shouldRedirect) {
             var link = document.createElement('a');
@@ -334,7 +337,18 @@
         
         
         <span>
-            <a href="/tags/Happiness/" style=background:#ff7d73>
+            <a href="/tags/Childhood/" style=background:#ffa2c4>
+                <span class="icon">
+                    <a-icon type="tag" theme="filled" />
+                </span>
+                Childhood
+            </a>
+        </span>
+        
+        
+        
+        <span>
+            <a href="/tags/Happiness/" style=background:#ffa2c4>
                 <span class="icon">
                     <a-icon type="tag" theme="filled" />
                 </span>
@@ -345,7 +359,18 @@
         
         
         <span>
-            <a href="/tags/Procrastination/" style=background:#ff7d73>
+            <a href="/tags/Study-Stuff/" style='background:linear-gradient(120deg, #9abbf7 0%, #ffbbf4 100%)'>
+                <span class="icon">
+                    <a-icon type="tag" theme="filled" />
+                </span>
+                Study Stuff
+            </a>
+        </span>
+        
+        
+        
+        <span>
+            <a href="/tags/Procrastination/" style=background:#03a9f4>
                 <span class="icon">
                     <a-icon type="tag" theme="filled" />
                 </span>
@@ -367,28 +392,6 @@
         
         
         <span>
-            <a href="/tags/Childhood/" style=background:#00a596>
-                <span class="icon">
-                    <a-icon type="tag" theme="filled" />
-                </span>
-                Childhood
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="/tags/Study-Stuff/" style='background:linear-gradient(120deg, #9abbf7 0%, #ffbbf4 100%)'>
-                <span class="icon">
-                    <a-icon type="tag" theme="filled" />
-                </span>
-                Study Stuff
-            </a>
-        </span>
-        
-        
-        
-        <span>
             <a href="/tags/Music/" style=background:#03a9f4>
                 <span class="icon">
                     <a-icon type="tag" theme="filled" />
@@ -400,7 +403,7 @@
         
         
         <span>
-            <a href="/tags/Productivity/" style=background:#00bcd4>
+            <a href="/tags/Productivity/" style=background:#ffa2c4>
                 <span class="icon">
                     <a-icon type="tag" theme="filled" />
                 </span>
@@ -411,7 +414,7 @@
         
         
         <span>
-            <a href="/tags/Indonesian/" style=background:#ff7d73>
+            <a href="/tags/Indonesian/" style=background:#ffa2c4>
                 <span class="icon">
                     <a-icon type="tag" theme="filled" />
                 </span>

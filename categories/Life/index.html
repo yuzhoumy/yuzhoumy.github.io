@@ -120,16 +120,19 @@
         var supported = state.supported;
         var params = new URLSearchParams(window.location.search);
         var queryLang = params.get('lang');
-        var lang = supported.indexOf(queryLang) !== -1 ? queryLang : localStorage.getItem('user-lang');
+        var routeMap = state.routeMap || {};
+        var path = window.location.pathname.replace(/\/+$/, '/') || '/';
+        var pathLangMatch = path.match(/\/(en|zh-TW|zh-CN|my)\/?$/);
+        var pathLang = pathLangMatch ? pathLangMatch[1] : null;
+        var lang = supported.indexOf(queryLang) !== -1 ? queryLang : (pathLang || localStorage.getItem('user-lang') || 'en');
         if (supported.indexOf(lang) === -1) lang = 'en';
         if (supported.indexOf(queryLang) !== -1) localStorage.setItem('user-lang', lang);
+        else if (pathLang) localStorage.setItem('user-lang', lang);
         else if (!localStorage.getItem('user-lang')) localStorage.setItem('user-lang', lang);
         document.documentElement.setAttribute('lang', lang);
 
-        var routeMap = state.routeMap || {};
         var target = routeMap[lang];
-        var path = window.location.pathname.replace(/\/+$/, '/') || '/';
-        var hasLangSuffix = /\/(en|zh-TW|zh-CN|my)\/?$/.test(path);
+        var hasLangSuffix = Boolean(pathLang);
         var shouldRedirect = target && (supported.indexOf(queryLang) !== -1 || !hasLangSuffix);
         if (shouldRedirect) {
             var link = document.createElement('a');
@@ -344,7 +347,7 @@
         
         
         <span>
-            <a href="/categories/Archive/" style=background:#00bcd4>
+            <a href="/categories/Archive/" style=background:#03a9f4>
                 <span class="icon">
                     <a-icon type="book" theme="filled" /></span>
                 Archive
@@ -354,7 +357,7 @@
         
         
         <span>
-            <a href="/categories/Culture/" style=background:#ff7d73>
+            <a href="/categories/Culture/" style=background:#00a596>
                 <span class="icon">
                     <a-icon type="book" theme="filled" /></span>
                 Culture
@@ -377,14 +380,14 @@
         
         
         <a-timeline>
-            <a-timeline-item data-post-card data-post-langs="zh-TW" timestamp="2026/3/26" placement="top" color="#a5c2f5">
+            <a-timeline-item data-post-card data-post-langs="zh-TW" timestamp="2026/4/25" placement="top" color="#a5c2f5">
                 <a-card hoverable>
-                    <div class="item-time">2026/3/26</div>
+                    <div class="item-time">2026/4/25</div>
                     
 <div class="post-title-variants" data-title-variants data-post-langs="zh-TW">
     
-    <a class="post-title-variant" href="/2026/03/26/ideal-day/" hreflang="zh-TW" data-lang-content="zh-TW">
-        <h3>理想的周末</h3>
+    <a class="post-title-variant" href="/2026/04/25/childhood-happiness/" hreflang="zh-TW" data-lang-content="zh-TW">
+        <h3>小時候的快樂，純粹是當時什麽都不知道而已</h3>
     </a>
     
 </div>
@@ -408,7 +411,14 @@
                             
                             <span class="tag">
                                 
-                                <a href="/tags/Happiness" style=color:#03a9f4>
+                                <a href="/tags/Childhood" style=color:#ffa2c4>
+                                    Childhood
+                                </a>
+                            </span>
+                            
+                            <span class="tag">
+                                
+                                <a href="/tags/Happiness" style=color:#ffa2c4>
                                     Happiness
                                 </a>
                             </span>
@@ -460,7 +470,7 @@
                             
                             <span class="tag">
                                 
-                                <a href="/tags/Self" style=color:#00a596>
+                                <a href="/tags/Self" style=color:#ff7d73>
                                     Self
                                 </a>
                             </span>
@@ -474,14 +484,14 @@
         
         
         <a-timeline>
-            <a-timeline-item data-post-card data-post-langs="zh-TW" timestamp="2026/4/25" placement="top" color="#a5c2f5">
+            <a-timeline-item data-post-card data-post-langs="zh-TW" timestamp="2026/3/26" placement="top" color="#a5c2f5">
                 <a-card hoverable>
-                    <div class="item-time">2026/4/25</div>
+                    <div class="item-time">2026/3/26</div>
                     
 <div class="post-title-variants" data-title-variants data-post-langs="zh-TW">
     
-    <a class="post-title-variant" href="/2026/04/25/childhood-happiness/" hreflang="zh-TW" data-lang-content="zh-TW">
-        <h3>小時候的快樂，純粹是當時什麽都不知道而已</h3>
+    <a class="post-title-variant" href="/2026/03/26/ideal-day/" hreflang="zh-TW" data-lang-content="zh-TW">
+        <h3>理想的周末</h3>
     </a>
     
 </div>
@@ -505,15 +515,53 @@
                             
                             <span class="tag">
                                 
-                                <a href="/tags/Happiness" style=color:#00bcd4>
+                                <a href="/tags/Happiness" style=color:#00a596>
                                     Happiness
                                 </a>
                             </span>
                             
+                        </span>
+                        
+                    </div>
+                </a-card>
+            </a-timeline-item>
+        </a-timeline>
+        
+        
+        <a-timeline>
+            <a-timeline-item data-post-card data-post-langs="zh-TW" timestamp="2026/3/30" placement="top" color="#a5c2f5">
+                <a-card hoverable>
+                    <div class="item-time">2026/3/30</div>
+                    
+<div class="post-title-variants" data-title-variants data-post-langs="zh-TW">
+    
+    <a class="post-title-variant" href="/2026/03/30/unconfident-words/" hreflang="zh-TW" data-lang-content="zh-TW">
+        <h3>不自信詞語</h3>
+    </a>
+    
+</div>
+                    <div class="info">
+                        
+                        <span class="category">
+                            <a href="/categories/Life">
+                                <span class="icon">
+                                    <a-icon type="book" theme="filled" />
+                                </span>
+                                Life
+                            </a>
+                        </span>
+                        
+
+                        
+                        <span class="tags">
+                            <span class="icon">
+                                <a-icon type="tags" />
+                            </span>
+                            
                             <span class="tag">
                                 
-                                <a href="/tags/Childhood" style=color:#ff7d73>
-                                    Childhood
+                                <a href="/tags/Self" style=color:#03a9f4>
+                                    Self
                                 </a>
                             </span>
                             
@@ -564,60 +612,15 @@
                             
                             <span class="tag">
                                 
-                                <a href="/tags/Self" style=color:#ffa2c4>
+                                <a href="/tags/Self" style=color:#00a596>
                                     Self
                                 </a>
                             </span>
                             
                             <span class="tag">
                                 
-                                <a href="/tags/Productivity" style=color:#ff7d73>
+                                <a href="/tags/Productivity" style=color:#ffa2c4>
                                     Productivity
-                                </a>
-                            </span>
-                            
-                        </span>
-                        
-                    </div>
-                </a-card>
-            </a-timeline-item>
-        </a-timeline>
-        
-        
-        <a-timeline>
-            <a-timeline-item data-post-card data-post-langs="zh-TW" timestamp="2026/3/30" placement="top" color="#a5c2f5">
-                <a-card hoverable>
-                    <div class="item-time">2026/3/30</div>
-                    
-<div class="post-title-variants" data-title-variants data-post-langs="zh-TW">
-    
-    <a class="post-title-variant" href="/2026/03/30/unconfident-words/" hreflang="zh-TW" data-lang-content="zh-TW">
-        <h3>不自信詞語</h3>
-    </a>
-    
-</div>
-                    <div class="info">
-                        
-                        <span class="category">
-                            <a href="/categories/Life">
-                                <span class="icon">
-                                    <a-icon type="book" theme="filled" />
-                                </span>
-                                Life
-                            </a>
-                        </span>
-                        
-
-                        
-                        <span class="tags">
-                            <span class="icon">
-                                <a-icon type="tags" />
-                            </span>
-                            
-                            <span class="tag">
-                                
-                                <a href="/tags/Self" style=color:#03a9f4>
-                                    Self
                                 </a>
                             </span>
                             

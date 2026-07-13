@@ -120,16 +120,19 @@
         var supported = state.supported;
         var params = new URLSearchParams(window.location.search);
         var queryLang = params.get('lang');
-        var lang = supported.indexOf(queryLang) !== -1 ? queryLang : localStorage.getItem('user-lang');
+        var routeMap = state.routeMap || {};
+        var path = window.location.pathname.replace(/\/+$/, '/') || '/';
+        var pathLangMatch = path.match(/\/(en|zh-TW|zh-CN|my)\/?$/);
+        var pathLang = pathLangMatch ? pathLangMatch[1] : null;
+        var lang = supported.indexOf(queryLang) !== -1 ? queryLang : (pathLang || localStorage.getItem('user-lang') || 'en');
         if (supported.indexOf(lang) === -1) lang = 'en';
         if (supported.indexOf(queryLang) !== -1) localStorage.setItem('user-lang', lang);
+        else if (pathLang) localStorage.setItem('user-lang', lang);
         else if (!localStorage.getItem('user-lang')) localStorage.setItem('user-lang', lang);
         document.documentElement.setAttribute('lang', lang);
 
-        var routeMap = state.routeMap || {};
         var target = routeMap[lang];
-        var path = window.location.pathname.replace(/\/+$/, '/') || '/';
-        var hasLangSuffix = /\/(en|zh-TW|zh-CN|my)\/?$/.test(path);
+        var hasLangSuffix = Boolean(pathLang);
         var shouldRedirect = target && (supported.indexOf(queryLang) !== -1 || !hasLangSuffix);
         if (shouldRedirect) {
             var link = document.createElement('a');
@@ -428,7 +431,7 @@
 
 <p>冷知識：徳布西在1889年的巴黎博覽會時，爪哇甘美蘭給了他巨大的啓發，在他的作品 <a target="_blank" rel="noopener" href="https://youtu.be/R-YcnPXY2yE">Estampes</a> 中的 Pagodes 樂章尤爲明顯。</p>
 <h3 id="那麽-Java（程式語言）爲什麽會叫-Java-呢？"><a href="#那麽-Java（程式語言）爲什麽會叫-Java-呢？" class="headerlink" title="那麽 Java（程式語言）爲什麽會叫 Java 呢？"></a>那麽 Java（程式語言）爲什麽會叫 Java 呢？</h3><p>起初，創始人原本想要把它命名爲“Oak”，因爲創始人門口正對著一顆橡樹。然而，在准備商業化推廣時，發現Oak這個名字早就被注冊了，被迫改名。此時，又因爲創作團隊人們對一種來自爪哇島上的咖啡情有獨鍾，便決定將之命名爲Java。</p>
-<h3 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h3><p>我不是爪哇人，如果有任何錯誤歡迎寄信到<a href="mailto:&#x31;&#x40;&#121;&#x75;&#x7a;&#x68;&#111;&#117;&#46;&#x6d;&#x79;">1@yuzhou.my</a>指正:)。由於想寫的冷知識太多，所以我把一些和標題沒有什麽關係的話題都寫在了冷知識裏面，希望這樣子讀起來不會太亂。</p>
+<h3 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h3><p>我不是爪哇人，如果有任何錯誤歡迎寄信到<a href="mailto:&#x31;&#64;&#121;&#x75;&#x7a;&#x68;&#111;&#x75;&#x2e;&#x6d;&#x79;">1@yuzhou.my</a>指正:)。由於想寫的冷知識太多，所以我把一些和標題沒有什麽關係的話題都寫在了冷知識裏面，希望這樣子讀起來不會太亂。</p>
 <p>last冷知識：大家耳熟能詳的貓屎咖啡（麝香貓咖啡）也是從爪哇島上來的哦~</p>
 
             
@@ -461,7 +464,7 @@
 <h1 id="Java-的音乐"><a href="#Java-的音乐" class="headerlink" title="Java 的音乐"></a>Java 的音乐</h1><p>甘美兰（Gamelan，意为合奏）是爪哇人的传统乐器，也是印尼历史最悠久的乐器。甘美兰的音调和西方乐器完全不同，并没有统一的标准音调，因此<strong>世界上没有任何两个音准相同的甘美兰</strong>。</p>
 <p>冷知识：德布西在 1889 年的巴黎博览会时，爪哇甘美兰给了他巨大的启发，在他的作品 <a target="_blank" rel="noopener" href="https://youtu.be/R-YcnPXY2yE">Estampes</a> 中的 Pagodes 乐章尤为明显。</p>
 <h3 id="那么-Java（程序语言）为什么会叫-Java-呢？"><a href="#那么-Java（程序语言）为什么会叫-Java-呢？" class="headerlink" title="那么 Java（程序语言）为什么会叫 Java 呢？"></a>那么 Java（程序语言）为什么会叫 Java 呢？</h3><p>起初，创始人原本想要把它命名为“Oak”，因为创始人门口正对着一颗橡树。然而，在准备商业化推广时，发现 Oak 这个名字早就被注册了，被迫改名。此时，又因为创作团队人们对一种来自爪哇岛上的咖啡情有独钟，便决定将之命名为 Java。</p>
-<h3 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h3><p>我不是爪哇人，如果有任何错误欢迎寄信到 <a href="mailto:&#49;&#64;&#121;&#117;&#x7a;&#x68;&#x6f;&#117;&#46;&#109;&#x79;">1@yuzhou.my</a> 指正:)。由于想写的冷知识太多，所以我把一些和标题没有什么关系的话题都写在了冷知识里面，希望这样子读起来不会太乱。</p>
+<h3 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h3><p>我不是爪哇人，如果有任何错误欢迎寄信到 <a href="mailto:&#x31;&#64;&#121;&#117;&#x7a;&#x68;&#x6f;&#x75;&#x2e;&#x6d;&#x79;">1@yuzhou.my</a> 指正:)。由于想写的冷知识太多，所以我把一些和标题没有什么关系的话题都写在了冷知识里面，希望这样子读起来不会太乱。</p>
 <p>last 冷知识：大家耳熟能详的猫屎咖啡（麝香猫咖啡）也是从爪哇岛上来的哦~</p>
 
             
@@ -478,7 +481,7 @@
         
         <span class="tag">
             
-            <a href="/tags/Indonesian" style=color:#00a596>
+            <a href="/tags/Indonesian" style=color:#00bcd4>
                 Indonesian
             </a>
         </span>
@@ -553,15 +556,15 @@
         
         <span class="tag">
             
-            <a href="/tags/Happiness" style=color:#00a596>
-                Happiness
+            <a href="/tags/Childhood" style=color:#00a596>
+                Childhood
             </a>
         </span>
         
         <span class="tag">
             
-            <a href="/tags/Childhood" style=color:#ffa2c4>
-                Childhood
+            <a href="/tags/Happiness" style=color:#ffa2c4>
+                Happiness
             </a>
         </span>
         
@@ -740,7 +743,7 @@
 <p>換成了 <em>Hielan’ Laddie</em>。雖然每天早上6點半都會聽到這段音樂，但我在寫上面那段文字時，播放了這首音樂來聼，居然沒有感到一絲煩躁，很神奇吧！</p>
 <p>以下是一些我喜歡的曲目，和我的賞析，僅供參考~</p>
 <hr>
-<h2 id="Hielan’-Laddie"><a href="#Hielan’-Laddie" class="headerlink" title="Hielan’ Laddie"></a>Hielan’ Laddie</h2><p>（蘇格蘭風笛似乎是轉調樂器，但我不管了，我就按照自己聽到的音來）<br>（歡迎致郵到 <a href="mailto:&#x31;&#64;&#121;&#x75;&#122;&#104;&#111;&#117;&#46;&#x6d;&#x79;">1@yuzhou.my</a> 糾正錯誤，我也想瞭解這個美妙的樂器）<br>這似乎是蘇格蘭風笛少有的降E調曲目，其他好像都是降B調。</p>
+<h2 id="Hielan’-Laddie"><a href="#Hielan’-Laddie" class="headerlink" title="Hielan’ Laddie"></a>Hielan’ Laddie</h2><p>（蘇格蘭風笛似乎是轉調樂器，但我不管了，我就按照自己聽到的音來）<br>（歡迎致郵到 <a href="mailto:&#x31;&#x40;&#121;&#117;&#x7a;&#104;&#x6f;&#117;&#x2e;&#x6d;&#121;">1@yuzhou.my</a> 糾正錯誤，我也想瞭解這個美妙的樂器）<br>這似乎是蘇格蘭風笛少有的降E調曲目，其他好像都是降B調。</p>
 <iframe width="100%" height="300" src="https://www.youtube.com/embed/KUIOtA8LPec?si=ZJHEag2e52qG9Usx" frameborder="0" allowfullscreen></iframe>
 
 <p>當Bass音B♭響起時，整個緊迫感就上來了。并且，這個音會持續到結尾，我認爲這是蘇格蘭風笛“消除雜念”以鼓舞士氣的關鍵。有點類似那種 <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=FwDfZDpP5Jc">播放單一頻率音頻的影片</a>，能讓人腦袋放空，我想是同一個原理吧。<br><img src="/images/post/hielan-laddie-1.png" alt="Hielan Laddie"></p>
@@ -955,14 +958,14 @@
         
         <span class="tag">
             
-            <a href="/tags/Procrastination" style=color:#ff7d73>
+            <a href="/tags/Procrastination" style=color:#03a9f4>
                 Procrastination
             </a>
         </span>
         
         <span class="tag">
             
-            <a href="/tags/Self" style=color:#03a9f4>
+            <a href="/tags/Self" style=color:#ff7d73>
                 Self
             </a>
         </span>
@@ -1050,21 +1053,21 @@
         
         <span class="tag">
             
-            <a href="/tags/Procrastination" style=color:#ffa2c4>
+            <a href="/tags/Procrastination" style=color:#03a9f4>
                 Procrastination
             </a>
         </span>
         
         <span class="tag">
             
-            <a href="/tags/Self" style=color:#ff7d73>
+            <a href="/tags/Self" style=color:#03a9f4>
                 Self
             </a>
         </span>
         
         <span class="tag">
             
-            <a href="/tags/Productivity" style=color:#00a596>
+            <a href="/tags/Productivity" style=color:#ffa2c4>
                 Productivity
             </a>
         </span>
@@ -1389,7 +1392,7 @@
         
         <span class="tag">
             
-            <a href="/tags/Music" style=color:#03a9f4>
+            <a href="/tags/Music" style=color:#ffa2c4>
                 Music
             </a>
         </span>

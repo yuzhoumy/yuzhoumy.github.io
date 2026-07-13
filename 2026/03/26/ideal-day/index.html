@@ -120,16 +120,19 @@
         var supported = state.supported;
         var params = new URLSearchParams(window.location.search);
         var queryLang = params.get('lang');
-        var lang = supported.indexOf(queryLang) !== -1 ? queryLang : localStorage.getItem('user-lang');
+        var routeMap = state.routeMap || {};
+        var path = window.location.pathname.replace(/\/+$/, '/') || '/';
+        var pathLangMatch = path.match(/\/(en|zh-TW|zh-CN|my)\/?$/);
+        var pathLang = pathLangMatch ? pathLangMatch[1] : null;
+        var lang = supported.indexOf(queryLang) !== -1 ? queryLang : (pathLang || localStorage.getItem('user-lang') || 'en');
         if (supported.indexOf(lang) === -1) lang = 'en';
         if (supported.indexOf(queryLang) !== -1) localStorage.setItem('user-lang', lang);
+        else if (pathLang) localStorage.setItem('user-lang', lang);
         else if (!localStorage.getItem('user-lang')) localStorage.setItem('user-lang', lang);
         document.documentElement.setAttribute('lang', lang);
 
-        var routeMap = state.routeMap || {};
         var target = routeMap[lang];
-        var path = window.location.pathname.replace(/\/+$/, '/') || '/';
-        var hasLangSuffix = /\/(en|zh-TW|zh-CN|my)\/?$/.test(path);
+        var hasLangSuffix = Boolean(pathLang);
         var shouldRedirect = target && (supported.indexOf(queryLang) !== -1 || !hasLangSuffix);
         if (shouldRedirect) {
             var link = document.createElement('a');
