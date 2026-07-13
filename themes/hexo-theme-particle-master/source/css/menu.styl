@@ -63,6 +63,8 @@
                 font-family inherit
                 outline none
                 transition all 0.25s ease
+                appearance none
+                -webkit-appearance none
 
                 &:hover, &.is-open
                     background rgba(255, 255, 255, 0.3)
@@ -101,6 +103,8 @@
                     font-family inherit
                     font-weight 600
                     cursor pointer
+                    appearance none
+                    -webkit-appearance none
 
                     &:hover
                         background rgba(0, 0, 0, 0.06)
@@ -164,6 +168,7 @@
                     background rgba(255, 255, 255, 0.95)
                     box-shadow 0 8px 20px rgba(0, 0, 0, 0.12)
                     display none
+                    flex-direction column
 
                     .global-language-option
                         color #233
@@ -171,7 +176,7 @@
 
                 &.is-open
                     .global-language-dropdown
-                        display block
+                        display flex
 
         .curtain
             position fixed
@@ -197,7 +202,22 @@
         color menu-index-font !important
 
     .global-language-menu .global-language-trigger,
+    .mobile-language-options .global-language-trigger
+        color menu-index-font !important
+        background transparent !important
+        border-color rgba(255, 255, 255, 0.28) !important
+
+    .global-language-menu .global-language-dropdown,
+    .mobile-language-options .global-language-dropdown
+        background rgba(255, 255, 255, 0.12) !important
+        border-color rgba(255, 255, 255, 0.2) !important
+        backdrop-filter blur(10px)
+
     .global-language-menu .global-language-option,
-    .mobile-language-options .global-language-trigger,
     .mobile-language-options .global-language-option
         color menu-index-font !important
+        background transparent !important
+
+    .global-language-menu .global-language-option:hover,
+    .mobile-language-options .global-language-option:hover
+        background rgba(255, 255, 255, 0.14) !important
