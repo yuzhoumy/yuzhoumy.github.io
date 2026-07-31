@@ -6,7 +6,7 @@ permalink: about/zh-TW/
 
 ![Messy](../images/enfpwangwei.jpg)
 
-<h2 id="traditional_chinese">嚴宇澤</h2>
+<h2 id="traditional_chinese">严宇泽</h2>
 
 `12/6/2009`  
 `雙子座`  
@@ -18,7 +18,7 @@ permalink: about/zh-TW/
 你也可以稱呼我為 **宇宙**。
 
 在觀馬來西亞中學生，喜歡聊天，重度P人，重度所愛腦。  
-分享欲很強（這也是為什麼我大費周章做博客的原因）。  
+分享欲很強（這也是為什麼我大費周章做部落格的原因）。  
 喜歡抽象但精神狀態依然良好。
 
 ### 愛好
@@ -40,3 +40,5 @@ E-mail: [1@yuzhou.my](mailto:1@yuzhou.my)
 > 入坑9年，當過建築師也當過伺服主，有血有淚，現在偶爾還是會玩單機。
 - Cities Skyline
 - Planet Coaster 2
+- Planet Zoo
+- Overcooked 2

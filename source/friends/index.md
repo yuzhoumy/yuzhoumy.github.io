@@ -1,7 +1,7 @@
 ---
 title: Friend Profiles
 layout: friends
-description: A little corner for the people I enjoy meeting on the internet. Tap any card to visit their website.
+description: Send me e-mail if you want to add friends. :)
 friends:  
   - name: yimang
     avatar: https://yimang.tw/images/avatar.webp

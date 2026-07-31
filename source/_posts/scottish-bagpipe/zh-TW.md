@@ -32,7 +32,7 @@ tags:
 
 <iframe width="100%" height="300" src="https://www.youtube.com/embed/KUIOtA8LPec?si=ZJHEag2e52qG9Usx" frameborder="0" allowfullscreen></iframe>
 
-當Bass音B♭響起時，整個緊迫感就上來了。并且，這個音會持續到結尾，我認爲這是蘇格蘭風笛“消除雜念”以鼓舞士氣的關鍵。有點類似那種 [播放單一頻率音頻的影片](https://www.youtube.com/watch?v=FwDfZDpP5Jc)，能讓人腦袋放空，我想是同一個原理吧。  
+當Bass音B♭響起時，整個緊迫感就上來了。并且，這個音會持續到結尾，我認爲這是蘇格蘭風笛“消除雜念”以鼓舞士氣的關鍵。有點類似那種 [播放單一頻率音頻的ASMR影片](https://www.youtube.com/watch?v=FwDfZDpP5Jc)，能讓人腦袋放空，我想是同一個原理吧。  
 ![Hielan Laddie](/images/post/hielan-laddie-1.png)
 
 另外，也有加上管樂和弦的版本（我就是拿這個來當鬧鐘的）：

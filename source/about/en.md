@@ -40,3 +40,5 @@ E-mail: [1@yuzhou.my](mailto:1@yuzhou.my)
 > Been playing for 9 years. I’ve been both a builder and a server admin. There were lots of ups and downs. These days I still play single-player when I'm bored.
 - Cities Skyline
 - Planet Coaster 2
+- Planet Zoo
+- Overcooked 2

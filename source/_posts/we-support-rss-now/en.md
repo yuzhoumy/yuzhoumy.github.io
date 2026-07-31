@@ -9,3 +9,4 @@ Now you can subscribe this blog by using RSS. The RSS link is <https://yuzhou.li
 
 UPDATE: It doesn’t seems to work right now, I’ll try to fix it later.  
 UPDATE: It should works now~
+

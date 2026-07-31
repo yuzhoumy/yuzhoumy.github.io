@@ -40,3 +40,5 @@ E-mail: [1@yuzhou.my](mailto:1@yuzhou.my)
 > Dah main 9 tahun, pernah jadi jurubina dan ketua server, ada manis ada pahit. Sekarang masih saya ekapemain kadang-kadang。
 - Cities Skyline
 - Planet Coaster 2
+- Planet Zoo
+- Overcooked 2

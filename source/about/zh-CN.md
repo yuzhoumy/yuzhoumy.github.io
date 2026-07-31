@@ -18,7 +18,7 @@ permalink: about/zh-CN/
 你亦或者可以叫我 **宇宙**。
 
 在读马来西亚中学生，喜欢聊天，重度P人，重度恋爱脑。  
-分享欲很强（这也是为什么我大费周章做博客的原因）。  
+分享欲很强（这也是为什么我大费周章做部落格的原因）。  
 喜欢抽象但精神状态仍然良好。
 
 ### 爱好
@@ -40,3 +40,5 @@ E-mail: [1@yuzhou.my](mailto:1@yuzhou.my)
 > 入坑9年，当过建筑师也当过服务器主，有血有泪，现在偶尔还是会玩单机。
 - Cities Skyline
 - Planet Coaster 2
+- Planet Zoo
+- Overcooked 2
