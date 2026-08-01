@@ -1,5 +1,5 @@
 ---
-title: 有三種語言的Blog
+title: A Blog in Three Languages
 categories:
 - Update
 tags:
