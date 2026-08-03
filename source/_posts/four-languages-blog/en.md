@@ -1,5 +1,6 @@
 ---
 title: A Blog in Three Languages
+date: 2026-08-04 12:32:00
 categories:
 - Update
 tags:
@@ -11,7 +12,7 @@ A while back (about two or three weeks ago now), I did a major overhaul of this 
 
 This was pretty massive undertaking that burned through my entire month's worth of token in one go. The Hexo theme I'm using doesn't support multiple languages, so I basically forced this feature into my site by brute force. Now you don't even need to check the source code on Github to imagine how terrifying it must look, right? Hehehe~
 
-Although building a multilingual site is a lot of thankless effort, when I really thought about it: I'm Malaysian, and if I only used one language, there's no way I could reach everyone I think might possibly read my blog. Of course I don't actually expect my blog to have readers, but would I be missing out on a chance for people to get to know me because of that?
+Although [building a multilingual site is a lot of thankless effort](https://alexhsu.com/en/multilingual), when I really thought about it: I'm Malaysian, and if I only used one language, there's no way I could reach everyone I think might possibly read my blog. Of course I don't actually expect my blog to have readers, but would I be missing out on a chance for people to get to know me because of that?
 
 In terms of coverage, technically just Traditional Chinese and English would be enough at the bare minimum. But... since I was already to take a knife to the whole site, why not just add a few more languages while I'm at it?
 
@@ -25,7 +26,7 @@ In terms of coverage, technically just Traditional Chinese and English would be 
 
 ### The Cost
 
-But the cost of doing this is pretty significant. Every time I publish a post, I now need to rewrite it in English in Malay as well, and 2-3 hours has become the baseline production time just for one article. But as I've mentioned before, writing articles has always been extremely time-consuming and difficult for me, so I've already gotten used to the feeling that every article is a big project. As for older posts, I've already translated them into Simplified Chinese; O'll fill in the English and Malay versions whenever I get the chance later.
+But the cost of doing this is pretty significant. Every time I publish a post, I now need to rewrite it in English in Malay as well, and 2-3 hours has become the baseline production time just for one article. But as I've mentioned before, writing articles has always been extremely time-consuming and [difficult](/2026/03/28/procrastination) for me, so I've already gotten used to the feeling that every article is a big project. As for older posts, I've already translated them into Simplified Chinese; O'll fill in the English and Malay versions whenever I get the chance later.
 
 ### RSS
 
