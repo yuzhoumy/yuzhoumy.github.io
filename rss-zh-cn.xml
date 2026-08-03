@@ -6,9 +6,25 @@
     <description>Hello</description>
     <language>zh-CN</language>
     <copyright>All rights reserved 2026, Yuzhou 宇宙</copyright>
-    <lastBuildDate>Sat, 11 Jul 2026 19:22:59 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 03 Aug 2026 16:34:34 GMT</lastBuildDate>
     <generator>Hexo</generator>
     <atom:link href="http://yuzhou.my/rss-zh-cn.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>有三种语言的Blog</title>
+      <link>http://yuzhou.my/2026/08/04/four-languages-blog/zh-CN/</link>
+      <description>
+        <![CDATA[<p>前段时间（大约是两三个星期之前吧）对这个网站进行了大翻修。现在网站所有内容都支持<strong>英文、马来文、繁体中文、简体中文</strong>了。</p>
+<p>这是一个相当大的工程，一下子把我整个月的token用光了。我现在用的Hexo主题是没有支援多语言的，我可以说]]>
+      </description>
+      <author>Yuzhou 宇宙</author>
+      <category domain="http://yuzhou.my/categories/Update/">Update</category>
+      <category domain="http://yuzhou.my/tags/Blog/">Blog</category>
+      <category domain="http://yuzhou.my/tags/Language/">Language</category>
+      <pubDate>Tue, 04 Aug 2026 04:32:00 GMT</pubDate>
+      <content:encoded>
+        <![CDATA[<p>前段时间（大约是两三个星期之前吧）对这个网站进行了大翻修。现在网站所有内容都支持<strong>英文、马来文、繁体中文、简体中文</strong>了。</p><p>这是一个相当大的工程，一下子把我整个月的token用光了。我现在用的Hexo主题是没有支援多语言的，我可以说是硬硬把这个功能加进网站。现在网站的原始码大家不用去Github看都可以想象到有多恐怖了吧？哼哼哼~<br>虽然<a href="https://alexhsu.com/multilingual">架设多语言网站吃力不讨好</a>，但仔细想了想，我是马来西亚人，如果只使用一种语言的话，绝对没办法复盖到所有我认为有可能会读我的Blog的人。我当然不指望我的Blog会有读者，但我会不会因此错失了让别人认识我的机会呢？<br>复盖率，其实最最基本只需要繁体中文和英文就足够了。但……既然都已经要给网站动大刀了，直接加多几个语言不是更好？</p><p><strong>繁体中文</strong>：中文说到底是我的母语，是我能最好表达自己的语言。我通常也会先用中文写文章再翻译成其他语言。考虑到常常参加BlogBlogParty，目前这个Blog大部分读者应该都是台湾人，更习惯看繁体字。</p><p><strong>简体中文</strong>：但我是马来西亚华人呀，我本地的朋友们都是用简体字居多，大家都会看繁体字但不一定喜欢看。繁体中文转换成简体中文非常容易，毕竟都是同一种语言嘛，直接用现成的翻译器即可。</p><p><strong>英文</strong>：不论我未来是在马来西亚还是国外读书，大学时期的主要语言都是英文，很大可能会一直泡在英文圈子。所以我觉得未雨绸缪更好。</p><p><strong>马来文</strong>：如果要讨论一些非常本地的（政治？）时事，我想用马来语表达会比中文更顺畅。还是那句话，我希望可以复盖到所有人，至少在马来西亚之内。当然最重要的是我自己喜欢，所以我愿意。</p><h3 id="代价"><a href="#代价" class="headerlink" title="代价"></a>代价</h3><p>但这么做的代价相当巨大，每次发文章都需要用英文和马来文再写一遍，2~3个小时已经成为一篇文章的打底出产时间了。但我以前有提过，写文章本来就对我来说非常耗时非常<a href="/2026/03/28/procrastination">不容易</a>，所以我已经习惯这种每次写文章都是大工程的感觉了。至于之前的文章，我先翻译好简体中文，英文和马来文以后有空再补回去。</p><h3 id="RSS"><a href="#RSS" class="headerlink" title="RSS"></a>RSS</h3><p>我把RSS分成了四个，这样子不同语言的文章就不会混淆了：<br><a href="https://yuzhou.my/rss-en.xml">https://yuzhou.my/rss-en.xml</a><br><a href="https://yuzhou.my/rss-my.xml">https://yuzhou.my/rss-my.xml</a><br><a href="https://yuzhou.my/rss-zh-tw.xml">https://yuzhou.my/rss-zh-tw.xml</a><br><a href="https://yuzhou.my/rss-zh-cn.xml">https://yuzhou.my/rss-zh-cn.xml</a><br>现在进入原本的RSS <a href="https://yuzhou.my/rss.xml/">https://yuzhou.my/rss.xml/</a> 只会显示这一篇文章，供读者选择语言。</p><h3 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h3><p>完成网站的翻修工程后，我似乎又感觉有点后悔，这个网站现在变得好臃肿啊。无论如何，我还是可以接受，甚至有点喜欢，因为这很符合我的个性（就好像我永远乱七八糟的书桌一样），但读者能不能接受就是另外一回事了。这一点折腾，我相信是值得的。</p>]]>
+      </content:encoded>
+    </item>
     <item>
       <title>真正的 Java</title>
       <link>http://yuzhou.my/2026/07/12/the-real-java/zh-CN/</link>
@@ -21,7 +37,23 @@
       <category domain="http://yuzhou.my/tags/Indonesian/">Indonesian</category>
       <pubDate>Sat, 11 Jul 2026 19:14:00 GMT</pubDate>
       <content:encoded>
-        <![CDATA[<blockquote><p>这是我的<a href="https://blogblog.club/party/">“BlogBlog 同乐会 - 2026 年 7 月 ”</a> 的投稿文章。本月主题是<a href="https://shuaixin.cc/Fun-Fact/">“有趣的小知识或冷门概念”</a>，由<a href="https://www.google.com/search?q=https://shuaixin.cc/">刘昕</a>主持。如果你有自己的部落格，欢迎一起来参加！</p></blockquote><p><img src="/images/post/wayang-kulit-kelantan.jpg" alt="吉兰丹皮影戏"><br>这是吉兰丹皮影戏，由爪哇人传入吉兰丹，是满者伯夷帝国扩展版图的结果。</p><h1 id="Wes-Mangan"><a href="#Wes-Mangan" class="headerlink" title="Wes Mangan?"></a>Wes Mangan?</h1><p>说起 Java，大部分人都会想到程序语言，或者是 Minecraft。但在世界的另一端，在硅谷的背面，<strong>爪哇语（Basa Jawa&#x2F;Javanese）</strong> 是印尼一门超过 8000 万人使用的语言哦！</p><p>爪哇语主要由爪哇人使用。虽然我居住在马来西亚，但身边不少马来朋友都是爪哇裔后代，便多多少少接触到爪哇文化了。<br>Wes mangan，在爪哇语中是呷饱没的意思，恭喜你学会了你的第一句爪哇话啦~</p><h3 id="灭绝危机"><a href="#灭绝危机" class="headerlink" title="灭绝危机"></a>灭绝危机</h3><p>虽然爪哇语拥有 8000 万使用者，但它<strong>不是任何国家的官方语言</strong>！这是为什么呢？<br>在 1945 年印尼独立运动之时，开国总统苏加诺担下了要统一全国的重任。统一的第一步，就是要统一语言。</p><p>但是印尼，可是拥有 17000 个岛屿，700 种语言，1945 年就有 7400 万人口的超复杂国家。如果选用接近一半人口使用的语言——爪哇语，那么非爪哇族的人肯定会超不爽，凭什么少数要服从多数？为了防止种族冲突，苏加诺做出了惊人的决定——使用当时仅有超少人用的语言——廖内马来语设为国语。由于对所有人来说都是外语，反而达成了公平。从此，爪哇语就失去官方地位了……</p><p>冷知识 1：犹如 Java 中公私分明的函数一样，爪哇语也有一套<strong>阶级系统</strong>。爪哇语主要分为三个主要阶层：</p><ul><li>Ngoko（粗语）用于同龄人、同辈对晚辈</li><li>Madya（中性语）用于陌生人</li><li>Krama（高雅语）用于晚辈对长辈、下级对上级<br>这三种阶层的爪哇语，可是连基本词汇都不一样，所以我认为会爪哇语的人都超强，相当于一次学了三门语言。例如“吃”这个字，对朋友说是“mangan”，对长辈必须用“dahar”；“你”对朋友使用是“kowe”，对长辈使用是“panjenengan”。想用爪哇语聊天，你必须时刻掂量对方的身份，用错一个词汇都是极大的冒犯。这种见人说人话，见鬼说鬼话的体系，实在是太繁杂了，也是爪哇语没有成为印尼国语的原因之一。</li></ul><p>冷知识 2：新加坡将英语设为核心行政与工作语言，是为了平衡三大民族之间的隔阂，亦是同理。</p><h3 id="真正的-JavaScript"><a href="#真正的-JavaScript" class="headerlink" title="真正的 JavaScript"></a>真正的 JavaScript</h3><p>除了可以用拉丁字书写之外，爪哇语也有自己独特又优美的文字！它叫做 Aksara Jawa 或 Hanacaraka</p><p>世界上绝大多数文字的字母表，比如拉丁字的 A, B, C, D…… 没有任何连贯的意义。<br>有趣的是，爪哇语的 20 个核心字母竟然可以组成一首<strong>五言绝句</strong>！</p><p>《Hanacaraka》是一首悲壮的史诗，普遍上认为与<a href="https://id.wikipedia.org/wiki/Aksara_Jawa#Pengurutan">阿吉 · 萨卡的传奇有关</a>。</p><blockquote><p>ꦲꦤꦕꦫꦏ<br>Hana Caraka<br>有两个使者<br>ꦢꦠꦱꦮꦭ<br>Data Sawala<br>他们之间意见不合<br>ꦥꦝꦗꦪꦚ<br>Padha Jayanya<br>他们的力量旗鼓相当，不相上下<br>ꦩꦒꦧꦛꦔ<br>Maga Bathanga<br>最终双双战死，留下两具尸体</p></blockquote><h1 id="Java-的音乐"><a href="#Java-的音乐" class="headerlink" title="Java 的音乐"></a>Java 的音乐</h1><p>甘美兰（Gamelan，意为合奏）是爪哇人的传统乐器，也是印尼历史最悠久的乐器。甘美兰的音调和西方乐器完全不同，并没有统一的标准音调，因此<strong>世界上没有任何两个音准相同的甘美兰</strong>。</p><p>冷知识：德布西在 1889 年的巴黎博览会时，爪哇甘美兰给了他巨大的启发，在他的作品 <a href="https://youtu.be/R-YcnPXY2yE">Estampes</a> 中的 Pagodes 乐章尤为明显。</p><h3 id="那么-Java（程序语言）为什么会叫-Java-呢？"><a href="#那么-Java（程序语言）为什么会叫-Java-呢？" class="headerlink" title="那么 Java（程序语言）为什么会叫 Java 呢？"></a>那么 Java（程序语言）为什么会叫 Java 呢？</h3><p>起初，创始人原本想要把它命名为“Oak”，因为创始人门口正对着一颗橡树。然而，在准备商业化推广时，发现 Oak 这个名字早就被注册了，被迫改名。此时，又因为创作团队人们对一种来自爪哇岛上的咖啡情有独钟，便决定将之命名为 Java。</p><h3 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h3><p>我不是爪哇人，如果有任何错误欢迎寄信到 <a href="mailto:&#x31;&#64;&#121;&#117;&#x7a;&#x68;&#x6f;&#x75;&#x2e;&#x6d;&#x79;">1@yuzhou.my</a> 指正:)。由于想写的冷知识太多，所以我把一些和标题没有什么关系的话题都写在了冷知识里面，希望这样子读起来不会太乱。</p><p>last 冷知识：大家耳熟能详的猫屎咖啡（麝香猫咖啡）也是从爪哇岛上来的哦~</p>]]>
+        <![CDATA[<blockquote><p>这是我的<a href="https://blogblog.club/party/">“BlogBlog 同乐会 - 2026 年 7 月 ”</a> 的投稿文章。本月主题是<a href="https://shuaixin.cc/Fun-Fact/">“有趣的小知识或冷门概念”</a>，由<a href="https://www.google.com/search?q=https://shuaixin.cc/">刘昕</a>主持。如果你有自己的部落格，欢迎一起来参加！</p></blockquote><p><img src="/images/post/wayang-kulit-kelantan.jpg" alt="吉兰丹皮影戏"><br>这是吉兰丹皮影戏，由爪哇人传入吉兰丹，是满者伯夷帝国扩展版图的结果。</p><h1 id="Wes-Mangan"><a href="#Wes-Mangan" class="headerlink" title="Wes Mangan?"></a>Wes Mangan?</h1><p>说起 Java，大部分人都会想到程序语言，或者是 Minecraft。但在世界的另一端，在硅谷的背面，<strong>爪哇语（Basa Jawa&#x2F;Javanese）</strong> 是印尼一门超过 8000 万人使用的语言哦！</p><p>爪哇语主要由爪哇人使用。虽然我居住在马来西亚，但身边不少马来朋友都是爪哇裔后代，便多多少少接触到爪哇文化了。<br>Wes mangan，在爪哇语中是呷饱没的意思，恭喜你学会了你的第一句爪哇话啦~</p><h3 id="灭绝危机"><a href="#灭绝危机" class="headerlink" title="灭绝危机"></a>灭绝危机</h3><p>虽然爪哇语拥有 8000 万使用者，但它<strong>不是任何国家的官方语言</strong>！这是为什么呢？<br>在 1945 年印尼独立运动之时，开国总统苏加诺担下了要统一全国的重任。统一的第一步，就是要统一语言。</p><p>但是印尼，可是拥有 17000 个岛屿，700 种语言，1945 年就有 7400 万人口的超复杂国家。如果选用接近一半人口使用的语言——爪哇语，那么非爪哇族的人肯定会超不爽，凭什么少数要服从多数？为了防止种族冲突，苏加诺做出了惊人的决定——使用当时仅有超少人用的语言——廖内马来语设为国语。由于对所有人来说都是外语，反而达成了公平。从此，爪哇语就失去官方地位了……</p><p>冷知识 1：犹如 Java 中公私分明的函数一样，爪哇语也有一套<strong>阶级系统</strong>。爪哇语主要分为三个主要阶层：</p><ul><li>Ngoko（粗语）用于同龄人、同辈对晚辈</li><li>Madya（中性语）用于陌生人</li><li>Krama（高雅语）用于晚辈对长辈、下级对上级<br>这三种阶层的爪哇语，可是连基本词汇都不一样，所以我认为会爪哇语的人都超强，相当于一次学了三门语言。例如“吃”这个字，对朋友说是“mangan”，对长辈必须用“dahar”；“你”对朋友使用是“kowe”，对长辈使用是“panjenengan”。想用爪哇语聊天，你必须时刻掂量对方的身份，用错一个词汇都是极大的冒犯。这种见人说人话，见鬼说鬼话的体系，实在是太繁杂了，也是爪哇语没有成为印尼国语的原因之一。</li></ul><p>冷知识 2：新加坡将英语设为核心行政与工作语言，是为了平衡三大民族之间的隔阂，亦是同理。</p><h3 id="真正的-JavaScript"><a href="#真正的-JavaScript" class="headerlink" title="真正的 JavaScript"></a>真正的 JavaScript</h3><p>除了可以用拉丁字书写之外，爪哇语也有自己独特又优美的文字！它叫做 Aksara Jawa 或 Hanacaraka</p><p>世界上绝大多数文字的字母表，比如拉丁字的 A, B, C, D…… 没有任何连贯的意义。<br>有趣的是，爪哇语的 20 个核心字母竟然可以组成一首<strong>五言绝句</strong>！</p><p>《Hanacaraka》是一首悲壮的史诗，普遍上认为与<a href="https://id.wikipedia.org/wiki/Aksara_Jawa#Pengurutan">阿吉 · 萨卡的传奇有关</a>。</p><blockquote><p>ꦲꦤꦕꦫꦏ<br>Hana Caraka<br>有两个使者<br>ꦢꦠꦱꦮꦭ<br>Data Sawala<br>他们之间意见不合<br>ꦥꦝꦗꦪꦚ<br>Padha Jayanya<br>他们的力量旗鼓相当，不相上下<br>ꦩꦒꦧꦛꦔ<br>Maga Bathanga<br>最终双双战死，留下两具尸体</p></blockquote><h1 id="Java-的音乐"><a href="#Java-的音乐" class="headerlink" title="Java 的音乐"></a>Java 的音乐</h1><p>甘美兰（Gamelan，意为合奏）是爪哇人的传统乐器，也是印尼历史最悠久的乐器。甘美兰的音调和西方乐器完全不同，并没有统一的标准音调，因此<strong>世界上没有任何两个音准相同的甘美兰</strong>。</p><p>冷知识：德布西在 1889 年的巴黎博览会时，爪哇甘美兰给了他巨大的启发，在他的作品 <a href="https://youtu.be/R-YcnPXY2yE">Estampes</a> 中的 Pagodes 乐章尤为明显。</p><h3 id="那么-Java（程序语言）为什么会叫-Java-呢？"><a href="#那么-Java（程序语言）为什么会叫-Java-呢？" class="headerlink" title="那么 Java（程序语言）为什么会叫 Java 呢？"></a>那么 Java（程序语言）为什么会叫 Java 呢？</h3><p>起初，创始人原本想要把它命名为“Oak”，因为创始人门口正对着一颗橡树。然而，在准备商业化推广时，发现 Oak 这个名字早就被注册了，被迫改名。此时，又因为创作团队人们对一种来自爪哇岛上的咖啡情有独钟，便决定将之命名为 Java。</p><h3 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h3><p>我不是爪哇人，如果有任何错误欢迎寄信到 <a href="mailto:&#x31;&#64;&#121;&#x75;&#x7a;&#x68;&#111;&#117;&#x2e;&#x6d;&#121;">1@yuzhou.my</a> 指正:)。由于想写的冷知识太多，所以我把一些和标题没有什么关系的话题都写在了冷知识里面，希望这样子读起来不会太乱。</p><p>last 冷知识：大家耳熟能详的猫屎咖啡（麝香猫咖啡）也是从爪哇岛上来的哦~</p>]]>
+      </content:encoded>
+    </item>
+    <item>
+      <title>小时候的快乐，纯粹是当时什么都不知道而已</title>
+      <link>http://yuzhou.my/2026/04/25/childhood-happiness/zh-CN/</link>
+      <description>
+        <![CDATA[<p>大约在我五岁的某个傍晚，老爸突然叫上我，说要到马六甲的医院，要留宿马六甲三天两夜。我蹦蹦跳跳地就走上车了，也许是开夜车的关系，路途上我并没有什么清晰的回忆。</p>
+<p>第一天晚上，天很暗了我们才去洗澡。小时候的我对部分电器很敏感（那时候好像最害怕洗衣机），一打开热水器我]]>
+      </description>
+      <author>Yuzhou 宇宙</author>
+      <category domain="http://yuzhou.my/categories/Life/">Life</category>
+      <category domain="http://yuzhou.my/tags/Childhood/">Childhood</category>
+      <category domain="http://yuzhou.my/tags/Happiness/">Happiness</category>
+      <pubDate>Sat, 25 Apr 2026 07:27:37 GMT</pubDate>
+      <content:encoded>
+        <![CDATA[<p>大约在我五岁的某个傍晚，老爸突然叫上我，说要到马六甲的医院，要留宿马六甲三天两夜。我蹦蹦跳跳地就走上车了，也许是开夜车的关系，路途上我并没有什么清晰的回忆。</p><p>第一天晚上，天很暗了我们才去洗澡。小时候的我对部分电器很敏感（那时候好像最害怕洗衣机），一打开热水器我就吓哭了…… 那个花洒居然上面有五颜六色的LED灯，而且还像迪厅的氛围灯一样会一直变颜色！！！最后还是在我记得那是个雨夜，窗外的雨哗啦啦地下，窗户被溅得满是水滴，但酒店里很温暖。后来第二天，我们才转去另一家酒店，那里的花洒终于能让年幼的我安心洗澡了。</p><p>另外一个仍有零星记忆的画面，就是第二天在超市买手信的时候。当时我、老爸和叔叔买了一些水果（这也是我鲜少关于叔叔的记忆），然后我们就到医院探望奶奶。她虚弱地躺在病床上，身穿蓝白相间的病服，微笑看着我。<br>但对小时候的我来说，探望并不是这次行程的重点。因为那时的我只要有机会放假，能够去住酒店我就已经很开心了。</p><p>前几天才知道，奶奶当时得了<strong>乳腺癌</strong>。</p><p>我想同个时期，同个事件，老爸的回忆会很不一样吧。</p>]]>
       </content:encoded>
     </item>
     <item>
@@ -36,6 +68,85 @@
       <pubDate>Sun, 12 Apr 2026 04:10:55 GMT</pubDate>
       <content:encoded>
         <![CDATA[<h1 id="光合作用中文解释"><a href="#光合作用中文解释" class="headerlink" title="光合作用中文解释"></a>光合作用中文解释</h1><h3 id="KSSM中五生物第二课：叶子"><a href="#KSSM中五生物第二课：叶子" class="headerlink" title="KSSM中五生物第二课：叶子"></a>KSSM中五生物第二课：叶子</h3><p>讲师: Sam Eu Qang<br>Instagram : <a href="https://instagram.com/samq709_2009">samq709_2009</a></p><p><video width="100%" height="300" src="/images/post/photosynthesis.mp4" controls></video></p>]]>
+      </content:encoded>
+    </item>
+    <item>
+      <title>苏格兰风笛</title>
+      <link>http://yuzhou.my/2026/04/09/scottish-bagpipe/zh-CN/</link>
+      <description>
+        <![CDATA[<p>觉得自己精神萎靡不振吗？且听我推坑给你的 <strong>苏格兰风笛</strong>！</p>
+<p><img src="/images/post/kenneth-mckay.jpg" alt="Kenneth McKay"><br><small style="color]]>
+      </description>
+      <author>Yuzhou 宇宙</author>
+      <category domain="http://yuzhou.my/categories/Culture/">Culture</category>
+      <category domain="http://yuzhou.my/tags/Music/">Music</category>
+      <pubDate>Thu, 09 Apr 2026 01:51:16 GMT</pubDate>
+      <content:encoded>
+        <![CDATA[<p>觉得自己精神萎靡不振吗？且听我推坑给你的 <strong>苏格兰风笛</strong>！</p><p><img src="/images/post/kenneth-mckay.jpg" alt="Kenneth McKay"><br><small style="color: grey;">勇敢的苏格兰高地士兵，Kenneth McKay。滑铁卢战役期间，McKay在法军骑兵袭击下，英勇地走到方阵外吹奏风笛以鼓舞士气的情景。<a href="https://www.reddit.com/r/BattlePaintings/s/JOHFpCZJUE">关于这张照片的Reddit贴文</a></small></p><p>这是一个音色霸气的乐器！既然都被拿来当苏格兰的军鼓乐器了，其振兴士气的能力毋庸置疑。</p><p>至少在我身上，是非常有效的。我甚至把……</p><ul><li>电话铃声</li><li>闹钟</li></ul><p>换成了 <em>Hielan’ Laddie</em>。虽然每天早上6点半都会听到这段音乐，但我在写上面那段文字时，播放了这首音乐来听，居然没有感到一丝烦躁，很神奇吧！</p><p>以下是一些我喜欢的曲目，和我的赏析，仅供参考~</p><hr><h2 id="Hielan’-Laddie"><a href="#Hielan’-Laddie" class="headerlink" title="Hielan’ Laddie"></a>Hielan’ Laddie</h2><p>（苏格兰风笛似乎是转调乐器，但我不管了，我就按照自己听到的音来）</p><p>（欢迎致邮到 <a href="mailto:&#49;&#x40;&#121;&#117;&#122;&#104;&#111;&#x75;&#x2e;&#x6d;&#121;">1@yuzhou.my</a> 纠正错误，我也想了解这个美妙的乐器）</p><p>这似乎是苏格兰风笛少有的降E调曲目，其他好像都是降B调。</p><iframe width="100%" height="300" src="https://www.youtube.com/embed/KUIOtA8LPec?si=ZJHEag2e52qG9Usx" frameborder="0" allowfullscreen></iframe><p>当Bass音B♭响起时，整个紧迫感就上来了。并且，这个音会持续到结尾，我认为这是苏格兰风笛“消除杂念”以鼓舞士气的关键。有点类似那种 <a href="https://www.youtube.com/watch?v=FwDfZDpP5Jc">播放单一频率音频的ASMR影片</a>，能让人脑袋放空，我想是同一个原理吧。<br><img src="/images/post/hielan-laddie-1.png" alt="Hielan Laddie"></p><p>另外，也有加上管乐和弦的版本（我就是拿这个来当闹钟的）：</p><iframe width="100%" height="300" src="https://www.youtube.com/embed/ESsVydlq8cM?si=TytIZ-NAoSnld8m_" frameborder="0" allowfullscreen></iframe><p>这个版本是不是听起来音色更丰满了呢？</p><p>我觉得呢，这个版本的<strong>下属和弦</strong>起到了强烈的衬托作用。我们把Hielan’ Laddie的主旋律<strong>拆成一半</strong>来看好了。</p><p>前半段的<strong>主和弦</strong>和<strong>属和弦</strong>似乎在告诉你：</p><p><code>无论你现在是什么状态，请振作起来！</code><br><img src="/images/post/hielan-laddie-2.png" alt="Hielan Laddie"></p><p>后半段的<strong>属和弦</strong>的，再加上有点往下走的旋律，好像在说：</p><p><code>亲爱的，你本来就该这样！振作起来！</code><br><img src="/images/post/hielan-laddie-3.png" alt="Hielan Laddie"></p><p>哦，如果Wiwi看到我的赏析，希望你不要生气…… 我已经两年没碰过乐理了。</p><hr><h2 id="Scotland-The-Brave"><a href="#Scotland-The-Brave" class="headerlink" title="Scotland The Brave"></a>Scotland The Brave</h2><p>相较于 Hielan’ Laddie，Scotland The Brave 听起来更加沉稳，仿佛听见了苏格兰士兵在草原缓缓行军。</p><p>在你认为你不该休息的时候，请效仿苏格兰高地士兵，<strong>前进、前进、不择一切手段地前进！！！</strong></p><iframe width="100%" height="300" src="https://www.youtube.com/embed/nnG1oUkWBa8?si=IgxPW6P5rcYbO_B5" frameborder="0" allowfullscreen></iframe><p>题外话：Massed Band的Slow March就和这首音乐听起来一样沉稳，太般配了！</p><p>通常我喜欢在早上散步&#x2F;跑步的时候开来听这首曲子，超级Chill的哦，它会带给我犹如身处在森林之中的感觉。</p><hr><h2 id="Auld-Lang-Syne"><a href="#Auld-Lang-Syne" class="headerlink" title="Auld Lang Syne"></a>Auld Lang Syne</h2><p>Auld Lang Syne，译为《友谊地久天长》，大部分人都听过。</p><p>但苏格兰风笛版本的 Auld Lang Syne 绝对是 Top 中之 Top，把原本的抒情歌变成了节奏感强烈、士气昂昂、霸气宏大的音乐，听起来完全不一样！</p><p>苏格兰的民谣，就应该用苏格兰当地的乐器演奏呀！</p><iframe width="100%" height="300" src="https://www.youtube.com/embed/CXcM-70KztI?si=qc2dTKHX5IqoGkGL" frameborder="0" allowfullscreen></iframe><p>而且，尤其在上面影片中的“特殊场合”，Auld Lang Syne听起来让人感慨万分。</p>]]>
+      </content:encoded>
+    </item>
+    <item>
+      <title>不自信词语</title>
+      <link>http://yuzhou.my/2026/03/30/unconfident-words/zh-CN/</link>
+      <description>
+        <![CDATA[<p><img src="/images/post/modal-words.jpg" alt="Modal Words"><br><small style="color: grey;">KSSM英文课本，79页</small></p>
+<p>我发现我在说话时，常常会下意识地否定自]]>
+      </description>
+      <author>Yuzhou 宇宙</author>
+      <category domain="http://yuzhou.my/categories/Life/">Life</category>
+      <category domain="http://yuzhou.my/tags/Language/">Language</category>
+      <category domain="http://yuzhou.my/tags/Self/">Self</category>
+      <pubDate>Mon, 30 Mar 2026 07:36:33 GMT</pubDate>
+      <content:encoded>
+        <![CDATA[<p><img src="/images/post/modal-words.jpg" alt="Modal Words"><br><small style="color: grey;">KSSM英文课本，79页</small></p><p>我发现我在说话时，常常会下意识地否定自己的观点，并加上一些“不自信词语”，就好像为自己的言论加上免责声明一样：</p><ul><li>“走这一条路可以去到市区 —— <strong>应该</strong>吧。”</li><li>“我查了一下时间表，会议<strong>应该</strong>是在下午5点开始。”</li><li>“每个星期六，这个广场都会举办大型活动 —— <strong>通常是这样的</strong>。”</li></ul><hr><h3 id="常见的不自信词语"><a href="#常见的不自信词语" class="headerlink" title="常见的不自信词语"></a>常见的不自信词语</h3><ul><li>“可能”</li><li>“应该”</li><li>“虽然”</li><li>“看起来好像”</li><li>“我其实不是很专业啦，但是……”</li><li>“我也不太确定”</li><li>“我猜是这样的”</li></ul><hr><p>很显然地，当我们在日常沟通时习惯使用“不自信词语”之后，我们在别人心中的自信程度会大大降低。尤其是在小组里面分工合作时，讲话自信&#x2F;不自信会让其他组员对你的信心差很多哦！</p><p>试想想，如果你的组员在工作时眼神闪避，并且这样子对你说：“噢…… 应该这样就可以了哦”，或者你问一句，他的答案中一定会带“应该”这两个字。即使他干了很多活，你也会觉得他没什么料的样子，对吧？</p><hr><p>用在写部落格上也是一样的道理，尤其是知识、讨论类型的文章，作者的论点就会显得没有那么有说服力了。</p><p>最后，相比起其他人的文章，我的文章（尤其是之前的那几篇）真的显得有点欠缺自信，看来得改一改了呀！</p>]]>
+      </content:encoded>
+    </item>
+    <item>
+      <title>拖延症</title>
+      <link>http://yuzhou.my/2026/03/28/procrastination/zh-CN/</link>
+      <description>
+        <![CDATA[<blockquote>
+<p>BlogBlog 同乐会<br>这是我的 <a href="https://blogblog.club/party/">“BlogBlog 同乐会 - 2026 年 4 月”</a> 的投稿文章。本月主题是 <a href="https://www]]>
+      </description>
+      <author>Yuzhou 宇宙</author>
+      <category domain="http://yuzhou.my/categories/Life/">Life</category>
+      <category domain="http://yuzhou.my/tags/Procrastination/">Procrastination</category>
+      <category domain="http://yuzhou.my/tags/Self/">Self</category>
+      <pubDate>Sat, 28 Mar 2026 00:01:16 GMT</pubDate>
+      <content:encoded>
+        <![CDATA[<blockquote><p>BlogBlog 同乐会<br>这是我的 <a href="https://blogblog.club/party/">“BlogBlog 同乐会 - 2026 年 4 月”</a> 的投稿文章。本月主题是 <a href="https://www.wen-lab.tw/blogblog-party-productivity/">“生产力”</a>，由 <a href="https://www.wen-lab.tw/author/wen/">Wen</a> 主持。如果你有自己的部落格，欢迎一起来参加！</p></blockquote><p>我的时间是<strong>液态</strong>的。<br>Google Calendar 中的排程看起来整齐又精美。但是，我真的能在指定的时间完成他吗？我的 To-do 任务就像在波涛的水中翻滚的石子，流来~ 流去~ 最后和一开始预定的时间越差越远。</p><p>经过我对自己的审视，拖延症的原因不外乎就那几个……</p><hr><h3 id="短视频"><a href="#短视频" class="headerlink" title="短视频"></a>短视频</h3><p>这绝对是最大的因素。</p><p>我十分认同 Wiwi 所揭示的 <a href="https://wiwi.blog/blog/virus#%E6%9C%80%E6%96%B0%E7%9A%84%E7%97%85%E6%AF%92%E7%A4%BE%E7%BE%A4%E5%AA%92%E4%BD%93%E5%92%8C%E7%9F%AD%E5%BD%B1%E9%9F%B3">社交媒体&#x2F;短视频对人类的危害</a>。</p><p>是的，我的拖延症是自小就有，但我以前只对不喜欢的事情拖延啊！<br>记得14岁时，当我第一次下载 Instagram 时，我并未察觉任何异样，只把他当作和 Facebook 一样的社交软体来看待。殊不知就是从这个时候开始，我再也回不去以前的自己了。</p><p>在沉迷短视频之前，我是 <strong>不想做</strong> ，而现在却是 <strong>想做但是无法执行</strong>。我的意志从此失去了自由，也就是从这个开始，时间变成液态的了。</p><hr><h3 id="完美主义"><a href="#完美主义" class="headerlink" title="完美主义"></a>完美主义</h3><p>如果摆在我眼前的是数理功课和语文功课，我一定会选前者。<br>我对写作的完美主义尤其严重。你绝对不会想到，我平均写一篇作文要3个小时，blog要2个小时！我会反复推敲我的句子，一定要100%完美才行。</p><p>当然，这是写作的必要程序，需要通过磨练可以继续增强效率，多多写作就行啦。</p><hr><h3 id="外界因素"><a href="#外界因素" class="headerlink" title="外界因素"></a>外界因素</h3><p>在我自己一个人待在家一整天后，如果这时候朋友邀约我去聚会…… 我仿佛感受到体内的E人基因在震动，实在是很难拒绝诱惑。<br>另外，我不擅长拒绝，即使我不太想去，我大可能还是会答应。</p><hr><h3 id="情绪"><a href="#情绪" class="headerlink" title="情绪"></a>情绪</h3><p>每当有人问我为什么不开心？我总会回答不知道，就是莫名其妙的情绪风暴而已。<br>但我现在大致明白是怎么回事了：我的情绪就像雪球一样，会从一个小小的雪球开始越滚越大，最后碾过所有我在 Google Calendar 中设定好的日程。</p><p>我是比较敏感的人，每个小小的事情（例如被人呛了、或是刷到负能量重的视频），都是小小的雪球。通常在接下来一整天内我会看什么都不爽，结果当然就是负面情绪逐渐涌现了。</p><hr><h3 id="睡眠"><a href="#睡眠" class="headerlink" title="睡眠"></a>睡眠</h3><p>睡眠的重要性是毋庸置疑的。<br>很遗憾的，报复性睡眠拖延是最难打破的恶性循环。说来惭愧，自从开始熬夜过后，除了生病之外不曾在12点半之前睡过。</p><p>我的睡眠拖延挺奇怪的，不到一个临界时间（必须睡觉的时间），脑袋都会很凌乱，完全不想关灯。就我而言，要想在某一天突然早睡的话，需要花费大量意志力对抗。因此我的早睡计划通常无法撑过三天XD。</p><hr><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>虽然这篇文章的负能量有点重，读起来像一只鲁蛇的抱怨，但我还是会多多改进的！</p>]]>
+      </content:encoded>
+    </item>
+    <item>
+      <title>生产力——与拖延症的博弈</title>
+      <link>http://yuzhou.my/2026/03/27/productivity/zh-CN/</link>
+      <description>
+        <![CDATA[<blockquote>
+<p>BlogBlog 同乐会<br>这是我的 <a href="https://blogblog.club/party/">“BlogBlog 同乐会 - 2026 年 4 月”</a> 的投稿文章。本月主题是 <a href="https://www]]>
+      </description>
+      <author>Yuzhou 宇宙</author>
+      <category domain="http://yuzhou.my/categories/Life/">Life</category>
+      <category domain="http://yuzhou.my/tags/Procrastination/">Procrastination</category>
+      <category domain="http://yuzhou.my/tags/Self/">Self</category>
+      <category domain="http://yuzhou.my/tags/Productivity/">Productivity</category>
+      <pubDate>Thu, 26 Mar 2026 21:55:50 GMT</pubDate>
+      <content:encoded>
+        <![CDATA[<blockquote><p>BlogBlog 同乐会<br>这是我的 <a href="https://blogblog.club/party/">“BlogBlog 同乐会 - 2026 年 4 月”</a> 的投稿文章。本月主题是 <a href="https://www.wen-lab.tw/blogblog-party-productivity/">“生产力”</a> ， <a href="https://www.wen-lab.tw/author/wen/">Wen</a> 如果你有自己的部落格，欢迎一起来参加！</p></blockquote><p>请原谅我的孤陋寡闻，我对“生产力”这三个字其实挺陌生的，所以这篇文章中，我会把他当作“效率”来理解。<br>作为学生，我是近两年（16岁开始）才开始重视生产力的，因为 <a href="https://zh.wikipedia.org/wiki/%E9%A6%AC%E4%BE%86%E8%A5%BF%E4%BA%9E%E6%95%99%E8%82%B2%E6%96%87%E6%86%91">SPM</a> 快到了嘛。</p><p>说到底，提升生产力 &#x3D; 提升效率 &#x3D; 对抗 <a href="/2026/03/28/procrastination">拖延症</a>。<br>经过我这几年的摸爬滚打，以下是我平时对抗拖延症的方法……</p><hr><h2 id="生产力工具"><a href="#生产力工具" class="headerlink" title="生产力工具"></a>生产力工具</h2><p>用来规划时间的工具应该都算吧？</p><h3 id="笔记本"><a href="#笔记本" class="headerlink" title="笔记本"></a>笔记本</h3><p>2025年开始，我准备了一本用来写日程的笔记本。有两个原因：</p><ol><li>我是想把要做的东西写下来，这样我就不会忘记。</li><li>我想要把自己一天里所有做过的事情记录下来（算是一种特殊癖好吧？），这样子以后回看会很有成就感。</li></ol><p><img src="/images/post/notebook.jpg" alt="Notebook"></p><p>然而，我几乎都是断断续续地记录，坚持不了几天。我会连续一两天做 To-do list，但隔几天又不写了，然后等待下次让我打开笔记本的契机。<br>今年，我也开了一本新的笔记本，但只用了一点点。因为在大约两周前，一个 Google 产品，打开了我的新世界……</p><h3 id="Google-Calendar"><a href="#Google-Calendar" class="headerlink" title="Google Calendar"></a>Google Calendar</h3><p>当我第一次打开 Google Calendar 的时候，内心 OS：这不是我梦寐以求的排程表吗！<br>所有补习时间、朋友聚会、假期，只需要养成每天早上打开 Google Calendar 的习惯就不怕忘记！比起我那潦草又凌乱的笔记本，实在是整齐太多了！</p><p><img src="/images/post/google-calendar.png" alt="Google Calendar"></p><p>OK，现在“健忘症”的问题解决了，但真正的大魔王“拖延症”仍然死死地捆绑着我……</p><hr><h2 id="和朋友一起学习"><a href="#和朋友一起学习" class="headerlink" title="和朋友一起学习"></a>和朋友一起学习</h2><p>这是一个好方法！我通常会去图书馆，虽然在外面的干扰要略高于自己安静的房间，但与朋友互相监督可以大大增加专注力。</p><p>举一个例子好了：在家里学习的时候，我常常只是打开手机看一下讯息，然后就进入短视频的世界 doomscroll 到不知天地为何物了。<br>但和朋友一起的话，他给我使一个眼神，我就可以意识到自己的意识正在被劫持，并赶紧关掉手机。</p><p>不仅如此，图书馆的氛围会降低我的启动困难。大家都在学习，冷气也开到位了，不可能不被这么赞的环境带动吧？自然而然就会翻开书本啦~</p><p><img src="/images/post/Activation-Energy.jpg" alt="Activation Energy"></p>]]>
+      </content:encoded>
+    </item>
+    <item>
+      <title>理想的周末</title>
+      <link>http://yuzhou.my/2026/03/26/ideal-day/zh-CN/</link>
+      <description>
+        <![CDATA[<p><img src="/images/post/alimuthuahock.jpg" alt="Ali Muthu &amp; Ah Hock"><br>Ali, Muthu &amp; Ah Hock, Dang Wangi店</p>
+<p>我今年17岁，是高中生，不知从何]]>
+      </description>
+      <author>Yuzhou 宇宙</author>
+      <category domain="http://yuzhou.my/categories/Life/">Life</category>
+      <category domain="http://yuzhou.my/tags/Happiness/">Happiness</category>
+      <pubDate>Thu, 26 Mar 2026 07:27:37 GMT</pubDate>
+      <content:encoded>
+        <![CDATA[<p><img src="/images/post/alimuthuahock.jpg" alt="Ali Muthu &amp; Ah Hock"><br>Ali, Muthu &amp; Ah Hock, Dang Wangi店</p><p>我今年17岁，是高中生，不知从何时开始，我便几乎完全地将自己沉浸在学业之中，不再思考自己的未来了。<br>对我这个鲜少瞳景未来的人来说，若你问我“理想的生活”是什么？我的脑袋是空荡荡的…… 因此，我就从比较近的地方，“理想的周末”，开始说起吧！</p><blockquote><p>BlogBlog 同乐会<br>这是我的 <a href="https://blogblog.club/party/">“BlogBlog 同乐会 - 2026 年 3 月”</a> 的投稿文章。本月主题是 <a href="https://alexhsu.com/perfect-days">“理想的日常”</a>，由 <a href="https://alexhsu.com/">Alex Hsu</a> 主持。如果你有自己的部落格，欢迎一起来参加！</p></blockquote><hr><h2 id="一日之计在于晨"><a href="#一日之计在于晨" class="headerlink" title="一日之计在于晨"></a>一日之计在于晨</h2><p>周末就应该早早起床啊！<br>每当我周末睡到11点多的时候，我接下来一整天都会超级 down 的，接下来一整天也做不好什么事情。</p><p>早上七点起来和朋友一起去散步&#x2F;跑步，看着外面的风景，心情一下子就变得很好了。再去咖啡店吃个早餐，享受血糖飚升的快感。这样的早晨多么有活力呢。</p><p>另外，由于我本身不喜欢（其实是太菜了）篮球、羽球之类的竞技体育，所以周末早上的运动时间对我显得格外重要了。</p><hr><h2 id="一周最快乐的时刻"><a href="#一周最快乐的时刻" class="headerlink" title="一周最快乐的时刻"></a>一周最快乐的时刻</h2><p>周末的下午被连续六个小时的物理、化学、生物 <strong>补习</strong> 填满了，但仔细想了想，这可能是我一周里最快乐的六个小时。因为满足了一下三点：</p><ul><li><strong>和朋友在一起</strong>：有和朋友一起聊天的机会（我还是有认真上课的！）。</li><li><strong>不会拖延</strong>：平时如果在家一个人的话，尽管是一件小事我也可以拖延到不知天地为何物，完全失去了对时间的支配，真的太痛苦了。</li><li><strong>放松</strong>：补习班没有上学的那种紧迫感。课间的时候常常会下楼买东西带上去，一边听课一边吃，实在是太享受了！</li></ul><p>另外最重要的，这些本来就是我喜欢的科目啊 XD。<br>如果换成连续六个小时的语文课的话，抱歉…… 我会晕倒。</p><hr><h2 id="自由的支配自己的时间"><a href="#自由的支配自己的时间" class="headerlink" title="自由的支配自己的时间"></a>自由的支配自己的时间</h2><p>上文有提到我很拖延，因此我是一个非常需要被约束的人。<br>上学天的时候，在学校学习动力的惯性使我回到家后仍然可以完成该做的事情。<br>但一到周末，情况就不一样了，堆积如山的课业总会拖到最后一分钟，结果可想而知——熬夜赶工。</p><p>如果没能完成设定好的日程，我会陷入焦虑的无限循环，美好的心情就这样子被毁掉了，这一点都不理想。</p><hr><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>我没有太多物质上的需求，除了吃饱穿暖之外，只要快快乐乐、无忧无虑就行了。<br>对我而言，快乐的源泉是充实的生活，而充实的生活源自自律。</p><p>看了一下 <a href="https://alexhsu.com/perfect-days">其他人的理想日常</a>，不少人都希望自己可以好好操盘自己的时间呢。<br>希望大家都可以在自律的路上越走越远吧！</p>]]>
       </content:encoded>
     </item>
     <item>

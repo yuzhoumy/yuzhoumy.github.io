@@ -1,0 +1,2224 @@
+
+<!DOCTYPE html>
+<html lang="en ">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuzhou&#39;s Playground</title>
+    <meta name="author" content="Yuzhou 宇宙">
+    <meta name="description" content="I call myself "yuzhou" (宇宙) which means the universe, since I was 12.  ">
+    <meta name="keywords" content=" ">
+    <script>
+    window.YZ_LANGUAGE = {
+        supported: ['en', 'zh-TW', 'zh-CN', 'my'],
+        labels: {
+            en: 'English',
+            'zh-TW': '\u7e41\u9ad4\u4e2d\u6587',
+            'zh-CN': '\u7b80\u4f53\u4e2d\u6587',
+            my: 'Bahasa Melayu'
+        },
+        routeMap: {},
+        translations: {
+            en: {
+                'nav.home': 'Home',
+                'nav.about': 'About',
+                'nav.archives': 'Archives',
+                'nav.friends': 'Friends',
+                'nav.categories': 'Categories',
+                'nav.tags': 'Tags',
+                'home.subtitle': 'Hello',
+                'home.description': 'I call myself "yuzhou" (宇宙) which means the universe, since I was 12. ',
+                'card.description1': 'A Malaysian high school student, currently 17 years old.',
+                'card.description2': 'I will share my thoughts and daily life here.',
+                'friends.kicker': 'Friends',
+                'friends.pageTitle': 'Friends',
+                'friends.pageDescription': '',
+                'friends.empty': 'Add entries to the <code>friends</code> list in this page\'s front matter to show profile cards here.',
+                'footer.basedOn': 'Based on the',
+                'footer.icp': '备案号',
+                'card.friendLink': 'About me',
+                'ui.readMore': 'Read More',
+                'ui.loading': 'LOADING...',
+                'ui.cacheHint': 'Please enable caching if loading is too slow (enabled by default in browsers).',
+                'post.unsupportedTitle': 'This version is not available in your selected language.',
+                'post.unsupportedDescription': 'Try one of the available variants below.'
+            },
+            'zh-TW': {
+                'nav.home': '\u9996\u9801',
+                'nav.about': '\u95dc\u65bc',
+                'nav.archives': '\u6b78\u6a94',
+                'nav.friends': '\u53cb\u93c8',
+                'nav.categories': '\u5206\u985e',
+                'nav.tags': '\u6a19\u7c64',
+                'home.subtitle': '歡迎來到我的小宇宙~',
+                'home.description': '我從12歲開始稱自己為「宇宙」',
+                'card.description1': '一位馬來西亞高中生，目前 17 歲。',
+                'card.description2': '我會把日常想法和生活點滴分享在這裡。',
+                'friends.kicker': '朋友們',
+                'friends.pageTitle': '友站',
+                'friends.pageDescription': '如果想要互加友站可以發email給我。:)',
+                'friends.empty': '在這個頁面的 front matter 中新增 <code>friends</code> 條目，就能在這裡顯示好友卡片。',
+                'footer.basedOn': '基於',
+                'footer.icp': '備案號',
+                'card.friendLink': '關於',
+                'ui.readMore': '\u95b1\u8b80\u66f4\u591a',
+                'ui.loading': '\u8f09\u5165\u4e2d...',
+                'ui.cacheHint': '\u5982\u679c\u8f09\u5165\u592a\u6162\uff0c\u8acb\u555f\u7528\u700f\u89bd\u5668\u5feb\u53d6\u3002'
+            },
+            'zh-CN': {
+                'nav.home': '\u9996\u9875',
+                'nav.about': '\u5173\u4e8e',
+                'nav.archives': '\u5f52\u6863',
+                'nav.friends': '\u53cb\u94fe',
+                'nav.categories': '\u5206\u7c7b',
+                'nav.tags': '\u6807\u7b7e',
+                'home.subtitle': '欢迎来到我的小宇宙~',
+                'home.description': '我从12岁开始称自己为「宇宙」',
+                'card.description1': '一位马来西亚高中生，目前 17 岁。',
+                'card.description2': '我会把日常想法和生活点滴分享在这里。',
+                'friends.kicker': '朋友们',
+                'friends.pageTitle': '友站',
+                'friends.pageDescription': '如果想要互加友站可以发email给我。:)',
+                'friends.empty': '在这个页面的 front matter 中新增 <code>friends</code> 条目，就能在这里显示好友卡片。',
+                'footer.basedOn': '基于',
+                'footer.icp': '备案号',
+                'card.friendLink': '关于',
+                'ui.readMore': '\u9605\u8bfb\u66f4\u591a',
+                'ui.loading': '\u52a0\u8f7d\u4e2d...',
+                'ui.cacheHint': '\u5982\u679c\u52a0\u8f7d\u592a\u6162\uff0c\u8bf7\u542f\u7528\u6d4f\u89c8\u5668\u7f13\u5b58\u3002'
+            },
+            my: {
+                'nav.home': 'Laman Utama',
+                'nav.about': 'Tentang',
+                'nav.archives': 'Arkib',
+                'nav.friends': 'Rakan',
+                'nav.categories': 'Kategori',
+                'nav.tags': 'Tag',
+                'home.subtitle': 'Selamat datang ke ruang saya',
+                'home.description': 'Kongsi kehidupan, pemikiran, dan catatan harian saya.',
+                'card.description1': 'Seorang pelajar sekolah menengah Malaysia, berusia 17 tahun.',
+                'card.description2': 'Saya akan berkongsi kehidupan harian dan pemikiran saya di sini.',
+                'friends.kicker': 'Rakan',
+                'friends.pageTitle': 'Profil Rakan',
+                'friends.pageDescription': 'Kalau nak tambah rakan, sila hantar e-mel kepada saya. :)',
+                'friends.empty': 'Tambah entri <code>friends</code> dalam front matter halaman ini untuk memaparkan kad profil di sini.',
+                'footer.basedOn': 'Berasaskan',
+                'footer.icp': 'No. Pendaftaran',
+                'card.friendLink': 'Lebih tentang saya',
+                'ui.readMore': 'Baca Lagi',
+                'ui.loading': 'MEMUATKAN...',
+                'ui.cacheHint': 'Sila aktifkan cache jika laman dimuatkan terlalu perlahan.',
+                'post.unsupportedTitle': 'Versi ini tidak tersedia dalam bahasa pilihan anda.',
+                'post.unsupportedDescription': 'Sila pilih versi yang tersedia di bawah.'
+            }
+        }
+    };
+
+    (function () {
+        var state = window.YZ_LANGUAGE;
+        var supported = state.supported;
+        var params = new URLSearchParams(window.location.search);
+        var queryLang = params.get('lang');
+        var routeMap = state.routeMap || {};
+        var path = window.location.pathname.replace(/\/+$/, '/') || '/';
+        var pathLangMatch = path.match(/\/(en|zh-TW|zh-CN|my)\/?$/);
+        var pathLang = pathLangMatch ? pathLangMatch[1] : null;
+        var lang = supported.indexOf(queryLang) !== -1 ? queryLang : (pathLang || localStorage.getItem('user-lang') || 'en');
+        if (supported.indexOf(lang) === -1) lang = 'en';
+        if (supported.indexOf(queryLang) !== -1) localStorage.setItem('user-lang', lang);
+        else if (pathLang) localStorage.setItem('user-lang', lang);
+        else if (!localStorage.getItem('user-lang')) localStorage.setItem('user-lang', lang);
+        document.documentElement.setAttribute('lang', lang);
+
+        var target = routeMap[lang];
+        var hasLangSuffix = Boolean(pathLang);
+        var shouldRedirect = target && (supported.indexOf(queryLang) !== -1 || !hasLangSuffix);
+        if (shouldRedirect) {
+            var link = document.createElement('a');
+            link.href = target;
+            var targetPath = link.pathname.replace(/\/+$/, '/') || '/';
+            if (targetPath !== path) {
+                window.location.replace(target + window.location.hash);
+            }
+        }
+    })();
+    </script>
+    <link rel="icon" href="/./images/avatar.png">
+    <link rel="stylesheet" href="/css/antd.min.css">
+    
+    <link rel="stylesheet" href="/css/full-theme.css">
+    
+    
+    <script src="/js/vue.js"></script>
+    <script src="/js/antd.min.js"></script>
+<meta name="generator" content="Hexo 8.1.1"><link rel="alternate" href="/rss.xml" title="Yuzhou's Playground" type="application/rss+xml">
+<link rel="alternate" href="/rss-en.xml" title="Yuzhou's Playground English" type="application/rss+xml">
+<link rel="alternate" href="/rss-zh-tw.xml" title="Yuzhou's Playground 繁體中文" type="application/rss+xml">
+<link rel="alternate" href="/rss-zh-cn.xml" title="Yuzhou's Playground 简体中文" type="application/rss+xml">
+<link rel="alternate" href="/rss-my.xml" title="Yuzhou's Playground Bahasa Melayu" type="application/rss+xml">
+</head>
+
+<body>
+
+    <div id="loading"
+        style="height: 100vh; width: 100%; position: fixed;display: flex;z-index: 200; justify-content: space-between;">
+        <div id="loadleft" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div id="loadright" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div
+            style="position: fixed; height: 100vh; width: 100%;display: flex;justify-content: center;align-items: center;">
+            <div id="loadcontent"
+                style="width:400px;height:400px;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px#a3ddfb; text-align:center;opacity:1;transition:opacity 0.3s ease-out;">
+                <div>
+                    <h2 data-i18n="ui.loading">LOADING...</h2>
+                    <p data-i18n="ui.cacheHint">Please enable caching if loading is too slow (enabled by default in browsers).</p>
+                    <div>
+                        <img src="/images/loading.gif" alt="loading">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="layout">
+        <transition name="into">
+            <div v-show="show_page" style="display: none;">
+                <div id="menu_show">
+                     
+<nav id="menu">
+    <div class="desktop-menu">
+        <a href="/">
+            <span class="title">Yuzhou's Playground</span>
+        </a>
+        
+        <a href="/">
+            <span>
+                <a-icon type="home" theme="filled" />
+            </span>
+            <span data-i18n="nav.home">home</span>
+        </a>
+        
+        <a href="/about">
+            <span>
+                <a-icon type="idcard" theme="filled" />
+            </span>
+            <span data-i18n="nav.about">about</span>
+        </a>
+        
+        <a href="/archives">
+            <span>
+                <a-icon type="folder" theme="filled" />
+            </span>
+            <span data-i18n="nav.archives">archives</span>
+        </a>
+        
+        <a href="/friends">
+            <span>
+                <a-icon type="heart" theme="filled" />
+            </span>
+            <span data-i18n="nav.friends">friends</span>
+        </a>
+        
+        <a href="/categories/Life">
+            <span>
+                <a-icon type="book" theme="filled" />
+            </span>
+            <span data-i18n="nav.categories">categories</span>
+        </a>
+        
+        <a href="/tags/Self">
+            <span>
+                <a-icon type="tags" theme="filled" />
+            </span>
+            <span data-i18n="nav.tags">tags</span>
+        </a>
+        
+        <div class="global-language-menu" data-language-menu>
+            <button class="global-language-trigger" type="button" data-language-trigger aria-expanded="false">
+                <span class="global-language-current" data-language-current>English</span>
+                <span class="global-language-caret"></span>
+            </button>
+            <div class="global-language-dropdown" role="menu">
+                <button class="global-language-option" type="button" value="en" data-language-option>English</button>
+                <button class="global-language-option" type="button" value="zh-TW" data-language-option>繁體中文</button>
+                <button class="global-language-option" type="button" value="zh-CN" data-language-option>简体中文</button>
+                <button class="global-language-option" type="button" value="my" data-language-option>Bahasa Melayu</button>
+            </div>
+        </div>
+    </div>
+
+    <div :class="'phone-menu ' + menu_show" id="phone-menu">
+        <div :class="'title'" @click="menu_show=!menu_show">
+            <span style="margin-right: 10px;">
+                <a-icon type="appstore" theme="filled" />
+            </span>
+            <span>Yuzhou's Playground</span>
+        </div>
+        <div class="items" v-show="menu_show">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="home" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;" data-i18n="nav.home">home</div>
+                </div>
+            </a>
+            
+            <a href="/about">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="idcard" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;" data-i18n="nav.about">about</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="folder" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;" data-i18n="nav.archives">archives</div>
+                </div>
+            </a>
+            
+            <a href="/friends">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="heart" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;" data-i18n="nav.friends">friends</div>
+                </div>
+            </a>
+            
+            <a href="/categories/Life">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="book" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;" data-i18n="nav.categories">categories</div>
+                </div>
+            </a>
+            
+            <a href="/tags/Self">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="tags" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;" data-i18n="nav.tags">tags</div>
+                </div>
+            </a>
+            
+            <div class="mobile-language-options" data-language-menu>
+                <button class="global-language-trigger" type="button" data-language-trigger aria-expanded="false">
+                    <span class="global-language-current" data-language-current>English</span>
+                    <span class="global-language-caret"></span>
+                </button>
+                <div class="global-language-dropdown" role="menu">
+                    <button class="global-language-option" type="button" value="en" data-language-option>English</button>
+                    <button class="global-language-option" type="button" value="zh-TW" data-language-option>繁體中文</button>
+                    <button class="global-language-option" type="button" value="zh-CN" data-language-option>简体中文</button>
+                    <button class="global-language-option" type="button" value="my" data-language-option>Bahasa Melayu</button>
+                </div>
+            </div>
+        </div>
+        <div class="curtain" v-show="menu_show"></div>
+    </div>
+
+</nav>
+                </div>
+
+                <div id="main">
+                    <div id="home-head" style=background-image:url('images/background/mononoke.jpg')>
+    <script>
+        var menu = document.getElementById("menu")
+        menu.className += " menu-color"
+    </script>
+     
+    <div id="home-info" class="home-info" @click="home_click">
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="info">
+            <div class="wrap">
+                <h1>Yuzhou's Playground</h1>
+                <h3 data-i18n="home.subtitle">Hello</h3>
+                <h5 data-i18n="home.description">I call myself "yuzhou" (宇宙) which means the universe, since I was 12. </h5>
+            </div>
+        </span>
+    </div>
+     
+</div>
+
+
+
+<div id="home-posts-wrap" class=>
+    <div id="home-posts">
+
+        <div id="posts">
+            
+<div data-feed-list data-page-number="3" data-per-page="10">
+
+
+<div class="post" data-feed-post data-post-langs="en zh-TW zh-CN my" style="display:none">
+
+    <div class="feed-post-title">
+        
+        <a href="/2026/08/04/four-languages-blog/" data-lang-content="en">
+            <h2>A Blog in Three Languages</h2>
+        </a>
+        
+        <a href="/2026/08/04/four-languages-blog/zh-TW/" data-lang-content="zh-TW">
+            <h2>有三種語言的Blog</h2>
+        </a>
+        
+        <a href="/2026/08/04/four-languages-blog/zh-CN/" data-lang-content="zh-CN">
+            <h2>有三种语言的Blog</h2>
+        </a>
+        
+        <a href="/2026/08/04/four-languages-blog/my/" data-lang-content="my">
+            <h2>Blog tiga bahasa</h2>
+        </a>
+        
+    </div>
+
+    <div class="category-and-date">
+
+        
+        <span class="category">
+            <a href="/categories/Update">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" /></span>
+                Update
+            </a>
+        </span>
+        
+
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2026/8/4
+        </span>
+
+    </div>
+
+    <div class="excerpt">
+        
+        <div class="content" v-pre data-lang-content="en">
+            
+            
+            <p>A while back (about two or three weeks ago now), I did a major overhaul of this website. All the content on the site now supports <strong>English, Malay Traditional Chinese, and Simplified Chinese.</strong></p>
+<p>This was pretty massive undertaking that burned through my entire month’s worth of token in one go. The Hexo theme I’m using doesn’t support multiple languages, so I basically forced this feature into my site by brute force. Now you don’t even need to check the source code on Github to imagine how terrifying it must look, right? Hehehe~</p>
+<p>Although <a target="_blank" rel="noopener" href="https://alexhsu.com/en/multilingual">building a multilingual site is a lot of thankless effort</a>, when I really thought about it: I’m Malaysian, and if I only used one language, there’s no way I could reach everyone I think might possibly read my blog. Of course I don’t actually expect my blog to have readers, but would I be missing out on a chance for people to get to know me because of that?</p>
+<p>In terms of coverage, technically just Traditional Chinese and English would be enough at the bare minimum. But… since I was already to take a knife to the whole site, why not just add a few more languages while I’m at it?</p>
+<p><strong>Traditional Chinese</strong>: Chinese is, at the end of the day, my mother tongue: the language I can express myself best in. I usually write articles in Chinese first and then translate them into other languages. Also, since I frequently attend BlogBlogParty, most of this blog’s current readers are probably Taiwanese, who are more used to reading Traditional Chinese.</p>
+<p><strong>Simplified Chinese</strong>: But I’m a Malaysian Chinese, and most of my local friends mainly use Simplified Chinese. Everyone can read Traditional Chinese, but that doesn’t mean they enjoy it. Converting Traditional Chinese to Simplified Chinese is very easy anyway, since it’s the same language. I can just use an off-the-shelf converter.</p>
+<p><strong>English</strong>: Whether I end up studying in Malaysia or abroad in the future, English will be the main language during my university years, and there’s a good chance I’ll be immersed in English-speaking circles for a long time. So I figured it’s better to plan ahead.</p>
+<p><strong>Malay</strong>: If I want to discuss very local topics (politics?) and current events, I think expressing myself in Malay would flow more naturally than in Chinese. Again, I want to reach as many people as possible, at least within Malaysia. And of course, most importantly, I just enjoy doing it, so I’m willing to put in the effort.</p>
+<h3 id="The-Cost"><a href="#The-Cost" class="headerlink" title="The Cost"></a>The Cost</h3><p>But the cost of doing this is pretty significant. Every time I publish a post, I now need to rewrite it in English in Malay as well, and 2-3 hours has become the baseline production time just for one article. But as I’ve mentioned before, writing articles has always been extremely time-consuming and <a href="/2026/03/28/procrastination">difficult</a> for me, so I’ve already gotten used to the feeling that every article is a big project. As for older posts, I’ve already translated them into Simplified Chinese; O’ll fill in the English and Malay versions whenever I get the chance later.</p>
+<h3 id="RSS"><a href="#RSS" class="headerlink" title="RSS"></a>RSS</h3><p>I’ve split the RSS feed into four seperate feeds, so that posts in different languages don’t get mixed together:<br><a href="https://yuzhou.my/rss-en.xml">https://yuzhou.my/rss-en.xml</a><br><a href="https://yuzhou.my/rss-my.xml">https://yuzhou.my/rss-my.xml</a><br><a href="https://yuzhou.my/rss-zh-tw.xml">https://yuzhou.my/rss-zh-tw.xml</a><br><a href="https://yuzhou.my/rss-zh-cn.xml">https://yuzhou.my/rss-zh-cn.xml</a><br>Now vising the original RSS at <a href="https://yuzhou.my/rss.xml/">https://yuzhou.my/rss.xml/</a> will only show this one post, letting readers choose their language from there.</p>
+<h3 id="Afterword"><a href="#Afterword" class="headerlink" title="Afterword"></a>Afterword</h3><p>After finishing this overhaul of the site, I find myself feeling a bit regretful again: the site has gotten so bloated now. Either way, I can live with it, and honestly kind of like it, because it really suits my personality (much like my perpetually messy desk). But whether readers can live with it is a whole other matter. I believe all this fuss was worth it.</p>
+
+            
+        </div>
+        
+        <div class="content" v-pre data-lang-content="zh-TW">
+            
+            
+            <p>前段時間（大約是兩三個星期之前吧）對這個網站進行了大翻修。現在網站所有内容都支持<strong>英文、馬來文、繁體中文、簡體中文</strong>了。</p>
+<p>這是一個相當大的工程，一下子把我整個月的token用光了。我現在用的Hexo主題是沒有支援多語言的，我可以説是硬硬把這個功能加進網站。現在網站的原始碼大家不用去Github看都可以想象到有多恐怖了吧？哼哼哼~<br>雖然<a target="_blank" rel="noopener" href="https://alexhsu.com/multilingual">架設多語言網站吃力不討好</a>，但仔細想了想，我是馬來西亞人，如果只使用一種語言的話，絕對沒辦法覆蓋到所有我認爲有可能會讀我的Blog的人。我當然不指望我的Blog會有讀者，但我會不會因此錯失了讓別人認識我的機會呢？<br>覆蓋率，其實最最基本只需要繁體中文和英文就足夠了。但……既然都已經要給網站動大刀了，直接加多幾個語言不是更好？</p>
+<p><strong>繁體中文</strong>：中文説到底是我的母語，是我能最好表達自己的語言。我通常也會先用中文寫文章再翻譯成其他語言。考慮到常常參加BlogBlogParty，目前這個Blog大部分讀者應該都是台灣人，更習慣看繁體字。</p>
+<p><strong>簡體中文</strong>：但我是馬來西亞華人呀，我本地的朋友們都是用簡體字居多，大家都會看繁體字但不一定喜歡看。繁體中文轉換成簡體中文非常容易，畢竟都是同一種語言嘛，直接用現成的翻譯器即可。</p>
+<p><strong>英文</strong>：不論我未來是在馬來西亞還是國外讀書，大學時期的主要語言都是英文，很大可能會一直泡在英文圈子。所以我覺得未雨綢繆更好。</p>
+<p><strong>馬來文</strong>：如果要討論一些非常本地的（政治？）時事，我想用馬來語表達會比中文更順暢。還是那句話，我希望可以覆蓋到所有人，至少在馬來西亞之内。當然最重要的是我自己喜歡，所以我願意。</p>
+<h3 id="代價"><a href="#代價" class="headerlink" title="代價"></a>代價</h3><p>但這麽做的代價相當巨大，每次發文章都需要用英文和馬來文再寫一遍，2~3個小時已經成爲一篇文章的打底出產時間了。但我以前有提過，寫文章本來就對我來説非常耗時非常<a href="/2026/03/28/procrastination">不容易</a>，所以我已經習慣這種每次寫文章都是大工程的感覺了。至於之前的文章，我先翻譯好簡體中文，英文和馬來文以後有空再補回去。</p>
+<h3 id="RSS"><a href="#RSS" class="headerlink" title="RSS"></a>RSS</h3><p>我把RSS分成了四個，這樣子不同語言的文章就不會混淆了：<br><a href="https://yuzhou.my/rss-en.xml">https://yuzhou.my/rss-en.xml</a><br><a href="https://yuzhou.my/rss-my.xml">https://yuzhou.my/rss-my.xml</a><br><a href="https://yuzhou.my/rss-zh-tw.xml">https://yuzhou.my/rss-zh-tw.xml</a><br><a href="https://yuzhou.my/rss-zh-cn.xml">https://yuzhou.my/rss-zh-cn.xml</a><br>現在進入原本的RSS <a href="https://yuzhou.my/rss.xml/">https://yuzhou.my/rss.xml/</a> 只會顯示這一篇文章，供讀者選擇語言。</p>
+<h3 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h3><p>完成網站的翻修工程后，我似乎又感覺有點後悔，這個網站現在變得好臃腫啊。無論如何，我還是可以接受，甚至有點喜歡，因爲這很符合我的個性（就好像我永遠亂七八糟的書桌一樣），但讀者能不能接受就是另外一回事了。這一點折騰，我相信是值得的。</p>
+
+            
+        </div>
+        
+        <div class="content" v-pre data-lang-content="zh-CN">
+            
+            
+            <p>前段时间（大约是两三个星期之前吧）对这个网站进行了大翻修。现在网站所有内容都支持<strong>英文、马来文、繁体中文、简体中文</strong>了。</p>
+<p>这是一个相当大的工程，一下子把我整个月的token用光了。我现在用的Hexo主题是没有支援多语言的，我可以说是硬硬把这个功能加进网站。现在网站的原始码大家不用去Github看都可以想象到有多恐怖了吧？哼哼哼~<br>虽然<a target="_blank" rel="noopener" href="https://alexhsu.com/multilingual">架设多语言网站吃力不讨好</a>，但仔细想了想，我是马来西亚人，如果只使用一种语言的话，绝对没办法复盖到所有我认为有可能会读我的Blog的人。我当然不指望我的Blog会有读者，但我会不会因此错失了让别人认识我的机会呢？<br>复盖率，其实最最基本只需要繁体中文和英文就足够了。但……既然都已经要给网站动大刀了，直接加多几个语言不是更好？</p>
+<p><strong>繁体中文</strong>：中文说到底是我的母语，是我能最好表达自己的语言。我通常也会先用中文写文章再翻译成其他语言。考虑到常常参加BlogBlogParty，目前这个Blog大部分读者应该都是台湾人，更习惯看繁体字。</p>
+<p><strong>简体中文</strong>：但我是马来西亚华人呀，我本地的朋友们都是用简体字居多，大家都会看繁体字但不一定喜欢看。繁体中文转换成简体中文非常容易，毕竟都是同一种语言嘛，直接用现成的翻译器即可。</p>
+<p><strong>英文</strong>：不论我未来是在马来西亚还是国外读书，大学时期的主要语言都是英文，很大可能会一直泡在英文圈子。所以我觉得未雨绸缪更好。</p>
+<p><strong>马来文</strong>：如果要讨论一些非常本地的（政治？）时事，我想用马来语表达会比中文更顺畅。还是那句话，我希望可以复盖到所有人，至少在马来西亚之内。当然最重要的是我自己喜欢，所以我愿意。</p>
+<h3 id="代价"><a href="#代价" class="headerlink" title="代价"></a>代价</h3><p>但这么做的代价相当巨大，每次发文章都需要用英文和马来文再写一遍，2~3个小时已经成为一篇文章的打底出产时间了。但我以前有提过，写文章本来就对我来说非常耗时非常<a href="/2026/03/28/procrastination">不容易</a>，所以我已经习惯这种每次写文章都是大工程的感觉了。至于之前的文章，我先翻译好简体中文，英文和马来文以后有空再补回去。</p>
+<h3 id="RSS"><a href="#RSS" class="headerlink" title="RSS"></a>RSS</h3><p>我把RSS分成了四个，这样子不同语言的文章就不会混淆了：<br><a href="https://yuzhou.my/rss-en.xml">https://yuzhou.my/rss-en.xml</a><br><a href="https://yuzhou.my/rss-my.xml">https://yuzhou.my/rss-my.xml</a><br><a href="https://yuzhou.my/rss-zh-tw.xml">https://yuzhou.my/rss-zh-tw.xml</a><br><a href="https://yuzhou.my/rss-zh-cn.xml">https://yuzhou.my/rss-zh-cn.xml</a><br>现在进入原本的RSS <a href="https://yuzhou.my/rss.xml/">https://yuzhou.my/rss.xml/</a> 只会显示这一篇文章，供读者选择语言。</p>
+<h3 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h3><p>完成网站的翻修工程后，我似乎又感觉有点后悔，这个网站现在变得好臃肿啊。无论如何，我还是可以接受，甚至有点喜欢，因为这很符合我的个性（就好像我永远乱七八糟的书桌一样），但读者能不能接受就是另外一回事了。这一点折腾，我相信是值得的。</p>
+
+            
+        </div>
+        
+        <div class="content" v-pre data-lang-content="my">
+            
+            
+            <p>Lebih kurang 2~3 minggu sebelum ini, saya telah merombakkan laman web ini. Sekarang, semua konten dalam laman web ini boleh dipaparkan dalam <strong>bahasa Inggeris, bahasa Melayu, bahasa Cina Tradisional, dan bahasa Cina ringkas</strong>.</p>
+<p>Rombakan kali ini memang sesuatu operasi yang sangat besar, sekajap sahaja dah habiskan semua peruntukan token saya untuk bulan ini. Tema Hexo yang saya guna sekarang tidak menyokong post pelbagai bahasa, boleh katanya saya tambahkan fungsi ini secara paksa. Kod sumber laman web ini, korang tak perlu pergi Github tengok pun, boleh bayangkan betapa dahsyatnya, hehehe~</p>
+<p>Walaupun <a target="_blank" rel="noopener" href="https://alexhsu.com/en/multilingual">membina laman web pelbagai bahasa sangat menyusahkan diri</a>, tapi saya fikir, saya orang Malaysia, kalau guna satu bahasa sahaja, semestinya tak boleh meliputi semua golongan yang mungkin baca blog saya. Saya tak harapkan blog saya ada pembaca, tetapi mungkin saya kehilangan peluang untuk orang lain mengenal saya?</p>
+<p>Dari segi keliputan, sebenarnya bahasa Cina dan bahasa Inggeris dah cukup. Tetapi… sudah tentulah laman web ini akan dikena rombakan besar, kenapa saya tak tambah banyak sikit bahasa?</p>
+<p><strong>Cina tradisional</strong>: Cina, macam mana pun bahasa ibunda saya, itulah bahasa terbaik untuk mengungkapkan idea saya. Biasanya saya menulis dalam bahasa Cina dulu, baru terjemahkan ke bahasa lain. Memandangkan saya kerap menyertai BlogBlogParty, kebanyakan pembaca blog ini orang Taiwan, yang lebih biasa membaca Cina tradisional.</p>
+<p><strong>Cina ringkas</strong>: Tetapi saya orang Cina Malaysia, kebanyakan kawan offline saya guna Cina ringkas, boleh baca Cina tradisional tak bermaksud mereka suka. Penukaran Cina tradisional ke Cina ringkas sangat senang, guna penterjemah sedia ada sahaja.</p>
+<p><strong>bahasa Inggeris</strong>: Masa universiti nanti, tak kiralah saya sambung belajar dalam Malaysia ke negara lain, bahasa utamanya Inggeris, kemungkinan besar saya akan berendam dalam persekitaran berbahasa Inggeris. Jadi lebih baik sedia payung sebelum hujan.</p>
+<p><strong>bahasa Melayu</strong>: Kalau saya nak bincang hal-hal tempatan (politik?), lebih lancar saya guna bahasa Melayu. Macam saya dah sebut tadi, saya harap saya dapat meliputi semua orang, sekurang-kurangnya dalam Malaysia. Yang penting itu saya suka, saya sudi.</p>
+<h3 id="Harga"><a href="#Harga" class="headerlink" title="Harga"></a>Harga</h3><p>Harga untuk berbuat begini sangat besar, setiap kali nak siarkan artikel baru kena tulis dalam bahasa Melayu dan bahasa Inggeris sekali lagi, 2~3 jam dah jadi masa minimum untuk saya menyiapkan satu artikel. Sebelum ini saya pernah pun sebut, menulis artikel <a href="/2026/03/28/procrastination">tak senang</a> bagi saya, saya pun dah biasa dengan perasaan menulis artikel macam projek besar. Bagi artikel-artikel sebelum ini, saya dah terjemahkan ke Cina Ringkas dahulu; bahasa Inggeris dan Melayu akan saya tambah kemudian bila ada masa</p>
+<h3 id="RSS"><a href="#RSS" class="headerlink" title="RSS"></a>RSS</h3><p>Saya dah pisahkan RSS kepada empat RSS yang berlainan. Dengan ini, artikel daripada pelbagai bahasa tak akan bercampur aduk.<br><a href="https://yuzhou.my/rss-en.xml">https://yuzhou.my/rss-en.xml</a><br><a href="https://yuzhou.my/rss-my.xml">https://yuzhou.my/rss-my.xml</a><br><a href="https://yuzhou.my/rss-zh-tw.xml">https://yuzhou.my/rss-zh-tw.xml</a><br><a href="https://yuzhou.my/rss-zh-cn.xml">https://yuzhou.my/rss-zh-cn.xml</a><br>Sekarang melawat RSS asal <a href="https://yuzhou.my/rss.xml/">https://yuzhou.my/rss.xml/</a> hanya memaparkan satu artikel ini saja, bagi pembaca memilih bahasa.</p>
+<h3 id="Kata-akhir"><a href="#Kata-akhir" class="headerlink" title="Kata akhir"></a>Kata akhir</h3><p>Lepas rombakan laman web ini, saya rasa sedikit menyesal pulak, laman web ini sekarang dah gemuk gedempong. Walau bagaimanapun, saya boleh terima lagi, malah ada rasa sedikit suka, kerana ia sepadan dengan perangai saya (seperti meja saya yang sentiasa kacau-bilau), tetapi pembaca boleh terima tak? Itu cerita lain. Saya percaya segala kesusahan ini berbaloi.</p>
+
+            
+        </div>
+        
+    </div>
+
+    <div class="post-tags">
+        
+        <span class="icon">
+            <a-icon type="tags" theme="filled" />
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/Blog" style=color:#03a9f4>
+                Blog
+            </a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/tags/Language" style=color:#ff7d73>
+                Language
+            </a>
+        </span>
+        
+    </div>
+
+    
+    <a href="/2026/08/04/four-languages-blog/" class="go-post" data-lang-content="en" data-i18n="ui.readMore">
+        Read More
+    </a>
+    
+    <a href="/2026/08/04/four-languages-blog/zh-TW/" class="go-post" data-lang-content="zh-TW" data-i18n="ui.readMore">
+        Read More
+    </a>
+    
+    <a href="/2026/08/04/four-languages-blog/zh-CN/" class="go-post" data-lang-content="zh-CN" data-i18n="ui.readMore">
+        Read More
+    </a>
+    
+    <a href="/2026/08/04/four-languages-blog/my/" class="go-post" data-lang-content="my" data-i18n="ui.readMore">
+        Read More
+    </a>
+    
+</div>
+
+
+<div class="post" data-feed-post data-post-langs="zh-TW zh-CN" style="display:none">
+
+    <div class="feed-post-title">
+        
+        <a href="/2026/07/12/the-real-java/" data-lang-content="zh-TW">
+            <h2>真正的 Java</h2>
+        </a>
+        
+        <a href="/2026/07/12/the-real-java/zh-CN/" data-lang-content="zh-CN">
+            <h2>真正的 Java</h2>
+        </a>
+        
+    </div>
+
+    <div class="category-and-date">
+
+        
+        <span class="category">
+            <a href="/categories/Culture">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" /></span>
+                Culture
+            </a>
+        </span>
+        
+
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2026/7/12
+        </span>
+
+    </div>
+
+    <div class="excerpt">
+        
+        <div class="content" v-pre data-lang-content="zh-TW">
+            
+            
+            <blockquote>
+<p>這是我的<a target="_blank" rel="noopener" href="https://blogblog.club/party/">「BlogBlog 同樂會 - 2026 年 7 月 」</a> 的投稿文章。本月主題是<a target="_blank" rel="noopener" href="https://shuaixin.cc/Fun-Fact/">「有趣的小知識或冷門概念」</a>，由<a target="_blank" rel="noopener" href="https://shuaixin.cc/">劉昕</a>主持。如果你有自己的部落格，歡迎一起來參加！</p>
+</blockquote>
+<p><img src="/images/post/wayang-kulit-kelantan.jpg" alt="吉蘭丹皮影戲"><br>這是吉蘭丹皮影戲，由爪哇人傳入馬來半島，是滿者伯夷帝國擴張版圖的結果。</p>
+<h1 id="Wes-Mangan"><a href="#Wes-Mangan" class="headerlink" title="Wes Mangan?"></a>Wes Mangan?</h1><p>説起 Java，大部分人都會想到程式語言，或者是Minecraft。但在世界的另一端，在硅谷的背面，<strong>爪哇語（Basa Jawa&#x2F;Javanese）</strong> 是印尼一門超過8000萬人使用的語言哦！</p>
+<p>爪哇語主要由爪哇人使用。雖然我居住在馬來西亞，但身邊不少馬來朋友都是爪哇裔後代，便多多少少接觸到爪哇文化了。<br>Wes mangan，在爪哇語中是呷飽沒的意思，恭喜你學會了你的第一句爪哇話啦~</p>
+<h3 id="滅絕危機"><a href="#滅絕危機" class="headerlink" title="滅絕危機"></a>滅絕危機</h3><p>雖然爪哇語擁有8000萬使用者，但它<strong>不是任何國家的官方語言</strong>！這是爲什麽呢？<br>在1945年印尼獨立運動之時，開國總統蘇加諾擔下了要統一全國的重任。統一的第一步，就是要統一語言。</p>
+<p><img src="/images/post/indonesia-map.png" alt="印尼的地圖"></p>
+<p>但是印尼，可是擁有17000個島嶼，700種語言，1945年就有7400萬人口的超複雜國家。如果選用接近一半人口使用的語言——爪哇語，那麽非爪哇族的人肯定會超不爽，憑什麽少數要服從多數？爲了防止種族衝突，蘇加諾做出了驚人的決定——使用當時僅有超少人用的語言——廖内馬來語設爲國語。由於對所有人來説都是外語，反而達成了公平。從此，爪哇語就失去官方地位了……</p>
+<p>冷知識1：猶如 Java 中公私分明的函數一樣，爪哇語也有一套<strong>階級系統</strong>。爪哇語主要分爲三個主要階層：</p>
+<ul>
+<li>Ngoko（粗語）用於同齡人、同輩對晚輩</li>
+<li>Madya（中性語）用於陌生人</li>
+<li>Krama（高雅語）用於晚輩對長輩、下級對上級<br>這三種階層的爪哇語，可是連基本詞匯都不一樣，所以我認爲會爪哇語的人都超强，相當於一次學了三門語言。例如“吃”這個字，對朋友說是“mangan”，對長輩必須用“dahar”；“你”對朋友使用是“kowe”，對長輩使用是“panjenengan”。想用爪哇語聊天，你必須時刻掂量對方的身份，用錯一個詞匯都是極大的冒犯。這種見人説人話，見鬼說鬼話的體系，實在是太繁雜了，也是爪哇語沒有成爲印尼國語的原因之一。</li>
+</ul>
+<p>冷知識2：新加坡將英語設爲核心行政與工作語言，是爲了平衡三大民族之間的隔閡，亦是同理。</p>
+<h3 id="真正的-JavaScript"><a href="#真正的-JavaScript" class="headerlink" title="真正的 JavaScript"></a>真正的 JavaScript</h3><p>除了可以用拉丁字書寫之外，爪哇語也有自己獨特又優美的文字！它叫做Aksara Jawa或Hanacaraka</p>
+<p><img src="/images/post/javanese-font.jpg" alt="爪哇文字"></p>
+<p>世界上絕大多數文字的字母表，比如拉丁字的A, B, C, D…… 都沒有任何連貫的意義。<br>有趣的是，爪哇語的20個核心字母竟然可以組成一首<strong>五言絕句</strong>！</p>
+<p><img src="/images/post/hanacaraka.jpg" alt="hanacaraka"></p>
+<p>《Hanacaraka》是一首悲壯的史詩，普遍上認爲與<a target="_blank" rel="noopener" href="https://id.wikipedia.org/wiki/Aksara_Jawa#Pengurutan">阿吉 · 薩卡的傳奇有關</a>。</p>
+<blockquote>
+<p>ꦲꦤꦕꦫꦏ<br>Hana Caraka<br>有兩個使者<br>ꦢꦠꦱꦮꦭ<br>Data Sawala<br>他們之間意見不合<br>ꦥꦝꦗꦪꦚ<br>Padha Jayanya<br>他們的力量旗鼓相當，不相上下<br>ꦩꦒꦧꦛꦔ<br>Maga Bathanga<br>最終雙雙戰死，留下兩具尸體</p>
+</blockquote>
+<h1 id="Java-的音樂"><a href="#Java-的音樂" class="headerlink" title="Java 的音樂"></a>Java 的音樂</h1><p>甘美蘭（Gamelan，意為合奏）是爪哇人的傳統樂器，也是印尼歷史最悠久的樂器。甘美蘭的音調和西方樂器完全不同，并沒有統一的標準音調，因此<strong>世界上沒有任何兩個音準相同的甘美蘭</strong>。</p>
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/p3HwqqiVxbE" frameborder="0" allowfullscreen></iframe>
+
+<p>冷知識：徳布西在1889年的巴黎博覽會時，爪哇甘美蘭給了他巨大的啓發，在他的作品 <a target="_blank" rel="noopener" href="https://youtu.be/R-YcnPXY2yE">Estampes</a> 中的 Pagodes 樂章尤爲明顯。</p>
+<h3 id="那麽-Java（程式語言）爲什麽會叫-Java-呢？"><a href="#那麽-Java（程式語言）爲什麽會叫-Java-呢？" class="headerlink" title="那麽 Java（程式語言）爲什麽會叫 Java 呢？"></a>那麽 Java（程式語言）爲什麽會叫 Java 呢？</h3><p>起初，創始人原本想要把它命名爲“Oak”，因爲創始人門口正對著一顆橡樹。然而，在准備商業化推廣時，發現Oak這個名字早就被注冊了，被迫改名。此時，又因爲創作團隊人們對一種來自爪哇島上的咖啡情有獨鍾，便決定將之命名爲Java。</p>
+<h3 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h3><p>我不是爪哇人，如果有任何錯誤歡迎寄信到<a href="mailto:&#49;&#64;&#121;&#117;&#122;&#104;&#111;&#117;&#x2e;&#109;&#x79;">1@yuzhou.my</a>指正:)。由於想寫的冷知識太多，所以我把一些和標題沒有什麽關係的話題都寫在了冷知識裏面，希望這樣子讀起來不會太亂。</p>
+<p>last冷知識：大家耳熟能詳的貓屎咖啡（麝香貓咖啡）也是從爪哇島上來的哦~</p>
+
+            
+        </div>
+        
+        <div class="content" v-pre data-lang-content="zh-CN">
+            
+            
+            <blockquote>
+<p>这是我的<a target="_blank" rel="noopener" href="https://blogblog.club/party/">“BlogBlog 同乐会 - 2026 年 7 月 ”</a> 的投稿文章。本月主题是<a target="_blank" rel="noopener" href="https://shuaixin.cc/Fun-Fact/">“有趣的小知识或冷门概念”</a>，由<a target="_blank" rel="noopener" href="https://www.google.com/search?q=https://shuaixin.cc/">刘昕</a>主持。如果你有自己的部落格，欢迎一起来参加！</p>
+</blockquote>
+<p><img src="/images/post/wayang-kulit-kelantan.jpg" alt="吉兰丹皮影戏"><br>这是吉兰丹皮影戏，由爪哇人传入吉兰丹，是满者伯夷帝国扩展版图的结果。</p>
+<h1 id="Wes-Mangan"><a href="#Wes-Mangan" class="headerlink" title="Wes Mangan?"></a>Wes Mangan?</h1><p>说起 Java，大部分人都会想到程序语言，或者是 Minecraft。但在世界的另一端，在硅谷的背面，<strong>爪哇语（Basa Jawa&#x2F;Javanese）</strong> 是印尼一门超过 8000 万人使用的语言哦！</p>
+<p>爪哇语主要由爪哇人使用。虽然我居住在马来西亚，但身边不少马来朋友都是爪哇裔后代，便多多少少接触到爪哇文化了。<br>Wes mangan，在爪哇语中是呷饱没的意思，恭喜你学会了你的第一句爪哇话啦~</p>
+<h3 id="灭绝危机"><a href="#灭绝危机" class="headerlink" title="灭绝危机"></a>灭绝危机</h3><p>虽然爪哇语拥有 8000 万使用者，但它<strong>不是任何国家的官方语言</strong>！这是为什么呢？<br>在 1945 年印尼独立运动之时，开国总统苏加诺担下了要统一全国的重任。统一的第一步，就是要统一语言。</p>
+<p>但是印尼，可是拥有 17000 个岛屿，700 种语言，1945 年就有 7400 万人口的超复杂国家。如果选用接近一半人口使用的语言——爪哇语，那么非爪哇族的人肯定会超不爽，凭什么少数要服从多数？为了防止种族冲突，苏加诺做出了惊人的决定——使用当时仅有超少人用的语言——廖内马来语设为国语。由于对所有人来说都是外语，反而达成了公平。从此，爪哇语就失去官方地位了……</p>
+<p>冷知识 1：犹如 Java 中公私分明的函数一样，爪哇语也有一套<strong>阶级系统</strong>。爪哇语主要分为三个主要阶层：</p>
+<ul>
+<li>Ngoko（粗语）用于同龄人、同辈对晚辈</li>
+<li>Madya（中性语）用于陌生人</li>
+<li>Krama（高雅语）用于晚辈对长辈、下级对上级<br>这三种阶层的爪哇语，可是连基本词汇都不一样，所以我认为会爪哇语的人都超强，相当于一次学了三门语言。例如“吃”这个字，对朋友说是“mangan”，对长辈必须用“dahar”；“你”对朋友使用是“kowe”，对长辈使用是“panjenengan”。想用爪哇语聊天，你必须时刻掂量对方的身份，用错一个词汇都是极大的冒犯。这种见人说人话，见鬼说鬼话的体系，实在是太繁杂了，也是爪哇语没有成为印尼国语的原因之一。</li>
+</ul>
+<p>冷知识 2：新加坡将英语设为核心行政与工作语言，是为了平衡三大民族之间的隔阂，亦是同理。</p>
+<h3 id="真正的-JavaScript"><a href="#真正的-JavaScript" class="headerlink" title="真正的 JavaScript"></a>真正的 JavaScript</h3><p>除了可以用拉丁字书写之外，爪哇语也有自己独特又优美的文字！它叫做 Aksara Jawa 或 Hanacaraka</p>
+<p>世界上绝大多数文字的字母表，比如拉丁字的 A, B, C, D…… 没有任何连贯的意义。<br>有趣的是，爪哇语的 20 个核心字母竟然可以组成一首<strong>五言绝句</strong>！</p>
+<p>《Hanacaraka》是一首悲壮的史诗，普遍上认为与<a target="_blank" rel="noopener" href="https://id.wikipedia.org/wiki/Aksara_Jawa#Pengurutan">阿吉 · 萨卡的传奇有关</a>。</p>
+<blockquote>
+<p>ꦲꦤꦕꦫꦏ<br>Hana Caraka<br>有两个使者<br>ꦢꦠꦱꦮꦭ<br>Data Sawala<br>他们之间意见不合<br>ꦥꦝꦗꦪꦚ<br>Padha Jayanya<br>他们的力量旗鼓相当，不相上下<br>ꦩꦒꦧꦛꦔ<br>Maga Bathanga<br>最终双双战死，留下两具尸体</p>
+</blockquote>
+<h1 id="Java-的音乐"><a href="#Java-的音乐" class="headerlink" title="Java 的音乐"></a>Java 的音乐</h1><p>甘美兰（Gamelan，意为合奏）是爪哇人的传统乐器，也是印尼历史最悠久的乐器。甘美兰的音调和西方乐器完全不同，并没有统一的标准音调，因此<strong>世界上没有任何两个音准相同的甘美兰</strong>。</p>
+<p>冷知识：德布西在 1889 年的巴黎博览会时，爪哇甘美兰给了他巨大的启发，在他的作品 <a target="_blank" rel="noopener" href="https://youtu.be/R-YcnPXY2yE">Estampes</a> 中的 Pagodes 乐章尤为明显。</p>
+<h3 id="那么-Java（程序语言）为什么会叫-Java-呢？"><a href="#那么-Java（程序语言）为什么会叫-Java-呢？" class="headerlink" title="那么 Java（程序语言）为什么会叫 Java 呢？"></a>那么 Java（程序语言）为什么会叫 Java 呢？</h3><p>起初，创始人原本想要把它命名为“Oak”，因为创始人门口正对着一颗橡树。然而，在准备商业化推广时，发现 Oak 这个名字早就被注册了，被迫改名。此时，又因为创作团队人们对一种来自爪哇岛上的咖啡情有独钟，便决定将之命名为 Java。</p>
+<h3 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h3><p>我不是爪哇人，如果有任何错误欢迎寄信到 <a href="mailto:&#x31;&#64;&#121;&#x75;&#x7a;&#x68;&#111;&#117;&#x2e;&#x6d;&#121;">1@yuzhou.my</a> 指正:)。由于想写的冷知识太多，所以我把一些和标题没有什么关系的话题都写在了冷知识里面，希望这样子读起来不会太乱。</p>
+<p>last 冷知识：大家耳熟能详的猫屎咖啡（麝香猫咖啡）也是从爪哇岛上来的哦~</p>
+
+            
+        </div>
+        
+    </div>
+
+    <div class="post-tags">
+        
+        <span class="icon">
+            <a-icon type="tags" theme="filled" />
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/Indonesian" style=color:#03a9f4>
+                Indonesian
+            </a>
+        </span>
+        
+    </div>
+
+    
+    <a href="/2026/07/12/the-real-java/" class="go-post" data-lang-content="zh-TW" data-i18n="ui.readMore">
+        Read More
+    </a>
+    
+    <a href="/2026/07/12/the-real-java/zh-CN/" class="go-post" data-lang-content="zh-CN" data-i18n="ui.readMore">
+        Read More
+    </a>
+    
+</div>
+
+
+<div class="post" data-feed-post data-post-langs="zh-TW zh-CN" style="display:none">
+
+    <div class="feed-post-title">
+        
+        <a href="/2026/04/25/childhood-happiness/" data-lang-content="zh-TW">
+            <h2>小時候的快樂，純粹是當時什麽都不知道而已</h2>
+        </a>
+        
+        <a href="/2026/04/25/childhood-happiness/zh-CN/" data-lang-content="zh-CN">
+            <h2>小时候的快乐，纯粹是当时什么都不知道而已</h2>
+        </a>
+        
+    </div>
+
+    <div class="category-and-date">
+
+        
+        <span class="category">
+            <a href="/categories/Life">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" /></span>
+                Life
+            </a>
+        </span>
+        
+
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2026/4/25
+        </span>
+
+    </div>
+
+    <div class="excerpt">
+        
+        <div class="content" v-pre data-lang-content="zh-TW">
+            
+            
+            <p>大約在我五歲的某個傍晚，老爸突然叫上我，説要到馬六甲的醫院，要留宿馬六甲三天兩夜。我蹦蹦跳跳地就走上車了，也許是開夜車的關係，路途上我並沒有什麽清晰的回憶。</p>
+<p>第一天晚上，天很暗了我們才去洗澡。小時候的我對部分電器很敏感（那時候好像最害怕洗衣機），一打開熱水器我就嚇哭了…… 那個花灑居然上面有五顔六色的LED燈，而且還像迪廳的氛圍燈一樣會一直變顔色！！！最後還是在我記得那是個雨夜，窗外的雨嘩啦啦地下，窗戶被濺得滿是水滴，但酒店裏很溫暖。後來第二天，我們才轉去另一家酒店，那裏的花灑終於能讓年幼的我安心洗澡了。</p>
+<p>另外一個仍有零星記憶的畫面，就是第二天在超市買手信的時候。當時我、老爸和叔叔買了一些水果（這也是我鮮少關於叔叔的記憶），然後我們就到醫院探望奶奶。她虛弱地躺在病床上，身穿藍白相間的病服，微笑看著我。<br>但對小時候的我來説，探望并不是這次行程的重點。因爲那時的我只要有機會放假，能夠去住酒店我就已經很開心了。</p>
+<p>前幾天才知道，奶奶當時得了<strong>乳腺癌</strong>。</p>
+<p>我想同個時期，同個事件，老爸的回憶會很不一樣吧。</p>
+
+            
+        </div>
+        
+        <div class="content" v-pre data-lang-content="zh-CN">
+            
+            
+            <p>大约在我五岁的某个傍晚，老爸突然叫上我，说要到马六甲的医院，要留宿马六甲三天两夜。我蹦蹦跳跳地就走上车了，也许是开夜车的关系，路途上我并没有什么清晰的回忆。</p>
+<p>第一天晚上，天很暗了我们才去洗澡。小时候的我对部分电器很敏感（那时候好像最害怕洗衣机），一打开热水器我就吓哭了…… 那个花洒居然上面有五颜六色的LED灯，而且还像迪厅的氛围灯一样会一直变颜色！！！最后还是在我记得那是个雨夜，窗外的雨哗啦啦地下，窗户被溅得满是水滴，但酒店里很温暖。后来第二天，我们才转去另一家酒店，那里的花洒终于能让年幼的我安心洗澡了。</p>
+<p>另外一个仍有零星记忆的画面，就是第二天在超市买手信的时候。当时我、老爸和叔叔买了一些水果（这也是我鲜少关于叔叔的记忆），然后我们就到医院探望奶奶。她虚弱地躺在病床上，身穿蓝白相间的病服，微笑看着我。<br>但对小时候的我来说，探望并不是这次行程的重点。因为那时的我只要有机会放假，能够去住酒店我就已经很开心了。</p>
+<p>前几天才知道，奶奶当时得了<strong>乳腺癌</strong>。</p>
+<p>我想同个时期，同个事件，老爸的回忆会很不一样吧。</p>
+
+            
+        </div>
+        
+    </div>
+
+    <div class="post-tags">
+        
+        <span class="icon">
+            <a-icon type="tags" theme="filled" />
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/Childhood" style=color:#00bcd4>
+                Childhood
+            </a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/tags/Happiness" style=color:#03a9f4>
+                Happiness
+            </a>
+        </span>
+        
+    </div>
+
+    
+    <a href="/2026/04/25/childhood-happiness/" class="go-post" data-lang-content="zh-TW" data-i18n="ui.readMore">
+        Read More
+    </a>
+    
+    <a href="/2026/04/25/childhood-happiness/zh-CN/" class="go-post" data-lang-content="zh-CN" data-i18n="ui.readMore">
+        Read More
+    </a>
+    
+</div>
+
+
+<div class="post" data-feed-post data-post-langs="en zh-TW zh-CN my" style="display:none">
+
+    <div class="feed-post-title">
+        
+        <a href="/2026/04/12/photosynthesis/" data-lang-content="en">
+            <h2>Photosynthesis</h2>
+        </a>
+        
+        <a href="/2026/04/12/photosynthesis/zh-TW/" data-lang-content="zh-TW">
+            <h2>光合作用</h2>
+        </a>
+        
+        <a href="/2026/04/12/photosynthesis/zh-CN/" data-lang-content="zh-CN">
+            <h2>光合作用</h2>
+        </a>
+        
+        <a href="/2026/04/12/photosynthesis/my/" data-lang-content="my">
+            <h2>Fotosintesis</h2>
+        </a>
+        
+    </div>
+
+    <div class="category-and-date">
+
+        
+        <span class="category">
+            <a href="/categories/Archive">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" /></span>
+                Archive
+            </a>
+        </span>
+        
+
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2026/4/12
+        </span>
+
+    </div>
+
+    <div class="excerpt">
+        
+        <div class="content" v-pre data-lang-content="en">
+            
+            
+            <h1 id="Photosynthesis-Explained-in-Chinese"><a href="#Photosynthesis-Explained-in-Chinese" class="headerlink" title="Photosynthesis: Explained in Chinese"></a>Photosynthesis: Explained in Chinese</h1><h3 id="KSSM-Biology-Form-5-Chapter-2-Leaf"><a href="#KSSM-Biology-Form-5-Chapter-2-Leaf" class="headerlink" title="KSSM Biology Form 5 Chapter 2: Leaf"></a>KSSM Biology Form 5 Chapter 2: Leaf</h3><p>Credit to our grand lecturer: Sam Eu Qang<br>Instagram : <a target="_blank" rel="noopener" href="https://instagram.com/samq709_2009">samq709_2009</a></p>
+<p><video width="100%" height="300" src="/images/post/photosynthesis.mp4" controls></video></p>
+
+            
+        </div>
+        
+        <div class="content" v-pre data-lang-content="zh-TW">
+            
+            
+            <h1 id="光合作用中文解釋"><a href="#光合作用中文解釋" class="headerlink" title="光合作用中文解釋"></a>光合作用中文解釋</h1><h3 id="KSSM中五生物第二課：葉子"><a href="#KSSM中五生物第二課：葉子" class="headerlink" title="KSSM中五生物第二課：葉子"></a>KSSM中五生物第二課：葉子</h3><p>講師: Sam Eu Qang<br>Instagram : <a target="_blank" rel="noopener" href="https://instagram.com/samq709_2009">samq709_2009</a></p>
+<p><video width="100%" height="300" src="/images/post/photosynthesis.mp4" controls></video></p>
+
+            
+        </div>
+        
+        <div class="content" v-pre data-lang-content="zh-CN">
+            
+            
+            <h1 id="光合作用中文解释"><a href="#光合作用中文解释" class="headerlink" title="光合作用中文解释"></a>光合作用中文解释</h1><h3 id="KSSM中五生物第二课：叶子"><a href="#KSSM中五生物第二课：叶子" class="headerlink" title="KSSM中五生物第二课：叶子"></a>KSSM中五生物第二课：叶子</h3><p>讲师: Sam Eu Qang<br>Instagram : <a target="_blank" rel="noopener" href="https://instagram.com/samq709_2009">samq709_2009</a></p>
+<p><video width="100%" height="300" src="/images/post/photosynthesis.mp4" controls></video></p>
+
+            
+        </div>
+        
+        <div class="content" v-pre data-lang-content="my">
+            
+            
+            <h1 id="Fotosintesis-Penerangan-dalam-bahasa-Cina"><a href="#Fotosintesis-Penerangan-dalam-bahasa-Cina" class="headerlink" title="Fotosintesis: Penerangan dalam bahasa Cina"></a>Fotosintesis: Penerangan dalam bahasa Cina</h1><h3 id="KSSM-Biologi-Tingkatan-5-Bab-2-Daun"><a href="#KSSM-Biologi-Tingkatan-5-Bab-2-Daun" class="headerlink" title="KSSM Biologi Tingkatan 5 Bab 2: Daun"></a>KSSM Biologi Tingkatan 5 Bab 2: Daun</h3><p>Penceramah yang dihormati: Sam Eu Qang<br>Instagram : <a target="_blank" rel="noopener" href="https://instagram.com/samq709_2009">samq709_2009</a></p>
+<p><video width="100%" height="300" src="/images/post/photosynthesis.mp4" controls></video></p>
+
+            
+        </div>
+        
+    </div>
+
+    <div class="post-tags">
+        
+        <span class="icon">
+            <a-icon type="tags" theme="filled" />
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/Study-Stuff" style=color:#ffa2c4>
+                Study Stuff
+            </a>
+        </span>
+        
+    </div>
+
+    
+    <a href="/2026/04/12/photosynthesis/" class="go-post" data-lang-content="en" data-i18n="ui.readMore">
+        Read More
+    </a>
+    
+    <a href="/2026/04/12/photosynthesis/zh-TW/" class="go-post" data-lang-content="zh-TW" data-i18n="ui.readMore">
+        Read More
+    </a>
+    
+    <a href="/2026/04/12/photosynthesis/zh-CN/" class="go-post" data-lang-content="zh-CN" data-i18n="ui.readMore">
+        Read More
+    </a>
+    
+    <a href="/2026/04/12/photosynthesis/my/" class="go-post" data-lang-content="my" data-i18n="ui.readMore">
+        Read More
+    </a>
+    
+</div>
+
+
+<div class="post" data-feed-post data-post-langs="zh-TW zh-CN" style="display:none">
+
+    <div class="feed-post-title">
+        
+        <a href="/2026/04/09/scottish-bagpipe/" data-lang-content="zh-TW">
+            <h2>蘇格蘭風笛</h2>
+        </a>
+        
+        <a href="/2026/04/09/scottish-bagpipe/zh-CN/" data-lang-content="zh-CN">
+            <h2>苏格兰风笛</h2>
+        </a>
+        
+    </div>
+
+    <div class="category-and-date">
+
+        
+        <span class="category">
+            <a href="/categories/Culture">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" /></span>
+                Culture
+            </a>
+        </span>
+        
+
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2026/4/9
+        </span>
+
+    </div>
+
+    <div class="excerpt">
+        
+        <div class="content" v-pre data-lang-content="zh-TW">
+            
+            
+            <p>覺得自己精神萎靡不振嗎？且聽我推坑給你的 <strong>蘇格蘭風笛</strong>！</p>
+<p><img src="/images/post/kenneth-mckay.jpg" alt="Kenneth McKay"><br><small style="color: grey;">勇敢的蘇格蘭高地士兵，Kenneth McKay。滑鐵盧戰役期間，McKay在法軍騎兵襲擊下，英勇地走到方陣外吹奏風笛以鼓舞士氣的情景。<a target="_blank" rel="noopener" href="https://www.reddit.com/r/BattlePaintings/s/JOHFpCZJUE">關於這張照片的Reddit貼文</a></small></p>
+<p>這是一個音色霸氣的樂器！既然都被拿來當蘇格蘭的軍鼓樂器了，其振興士氣的能力毋庸置疑。<br>至少在我身上，是非常有效的。我甚至把……</p>
+<ul>
+<li>電話鈴聲  </li>
+<li>鬧鐘</li>
+</ul>
+<p>換成了 <em>Hielan’ Laddie</em>。雖然每天早上6點半都會聽到這段音樂，但我在寫上面那段文字時，播放了這首音樂來聼，居然沒有感到一絲煩躁，很神奇吧！</p>
+<p>以下是一些我喜歡的曲目，和我的賞析，僅供參考~</p>
+<hr>
+<h2 id="Hielan’-Laddie"><a href="#Hielan’-Laddie" class="headerlink" title="Hielan’ Laddie"></a>Hielan’ Laddie</h2><p>（蘇格蘭風笛似乎是轉調樂器，但我不管了，我就按照自己聽到的音來）<br>（歡迎致郵到 <a href="mailto:&#49;&#64;&#121;&#117;&#122;&#x68;&#111;&#117;&#x2e;&#109;&#121;">1@yuzhou.my</a> 糾正錯誤，我也想瞭解這個美妙的樂器）<br>這似乎是蘇格蘭風笛少有的降E調曲目，其他好像都是降B調。</p>
+<iframe width="100%" height="300" src="https://www.youtube.com/embed/KUIOtA8LPec?si=ZJHEag2e52qG9Usx" frameborder="0" allowfullscreen></iframe>
+
+<p>當Bass音B♭響起時，整個緊迫感就上來了。并且，這個音會持續到結尾，我認爲這是蘇格蘭風笛“消除雜念”以鼓舞士氣的關鍵。有點類似那種 <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=FwDfZDpP5Jc">播放單一頻率音頻的ASMR影片</a>，能讓人腦袋放空，我想是同一個原理吧。<br><img src="/images/post/hielan-laddie-1.png" alt="Hielan Laddie"></p>
+<p>另外，也有加上管樂和弦的版本（我就是拿這個來當鬧鐘的）：</p>
+<iframe width="100%" height="300" src="https://www.youtube.com/embed/ESsVydlq8cM?si=TytIZ-NAoSnld8m_" frameborder="0" allowfullscreen></iframe>
+
+<p>這個版本是不是聽起來音色更豐滿了呢？<br>我覺得呢，這個版本的<strong>下屬和弦</strong>起到了强烈的襯托作用。我們把Hielan’ Laddie的主旋律<strong>拆成一半</strong>來看好了。</p>
+<p>前半段的<strong>主和弦</strong>和<strong>屬和弦</strong>似乎在告訴你：<br><code>無論你現在是什麽狀態，請振作起來！</code><br><img src="/images/post/hielan-laddie-2.png" alt="Hielan Laddie"></p>
+<p>後半段的<strong>屬和弦</strong>的，再加上有點往下走的旋律，好像在説：<br><code>親愛的，你本來就該這樣！振作起來！</code><br><img src="/images/post/hielan-laddie-3.png" alt="Hielan Laddie"></p>
+<p>哦，如果Wiwi看到我的賞析，希望你不要生氣…… 我已經兩年沒碰過樂理了。</p>
+<hr>
+<h2 id="Scotland-The-Brave"><a href="#Scotland-The-Brave" class="headerlink" title="Scotland The Brave"></a>Scotland The Brave</h2><p>相較於 Hielan’ Laddie，Scotland The Brave 聽起來更加沉穩，仿佛聼見了蘇格蘭士兵在草原緩緩行軍。<br>在你認爲你不該休息的時候，請效仿蘇格蘭高地士兵，<strong>前進、前進、不擇一切手段地前進！！！</strong></p>
+<iframe width="100%" height="300" src="https://www.youtube.com/embed/nnG1oUkWBa8?si=IgxPW6P5rcYbO_B5" frameborder="0" allowfullscreen></iframe>
+
+<p>題外話：Massed Band的Slow March就和這首音樂聽起來一樣沉穩，太般配了！</p>
+<p>通常我喜歡在早上散步&#x2F;跑步的時候開來聼這首曲子，超級Chill的哦，它會帶給我猶如身處在森林之中的感覺。</p>
+<hr>
+<h2 id="Auld-Lang-Syne"><a href="#Auld-Lang-Syne" class="headerlink" title="Auld Lang Syne"></a>Auld Lang Syne</h2><p>Auld Lang Syne，譯爲《友誼地久天長》，大部分人都聽過。<br>但蘇格蘭風笛版本的 Auld Lang Syne 絕對是 Top 中之 Top，把原本的抒情歌變成了節奏感强烈、士氣昂昂、霸氣宏大的音樂，聽起來完全不一樣！<br>蘇格蘭的民謠，就應該用蘇格蘭當地的樂器演奏呀！</p>
+<iframe width="100%" height="300" src="https://www.youtube.com/embed/CXcM-70KztI?si=qc2dTKHX5IqoGkGL" frameborder="0" allowfullscreen></iframe>
+
+<p>而且，尤其在上面影片中的“特殊場合”，Auld Lang Syne聽起來讓人感慨萬分。</p>
+
+            
+        </div>
+        
+        <div class="content" v-pre data-lang-content="zh-CN">
+            
+            
+            <p>觉得自己精神萎靡不振吗？且听我推坑给你的 <strong>苏格兰风笛</strong>！</p>
+<p><img src="/images/post/kenneth-mckay.jpg" alt="Kenneth McKay"><br><small style="color: grey;">勇敢的苏格兰高地士兵，Kenneth McKay。滑铁卢战役期间，McKay在法军骑兵袭击下，英勇地走到方阵外吹奏风笛以鼓舞士气的情景。<a target="_blank" rel="noopener" href="https://www.reddit.com/r/BattlePaintings/s/JOHFpCZJUE">关于这张照片的Reddit贴文</a></small></p>
+<p>这是一个音色霸气的乐器！既然都被拿来当苏格兰的军鼓乐器了，其振兴士气的能力毋庸置疑。</p>
+<p>至少在我身上，是非常有效的。我甚至把……</p>
+<ul>
+<li>电话铃声</li>
+<li>闹钟</li>
+</ul>
+<p>换成了 <em>Hielan’ Laddie</em>。虽然每天早上6点半都会听到这段音乐，但我在写上面那段文字时，播放了这首音乐来听，居然没有感到一丝烦躁，很神奇吧！</p>
+<p>以下是一些我喜欢的曲目，和我的赏析，仅供参考~</p>
+<hr>
+<h2 id="Hielan’-Laddie"><a href="#Hielan’-Laddie" class="headerlink" title="Hielan’ Laddie"></a>Hielan’ Laddie</h2><p>（苏格兰风笛似乎是转调乐器，但我不管了，我就按照自己听到的音来）</p>
+<p>（欢迎致邮到 <a href="mailto:&#49;&#x40;&#121;&#117;&#122;&#104;&#111;&#x75;&#x2e;&#x6d;&#121;">1@yuzhou.my</a> 纠正错误，我也想了解这个美妙的乐器）</p>
+<p>这似乎是苏格兰风笛少有的降E调曲目，其他好像都是降B调。</p>
+<iframe width="100%" height="300" src="https://www.youtube.com/embed/KUIOtA8LPec?si=ZJHEag2e52qG9Usx" frameborder="0" allowfullscreen></iframe>
+
+<p>当Bass音B♭响起时，整个紧迫感就上来了。并且，这个音会持续到结尾，我认为这是苏格兰风笛“消除杂念”以鼓舞士气的关键。有点类似那种 <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=FwDfZDpP5Jc">播放单一频率音频的ASMR影片</a>，能让人脑袋放空，我想是同一个原理吧。<br><img src="/images/post/hielan-laddie-1.png" alt="Hielan Laddie"></p>
+<p>另外，也有加上管乐和弦的版本（我就是拿这个来当闹钟的）：</p>
+<iframe width="100%" height="300" src="https://www.youtube.com/embed/ESsVydlq8cM?si=TytIZ-NAoSnld8m_" frameborder="0" allowfullscreen></iframe>
+
+<p>这个版本是不是听起来音色更丰满了呢？</p>
+<p>我觉得呢，这个版本的<strong>下属和弦</strong>起到了强烈的衬托作用。我们把Hielan’ Laddie的主旋律<strong>拆成一半</strong>来看好了。</p>
+<p>前半段的<strong>主和弦</strong>和<strong>属和弦</strong>似乎在告诉你：</p>
+<p><code>无论你现在是什么状态，请振作起来！</code><br><img src="/images/post/hielan-laddie-2.png" alt="Hielan Laddie"></p>
+<p>后半段的<strong>属和弦</strong>的，再加上有点往下走的旋律，好像在说：</p>
+<p><code>亲爱的，你本来就该这样！振作起来！</code><br><img src="/images/post/hielan-laddie-3.png" alt="Hielan Laddie"></p>
+<p>哦，如果Wiwi看到我的赏析，希望你不要生气…… 我已经两年没碰过乐理了。</p>
+<hr>
+<h2 id="Scotland-The-Brave"><a href="#Scotland-The-Brave" class="headerlink" title="Scotland The Brave"></a>Scotland The Brave</h2><p>相较于 Hielan’ Laddie，Scotland The Brave 听起来更加沉稳，仿佛听见了苏格兰士兵在草原缓缓行军。</p>
+<p>在你认为你不该休息的时候，请效仿苏格兰高地士兵，<strong>前进、前进、不择一切手段地前进！！！</strong></p>
+<iframe width="100%" height="300" src="https://www.youtube.com/embed/nnG1oUkWBa8?si=IgxPW6P5rcYbO_B5" frameborder="0" allowfullscreen></iframe>
+
+<p>题外话：Massed Band的Slow March就和这首音乐听起来一样沉稳，太般配了！</p>
+<p>通常我喜欢在早上散步&#x2F;跑步的时候开来听这首曲子，超级Chill的哦，它会带给我犹如身处在森林之中的感觉。</p>
+<hr>
+<h2 id="Auld-Lang-Syne"><a href="#Auld-Lang-Syne" class="headerlink" title="Auld Lang Syne"></a>Auld Lang Syne</h2><p>Auld Lang Syne，译为《友谊地久天长》，大部分人都听过。</p>
+<p>但苏格兰风笛版本的 Auld Lang Syne 绝对是 Top 中之 Top，把原本的抒情歌变成了节奏感强烈、士气昂昂、霸气宏大的音乐，听起来完全不一样！</p>
+<p>苏格兰的民谣，就应该用苏格兰当地的乐器演奏呀！</p>
+<iframe width="100%" height="300" src="https://www.youtube.com/embed/CXcM-70KztI?si=qc2dTKHX5IqoGkGL" frameborder="0" allowfullscreen></iframe>
+
+
+<p>而且，尤其在上面影片中的“特殊场合”，Auld Lang Syne听起来让人感慨万分。</p>
+
+            
+        </div>
+        
+    </div>
+
+    <div class="post-tags">
+        
+        <span class="icon">
+            <a-icon type="tags" theme="filled" />
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/Music" style=color:#03a9f4>
+                Music
+            </a>
+        </span>
+        
+    </div>
+
+    
+    <a href="/2026/04/09/scottish-bagpipe/" class="go-post" data-lang-content="zh-TW" data-i18n="ui.readMore">
+        Read More
+    </a>
+    
+    <a href="/2026/04/09/scottish-bagpipe/zh-CN/" class="go-post" data-lang-content="zh-CN" data-i18n="ui.readMore">
+        Read More
+    </a>
+    
+</div>
+
+
+<div class="post" data-feed-post data-post-langs="zh-TW zh-CN" style="display:none">
+
+    <div class="feed-post-title">
+        
+        <a href="/2026/03/30/unconfident-words/" data-lang-content="zh-TW">
+            <h2>不自信詞語</h2>
+        </a>
+        
+        <a href="/2026/03/30/unconfident-words/zh-CN/" data-lang-content="zh-CN">
+            <h2>不自信词语</h2>
+        </a>
+        
+    </div>
+
+    <div class="category-and-date">
+
+        
+        <span class="category">
+            <a href="/categories/Life">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" /></span>
+                Life
+            </a>
+        </span>
+        
+
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2026/3/30
+        </span>
+
+    </div>
+
+    <div class="excerpt">
+        
+        <div class="content" v-pre data-lang-content="zh-TW">
+            
+            
+            <p><img src="/images/post/modal-words.jpg" alt="Modal Words"><br><small style="color: grey;">KSSM英文課本，79頁</small></p>
+<p>我發現我在説話時，常常會下意識地否認自己的觀點，並加上一些“不自信詞語”，就好像爲自己的言論加上免責聲明一樣：</p>
+<ul>
+<li>“走這一條路可以去到市區 —— <strong>應該</strong>吧。”  </li>
+<li>“我查了一下時間表，會議<strong>應該</strong>是在下午5點開始。”  </li>
+<li>“每個星期六，這個廣場都會舉辦大型活動 —— <strong>通常是這樣的</strong>。”</li>
+</ul>
+<hr>
+<h3 id="常見的不自信詞語"><a href="#常見的不自信詞語" class="headerlink" title="常見的不自信詞語"></a>常見的不自信詞語</h3><ul>
+<li>“可能”  </li>
+<li>“應該”  </li>
+<li>“雖然”  </li>
+<li>“看起來好像”  </li>
+<li>“我其實不是很專業啦，但是……”  </li>
+<li>“我也不太確定”  </li>
+<li>“我猜是這樣的”</li>
+</ul>
+<hr>
+<p>很顯然地，當我們在日常溝通時習慣使用“不自信詞語”之後，我們在別人心中的自信程度會大大降低。尤其是在小組裏面分工合作時，講話自信&#x2F;不自信會讓其他組員對你的信心差很多哦！</p>
+<p>試想想，如果你的組員在工作時眼神閃避，并且這樣子對你説話：“噢…… 應該這樣就可以了哦”，或者你問一句，他的答案中一定會帶“應該”這兩個字。即使他幹了很多活，你也會覺得他沒什麽料的樣子，對吧？</p>
+<hr>
+<p>用在寫部落格上也是一樣的道理，尤其是知識、討論類型的文章，作者的論點就會顯得沒有那麽有説服力了。</p>
+<p>最後，相比起其他人的文章，我的文章（尤其是之前的那幾篇）真的顯得有點欠缺自信，看來得改一改了呀！</p>
+
+            
+        </div>
+        
+        <div class="content" v-pre data-lang-content="zh-CN">
+            
+            
+            <p><img src="/images/post/modal-words.jpg" alt="Modal Words"><br><small style="color: grey;">KSSM英文课本，79页</small></p>
+<p>我发现我在说话时，常常会下意识地否定自己的观点，并加上一些“不自信词语”，就好像为自己的言论加上免责声明一样：</p>
+<ul>
+<li>“走这一条路可以去到市区 —— <strong>应该</strong>吧。”</li>
+<li>“我查了一下时间表，会议<strong>应该</strong>是在下午5点开始。”</li>
+<li>“每个星期六，这个广场都会举办大型活动 —— <strong>通常是这样的</strong>。”</li>
+</ul>
+<hr>
+<h3 id="常见的不自信词语"><a href="#常见的不自信词语" class="headerlink" title="常见的不自信词语"></a>常见的不自信词语</h3><ul>
+<li>“可能”</li>
+<li>“应该”</li>
+<li>“虽然”</li>
+<li>“看起来好像”</li>
+<li>“我其实不是很专业啦，但是……”</li>
+<li>“我也不太确定”</li>
+<li>“我猜是这样的”</li>
+</ul>
+<hr>
+<p>很显然地，当我们在日常沟通时习惯使用“不自信词语”之后，我们在别人心中的自信程度会大大降低。尤其是在小组里面分工合作时，讲话自信&#x2F;不自信会让其他组员对你的信心差很多哦！</p>
+<p>试想想，如果你的组员在工作时眼神闪避，并且这样子对你说：“噢…… 应该这样就可以了哦”，或者你问一句，他的答案中一定会带“应该”这两个字。即使他干了很多活，你也会觉得他没什么料的样子，对吧？</p>
+<hr>
+<p>用在写部落格上也是一样的道理，尤其是知识、讨论类型的文章，作者的论点就会显得没有那么有说服力了。</p>
+<p>最后，相比起其他人的文章，我的文章（尤其是之前的那几篇）真的显得有点欠缺自信，看来得改一改了呀！</p>
+
+            
+        </div>
+        
+    </div>
+
+    <div class="post-tags">
+        
+        <span class="icon">
+            <a-icon type="tags" theme="filled" />
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/Language" style=color:#ff7d73>
+                Language
+            </a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/tags/Self" style=color:#ffa2c4>
+                Self
+            </a>
+        </span>
+        
+    </div>
+
+    
+    <a href="/2026/03/30/unconfident-words/" class="go-post" data-lang-content="zh-TW" data-i18n="ui.readMore">
+        Read More
+    </a>
+    
+    <a href="/2026/03/30/unconfident-words/zh-CN/" class="go-post" data-lang-content="zh-CN" data-i18n="ui.readMore">
+        Read More
+    </a>
+    
+</div>
+
+
+<div class="post" data-feed-post data-post-langs="zh-TW zh-CN" style="display:none">
+
+    <div class="feed-post-title">
+        
+        <a href="/2026/03/28/procrastination/" data-lang-content="zh-TW">
+            <h2>拖延症</h2>
+        </a>
+        
+        <a href="/2026/03/28/procrastination/zh-CN/" data-lang-content="zh-CN">
+            <h2>拖延症</h2>
+        </a>
+        
+    </div>
+
+    <div class="category-and-date">
+
+        
+        <span class="category">
+            <a href="/categories/Life">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" /></span>
+                Life
+            </a>
+        </span>
+        
+
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2026/3/28
+        </span>
+
+    </div>
+
+    <div class="excerpt">
+        
+        <div class="content" v-pre data-lang-content="zh-TW">
+            
+            
+            <blockquote>
+<p>BlogBlog 同樂會<br>這是我的 <a target="_blank" rel="noopener" href="https://blogblog.club/party/">「BlogBlog 同樂會 - 2026 年 4 月」</a> 的投稿文章。本月主題是 <a target="_blank" rel="noopener" href="https://www.wen-lab.tw/blogblog-party-productivity/">「生產力」</a>，由 <a target="_blank" rel="noopener" href="https://www.wen-lab.tw/author/wen/">Wen</a> 主持。如果你有自己的部落格，歡迎一起來參加！</p>
+</blockquote>
+<p>我的時間是<strong>液態</strong>的。<br>Google Calendar 中的排程看起來整齊又精美。但是，我真的能在指定的時間完成他嗎？我的 To-do 任務就像在波濤的水中翻滾的石子，流來~ 流去~ 最後和一開始預定的時間越差越遠。</p>
+<p>經過我對自己的審視，拖延症的原因不外乎就那幾個……</p>
+<hr>
+<h3 id="短視頻"><a href="#短視頻" class="headerlink" title="短視頻"></a>短視頻</h3><p>這絕對是最大的因素。</p>
+<p>我十分認同 Wiwi 所揭示的 <a target="_blank" rel="noopener" href="https://wiwi.blog/blog/virus#%E6%9C%80%E6%96%B0%E7%9A%84%E7%97%85%E6%AF%92%E7%A4%BE%E7%BE%A4%E5%AA%92%E9%AB%94%E5%92%8C%E7%9F%AD%E5%BD%B1%E9%9F%B3">社交媒體&#x2F;短視頻對人類的危害</a>。</p>
+<p>是的，我的拖延症是自小就有，但我以前只對不喜歡的事情拖延啊！<br>記得14歲時，當我第一次下載 Instagram 時，我并未察覺任何異樣，只把他當作和 Facebook 一樣的社交軟體來看待。殊不知就是從這個時候開始，我再也回不去以前的自己了。</p>
+<p>在沉迷短視頻之前，我是 <strong>不想做</strong> ，而現在卻是 <strong>想做但是無法執行</strong>。我的意志從此失去了自由，也就是從這個開始，時間變成液態的了。</p>
+<hr>
+<h3 id="完美主義"><a href="#完美主義" class="headerlink" title="完美主義"></a>完美主義</h3><p>如果擺在我眼前的是數理功課和語文功課，我一定會選前者。<br>我對寫作的完美主義尤其嚴重。你絕對不會想到，我平均寫一篇作文要3個小時，blog要2個小時！我會反復推敲我的句子，一定要100%完美才行。</p>
+<p>當然，這是寫作的必要程序，需要通過磨練可以繼續增强效率，多多寫作就行啦。</p>
+<hr>
+<h3 id="外界因素"><a href="#外界因素" class="headerlink" title="外界因素"></a>外界因素</h3><p>在我自己一個人待在家一整天後，如果這時候朋友邀約我去聚會…… 我仿佛感受到體内的E人基因在震動，實在是很難拒絕誘惑。<br>另外，我不擅長拒絕，即使我不太想去，我大可能還是會答應。</p>
+<hr>
+<h3 id="情緒"><a href="#情緒" class="headerlink" title="情緒"></a>情緒</h3><p>每當有人問我爲什麽不開心？我總會回答不知道，就是莫名其妙的情緒風暴而已。<br>但我現在大致明白是怎麽回事了：我的情緒就像雪球一樣，會從一個小小的雪球開始越滾越大，最後碾過所有我在 Google Calendar 中設定好的日程。</p>
+<p>我是比較敏感的人，每個小小的事情（例如被人嗆了、或是刷到負能量重的視頻），都是小小的雪球。通常在接下來一整天内我會看什麽都不爽，結果當然就是負面情緒逐漸湧現了。</p>
+<hr>
+<h3 id="睡眠"><a href="#睡眠" class="headerlink" title="睡眠"></a>睡眠</h3><p>睡眠的重要性是毋庸置疑的。<br>很遺憾的，報復性睡眠拖延是最難打破的惡性循環。説來慚愧，自從開始熬夜過後，除了生病之外不曾在12點半之前睡過。</p>
+<p>我的睡眠拖延挺奇怪的，不到一個臨界時間（必須睡覺的時間），腦袋都會很凌亂，完全不想關燈。就我而言，要想在某一天突然早睡的話，需要花費大量意志力對抗。因此我的早睡計劃通常無法撐過三天XD。</p>
+<hr>
+<h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>雖然這篇文章的負能量有點重，讀起來像一隻魯蛇的抱怨，但我還是會多多改進的！</p>
+
+            
+        </div>
+        
+        <div class="content" v-pre data-lang-content="zh-CN">
+            
+            
+            <blockquote>
+<p>BlogBlog 同乐会<br>这是我的 <a target="_blank" rel="noopener" href="https://blogblog.club/party/">“BlogBlog 同乐会 - 2026 年 4 月”</a> 的投稿文章。本月主题是 <a target="_blank" rel="noopener" href="https://www.wen-lab.tw/blogblog-party-productivity/">“生产力”</a>，由 <a target="_blank" rel="noopener" href="https://www.wen-lab.tw/author/wen/">Wen</a> 主持。如果你有自己的部落格，欢迎一起来参加！</p>
+</blockquote>
+<p>我的时间是<strong>液态</strong>的。<br>Google Calendar 中的排程看起来整齐又精美。但是，我真的能在指定的时间完成他吗？我的 To-do 任务就像在波涛的水中翻滚的石子，流来~ 流去~ 最后和一开始预定的时间越差越远。</p>
+<p>经过我对自己的审视，拖延症的原因不外乎就那几个……</p>
+<hr>
+<h3 id="短视频"><a href="#短视频" class="headerlink" title="短视频"></a>短视频</h3><p>这绝对是最大的因素。</p>
+<p>我十分认同 Wiwi 所揭示的 <a target="_blank" rel="noopener" href="https://wiwi.blog/blog/virus#%E6%9C%80%E6%96%B0%E7%9A%84%E7%97%85%E6%AF%92%E7%A4%BE%E7%BE%A4%E5%AA%92%E4%BD%93%E5%92%8C%E7%9F%AD%E5%BD%B1%E9%9F%B3">社交媒体&#x2F;短视频对人类的危害</a>。</p>
+<p>是的，我的拖延症是自小就有，但我以前只对不喜欢的事情拖延啊！<br>记得14岁时，当我第一次下载 Instagram 时，我并未察觉任何异样，只把他当作和 Facebook 一样的社交软体来看待。殊不知就是从这个时候开始，我再也回不去以前的自己了。</p>
+<p>在沉迷短视频之前，我是 <strong>不想做</strong> ，而现在却是 <strong>想做但是无法执行</strong>。我的意志从此失去了自由，也就是从这个开始，时间变成液态的了。</p>
+<hr>
+<h3 id="完美主义"><a href="#完美主义" class="headerlink" title="完美主义"></a>完美主义</h3><p>如果摆在我眼前的是数理功课和语文功课，我一定会选前者。<br>我对写作的完美主义尤其严重。你绝对不会想到，我平均写一篇作文要3个小时，blog要2个小时！我会反复推敲我的句子，一定要100%完美才行。</p>
+<p>当然，这是写作的必要程序，需要通过磨练可以继续增强效率，多多写作就行啦。</p>
+<hr>
+<h3 id="外界因素"><a href="#外界因素" class="headerlink" title="外界因素"></a>外界因素</h3><p>在我自己一个人待在家一整天后，如果这时候朋友邀约我去聚会…… 我仿佛感受到体内的E人基因在震动，实在是很难拒绝诱惑。<br>另外，我不擅长拒绝，即使我不太想去，我大可能还是会答应。</p>
+<hr>
+<h3 id="情绪"><a href="#情绪" class="headerlink" title="情绪"></a>情绪</h3><p>每当有人问我为什么不开心？我总会回答不知道，就是莫名其妙的情绪风暴而已。<br>但我现在大致明白是怎么回事了：我的情绪就像雪球一样，会从一个小小的雪球开始越滚越大，最后碾过所有我在 Google Calendar 中设定好的日程。</p>
+<p>我是比较敏感的人，每个小小的事情（例如被人呛了、或是刷到负能量重的视频），都是小小的雪球。通常在接下来一整天内我会看什么都不爽，结果当然就是负面情绪逐渐涌现了。</p>
+<hr>
+<h3 id="睡眠"><a href="#睡眠" class="headerlink" title="睡眠"></a>睡眠</h3><p>睡眠的重要性是毋庸置疑的。<br>很遗憾的，报复性睡眠拖延是最难打破的恶性循环。说来惭愧，自从开始熬夜过后，除了生病之外不曾在12点半之前睡过。</p>
+<p>我的睡眠拖延挺奇怪的，不到一个临界时间（必须睡觉的时间），脑袋都会很凌乱，完全不想关灯。就我而言，要想在某一天突然早睡的话，需要花费大量意志力对抗。因此我的早睡计划通常无法撑过三天XD。</p>
+<hr>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>虽然这篇文章的负能量有点重，读起来像一只鲁蛇的抱怨，但我还是会多多改进的！</p>
+
+            
+        </div>
+        
+    </div>
+
+    <div class="post-tags">
+        
+        <span class="icon">
+            <a-icon type="tags" theme="filled" />
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/Procrastination" style=color:#ff7d73>
+                Procrastination
+            </a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/tags/Self" style=color:#03a9f4>
+                Self
+            </a>
+        </span>
+        
+    </div>
+
+    
+    <a href="/2026/03/28/procrastination/" class="go-post" data-lang-content="zh-TW" data-i18n="ui.readMore">
+        Read More
+    </a>
+    
+    <a href="/2026/03/28/procrastination/zh-CN/" class="go-post" data-lang-content="zh-CN" data-i18n="ui.readMore">
+        Read More
+    </a>
+    
+</div>
+
+
+<div class="post" data-feed-post data-post-langs="zh-TW zh-CN" style="display:none">
+
+    <div class="feed-post-title">
+        
+        <a href="/2026/03/27/productivity/" data-lang-content="zh-TW">
+            <h2>生產力——與拖延症的博弈</h2>
+        </a>
+        
+        <a href="/2026/03/27/productivity/zh-CN/" data-lang-content="zh-CN">
+            <h2>生产力——与拖延症的博弈</h2>
+        </a>
+        
+    </div>
+
+    <div class="category-and-date">
+
+        
+        <span class="category">
+            <a href="/categories/Life">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" /></span>
+                Life
+            </a>
+        </span>
+        
+
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2026/3/27
+        </span>
+
+    </div>
+
+    <div class="excerpt">
+        
+        <div class="content" v-pre data-lang-content="zh-TW">
+            
+            
+            <blockquote>
+<p>BlogBlog 同樂會<br>這是我的 <a target="_blank" rel="noopener" href="https://blogblog.club/party/">「BlogBlog 同樂會 - 2026 年 4 月」</a> 的投稿文章。本月主題是 <a target="_blank" rel="noopener" href="https://www.wen-lab.tw/blogblog-party-productivity/">「生產力」</a> ， <a target="_blank" rel="noopener" href="https://www.wen-lab.tw/author/wen/">Wen</a> 如果你有自己的部落格，歡迎一起來參加！</p>
+</blockquote>
+<p>請原諒我的孤陋寡聞，我對“生產力”這三個字其實挺陌生的，所以這篇文章中，我會把他當作“效率”來理解。<br>作爲學生，我是近兩年（16歲開始）才開始重視生產力的，因爲 <a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E9%A6%AC%E4%BE%86%E8%A5%BF%E4%BA%9E%E6%95%99%E8%82%B2%E6%96%87%E6%86%91">SPM</a> 快到了嘛。</p>
+<p>説到底，提升生產力 &#x3D; 提升效率 &#x3D; 對抗 <a href="/2026/03/28/procrastination">拖延症</a>。<br>經過我這幾年的摸爬滾打，以下是我平時對抗拖延症的方法……</p>
+<hr>
+<h2 id="生產力工具"><a href="#生產力工具" class="headerlink" title="生產力工具"></a>生產力工具</h2><p>用來規劃時間的工具應該都算吧？</p>
+<h3 id="筆記本"><a href="#筆記本" class="headerlink" title="筆記本"></a>筆記本</h3><p>2025年開始，我准備了一本用來寫日程的筆記本。有兩個原因：</p>
+<ol>
+<li>我是想把要做的東西寫下來，這樣我就不會忘記。  </li>
+<li>我想要把自己一天裏所有做過的事情記錄下來（算是一種特殊癖好吧？），這樣子以後回看會很有成就感。</li>
+</ol>
+<p><img src="/images/post/notebook.jpg" alt="Notebook"></p>
+<p>然而，我幾乎都是斷斷續續地記錄，堅持不了幾天。我會連續一兩天做 To-do list，但隔幾天又不寫了，然後等待下次讓我打開筆記本的契機。<br>今年，我也開了一本新的筆記本，但只用了一點點。因爲在大約兩周前，一個 Google 產品，打開了我的新世界……</p>
+<h3 id="Google-Calendar"><a href="#Google-Calendar" class="headerlink" title="Google Calendar"></a>Google Calendar</h3><p>當我第一次打開 Google Calendar 的時候，内心 OS：這不是我夢寐以求的排程表嗎！<br>所有補習時間、朋友聚會、假期，只需要養成每天早上打開 Google Calendar 的習慣就不怕忘記！比起我那潦草又凌亂的筆記本，實在是整齊太多了！</p>
+<p><img src="/images/post/google-calendar.png" alt="Google Calendar"></p>
+<p>OK，現在“健忘症”的問題解決了，但真正的大魔王“拖延症”仍然死死地捆綁著我……</p>
+<hr>
+<h2 id="和朋友一起學習"><a href="#和朋友一起學習" class="headerlink" title="和朋友一起學習"></a>和朋友一起學習</h2><p>這是一個好方法！我通常會去圖書館，雖然在外面的干擾要略高於自己安靜的房間，但與朋友互相監督可以大大增加專注力。</p>
+<p>舉一個例子好了：在家裏學習的時候，我常常只是打開手機看一下訊息，然後就進入短視頻的世界 doomscroll 到不知天地爲何物了。<br>但和朋友一起的話，他給我使一個眼神，我就可以意識到自己的意識正在被劫持，並趕緊關掉手機。</p>
+<p>不僅如此，圖書館的氛圍會降低我的啓動困難。大家都在學習，冷氣也開到位了，不可能不被這麽讚的環境帶動吧？自然而然就會翻開書本啦~</p>
+<p><img src="/images/post/Activation-Energy.jpg" alt="Activation Energy"></p>
+
+            
+        </div>
+        
+        <div class="content" v-pre data-lang-content="zh-CN">
+            
+            
+            <blockquote>
+<p>BlogBlog 同乐会<br>这是我的 <a target="_blank" rel="noopener" href="https://blogblog.club/party/">“BlogBlog 同乐会 - 2026 年 4 月”</a> 的投稿文章。本月主题是 <a target="_blank" rel="noopener" href="https://www.wen-lab.tw/blogblog-party-productivity/">“生产力”</a> ， <a target="_blank" rel="noopener" href="https://www.wen-lab.tw/author/wen/">Wen</a> 如果你有自己的部落格，欢迎一起来参加！</p>
+</blockquote>
+<p>请原谅我的孤陋寡闻，我对“生产力”这三个字其实挺陌生的，所以这篇文章中，我会把他当作“效率”来理解。<br>作为学生，我是近两年（16岁开始）才开始重视生产力的，因为 <a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E9%A6%AC%E4%BE%86%E8%A5%BF%E4%BA%9E%E6%95%99%E8%82%B2%E6%96%87%E6%86%91">SPM</a> 快到了嘛。</p>
+<p>说到底，提升生产力 &#x3D; 提升效率 &#x3D; 对抗 <a href="/2026/03/28/procrastination">拖延症</a>。<br>经过我这几年的摸爬滚打，以下是我平时对抗拖延症的方法……</p>
+<hr>
+<h2 id="生产力工具"><a href="#生产力工具" class="headerlink" title="生产力工具"></a>生产力工具</h2><p>用来规划时间的工具应该都算吧？</p>
+<h3 id="笔记本"><a href="#笔记本" class="headerlink" title="笔记本"></a>笔记本</h3><p>2025年开始，我准备了一本用来写日程的笔记本。有两个原因：</p>
+<ol>
+<li>我是想把要做的东西写下来，这样我就不会忘记。</li>
+<li>我想要把自己一天里所有做过的事情记录下来（算是一种特殊癖好吧？），这样子以后回看会很有成就感。</li>
+</ol>
+<p><img src="/images/post/notebook.jpg" alt="Notebook"></p>
+<p>然而，我几乎都是断断续续地记录，坚持不了几天。我会连续一两天做 To-do list，但隔几天又不写了，然后等待下次让我打开笔记本的契机。<br>今年，我也开了一本新的笔记本，但只用了一点点。因为在大约两周前，一个 Google 产品，打开了我的新世界……</p>
+<h3 id="Google-Calendar"><a href="#Google-Calendar" class="headerlink" title="Google Calendar"></a>Google Calendar</h3><p>当我第一次打开 Google Calendar 的时候，内心 OS：这不是我梦寐以求的排程表吗！<br>所有补习时间、朋友聚会、假期，只需要养成每天早上打开 Google Calendar 的习惯就不怕忘记！比起我那潦草又凌乱的笔记本，实在是整齐太多了！</p>
+<p><img src="/images/post/google-calendar.png" alt="Google Calendar"></p>
+<p>OK，现在“健忘症”的问题解决了，但真正的大魔王“拖延症”仍然死死地捆绑着我……</p>
+<hr>
+<h2 id="和朋友一起学习"><a href="#和朋友一起学习" class="headerlink" title="和朋友一起学习"></a>和朋友一起学习</h2><p>这是一个好方法！我通常会去图书馆，虽然在外面的干扰要略高于自己安静的房间，但与朋友互相监督可以大大增加专注力。</p>
+<p>举一个例子好了：在家里学习的时候，我常常只是打开手机看一下讯息，然后就进入短视频的世界 doomscroll 到不知天地为何物了。<br>但和朋友一起的话，他给我使一个眼神，我就可以意识到自己的意识正在被劫持，并赶紧关掉手机。</p>
+<p>不仅如此，图书馆的氛围会降低我的启动困难。大家都在学习，冷气也开到位了，不可能不被这么赞的环境带动吧？自然而然就会翻开书本啦~</p>
+<p><img src="/images/post/Activation-Energy.jpg" alt="Activation Energy"></p>
+
+            
+        </div>
+        
+    </div>
+
+    <div class="post-tags">
+        
+        <span class="icon">
+            <a-icon type="tags" theme="filled" />
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/Procrastination" style=color:#ffa2c4>
+                Procrastination
+            </a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/tags/Self" style=color:#03a9f4>
+                Self
+            </a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/tags/Productivity" style=color:#00bcd4>
+                Productivity
+            </a>
+        </span>
+        
+    </div>
+
+    
+    <a href="/2026/03/27/productivity/" class="go-post" data-lang-content="zh-TW" data-i18n="ui.readMore">
+        Read More
+    </a>
+    
+    <a href="/2026/03/27/productivity/zh-CN/" class="go-post" data-lang-content="zh-CN" data-i18n="ui.readMore">
+        Read More
+    </a>
+    
+</div>
+
+
+<div class="post" data-feed-post data-post-langs="zh-TW zh-CN" style="display:none">
+
+    <div class="feed-post-title">
+        
+        <a href="/2026/03/26/ideal-day/" data-lang-content="zh-TW">
+            <h2>理想的周末</h2>
+        </a>
+        
+        <a href="/2026/03/26/ideal-day/zh-CN/" data-lang-content="zh-CN">
+            <h2>理想的周末</h2>
+        </a>
+        
+    </div>
+
+    <div class="category-and-date">
+
+        
+        <span class="category">
+            <a href="/categories/Life">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" /></span>
+                Life
+            </a>
+        </span>
+        
+
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2026/3/26
+        </span>
+
+    </div>
+
+    <div class="excerpt">
+        
+        <div class="content" v-pre data-lang-content="zh-TW">
+            
+            
+            <p><img src="/images/post/alimuthuahock.jpg" alt="Ali Muthu &amp; Ah Hock"><br><small style="color: grey;">Ali, Muthu &amp; Ah Hock, Dang Wangi店</small></p>
+<p>我今年17歲，是高中生，不知從何時開始，我便幾乎完全地將自己沉浸在學業之中，不再思考自己的未來了。<br>對我這個鮮少瞳景未來的人來説，若你問我“理想的生活”是什麽？我的腦袋是空蕩蕩的…… 因此，我就從比較近的地方，“理想的周末”，開始説起吧！</p>
+<blockquote>
+<p>BlogBlog 同樂會<br>這是我的 <a target="_blank" rel="noopener" href="https://blogblog.club/party/">「BlogBlog 同樂會 - 2026 年 3 月」</a> 的投稿文章。本月主題是 <a target="_blank" rel="noopener" href="https://alexhsu.com/perfect-days">「理想的日常」</a>，由 <a target="_blank" rel="noopener" href="https://alexhsu.com/">Alex Hsu</a> 主持。如果你有自己的部落格，歡迎一起來參加！</p>
+</blockquote>
+<hr>
+<h2 id="一日之計在於晨"><a href="#一日之計在於晨" class="headerlink" title="一日之計在於晨"></a>一日之計在於晨</h2><p>周末就應該早早起床啊！<br>每當我周末睡到11點多的時候，我接下來一整天都會超級 down 的，接下來一整天也做不好什麽事情。</p>
+<p>早上七點起來和朋友一起去散步&#x2F;跑步，看著外面的風景，心情一下子就變得很好了。再去咖啡店吃個早餐，享受血糖飆升的快感。這樣的早晨多麽有活力呢。</p>
+<p>另外，由於我本身不喜歡（其實是太菜了）籃球、羽球之類的競技體育，所以周末早上的運動時間對我顯得格外重要了。</p>
+<hr>
+<h2 id="一周最快樂的時刻"><a href="#一周最快樂的時刻" class="headerlink" title="一周最快樂的時刻"></a>一周最快樂的時刻</h2><p>周末的下午被連續六個小時的物理、化學、生物 <strong>補習</strong> 填滿了，但仔細想了想，這可能是我一周裏最快樂的六個小時。因爲滿足了一下三點：</p>
+<ul>
+<li><strong>和朋友在一起</strong>：有和朋友一起聊天的機會（我還是有認真上課的！）。  </li>
+<li><strong>不會拖延</strong>：平時如果在家一個人的話，儘管是一件小事我也可以拖延到不知天地爲何物，完全失去了對時間的支配，真的太痛苦了。  </li>
+<li><strong>放鬆</strong>：補習班沒有上學的那種緊迫感。課間的時候常常會下樓買東西帶上去，一邊聽課一邊吃，實在是太享受了！</li>
+</ul>
+<p>另外最重要的，這些本來就是我喜歡的科目啊 XD。<br>如果換成連續六個小時的語文課的話，抱歉…… 我會暈倒。</p>
+<hr>
+<h2 id="自由的支配自己的時間"><a href="#自由的支配自己的時間" class="headerlink" title="自由的支配自己的時間"></a>自由的支配自己的時間</h2><p>上文有提到我很拖延，因此我是一個非常需要被約束的人。<br>上學天的時候，在學校學習動力的慣性使我回到家後仍然可以完成該做的事情。<br>但一到周末，情況就不一樣了，堆積如山的課業總會拖到最後一分鐘，結果可想而知——熬夜趕工。</p>
+<p>如果沒能完成設定好的日程，我會陷入焦慮的無限循環，美好的心情就這樣子被毀掉了，這一點都不理想。</p>
+<hr>
+<h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>我沒有太多物質上的需求，除了吃飽穿暖之外，只要快快樂樂、無憂無慮就行了。<br>對我而言，快樂的源泉是充實的生活，而充實的生活源自自律。</p>
+<p>看了一下 <a target="_blank" rel="noopener" href="https://alexhsu.com/perfect-days">其他人的理想日常</a>，不少人都希望自己可以好好操盤自己的時間呢。<br>希望大家都可以在自律的路上越走越遠吧！</p>
+
+            
+        </div>
+        
+        <div class="content" v-pre data-lang-content="zh-CN">
+            
+            
+            <p><img src="/images/post/alimuthuahock.jpg" alt="Ali Muthu &amp; Ah Hock"><br>Ali, Muthu &amp; Ah Hock, Dang Wangi店</p>
+<p>我今年17岁，是高中生，不知从何时开始，我便几乎完全地将自己沉浸在学业之中，不再思考自己的未来了。<br>对我这个鲜少瞳景未来的人来说，若你问我“理想的生活”是什么？我的脑袋是空荡荡的…… 因此，我就从比较近的地方，“理想的周末”，开始说起吧！</p>
+<blockquote>
+<p>BlogBlog 同乐会<br>这是我的 <a target="_blank" rel="noopener" href="https://blogblog.club/party/">“BlogBlog 同乐会 - 2026 年 3 月”</a> 的投稿文章。本月主题是 <a target="_blank" rel="noopener" href="https://alexhsu.com/perfect-days">“理想的日常”</a>，由 <a target="_blank" rel="noopener" href="https://alexhsu.com/">Alex Hsu</a> 主持。如果你有自己的部落格，欢迎一起来参加！</p>
+</blockquote>
+<hr>
+<h2 id="一日之计在于晨"><a href="#一日之计在于晨" class="headerlink" title="一日之计在于晨"></a>一日之计在于晨</h2><p>周末就应该早早起床啊！<br>每当我周末睡到11点多的时候，我接下来一整天都会超级 down 的，接下来一整天也做不好什么事情。</p>
+<p>早上七点起来和朋友一起去散步&#x2F;跑步，看着外面的风景，心情一下子就变得很好了。再去咖啡店吃个早餐，享受血糖飚升的快感。这样的早晨多么有活力呢。</p>
+<p>另外，由于我本身不喜欢（其实是太菜了）篮球、羽球之类的竞技体育，所以周末早上的运动时间对我显得格外重要了。</p>
+<hr>
+<h2 id="一周最快乐的时刻"><a href="#一周最快乐的时刻" class="headerlink" title="一周最快乐的时刻"></a>一周最快乐的时刻</h2><p>周末的下午被连续六个小时的物理、化学、生物 <strong>补习</strong> 填满了，但仔细想了想，这可能是我一周里最快乐的六个小时。因为满足了一下三点：</p>
+<ul>
+<li><strong>和朋友在一起</strong>：有和朋友一起聊天的机会（我还是有认真上课的！）。</li>
+<li><strong>不会拖延</strong>：平时如果在家一个人的话，尽管是一件小事我也可以拖延到不知天地为何物，完全失去了对时间的支配，真的太痛苦了。</li>
+<li><strong>放松</strong>：补习班没有上学的那种紧迫感。课间的时候常常会下楼买东西带上去，一边听课一边吃，实在是太享受了！</li>
+</ul>
+<p>另外最重要的，这些本来就是我喜欢的科目啊 XD。<br>如果换成连续六个小时的语文课的话，抱歉…… 我会晕倒。</p>
+<hr>
+<h2 id="自由的支配自己的时间"><a href="#自由的支配自己的时间" class="headerlink" title="自由的支配自己的时间"></a>自由的支配自己的时间</h2><p>上文有提到我很拖延，因此我是一个非常需要被约束的人。<br>上学天的时候，在学校学习动力的惯性使我回到家后仍然可以完成该做的事情。<br>但一到周末，情况就不一样了，堆积如山的课业总会拖到最后一分钟，结果可想而知——熬夜赶工。</p>
+<p>如果没能完成设定好的日程，我会陷入焦虑的无限循环，美好的心情就这样子被毁掉了，这一点都不理想。</p>
+<hr>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>我没有太多物质上的需求，除了吃饱穿暖之外，只要快快乐乐、无忧无虑就行了。<br>对我而言，快乐的源泉是充实的生活，而充实的生活源自自律。</p>
+<p>看了一下 <a target="_blank" rel="noopener" href="https://alexhsu.com/perfect-days">其他人的理想日常</a>，不少人都希望自己可以好好操盘自己的时间呢。<br>希望大家都可以在自律的路上越走越远吧！</p>
+
+            
+        </div>
+        
+    </div>
+
+    <div class="post-tags">
+        
+        <span class="icon">
+            <a-icon type="tags" theme="filled" />
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/Happiness" style=color:#00bcd4>
+                Happiness
+            </a>
+        </span>
+        
+    </div>
+
+    
+    <a href="/2026/03/26/ideal-day/" class="go-post" data-lang-content="zh-TW" data-i18n="ui.readMore">
+        Read More
+    </a>
+    
+    <a href="/2026/03/26/ideal-day/zh-CN/" class="go-post" data-lang-content="zh-CN" data-i18n="ui.readMore">
+        Read More
+    </a>
+    
+</div>
+
+
+<div class="post" data-feed-post data-post-langs="en" style="display:none">
+
+    <div class="feed-post-title">
+        
+        <a href="/2026/03/10/we-support-rss-now/" data-lang-content="en">
+            <h2>We support RSS now!</h2>
+        </a>
+        
+    </div>
+
+    <div class="category-and-date">
+
+        
+        <span class="category">
+            <a href="/categories/Update">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" /></span>
+                Update
+            </a>
+        </span>
+        
+
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2026/3/10
+        </span>
+
+    </div>
+
+    <div class="excerpt">
+        
+        <div class="content" v-pre data-lang-content="en">
+            
+            
+            <p>Now you can subscribe this blog by using RSS. The RSS link is <a target="_blank" rel="noopener" href="https://yuzhou.life/rss.xml">https://yuzhou.life/rss.xml</a>.</p>
+<p>UPDATE: It doesn’t seems to work right now, I’ll try to fix it later.<br>UPDATE: It should works now~</p>
+
+            
+        </div>
+        
+    </div>
+
+    <div class="post-tags">
+        
+        
+    </div>
+
+    
+    <a href="/2026/03/10/we-support-rss-now/" class="go-post" data-lang-content="en" data-i18n="ui.readMore">
+        Read More
+    </a>
+    
+</div>
+
+
+<div class="post" data-feed-post data-post-langs="en zh-TW zh-CN my" style="display:none">
+
+    <div class="feed-post-title">
+        
+        <a href="/2026/02/05/piano-video-archive/" data-lang-content="en">
+            <h2>Piano video archive</h2>
+        </a>
+        
+        <a href="/2026/02/05/piano-video-archive/zh-TW/" data-lang-content="zh-TW">
+            <h2>鋼琴影片列表</h2>
+        </a>
+        
+        <a href="/2026/02/05/piano-video-archive/zh-CN/" data-lang-content="zh-CN">
+            <h2>钢琴影片列表</h2>
+        </a>
+        
+        <a href="/2026/02/05/piano-video-archive/my/" data-lang-content="my">
+            <h2>Arkib video piano</h2>
+        </a>
+        
+    </div>
+
+    <div class="category-and-date">
+
+        
+        <span class="category">
+            <a href="/categories/Archive">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" /></span>
+                Archive
+            </a>
+        </span>
+        
+
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2026/2/5
+        </span>
+
+    </div>
+
+    <div class="excerpt">
+        
+        <div class="content" v-pre data-lang-content="en">
+            
+            
+            <p>Here is a list of videos of me playing the piano. I recorded most of them between 2021 and 2023.<br>The list is arranged according to the date each video was originally recorded.<br>Some videos are not included because the quality is poor, unclear or the recording is incomplete.</p>
+<hr>
+<h3 id="Nocturne-Op-9-No-2"><a href="#Nocturne-Op-9-No-2" class="headerlink" title="Nocturne Op. 9, No. 2"></a>Nocturne Op. 9, No. 2</h3><p><code>Frédéric François Chopin : Nocturne Op. 9, No. 2</code><br><code>Recorded 7/10/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/chopin-nocturne-2.mp4" controls></video></p>
+<h3 id="Reverie"><a href="#Reverie" class="headerlink" title="Rêverie"></a>Rêverie</h3><p><code>Achille Claude Debussy : Rêverie (L, 76)</code><br><code>Recorded 31/10/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/reverie.mp4" controls></video></p>
+<h3 id="1eme-Gymnopedies"><a href="#1eme-Gymnopedies" class="headerlink" title="1ème Gymnopédies"></a>1ème Gymnopédies</h3><p><code>Erik Satie : Trois Gymnopédies - I. Lent et douloureux</code><br><code>Recorded 4/11/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/gymnopedie-1.mp4" controls></video></p>
+<h3 id="Suite-Bergamasque-Prelude"><a href="#Suite-Bergamasque-Prelude" class="headerlink" title="Suite Bergamasque : Prélude"></a>Suite Bergamasque : Prélude</h3><p><code>Achille Claude Debussy : Suite bergamasque (L. 75) - I. Prélude</code><br><code>Recorded 5/11/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/suite-bergamasque-prelude.mp4" controls></video></p>
+<h3 id="2eme-Gymnopedies"><a href="#2eme-Gymnopedies" class="headerlink" title="2ème Gymnopédies"></a>2ème Gymnopédies</h3><p><code>Erik Satie : Trois Gymnopédies - II. Lent et triste</code><br><code>Recorded 11/11/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/gymnopedie-2.mp4" controls></video></p>
+<h3 id="Moonlight-Sonata-1st-movement"><a href="#Moonlight-Sonata-1st-movement" class="headerlink" title="Moonlight Sonata 1st movement"></a>Moonlight Sonata 1st movement</h3><p><code>Ludwig Van Beethoven : Piano Sonata No. 14 &quot;Quasi una fantasia&quot; - I. Adagio sostenuto</code><br><code>Recorded 20/11/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/moonlight-sonata-1.mp4" controls></video></p>
+<h3 id="Danseuses-De-Delphes"><a href="#Danseuses-De-Delphes" class="headerlink" title="Danseuses De Delphes"></a>Danseuses De Delphes</h3><p><code>Achille Claude Debussy : Préludes, Livre 1 (L. 125) - I. Danseuses de Delphes: Lent et grave</code><br><code>Recorded 2/12/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/danseuses-de-delphes.mp4" controls></video></p>
+<h3 id="Notturno-Op-54-No-4"><a href="#Notturno-Op-54-No-4" class="headerlink" title="Notturno Op. 54, No. 4"></a>Notturno Op. 54, No. 4</h3><p><code>Grieg, Edward : Notturno, Op. 54, No. 4</code><br><code>Recorded 13/12/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/grieg.mp4" controls></video></p>
+<h3 id="Premiere-Arabesque"><a href="#Premiere-Arabesque" class="headerlink" title="Première Arabesque"></a>Première Arabesque</h3><p><code>Achille Claude Debussy : Deux arabesques (L. 74) - I. Andantino con moto</code><br><code>Recorded 30/12/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/arabesque-1.mp4" controls></video></p>
+<h3 id="La-Fille-aux-cheveux-de-lin"><a href="#La-Fille-aux-cheveux-de-lin" class="headerlink" title="La Fille aux cheveux de lin"></a>La Fille aux cheveux de lin</h3><p><code>Achille Claude Debussy : Préludes, Livre 1 (L. 125) - VIII. La Fille aux cheveux de lin: Très calme et doucement expressif</code><br><code>Recorded 30/12/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/la-fille-aux-cheveux-de-lin.mp4" controls></video></p>
+<h3 id="2eme-Gnossienne"><a href="#2eme-Gnossienne" class="headerlink" title="2ème Gnossienne"></a>2ème Gnossienne</h3><p><code>Erik Satie : Trois Gnossiennes - II. Avec étonnement</code><br><code>Recorded 22/1/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/gnossienne-2.mp4" controls></video></p>
+<h3 id="Nocturne-Op-20-No-1"><a href="#Nocturne-Op-20-No-1" class="headerlink" title="Nocturne Op. 20, No. 1"></a>Nocturne Op. 20, No. 1</h3><p><code>Frédéric François Chopin : Nocturne Op. 20, No. 1</code><br><code>Recorded 14/2/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/chopin-nocturne-op20-no1.mp4" controls></video></p>
+<h3 id="Wet-Hands"><a href="#Wet-Hands" class="headerlink" title="Wet Hands"></a>Wet Hands</h3><p><code>C418 : Minecraft Volume Alpha - XIII. Wet Hands</code><br><code>Recorded 20/2/2022</code><br><video width="100%" height="300" src="/images/piano-video-archive/wet-hands.mp4" controls></video></p>
+<h3 id="Pathetique-Sonata-2nd-movement"><a href="#Pathetique-Sonata-2nd-movement" class="headerlink" title="Pathétique Sonata 2nd movement"></a>Pathétique Sonata 2nd movement</h3><p><code>Ludwig Van Beethoven : Piano Sonata No. 8 &quot;Pathétique&quot; - II. Adagio cantabile</code><br><code>Recorded 21/5/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/pathetique-mvt-2.mp4" controls></video></p>
+<h3 id="Pavane-for-a-Dead-Princess"><a href="#Pavane-for-a-Dead-Princess" class="headerlink" title="Pavane for a Dead Princess"></a>Pavane for a Dead Princess</h3><p><code>Maurice Ravel : Pavane pour une infante défunte</code><br><code>Recorded 12/6/2022</code><br><video width="100%" height="300" src="/images/piano-video-archive/pavane-pour-une-infante-defunte.mp4" controls></video></p>
+<h3 id="Game-of-Thrones-Theme"><a href="#Game-of-Thrones-Theme" class="headerlink" title="Game of Thrones Theme"></a>Game of Thrones Theme</h3><p><code>Ramin Djawadi : Game of Thrones Theme</code><br><code>Recorded 23/7/2022</code><br><video width="100%" height="300" src="/images/piano-video-archive/game-of-thrones.mp4" controls></video></p>
+<h3 id="Prelude-in-C-major-from-The-Well-Tempered-Clavier-Book-1"><a href="#Prelude-in-C-major-from-The-Well-Tempered-Clavier-Book-1" class="headerlink" title="Prelude in C major, from The Well-Tempered Clavier Book 1"></a>Prelude in C major, from The Well-Tempered Clavier Book 1</h3><p><code>Johann Sebastian Bach : Das Wohltemperierte Klavier, Band I: Präludium in C-Dur, BWV846</code><br><code>Recorded 27/8/2022</code><br><video width="100%" height="300" src="/images/piano-video-archive/well-tempered-clavier-1.mp4" controls></video></p>
+<h3 id="Canon-in-D"><a href="#Canon-in-D" class="headerlink" title="Canon in D"></a>Canon in D</h3><p><code>Johann Pachelbel : Kanon in D-Dur</code><br><code>Recorded 8/10/2022</code><br><video width="100%" height="300" src="/images/piano-video-archive/canon-in-d.mp4" controls></video></p>
+
+            
+        </div>
+        
+        <div class="content" v-pre data-lang-content="zh-TW">
+            
+            
+            <p>這裏收藏了許多我彈鋼琴的影片，大部分是在2021 ~ 2023左右錄的。<br>所有影片根據錄製時間排序。<br>有一些影片由於畫質受損，音質不佳沒有被放進來。</p>
+<hr>
+<h3 id="Nocturne-Op-9-No-2"><a href="#Nocturne-Op-9-No-2" class="headerlink" title="Nocturne Op. 9, No. 2"></a>Nocturne Op. 9, No. 2</h3><p><code>Frédéric François Chopin : Nocturne Op. 9, No. 2</code><br><code>Recorded 7/10/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/chopin-nocturne-2.mp4" controls></video></p>
+<h3 id="Reverie"><a href="#Reverie" class="headerlink" title="Rêverie"></a>Rêverie</h3><p><code>Achille Claude Debussy : Rêverie (L, 76)</code><br><code>Recorded 31/10/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/reverie.mp4" controls></video></p>
+<h3 id="1eme-Gymnopedies"><a href="#1eme-Gymnopedies" class="headerlink" title="1ème Gymnopédies"></a>1ème Gymnopédies</h3><p><code>Erik Satie : Trois Gymnopédies - I. Lent et douloureux</code><br><code>Recorded 4/11/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/gymnopedie-1.mp4" controls></video></p>
+<h3 id="Suite-Bergamasque-Prelude"><a href="#Suite-Bergamasque-Prelude" class="headerlink" title="Suite Bergamasque : Prélude"></a>Suite Bergamasque : Prélude</h3><p><code>Achille Claude Debussy : Suite bergamasque (L. 75) - I. Prélude</code><br><code>Recorded 5/11/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/suite-bergamasque-prelude.mp4" controls></video></p>
+<h3 id="2eme-Gymnopedies"><a href="#2eme-Gymnopedies" class="headerlink" title="2ème Gymnopédies"></a>2ème Gymnopédies</h3><p><code>Erik Satie : Trois Gymnopédies - II. Lent et triste</code><br><code>Recorded 11/11/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/gymnopedie-2.mp4" controls></video></p>
+<h3 id="Moonlight-Sonata-1st-movement"><a href="#Moonlight-Sonata-1st-movement" class="headerlink" title="Moonlight Sonata 1st movement"></a>Moonlight Sonata 1st movement</h3><p><code>Ludwig Van Beethoven : Piano Sonata No. 14 &quot;Quasi una fantasia&quot; - I. Adagio sostenuto</code><br><code>Recorded 20/11/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/moonlight-sonata-1.mp4" controls></video></p>
+<h3 id="Danseuses-De-Delphes"><a href="#Danseuses-De-Delphes" class="headerlink" title="Danseuses De Delphes"></a>Danseuses De Delphes</h3><p><code>Achille Claude Debussy : Préludes, Livre 1 (L. 125) - I. Danseuses de Delphes: Lent et grave</code><br><code>Recorded 2/12/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/danseuses-de-delphes.mp4" controls></video></p>
+<h3 id="Notturno-Op-54-No-4"><a href="#Notturno-Op-54-No-4" class="headerlink" title="Notturno Op. 54, No. 4"></a>Notturno Op. 54, No. 4</h3><p><code>Grieg, Edward : Notturno, Op. 54, No. 4</code><br><code>Recorded 13/12/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/grieg.mp4" controls></video></p>
+<h3 id="Premiere-Arabesque"><a href="#Premiere-Arabesque" class="headerlink" title="Première Arabesque"></a>Première Arabesque</h3><p><code>Achille Claude Debussy : Deux arabesques (L. 74) - I. Andantino con moto</code><br><code>Recorded 30/12/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/arabesque-1.mp4" controls></video></p>
+<h3 id="La-Fille-aux-cheveux-de-lin"><a href="#La-Fille-aux-cheveux-de-lin" class="headerlink" title="La Fille aux cheveux de lin"></a>La Fille aux cheveux de lin</h3><p><code>Achille Claude Debussy : Préludes, Livre 1 (L. 125) - VIII. La Fille aux cheveux de lin: Très calme et doucement expressif</code><br><code>Recorded 30/12/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/la-fille-aux-cheveux-de-lin.mp4" controls></video></p>
+<h3 id="2eme-Gnossienne"><a href="#2eme-Gnossienne" class="headerlink" title="2ème Gnossienne"></a>2ème Gnossienne</h3><p><code>Erik Satie : Trois Gnossiennes - II. Avec étonnement</code><br><code>Recorded 22/1/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/gnossienne-2.mp4" controls></video></p>
+<h3 id="Nocturne-Op-20-No-1"><a href="#Nocturne-Op-20-No-1" class="headerlink" title="Nocturne Op. 20, No. 1"></a>Nocturne Op. 20, No. 1</h3><p><code>Frédéric François Chopin : Nocturne Op. 20, No. 1</code><br><code>Recorded 14/2/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/chopin-nocturne-op20-no1.mp4" controls></video></p>
+<h3 id="Wet-Hands"><a href="#Wet-Hands" class="headerlink" title="Wet Hands"></a>Wet Hands</h3><p><code>C418 : Minecraft Volume Alpha - XIII. Wet Hands</code><br><code>Recorded 20/2/2022</code><br><video width="100%" height="300" src="/images/piano-video-archive/wet-hands.mp4" controls></video></p>
+<h3 id="Pathetique-Sonata-2nd-movement"><a href="#Pathetique-Sonata-2nd-movement" class="headerlink" title="Pathétique Sonata 2nd movement"></a>Pathétique Sonata 2nd movement</h3><p><code>Ludwig Van Beethoven : Piano Sonata No. 8 &quot;Pathétique&quot; - II. Adagio cantabile</code><br><code>Recorded 21/5/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/pathetique-mvt-2.mp4" controls></video></p>
+<h3 id="Pavane-for-a-Dead-Princess"><a href="#Pavane-for-a-Dead-Princess" class="headerlink" title="Pavane for a Dead Princess"></a>Pavane for a Dead Princess</h3><p><code>Maurice Ravel : Pavane pour une infante défunte</code><br><code>Recorded 12/6/2022</code><br><video width="100%" height="300" src="/images/piano-video-archive/pavane-pour-une-infante-defunte.mp4" controls></video></p>
+<h3 id="Game-of-Thrones-Theme"><a href="#Game-of-Thrones-Theme" class="headerlink" title="Game of Thrones Theme"></a>Game of Thrones Theme</h3><p><code>Ramin Djawadi : Game of Thrones Theme</code><br><code>Recorded 23/7/2022</code><br><video width="100%" height="300" src="/images/piano-video-archive/game-of-thrones.mp4" controls></video></p>
+<h3 id="Prelude-in-C-major-from-The-Well-Tempered-Clavier-Book-1"><a href="#Prelude-in-C-major-from-The-Well-Tempered-Clavier-Book-1" class="headerlink" title="Prelude in C major, from The Well-Tempered Clavier Book 1"></a>Prelude in C major, from The Well-Tempered Clavier Book 1</h3><p><code>Johann Sebastian Bach : Das Wohltemperierte Klavier, Band I: Präludium in C-Dur, BWV846</code><br><code>Recorded 27/8/2022</code><br><video width="100%" height="300" src="/images/piano-video-archive/well-tempered-clavier-1.mp4" controls></video></p>
+<h3 id="Canon-in-D"><a href="#Canon-in-D" class="headerlink" title="Canon in D"></a>Canon in D</h3><p><code>Johann Pachelbel : Kanon in D-Dur</code><br><code>Recorded 8/10/2022</code><br><video width="100%" height="300" src="/images/piano-video-archive/canon-in-d.mp4" controls></video></p>
+
+            
+        </div>
+        
+        <div class="content" v-pre data-lang-content="zh-CN">
+            
+            
+            <p>这里收藏了许多我弹钢琴的影片，大部分是在2021 ~ 2023左右录的。<br>所有影片根据录制日期排序。<br>有一些影片由于画质受损、音质不佳没有被放进来。</p>
+<hr>
+<h3 id="Nocturne-Op-9-No-2"><a href="#Nocturne-Op-9-No-2" class="headerlink" title="Nocturne Op. 9, No. 2"></a>Nocturne Op. 9, No. 2</h3><p><code>Frédéric François Chopin : Nocturne Op. 9, No. 2</code><br><code>Recorded 7/10/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/chopin-nocturne-2.mp4" controls></video></p>
+<h3 id="Reverie"><a href="#Reverie" class="headerlink" title="Rêverie"></a>Rêverie</h3><p><code>Achille Claude Debussy : Rêverie (L, 76)</code><br><code>Recorded 31/10/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/reverie.mp4" controls></video></p>
+<h3 id="1eme-Gymnopedies"><a href="#1eme-Gymnopedies" class="headerlink" title="1ème Gymnopédies"></a>1ème Gymnopédies</h3><p><code>Erik Satie : Trois Gymnopédies - I. Lent et douloureux</code><br><code>Recorded 4/11/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/gymnopedie-1.mp4" controls></video></p>
+<h3 id="Suite-Bergamasque-Prelude"><a href="#Suite-Bergamasque-Prelude" class="headerlink" title="Suite Bergamasque : Prélude"></a>Suite Bergamasque : Prélude</h3><p><code>Achille Claude Debussy : Suite bergamasque (L. 75) - I. Prélude</code><br><code>Recorded 5/11/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/suite-bergamasque-prelude.mp4" controls></video></p>
+<h3 id="2eme-Gymnopedies"><a href="#2eme-Gymnopedies" class="headerlink" title="2ème Gymnopédies"></a>2ème Gymnopédies</h3><p><code>Erik Satie : Trois Gymnopédies - II. Lent et triste</code><br><code>Recorded 11/11/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/gymnopedie-2.mp4" controls></video></p>
+<h3 id="Moonlight-Sonata-1st-movement"><a href="#Moonlight-Sonata-1st-movement" class="headerlink" title="Moonlight Sonata 1st movement"></a>Moonlight Sonata 1st movement</h3><p><code>Ludwig Van Beethoven : Piano Sonata No. 14 &quot;Quasi una fantasia&quot; - I. Adagio sostenuto</code><br><code>Recorded 20/11/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/moonlight-sonata-1.mp4" controls></video></p>
+<h3 id="Danseuses-De-Delphes"><a href="#Danseuses-De-Delphes" class="headerlink" title="Danseuses De Delphes"></a>Danseuses De Delphes</h3><p><code>Achille Claude Debussy : Préludes, Livre 1 (L. 125) - I. Danseuses de Delphes: Lent et grave</code><br><code>Recorded 2/12/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/danseuses-de-delphes.mp4" controls></video></p>
+<h3 id="Notturno-Op-54-No-4"><a href="#Notturno-Op-54-No-4" class="headerlink" title="Notturno Op. 54, No. 4"></a>Notturno Op. 54, No. 4</h3><p><code>Grieg, Edward : Notturno, Op. 54, No. 4</code><br><code>Recorded 13/12/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/grieg.mp4" controls></video></p>
+<h3 id="Premiere-Arabesque"><a href="#Premiere-Arabesque" class="headerlink" title="Première Arabesque"></a>Première Arabesque</h3><p><code>Achille Claude Debussy : Deux arabesques (L. 74) - I. Andantino con moto</code><br><code>Recorded 30/12/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/arabesque-1.mp4" controls></video></p>
+<h3 id="La-Fille-aux-cheveux-de-lin"><a href="#La-Fille-aux-cheveux-de-lin" class="headerlink" title="La Fille aux cheveux de lin"></a>La Fille aux cheveux de lin</h3><p><code>Achille Claude Debussy : Préludes, Livre 1 (L. 125) - VIII. La Fille aux cheveux de lin: Très calme et doucement expressif</code><br><code>Recorded 30/12/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/la-fille-aux-cheveux-de-lin.mp4" controls></video></p>
+<h3 id="2eme-Gnossienne"><a href="#2eme-Gnossienne" class="headerlink" title="2ème Gnossienne"></a>2ème Gnossienne</h3><p><code>Erik Satie : Trois Gnossiennes - II. Avec étonnement</code><br><code>Recorded 22/1/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/gnossienne-2.mp4" controls></video></p>
+<h3 id="Nocturne-Op-20-No-1"><a href="#Nocturne-Op-20-No-1" class="headerlink" title="Nocturne Op. 20, No. 1"></a>Nocturne Op. 20, No. 1</h3><p><code>Frédéric François Chopin : Nocturne Op. 20, No. 1</code><br><code>Recorded 14/2/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/chopin-nocturne-op20-no1.mp4" controls></video></p>
+<h3 id="Wet-Hands"><a href="#Wet-Hands" class="headerlink" title="Wet Hands"></a>Wet Hands</h3><p><code>C418 : Minecraft Volume Alpha - XIII. Wet Hands</code><br><code>Recorded 20/2/2022</code><br><video width="100%" height="300" src="/images/piano-video-archive/wet-hands.mp4" controls></video></p>
+<h3 id="Pathetique-Sonata-2nd-movement"><a href="#Pathetique-Sonata-2nd-movement" class="headerlink" title="Pathétique Sonata 2nd movement"></a>Pathétique Sonata 2nd movement</h3><p><code>Ludwig Van Beethoven : Piano Sonata No. 8 &quot;Pathétique&quot; - II. Adagio cantabile</code><br><code>Recorded 21/5/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/pathetique-mvt-2.mp4" controls></video></p>
+<h3 id="Pavane-for-a-Dead-Princess"><a href="#Pavane-for-a-Dead-Princess" class="headerlink" title="Pavane for a Dead Princess"></a>Pavane for a Dead Princess</h3><p><code>Maurice Ravel : Pavane pour une infante défunte</code><br><code>Recorded 12/6/2022</code><br><video width="100%" height="300" src="/images/piano-video-archive/pavane-pour-une-infante-defunte.mp4" controls></video></p>
+<h3 id="Game-of-Thrones-Theme"><a href="#Game-of-Thrones-Theme" class="headerlink" title="Game of Thrones Theme"></a>Game of Thrones Theme</h3><p><code>Ramin Djawadi : Game of Thrones Theme</code><br><code>Recorded 23/7/2022</code><br><video width="100%" height="300" src="/images/piano-video-archive/game-of-thrones.mp4" controls></video></p>
+<h3 id="Prelude-in-C-major-from-The-Well-Tempered-Clavier-Book-1"><a href="#Prelude-in-C-major-from-The-Well-Tempered-Clavier-Book-1" class="headerlink" title="Prelude in C major, from The Well-Tempered Clavier Book 1"></a>Prelude in C major, from The Well-Tempered Clavier Book 1</h3><p><code>Johann Sebastian Bach : Das Wohltemperierte Klavier, Band I: Präludium in C-Dur, BWV846</code><br><code>Recorded 27/8/2022</code><br><video width="100%" height="300" src="/images/piano-video-archive/well-tempered-clavier-1.mp4" controls></video></p>
+<h3 id="Canon-in-D"><a href="#Canon-in-D" class="headerlink" title="Canon in D"></a>Canon in D</h3><p><code>Johann Pachelbel : Kanon in D-Dur</code><br><code>Recorded 8/10/2022</code><br><video width="100%" height="300" src="/images/piano-video-archive/canon-in-d.mp4" controls></video></p>
+
+            
+        </div>
+        
+        <div class="content" v-pre data-lang-content="my">
+            
+            
+            <p>Yang berikut ialah senarai video saya main piano. Saya merekodkan kebanyakannya semasa 2021~2023.<br>Senarai ini disusun mengikut tarikh perekodan video.<br>Ada beberapa video yang tidak tersenarai kerana kualiti yang rendah, tidak jelas ataupun sudah rosak.</p>
+<hr>
+<h3 id="Nocturne-Op-9-No-2"><a href="#Nocturne-Op-9-No-2" class="headerlink" title="Nocturne Op. 9, No. 2"></a>Nocturne Op. 9, No. 2</h3><p><code>Frédéric François Chopin : Nocturne Op. 9, No. 2</code><br><code>Recorded 7/10/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/chopin-nocturne-2.mp4" controls></video></p>
+<h3 id="Reverie"><a href="#Reverie" class="headerlink" title="Rêverie"></a>Rêverie</h3><p><code>Achille Claude Debussy : Rêverie (L, 76)</code><br><code>Recorded 31/10/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/reverie.mp4" controls></video></p>
+<h3 id="1eme-Gymnopedies"><a href="#1eme-Gymnopedies" class="headerlink" title="1ème Gymnopédies"></a>1ème Gymnopédies</h3><p><code>Erik Satie : Trois Gymnopédies - I. Lent et douloureux</code><br><code>Recorded 4/11/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/gymnopedie-1.mp4" controls></video></p>
+<h3 id="Suite-Bergamasque-Prelude"><a href="#Suite-Bergamasque-Prelude" class="headerlink" title="Suite Bergamasque : Prélude"></a>Suite Bergamasque : Prélude</h3><p><code>Achille Claude Debussy : Suite bergamasque (L. 75) - I. Prélude</code><br><code>Recorded 5/11/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/suite-bergamasque-prelude.mp4" controls></video></p>
+<h3 id="2eme-Gymnopedies"><a href="#2eme-Gymnopedies" class="headerlink" title="2ème Gymnopédies"></a>2ème Gymnopédies</h3><p><code>Erik Satie : Trois Gymnopédies - II. Lent et triste</code><br><code>Recorded 11/11/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/gymnopedie-2.mp4" controls></video></p>
+<h3 id="Moonlight-Sonata-1st-movement"><a href="#Moonlight-Sonata-1st-movement" class="headerlink" title="Moonlight Sonata 1st movement"></a>Moonlight Sonata 1st movement</h3><p><code>Ludwig Van Beethoven : Piano Sonata No. 14 &quot;Quasi una fantasia&quot; - I. Adagio sostenuto</code><br><code>Recorded 20/11/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/moonlight-sonata-1.mp4" controls></video></p>
+<h3 id="Danseuses-De-Delphes"><a href="#Danseuses-De-Delphes" class="headerlink" title="Danseuses De Delphes"></a>Danseuses De Delphes</h3><p><code>Achille Claude Debussy : Préludes, Livre 1 (L. 125) - I. Danseuses de Delphes: Lent et grave</code><br><code>Recorded 2/12/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/danseuses-de-delphes.mp4" controls></video></p>
+<h3 id="Notturno-Op-54-No-4"><a href="#Notturno-Op-54-No-4" class="headerlink" title="Notturno Op. 54, No. 4"></a>Notturno Op. 54, No. 4</h3><p><code>Grieg, Edward : Notturno, Op. 54, No. 4</code><br><code>Recorded 13/12/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/grieg.mp4" controls></video></p>
+<h3 id="Premiere-Arabesque"><a href="#Premiere-Arabesque" class="headerlink" title="Première Arabesque"></a>Première Arabesque</h3><p><code>Achille Claude Debussy : Deux arabesques (L. 74) - I. Andantino con moto</code><br><code>Recorded 30/12/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/arabesque-1.mp4" controls></video></p>
+<h3 id="La-Fille-aux-cheveux-de-lin"><a href="#La-Fille-aux-cheveux-de-lin" class="headerlink" title="La Fille aux cheveux de lin"></a>La Fille aux cheveux de lin</h3><p><code>Achille Claude Debussy : Préludes, Livre 1 (L. 125) - VIII. La Fille aux cheveux de lin: Très calme et doucement expressif</code><br><code>Recorded 30/12/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/la-fille-aux-cheveux-de-lin.mp4" controls></video></p>
+<h3 id="2eme-Gnossienne"><a href="#2eme-Gnossienne" class="headerlink" title="2ème Gnossienne"></a>2ème Gnossienne</h3><p><code>Erik Satie : Trois Gnossiennes - II. Avec étonnement</code><br><code>Recorded 22/1/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/gnossienne-2.mp4" controls></video></p>
+<h3 id="Nocturne-Op-20-No-1"><a href="#Nocturne-Op-20-No-1" class="headerlink" title="Nocturne Op. 20, No. 1"></a>Nocturne Op. 20, No. 1</h3><p><code>Frédéric François Chopin : Nocturne Op. 20, No. 1</code><br><code>Recorded 14/2/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/chopin-nocturne-op20-no1.mp4" controls></video></p>
+<h3 id="Wet-Hands"><a href="#Wet-Hands" class="headerlink" title="Wet Hands"></a>Wet Hands</h3><p><code>C418 : Minecraft Volume Alpha - XIII. Wet Hands</code><br><code>Recorded 20/2/2022</code><br><video width="100%" height="300" src="/images/piano-video-archive/wet-hands.mp4" controls></video></p>
+<h3 id="Pathetique-Sonata-2nd-movement"><a href="#Pathetique-Sonata-2nd-movement" class="headerlink" title="Pathétique Sonata 2nd movement"></a>Pathétique Sonata 2nd movement</h3><p><code>Ludwig Van Beethoven : Piano Sonata No. 8 &quot;Pathétique&quot; - II. Adagio cantabile</code><br><code>Recorded 21/5/2021</code><br><video width="100%" height="300" src="/images/piano-video-archive/pathetique-mvt-2.mp4" controls></video></p>
+<h3 id="Pavane-for-a-Dead-Princess"><a href="#Pavane-for-a-Dead-Princess" class="headerlink" title="Pavane for a Dead Princess"></a>Pavane for a Dead Princess</h3><p><code>Maurice Ravel : Pavane pour une infante défunte</code><br><code>Recorded 12/6/2022</code><br><video width="100%" height="300" src="/images/piano-video-archive/pavane-pour-une-infante-defunte.mp4" controls></video></p>
+<h3 id="Game-of-Thrones-Theme"><a href="#Game-of-Thrones-Theme" class="headerlink" title="Game of Thrones Theme"></a>Game of Thrones Theme</h3><p><code>Ramin Djawadi : Game of Thrones Theme</code><br><code>Recorded 23/7/2022</code><br><video width="100%" height="300" src="/images/piano-video-archive/game-of-thrones.mp4" controls></video></p>
+<h3 id="Prelude-in-C-major-from-The-Well-Tempered-Clavier-Book-1"><a href="#Prelude-in-C-major-from-The-Well-Tempered-Clavier-Book-1" class="headerlink" title="Prelude in C major, from The Well-Tempered Clavier Book 1"></a>Prelude in C major, from The Well-Tempered Clavier Book 1</h3><p><code>Johann Sebastian Bach : Das Wohltemperierte Klavier, Band I: Präludium in C-Dur, BWV846</code><br><code>Recorded 27/8/2022</code><br><video width="100%" height="300" src="/images/piano-video-archive/well-tempered-clavier-1.mp4" controls></video></p>
+<h3 id="Canon-in-D"><a href="#Canon-in-D" class="headerlink" title="Canon in D"></a>Canon in D</h3><p><code>Johann Pachelbel : Kanon in D-Dur</code><br><code>Recorded 8/10/2022</code><br><video width="100%" height="300" src="/images/piano-video-archive/canon-in-d.mp4" controls></video></p>
+
+            
+        </div>
+        
+    </div>
+
+    <div class="post-tags">
+        
+        <span class="icon">
+            <a-icon type="tags" theme="filled" />
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/Music" style=color:#ffa2c4>
+                Music
+            </a>
+        </span>
+        
+    </div>
+
+    
+    <a href="/2026/02/05/piano-video-archive/" class="go-post" data-lang-content="en" data-i18n="ui.readMore">
+        Read More
+    </a>
+    
+    <a href="/2026/02/05/piano-video-archive/zh-TW/" class="go-post" data-lang-content="zh-TW" data-i18n="ui.readMore">
+        Read More
+    </a>
+    
+    <a href="/2026/02/05/piano-video-archive/zh-CN/" class="go-post" data-lang-content="zh-CN" data-i18n="ui.readMore">
+        Read More
+    </a>
+    
+    <a href="/2026/02/05/piano-video-archive/my/" class="go-post" data-lang-content="my" data-i18n="ui.readMore">
+        Read More
+    </a>
+    
+</div>
+
+</div>
+
+             
+<div class="page-current">
+
+    <div class="prev">
+        
+        <a href="/page/2/">
+            <span class="page-num">
+                <a-icon type="caret-left" theme="filled" />
+            </span>
+        </a>
+        
+    </div>
+
+    <div class="page-index">
+
+        
+        <span>
+
+            
+
+            
+
+            
+            <a href="/">
+                <span class="page-num">1</span>
+            </a>
+            
+
+            
+
+            
+            <a href="/page/2/">
+                <span class="page-num">
+                    2
+                </span>
+            </a>
+        </span>
+        
+
+        <span class="current">
+            3
+        </span>
+
+        
+
+    </div>
+
+    <div class="next">
+        
+    </div>
+
+</div>
+
+        </div>
+    </div>
+    
+    <div id="home-card">
+        <a-affix :offset-top="card_top">
+    <a-card class="card-style" style="width: 300px">
+        <div class="avatar">
+            <img src="./images/profile_picture.jpg " alt="å¤´åƒ">
+        </div>
+        <div class="name">
+            Yuzhou 宇宙
+        </div>
+        <div class="descriptions">
+            
+            <div class="description" data-i18n="card.description1">
+                A Malaysian high school student, currently 17 years old.
+            </div>
+            
+            <div class="description" data-i18n="card.description2">
+                I will share my thoughts and daily life here.
+            </div>
+            
+        </div>
+        <div class="icon-links">
+            
+            <span class="icon-link">
+                <a target="_blank" rel="noopener" href="https://discord.com/users/709009923572498463">
+
+                    
+                    <img width="18px" height="18px" src="./images/icon/discord.svg" alt="discord">
+                    
+                </a>
+            </span>
+            
+            <span class="icon-link">
+                <a target="_blank" rel="noopener" href="https://github.com/yuzhoumy">
+
+                    
+                    <img width="18px" height="18px" src="./images/icon/github.png" alt="github">
+                    
+                </a>
+            </span>
+            
+            <span class="icon-link">
+                <a target="_blank" rel="noopener" href="https://www.instagram.com/yuzhou____/">
+
+                    
+                    <img width="18px" height="18px" src="./images/icon/instagram.svg" alt="instagram">
+                    
+                </a>
+            </span>
+            
+            <span class="icon-link">
+                <a target="_blank" rel="noopener" href="https://t.me/yamyeezhe">
+
+                    
+                    <img width="18px" height="18px" src="./images/icon/telegram.svg" alt="telegram">
+                    
+                </a>
+            </span>
+            
+            <span class="icon-link">
+                <a href="mailto:1@yuzhou.my">
+
+                    
+                    <img width="18px" height="18px" src="./images/icon/mail.svg" alt="mail">
+                    
+                </a>
+            </span>
+            
+        </div>
+        <div class="friend-links">
+            
+            <div class="friend-link">
+                <a href="/about" data-i18n="card.friendLink">
+                    More about me
+                </a>
+            </div>
+            
+        </div>
+    </a-card>
+</a-affix>
+
+    </div>
+    
+</div>
+                     
+<footer id="footer">
+    <div class="footer-wrap">
+        <div>
+            © 2026 - 2026 Yuzhou&#39;s Playground
+            <span class="footer-icon">
+                <a-icon type="flag" theme="filled" /></span>
+            @Yuzhou 宇宙
+        </div>
+        <div></div>
+        <div>
+            <span data-i18n="footer.basedOn">Based on the</span>
+            <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo Engine</a> &
+            <a target="_blank" rel="noopener" href="https://github.com/korilin/hexo-theme-particle">Particle Theme</a>
+        </div>
+        
+    </div>
+
+</footer>
+
+<script src="/js/highlight.min.js"></script>
+<script src="/js/particle.js"></script>
+                </div>
+            </div>
+        </transition>
+    </div>
+
+    <script>
+    new Vue({
+        el: "#layout",
+        data: {
+            show_page: false,
+            onload_menu: false,
+            menu_show: false,
+            card_top: 100
+        },
+        created: function () {
+            var that = this
+            window.onload = function () {
+                that.show_page = true
+                document.getElementById("loadcontent").style.opacity = 0
+                setTimeout(function () {
+                    document.getElementById("loadleft").style.width = 0
+                    document.getElementById("loadright").style.width = 0
+                }, 300)
+                setTimeout(function () {
+                    document.getElementById("loading").style = "display:none"
+                }, 600)
+            }
+        },
+        mounted: function () {
+            var that = this
+            window.addEventListener('scroll', function (e) {
+                that.menu_show = false
+            })
+        },
+        methods: {
+            home_click: function () {
+                window.scrollTo({
+                    top: window.innerHeight - 80,
+                    behavior: "smooth",
+                });
+            }
+        }
+    })
+</script>
+
+<script>
+(function () {
+    var state = window.YZ_LANGUAGE || {};
+    var supported = state.supported || ['en', 'zh-TW', 'zh-CN', 'my'];
+    var labels = state.labels || { en: 'English', 'zh-TW': '繁體中文', 'zh-CN': '简体中文', my: 'Bahasa Melayu' };
+    var translations = state.translations || {};
+
+    function normalizeLang(lang) {
+        return supported.indexOf(lang) !== -1 ? lang : 'en';
+    }
+
+    function currentLang() {
+        return normalizeLang(localStorage.getItem('user-lang') || 'en');
+    }
+
+    function routeForLang(lang) {
+        return (state.routeMap || {})[lang];
+    }
+
+    function normalizedPath(url) {
+        var link = document.createElement('a');
+        link.href = url;
+        return link.pathname.replace(/\/+$/, '/') || '/';
+    }
+
+    function redirectToLangRoute(lang) {
+        var target = routeForLang(lang);
+        if (!target) return false;
+        if (normalizedPath(target) === (window.location.pathname.replace(/\/+$/, '/') || '/')) return false;
+        window.location.href = target + window.location.hash;
+        return true;
+    }
+
+    function setUrlLang(lang) {
+        var url = new URL(window.location.href);
+        url.searchParams.set('lang', lang);
+        window.history.replaceState({}, '', url.pathname + url.search + url.hash);
+    }
+
+    function setPaginationLang(lang) {
+        document.querySelectorAll('.page-current a').forEach(function (link) {
+            var url = new URL(link.getAttribute('href'), window.location.origin);
+            url.searchParams.set('lang', lang);
+            link.setAttribute('href', url.pathname + url.search + url.hash);
+        });
+    }
+
+    function hasLang(node, lang) {
+        return (node.getAttribute('data-post-langs') || '').split(/\s+/).indexOf(lang) !== -1;
+    }
+
+    function applyTranslations(lang) {
+        var dictionary = translations[lang] || translations.en || {};
+        document.querySelectorAll('[data-i18n]').forEach(function (node) {
+            var key = node.getAttribute('data-i18n');
+            if (!dictionary[key]) return;
+            if (dictionary[key].indexOf('<') !== -1) {
+                node.innerHTML = dictionary[key];
+            } else {
+                node.textContent = dictionary[key];
+            }
+        });
+        document.querySelectorAll('[data-language-current]').forEach(function (node) {
+            node.textContent = labels[lang] || lang;
+        });
+        document.querySelectorAll('[data-language-trigger]').forEach(function (node) {
+            node.setAttribute('aria-label', labels[lang] || lang);
+        });
+    }
+
+    function applyLangContent(root, lang, forceBlock) {
+        root.querySelectorAll('[data-lang-content]').forEach(function (node) {
+            node.style.display = node.getAttribute('data-lang-content') === lang ? (forceBlock || 'block') : 'none';
+        });
+    }
+
+    function applyHome(lang) {
+        var feed = document.querySelector('[data-feed-list]');
+        if (!feed) return;
+
+        var perPage = parseInt(feed.getAttribute('data-per-page'), 10) || 10;
+        var pageNumber = parseInt(feed.getAttribute('data-page-number'), 10) || 1;
+        var matchingPosts = Array.prototype.filter.call(feed.querySelectorAll('[data-feed-post]'), function (post) {
+            return hasLang(post, lang);
+        });
+        var start = (pageNumber - 1) * perPage;
+        var end = start + perPage;
+
+        feed.querySelectorAll('[data-feed-post]').forEach(function (post) {
+            var index = matchingPosts.indexOf(post);
+            var showPost = index >= start && index < end;
+            post.style.display = showPost ? '' : 'none';
+            applyLangContent(post, lang, 'block');
+        });
+    }
+
+    function applyVariantLists(lang) {
+        document.querySelectorAll('[data-post-card]').forEach(function (entry) {
+            var hasActiveTitle = hasLang(entry, lang);
+            entry.style.display = hasActiveTitle ? '' : 'none';
+            applyLangContent(entry, lang, 'block');
+        });
+
+        document.querySelectorAll('[data-title-variants]').forEach(function (group) {
+            applyLangContent(group, lang, 'block');
+        });
+    }
+
+    function updateUnsupportedWarning(lang) {
+        var warning = document.querySelector('[data-post-unsupported-warning]');
+        if (!warning) return;
+
+        var routeMap = state.routeMap || {};
+        var variantList = Object.keys(routeMap).filter(function (variantLang) {
+            return Boolean(routeMap[variantLang]);
+        });
+        var supportedForPage = Boolean(routeMap[lang]);
+
+        warning.style.display = supportedForPage || variantList.length === 0 ? 'none' : '';
+        if (!warning.style.display || warning.style.display === 'none') return;
+
+        var links = warning.querySelector('[data-post-variant-links]');
+        if (!links) return;
+
+        links.innerHTML = variantList.map(function (variantLang) {
+            var href = routeMap[variantLang];
+            return '<li><a href="' + href + '">' + (labels[variantLang] || variantLang) + '</a></li>';
+        }).join('');
+    }
+
+    function applyLanguage(lang) {
+        lang = normalizeLang(lang);
+        localStorage.setItem('user-lang', lang);
+        document.documentElement.setAttribute('lang', lang);
+        applyTranslations(lang);
+        applyHome(lang);
+        applyVariantLists(lang);
+        updateUnsupportedWarning(lang);
+        setPaginationLang(lang);
+    }
+
+    function switchLanguage(lang) {
+        lang = normalizeLang(lang);
+        localStorage.setItem('user-lang', lang);
+        if (redirectToLangRoute(lang)) return;
+        setUrlLang(lang);
+        applyLanguage(lang);
+    }
+
+    document.addEventListener('click', function (event) {
+        var trigger = event.target.closest('[data-language-trigger]');
+        if (trigger) {
+            event.preventDefault();
+            var menu = trigger.closest('[data-language-menu]');
+            if (!menu) return;
+            var isOpen = menu.classList.contains('is-open');
+            document.querySelectorAll('[data-language-menu].is-open').forEach(function (item) {
+                item.classList.remove('is-open');
+            });
+            if (!isOpen) {
+                menu.classList.add('is-open');
+            }
+            document.querySelectorAll('[data-language-trigger]').forEach(function (button) {
+                button.setAttribute('aria-expanded', String(menu.classList.contains('is-open')));
+            });
+            return;
+        }
+
+        var option = event.target.closest('[data-language-option]');
+        if (option) {
+            event.preventDefault();
+            switchLanguage(option.getAttribute('value') || option.value);
+            document.querySelectorAll('[data-language-menu].is-open').forEach(function (item) {
+                item.classList.remove('is-open');
+            });
+            return;
+        }
+
+        if (!event.target.closest('[data-language-menu]')) {
+            document.querySelectorAll('[data-language-menu].is-open').forEach(function (item) {
+                item.classList.remove('is-open');
+            });
+        }
+    });
+
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') {
+            document.querySelectorAll('[data-language-menu].is-open').forEach(function (item) {
+                item.classList.remove('is-open');
+            });
+        }
+    });
+
+    window.yuzhouApplyLanguage = applyLanguage;
+    applyLanguage(currentLang());
+    window.addEventListener('load', function () {
+        applyLanguage(currentLang());
+    });
+})();
+</script>
+</body>
+
+</html>
