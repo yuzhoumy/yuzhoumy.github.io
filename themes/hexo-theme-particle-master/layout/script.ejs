@@ -172,15 +172,15 @@
         var supportedForPage = Boolean(routeMap[lang]);
 
         warning.style.display = supportedForPage || variantList.length === 0 ? 'none' : '';
-        if (!warning.style.display || warning.style.display === 'none') return;
+        if (warning.style.display === 'none') return;
 
         var links = warning.querySelector('[data-post-variant-links]');
         if (!links) return;
 
         links.innerHTML = variantList.map(function (variantLang) {
             var href = routeMap[variantLang];
-            return '<li><a href="' + href + '">' + (labels[variantLang] || variantLang) + '</a></li>';
-        }).join('');
+            return '<a href="' + href + '">' + (labels[variantLang] || variantLang) + '</a>';
+        }).join('<br>');
     }
 
     function applyLanguage(lang) {
