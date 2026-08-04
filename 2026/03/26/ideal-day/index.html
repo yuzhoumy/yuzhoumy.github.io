@@ -362,6 +362,14 @@
 
     </div>
 
+    
+    
+    <div class="post-language-warning" data-post-unsupported-warning style="display:none">
+        <div class="warning-title" data-i18n="post.unsupportedTitle">This version is not available in your selected language.</div>
+        <p class="warning-description" data-i18n="post.unsupportedDescription">Try one of the available variants below.</p>
+        <div class="warning-links" data-post-variant-links></div>
+    </div>
+    
     <div class="content" v-pre>
         <p><img src="/images/post/alimuthuahock.jpg" alt="Ali Muthu &amp; Ah Hock"><br><small style="color: grey;">Ali, Muthu &amp; Ah Hock, Dang Wangi店</small></p>
 <p>我今年17歲，是高中生，不知從何時開始，我便幾乎完全地將自己沉浸在學業之中，不再思考自己的未來了。<br>對我這個鮮少瞳景未來的人來説，若你問我“理想的生活”是什麽？我的腦袋是空蕩蕩的…… 因此，我就從比較近的地方，“理想的周末”，開始説起吧！</p>
@@ -389,15 +397,6 @@
 
     </div>
 
-    
-    
-    <div class="post-language-warning" data-post-unsupported-warning style="display:none">
-        <div class="warning-title" data-i18n="post.unsupportedTitle">This version is not available in your selected language.</div>
-        <p class="warning-description" data-i18n="post.unsupportedDescription">Try one of the available variants below.</p>
-        <ul class="warning-links" data-post-variant-links></ul>
-    </div>
-    
-
     <div class="post-tags">
         
         <span class="icon">
@@ -407,7 +406,7 @@
         
         <span class="tag">
             
-            <a href="/tags/Happiness" style=color:#00a596>
+            <a href="/tags/Happiness" style=color:#ffa2c4>
                 Happiness
             </a>
         </span>
@@ -622,15 +621,15 @@
         var supportedForPage = Boolean(routeMap[lang]);
 
         warning.style.display = supportedForPage || variantList.length === 0 ? 'none' : '';
-        if (!warning.style.display || warning.style.display === 'none') return;
+        if (warning.style.display === 'none') return;
 
         var links = warning.querySelector('[data-post-variant-links]');
         if (!links) return;
 
         links.innerHTML = variantList.map(function (variantLang) {
             var href = routeMap[variantLang];
-            return '<li><a href="' + href + '">' + (labels[variantLang] || variantLang) + '</a></li>';
-        }).join('');
+            return '<a href="' + href + '">' + (labels[variantLang] || variantLang) + '</a>';
+        }).join('<br>');
     }
 
     function applyLanguage(lang) {

@@ -362,6 +362,14 @@
 
     </div>
 
+    
+    
+    <div class="post-language-warning" data-post-unsupported-warning style="display:none">
+        <div class="warning-title" data-i18n="post.unsupportedTitle">This version is not available in your selected language.</div>
+        <p class="warning-description" data-i18n="post.unsupportedDescription">Try one of the available variants below.</p>
+        <div class="warning-links" data-post-variant-links></div>
+    </div>
+    
     <div class="content" v-pre>
         <p><img src="/images/post/alimuthuahock.jpg" alt="Ali Muthu &amp; Ah Hock"><br>Ali, Muthu &amp; Ah Hock, Dang Wangi店</p>
 <p>我今年17岁，是高中生，不知从何时开始，我便几乎完全地将自己沉浸在学业之中，不再思考自己的未来了。<br>对我这个鲜少瞳景未来的人来说，若你问我“理想的生活”是什么？我的脑袋是空荡荡的…… 因此，我就从比较近的地方，“理想的周末”，开始说起吧！</p>
@@ -389,15 +397,6 @@
 
     </div>
 
-    
-    
-    <div class="post-language-warning" data-post-unsupported-warning style="display:none">
-        <div class="warning-title" data-i18n="post.unsupportedTitle">This version is not available in your selected language.</div>
-        <p class="warning-description" data-i18n="post.unsupportedDescription">Try one of the available variants below.</p>
-        <ul class="warning-links" data-post-variant-links></ul>
-    </div>
-    
-
     <div class="post-tags">
         
         <span class="icon">
@@ -407,7 +406,7 @@
         
         <span class="tag">
             
-            <a href="/tags/Happiness" style=color:#00a596>
+            <a href="/tags/Happiness" style=color:#ff7d73>
                 Happiness
             </a>
         </span>
@@ -622,15 +621,15 @@
         var supportedForPage = Boolean(routeMap[lang]);
 
         warning.style.display = supportedForPage || variantList.length === 0 ? 'none' : '';
-        if (!warning.style.display || warning.style.display === 'none') return;
+        if (warning.style.display === 'none') return;
 
         var links = warning.querySelector('[data-post-variant-links]');
         if (!links) return;
 
         links.innerHTML = variantList.map(function (variantLang) {
             var href = routeMap[variantLang];
-            return '<li><a href="' + href + '">' + (labels[variantLang] || variantLang) + '</a></li>';
-        }).join('');
+            return '<a href="' + href + '">' + (labels[variantLang] || variantLang) + '</a>';
+        }).join('<br>');
     }
 
     function applyLanguage(lang) {

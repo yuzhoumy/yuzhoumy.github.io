@@ -362,6 +362,14 @@
 
     </div>
 
+    
+    
+    <div class="post-language-warning" data-post-unsupported-warning style="display:none">
+        <div class="warning-title" data-i18n="post.unsupportedTitle">This version is not available in your selected language.</div>
+        <p class="warning-description" data-i18n="post.unsupportedDescription">Try one of the available variants below.</p>
+        <div class="warning-links" data-post-variant-links></div>
+    </div>
+    
     <div class="content" v-pre>
         <p><img src="/images/post/modal-words.jpg" alt="Modal Words"><br><small style="color: grey;">KSSM英文课本，79页</small></p>
 <p>我发现我在说话时，常常会下意识地否定自己的观点，并加上一些“不自信词语”，就好像为自己的言论加上免责声明一样：</p>
@@ -389,15 +397,6 @@
 
     </div>
 
-    
-    
-    <div class="post-language-warning" data-post-unsupported-warning style="display:none">
-        <div class="warning-title" data-i18n="post.unsupportedTitle">This version is not available in your selected language.</div>
-        <p class="warning-description" data-i18n="post.unsupportedDescription">Try one of the available variants below.</p>
-        <ul class="warning-links" data-post-variant-links></ul>
-    </div>
-    
-
     <div class="post-tags">
         
         <span class="icon">
@@ -414,7 +413,7 @@
         
         <span class="tag">
             
-            <a href="/tags/Self" style=color:#03a9f4>
+            <a href="/tags/Self" style=color:#00bcd4>
                 Self
             </a>
         </span>
@@ -629,15 +628,15 @@
         var supportedForPage = Boolean(routeMap[lang]);
 
         warning.style.display = supportedForPage || variantList.length === 0 ? 'none' : '';
-        if (!warning.style.display || warning.style.display === 'none') return;
+        if (warning.style.display === 'none') return;
 
         var links = warning.querySelector('[data-post-variant-links]');
         if (!links) return;
 
         links.innerHTML = variantList.map(function (variantLang) {
             var href = routeMap[variantLang];
-            return '<li><a href="' + href + '">' + (labels[variantLang] || variantLang) + '</a></li>';
-        }).join('');
+            return '<a href="' + href + '">' + (labels[variantLang] || variantLang) + '</a>';
+        }).join('<br>');
     }
 
     function applyLanguage(lang) {

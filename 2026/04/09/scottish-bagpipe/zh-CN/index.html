@@ -362,6 +362,14 @@
 
     </div>
 
+    
+    
+    <div class="post-language-warning" data-post-unsupported-warning style="display:none">
+        <div class="warning-title" data-i18n="post.unsupportedTitle">This version is not available in your selected language.</div>
+        <p class="warning-description" data-i18n="post.unsupportedDescription">Try one of the available variants below.</p>
+        <div class="warning-links" data-post-variant-links></div>
+    </div>
+    
     <div class="content" v-pre>
         <p>觉得自己精神萎靡不振吗？且听我推坑给你的 <strong>苏格兰风笛</strong>！</p>
 <p><img src="/images/post/kenneth-mckay.jpg" alt="Kenneth McKay"><br><small style="color: grey;">勇敢的苏格兰高地士兵，Kenneth McKay。滑铁卢战役期间，McKay在法军骑兵袭击下，英勇地走到方阵外吹奏风笛以鼓舞士气的情景。<a target="_blank" rel="noopener" href="https://www.reddit.com/r/BattlePaintings/s/JOHFpCZJUE">关于这张照片的Reddit贴文</a></small></p>
@@ -375,7 +383,7 @@
 <p>以下是一些我喜欢的曲目，和我的赏析，仅供参考~</p>
 <hr>
 <h2 id="Hielan’-Laddie"><a href="#Hielan’-Laddie" class="headerlink" title="Hielan’ Laddie"></a>Hielan’ Laddie</h2><p>（苏格兰风笛似乎是转调乐器，但我不管了，我就按照自己听到的音来）</p>
-<p>（欢迎致邮到 <a href="mailto:&#49;&#x40;&#121;&#117;&#122;&#104;&#111;&#x75;&#x2e;&#x6d;&#121;">1@yuzhou.my</a> 纠正错误，我也想了解这个美妙的乐器）</p>
+<p>（欢迎致邮到 <a href="mailto:&#x31;&#x40;&#121;&#x75;&#x7a;&#x68;&#x6f;&#117;&#x2e;&#109;&#x79;">1@yuzhou.my</a> 纠正错误，我也想了解这个美妙的乐器）</p>
 <p>这似乎是苏格兰风笛少有的降E调曲目，其他好像都是降B调。</p>
 <iframe width="100%" height="300" src="https://www.youtube.com/embed/KUIOtA8LPec?si=ZJHEag2e52qG9Usx" frameborder="0" allowfullscreen></iframe>
 
@@ -408,15 +416,6 @@
 
     </div>
 
-    
-    
-    <div class="post-language-warning" data-post-unsupported-warning style="display:none">
-        <div class="warning-title" data-i18n="post.unsupportedTitle">This version is not available in your selected language.</div>
-        <p class="warning-description" data-i18n="post.unsupportedDescription">Try one of the available variants below.</p>
-        <ul class="warning-links" data-post-variant-links></ul>
-    </div>
-    
-
     <div class="post-tags">
         
         <span class="icon">
@@ -426,7 +425,7 @@
         
         <span class="tag">
             
-            <a href="/tags/Music" style=color:#00a596>
+            <a href="/tags/Music" style=color:#03a9f4>
                 Music
             </a>
         </span>
@@ -641,15 +640,15 @@
         var supportedForPage = Boolean(routeMap[lang]);
 
         warning.style.display = supportedForPage || variantList.length === 0 ? 'none' : '';
-        if (!warning.style.display || warning.style.display === 'none') return;
+        if (warning.style.display === 'none') return;
 
         var links = warning.querySelector('[data-post-variant-links]');
         if (!links) return;
 
         links.innerHTML = variantList.map(function (variantLang) {
             var href = routeMap[variantLang];
-            return '<li><a href="' + href + '">' + (labels[variantLang] || variantLang) + '</a></li>';
-        }).join('');
+            return '<a href="' + href + '">' + (labels[variantLang] || variantLang) + '</a>';
+        }).join('<br>');
     }
 
     function applyLanguage(lang) {

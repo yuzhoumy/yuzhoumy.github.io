@@ -362,6 +362,14 @@
 
     </div>
 
+    
+    
+    <div class="post-language-warning" data-post-unsupported-warning style="display:none">
+        <div class="warning-title" data-i18n="post.unsupportedTitle">This version is not available in your selected language.</div>
+        <p class="warning-description" data-i18n="post.unsupportedDescription">Try one of the available variants below.</p>
+        <div class="warning-links" data-post-variant-links></div>
+    </div>
+    
     <div class="content" v-pre>
         <blockquote>
 <p>這是我的<a target="_blank" rel="noopener" href="https://blogblog.club/party/">「BlogBlog 同樂會 - 2026 年 7 月 」</a> 的投稿文章。本月主題是<a target="_blank" rel="noopener" href="https://shuaixin.cc/Fun-Fact/">「有趣的小知識或冷門概念」</a>，由<a target="_blank" rel="noopener" href="https://shuaixin.cc/">劉昕</a>主持。如果你有自己的部落格，歡迎一起來參加！</p>
@@ -392,19 +400,10 @@
 
 <p>冷知識：徳布西在1889年的巴黎博覽會時，爪哇甘美蘭給了他巨大的啓發，在他的作品 <a target="_blank" rel="noopener" href="https://youtu.be/R-YcnPXY2yE">Estampes</a> 中的 Pagodes 樂章尤爲明顯。</p>
 <h3 id="那麽-Java（程式語言）爲什麽會叫-Java-呢？"><a href="#那麽-Java（程式語言）爲什麽會叫-Java-呢？" class="headerlink" title="那麽 Java（程式語言）爲什麽會叫 Java 呢？"></a>那麽 Java（程式語言）爲什麽會叫 Java 呢？</h3><p>起初，創始人原本想要把它命名爲“Oak”，因爲創始人門口正對著一顆橡樹。然而，在准備商業化推廣時，發現Oak這個名字早就被注冊了，被迫改名。此時，又因爲創作團隊人們對一種來自爪哇島上的咖啡情有獨鍾，便決定將之命名爲Java。</p>
-<h3 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h3><p>我不是爪哇人，如果有任何錯誤歡迎寄信到<a href="mailto:&#49;&#64;&#121;&#117;&#122;&#104;&#111;&#117;&#x2e;&#109;&#x79;">1@yuzhou.my</a>指正:)。由於想寫的冷知識太多，所以我把一些和標題沒有什麽關係的話題都寫在了冷知識裏面，希望這樣子讀起來不會太亂。</p>
+<h3 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h3><p>我不是爪哇人，如果有任何錯誤歡迎寄信到<a href="mailto:&#x31;&#64;&#x79;&#x75;&#x7a;&#x68;&#111;&#x75;&#x2e;&#x6d;&#x79;">1@yuzhou.my</a>指正:)。由於想寫的冷知識太多，所以我把一些和標題沒有什麽關係的話題都寫在了冷知識裏面，希望這樣子讀起來不會太亂。</p>
 <p>last冷知識：大家耳熟能詳的貓屎咖啡（麝香貓咖啡）也是從爪哇島上來的哦~</p>
 
     </div>
-
-    
-    
-    <div class="post-language-warning" data-post-unsupported-warning style="display:none">
-        <div class="warning-title" data-i18n="post.unsupportedTitle">This version is not available in your selected language.</div>
-        <p class="warning-description" data-i18n="post.unsupportedDescription">Try one of the available variants below.</p>
-        <ul class="warning-links" data-post-variant-links></ul>
-    </div>
-    
 
     <div class="post-tags">
         
@@ -415,7 +414,7 @@
         
         <span class="tag">
             
-            <a href="/tags/Indonesian" style=color:#ffa2c4>
+            <a href="/tags/Indonesian" style=color:#00a596>
                 Indonesian
             </a>
         </span>
@@ -630,15 +629,15 @@
         var supportedForPage = Boolean(routeMap[lang]);
 
         warning.style.display = supportedForPage || variantList.length === 0 ? 'none' : '';
-        if (!warning.style.display || warning.style.display === 'none') return;
+        if (warning.style.display === 'none') return;
 
         var links = warning.querySelector('[data-post-variant-links]');
         if (!links) return;
 
         links.innerHTML = variantList.map(function (variantLang) {
             var href = routeMap[variantLang];
-            return '<li><a href="' + href + '">' + (labels[variantLang] || variantLang) + '</a></li>';
-        }).join('');
+            return '<a href="' + href + '">' + (labels[variantLang] || variantLang) + '</a>';
+        }).join('<br>');
     }
 
     function applyLanguage(lang) {

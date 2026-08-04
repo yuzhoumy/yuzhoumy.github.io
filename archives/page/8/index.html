@@ -378,14 +378,14 @@
                         
                         <span class="tag">
                             
-                            <a href="/tags/Blog" style=color:#03a9f4>
+                            <a href="/tags/Blog" style=color:#00a596>
                                 Blog
                             </a>
                         </span>
                         
                         <span class="tag">
                             
-                            <a href="/tags/Language" style=color:#00a596>
+                            <a href="/tags/Language" style=color:#03a9f4>
                                 Language
                             </a>
                         </span>
@@ -437,7 +437,7 @@
                         
                         <span class="tag">
                             
-                            <a href="/tags/Indonesian" style=color:#00bcd4>
+                            <a href="/tags/Indonesian" style=color:#ffa2c4>
                                 Indonesian
                             </a>
                         </span>
@@ -487,14 +487,14 @@
                         
                         <span class="tag">
                             
-                            <a href="/tags/Childhood" style=color:#00a596>
+                            <a href="/tags/Childhood" style=color:#03a9f4>
                                 Childhood
                             </a>
                         </span>
                         
                         <span class="tag">
                             
-                            <a href="/tags/Happiness" style=color:#00a596>
+                            <a href="/tags/Happiness" style=color:#03a9f4>
                                 Happiness
                             </a>
                         </span>
@@ -552,7 +552,7 @@
                         
                         <span class="tag">
                             
-                            <a href="/tags/Study-Stuff" style=color:#00a596>
+                            <a href="/tags/Study-Stuff" style=color:#00bcd4>
                                 Study Stuff
                             </a>
                         </span>
@@ -604,7 +604,7 @@
                         
                         <span class="tag">
                             
-                            <a href="/tags/Music" style=color:#ffa2c4>
+                            <a href="/tags/Music" style=color:#ff7d73>
                                 Music
                             </a>
                         </span>
@@ -654,7 +654,7 @@
                         
                         <span class="tag">
                             
-                            <a href="/tags/Language" style=color:#ff7d73>
+                            <a href="/tags/Language" style=color:#ffa2c4>
                                 Language
                             </a>
                         </span>
@@ -711,7 +711,7 @@
                         
                         <span class="tag">
                             
-                            <a href="/tags/Procrastination" style=color:#ffa2c4>
+                            <a href="/tags/Procrastination" style=color:#00a596>
                                 Procrastination
                             </a>
                         </span>
@@ -768,21 +768,21 @@
                         
                         <span class="tag">
                             
-                            <a href="/tags/Procrastination" style=color:#03a9f4>
+                            <a href="/tags/Procrastination" style=color:#ff7d73>
                                 Procrastination
                             </a>
                         </span>
                         
                         <span class="tag">
                             
-                            <a href="/tags/Self" style=color:#03a9f4>
+                            <a href="/tags/Self" style=color:#ffa2c4>
                                 Self
                             </a>
                         </span>
                         
                         <span class="tag">
                             
-                            <a href="/tags/Productivity" style=color:#ffa2c4>
+                            <a href="/tags/Productivity" style=color:#00a596>
                                 Productivity
                             </a>
                         </span>
@@ -832,7 +832,7 @@
                         
                         <span class="tag">
                             
-                            <a href="/tags/Happiness" style=color:#00a596>
+                            <a href="/tags/Happiness" style=color:#00bcd4>
                                 Happiness
                             </a>
                         </span>
@@ -921,7 +921,7 @@
                         
                         <span class="tag">
                             
-                            <a href="/tags/Music" style=color:#03a9f4>
+                            <a href="/tags/Music" style=color:#00a596>
                                 Music
                             </a>
                         </span>
@@ -1124,15 +1124,15 @@
         var supportedForPage = Boolean(routeMap[lang]);
 
         warning.style.display = supportedForPage || variantList.length === 0 ? 'none' : '';
-        if (!warning.style.display || warning.style.display === 'none') return;
+        if (warning.style.display === 'none') return;
 
         var links = warning.querySelector('[data-post-variant-links]');
         if (!links) return;
 
         links.innerHTML = variantList.map(function (variantLang) {
             var href = routeMap[variantLang];
-            return '<li><a href="' + href + '">' + (labels[variantLang] || variantLang) + '</a></li>';
-        }).join('');
+            return '<a href="' + href + '">' + (labels[variantLang] || variantLang) + '</a>';
+        }).join('<br>');
     }
 
     function applyLanguage(lang) {

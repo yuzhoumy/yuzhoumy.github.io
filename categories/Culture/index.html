@@ -347,7 +347,7 @@
         
         
         <span>
-            <a href="/categories/Update/" style=background:#ff7d73>
+            <a href="/categories/Update/" style=background:#00a596>
                 <span class="icon">
                     <a-icon type="book" theme="filled" /></span>
                 Update
@@ -357,7 +357,7 @@
         
         
         <span>
-            <a href="/categories/Archive/" style=background:#ff7d73>
+            <a href="/categories/Archive/" style=background:#00bcd4>
                 <span class="icon">
                     <a-icon type="book" theme="filled" /></span>
                 Archive
@@ -377,56 +377,6 @@
         
     </div>
     <div id="archives">
-        
-        
-        <a-timeline>
-            <a-timeline-item data-post-card data-post-langs="zh-TW zh-CN" timestamp="2026/4/9" placement="top" color="#a5c2f5">
-                <a-card hoverable>
-                    <div class="item-time">2026/4/9</div>
-                    
-<div class="post-title-variants" data-title-variants data-post-langs="zh-TW zh-CN">
-    
-    <a class="post-title-variant" href="/2026/04/09/scottish-bagpipe/" hreflang="zh-TW" data-lang-content="zh-TW">
-        <h3>蘇格蘭風笛</h3>
-    </a>
-    
-    <a class="post-title-variant" href="/2026/04/09/scottish-bagpipe/zh-CN/" hreflang="zh-CN" data-lang-content="zh-CN">
-        <h3>苏格兰风笛</h3>
-    </a>
-    
-</div>
-                    <div class="info">
-                        
-                        <span class="category">
-                            <a href="/categories/Culture">
-                                <span class="icon">
-                                    <a-icon type="book" theme="filled" />
-                                </span>
-                                Culture
-                            </a>
-                        </span>
-                        
-
-                        
-                        <span class="tags">
-                            <span class="icon">
-                                <a-icon type="tags" />
-                            </span>
-                            
-                            <span class="tag">
-                                
-                                <a href="/tags/Music" style=color:#ff7d73>
-                                    Music
-                                </a>
-                            </span>
-                            
-                        </span>
-                        
-                    </div>
-                </a-card>
-            </a-timeline-item>
-        </a-timeline>
-        
         
         
         <a-timeline>
@@ -465,8 +415,58 @@
                             
                             <span class="tag">
                                 
-                                <a href="/tags/Indonesian" style=color:#00bcd4>
+                                <a href="/tags/Indonesian" style=color:#ff7d73>
                                     Indonesian
+                                </a>
+                            </span>
+                            
+                        </span>
+                        
+                    </div>
+                </a-card>
+            </a-timeline-item>
+        </a-timeline>
+        
+        
+        
+        <a-timeline>
+            <a-timeline-item data-post-card data-post-langs="zh-TW zh-CN" timestamp="2026/4/9" placement="top" color="#a5c2f5">
+                <a-card hoverable>
+                    <div class="item-time">2026/4/9</div>
+                    
+<div class="post-title-variants" data-title-variants data-post-langs="zh-TW zh-CN">
+    
+    <a class="post-title-variant" href="/2026/04/09/scottish-bagpipe/" hreflang="zh-TW" data-lang-content="zh-TW">
+        <h3>蘇格蘭風笛</h3>
+    </a>
+    
+    <a class="post-title-variant" href="/2026/04/09/scottish-bagpipe/zh-CN/" hreflang="zh-CN" data-lang-content="zh-CN">
+        <h3>苏格兰风笛</h3>
+    </a>
+    
+</div>
+                    <div class="info">
+                        
+                        <span class="category">
+                            <a href="/categories/Culture">
+                                <span class="icon">
+                                    <a-icon type="book" theme="filled" />
+                                </span>
+                                Culture
+                            </a>
+                        </span>
+                        
+
+                        
+                        <span class="tags">
+                            <span class="icon">
+                                <a-icon type="tags" />
+                            </span>
+                            
+                            <span class="tag">
+                                
+                                <a href="/tags/Music" style=color:#ffa2c4>
+                                    Music
                                 </a>
                             </span>
                             
@@ -671,15 +671,15 @@
         var supportedForPage = Boolean(routeMap[lang]);
 
         warning.style.display = supportedForPage || variantList.length === 0 ? 'none' : '';
-        if (!warning.style.display || warning.style.display === 'none') return;
+        if (warning.style.display === 'none') return;
 
         var links = warning.querySelector('[data-post-variant-links]');
         if (!links) return;
 
         links.innerHTML = variantList.map(function (variantLang) {
             var href = routeMap[variantLang];
-            return '<li><a href="' + href + '">' + (labels[variantLang] || variantLang) + '</a></li>';
-        }).join('');
+            return '<a href="' + href + '">' + (labels[variantLang] || variantLang) + '</a>';
+        }).join('<br>');
     }
 
     function applyLanguage(lang) {

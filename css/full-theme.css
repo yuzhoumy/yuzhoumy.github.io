@@ -287,6 +287,43 @@ a {
 #home-posts .post .category-and-date .date {
   display: inline-block;
 }
+#home-posts .post .post-language-warning {
+  margin: 24px auto 34px;
+  padding: 22px 24px;
+  border: 1px solid rgba(240,180,41,0.5);
+  border-left: 6px solid #f0b429;
+  border-radius: 8px;
+  background: #fff8e6;
+  color: #333;
+  box-shadow: 0 8px 22px rgba(140,91,0,0.12);
+  text-align: left;
+}
+#home-posts .post .post-language-warning .warning-title {
+  margin: 0 0 8px;
+  font-size: 22px;
+  line-height: 1.35;
+  font-weight: bold;
+  color: #6f4b00;
+}
+#home-posts .post .post-language-warning .warning-description {
+  margin: 0 0 14px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #7a5a00;
+}
+#home-posts .post .post-language-warning .warning-links {
+  font-size: 17px;
+  line-height: 1.9;
+}
+#home-posts .post .post-language-warning .warning-links a {
+  color: #8c5b00;
+  font-weight: bold;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+#home-posts .post .post-language-warning .warning-links a:hover {
+  color: #66afef;
+}
 #home-posts .post .excerpt {
   color: #1e3e3f;
 }

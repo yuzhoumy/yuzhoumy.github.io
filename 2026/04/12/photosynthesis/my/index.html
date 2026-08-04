@@ -362,20 +362,19 @@
 
     </div>
 
-    <div class="content" v-pre>
-        <h1 id="Fotosintesis-Penerangan-dalam-bahasa-Cina"><a href="#Fotosintesis-Penerangan-dalam-bahasa-Cina" class="headerlink" title="Fotosintesis: Penerangan dalam bahasa Cina"></a>Fotosintesis: Penerangan dalam bahasa Cina</h1><h3 id="KSSM-Biologi-Tingkatan-5-Bab-2-Daun"><a href="#KSSM-Biologi-Tingkatan-5-Bab-2-Daun" class="headerlink" title="KSSM Biologi Tingkatan 5 Bab 2: Daun"></a>KSSM Biologi Tingkatan 5 Bab 2: Daun</h3><p>Penceramah yang dihormati: Sam Eu Qang<br>Instagram : <a target="_blank" rel="noopener" href="https://instagram.com/samq709_2009">samq709_2009</a></p>
-<p><video width="100%" height="300" src="/images/post/photosynthesis.mp4" controls></video></p>
-
-    </div>
-
     
     
     <div class="post-language-warning" data-post-unsupported-warning style="display:none">
         <div class="warning-title" data-i18n="post.unsupportedTitle">This version is not available in your selected language.</div>
         <p class="warning-description" data-i18n="post.unsupportedDescription">Try one of the available variants below.</p>
-        <ul class="warning-links" data-post-variant-links></ul>
+        <div class="warning-links" data-post-variant-links></div>
     </div>
     
+    <div class="content" v-pre>
+        <h1 id="Fotosintesis-Penerangan-dalam-bahasa-Cina"><a href="#Fotosintesis-Penerangan-dalam-bahasa-Cina" class="headerlink" title="Fotosintesis: Penerangan dalam bahasa Cina"></a>Fotosintesis: Penerangan dalam bahasa Cina</h1><h3 id="KSSM-Biologi-Tingkatan-5-Bab-2-Daun"><a href="#KSSM-Biologi-Tingkatan-5-Bab-2-Daun" class="headerlink" title="KSSM Biologi Tingkatan 5 Bab 2: Daun"></a>KSSM Biologi Tingkatan 5 Bab 2: Daun</h3><p>Penceramah yang dihormati: Sam Eu Qang<br>Instagram : <a target="_blank" rel="noopener" href="https://instagram.com/samq709_2009">samq709_2009</a></p>
+<p><video width="100%" height="300" src="/images/post/photosynthesis.mp4" controls></video></p>
+
+    </div>
 
     <div class="post-tags">
         
@@ -386,7 +385,7 @@
         
         <span class="tag">
             
-            <a href="/tags/Study-Stuff" style=color:#ffa2c4>
+            <a href="/tags/Study-Stuff" style=color:#00a596>
                 Study Stuff
             </a>
         </span>
@@ -601,15 +600,15 @@
         var supportedForPage = Boolean(routeMap[lang]);
 
         warning.style.display = supportedForPage || variantList.length === 0 ? 'none' : '';
-        if (!warning.style.display || warning.style.display === 'none') return;
+        if (warning.style.display === 'none') return;
 
         var links = warning.querySelector('[data-post-variant-links]');
         if (!links) return;
 
         links.innerHTML = variantList.map(function (variantLang) {
             var href = routeMap[variantLang];
-            return '<li><a href="' + href + '">' + (labels[variantLang] || variantLang) + '</a></li>';
-        }).join('');
+            return '<a href="' + href + '">' + (labels[variantLang] || variantLang) + '</a>';
+        }).join('<br>');
     }
 
     function applyLanguage(lang) {

@@ -362,6 +362,14 @@
 
     </div>
 
+    
+    
+    <div class="post-language-warning" data-post-unsupported-warning style="display:none">
+        <div class="warning-title" data-i18n="post.unsupportedTitle">This version is not available in your selected language.</div>
+        <p class="warning-description" data-i18n="post.unsupportedDescription">Try one of the available variants below.</p>
+        <div class="warning-links" data-post-variant-links></div>
+    </div>
+    
     <div class="content" v-pre>
         <p>Lebih kurang 2~3 minggu sebelum ini, saya telah merombakkan laman web ini. Sekarang, semua konten dalam laman web ini boleh dipaparkan dalam <strong>bahasa Inggeris, bahasa Melayu, bahasa Cina Tradisional, dan bahasa Cina ringkas</strong>.</p>
 <p>Rombakan kali ini memang sesuatu operasi yang sangat besar, sekajap sahaja dah habiskan semua peruntukan token saya untuk bulan ini. Tema Hexo yang saya guna sekarang tidak menyokong post pelbagai bahasa, boleh katanya saya tambahkan fungsi ini secara paksa. Kod sumber laman web ini, korang tak perlu pergi Github tengok pun, boleh bayangkan betapa dahsyatnya, hehehe~</p>
@@ -377,15 +385,6 @@
 
     </div>
 
-    
-    
-    <div class="post-language-warning" data-post-unsupported-warning style="display:none">
-        <div class="warning-title" data-i18n="post.unsupportedTitle">This version is not available in your selected language.</div>
-        <p class="warning-description" data-i18n="post.unsupportedDescription">Try one of the available variants below.</p>
-        <ul class="warning-links" data-post-variant-links></ul>
-    </div>
-    
-
     <div class="post-tags">
         
         <span class="icon">
@@ -395,14 +394,14 @@
         
         <span class="tag">
             
-            <a href="/tags/Blog" style=color:#ffa2c4>
+            <a href="/tags/Blog" style=color:#03a9f4>
                 Blog
             </a>
         </span>
         
         <span class="tag">
             
-            <a href="/tags/Language" style=color:#ff7d73>
+            <a href="/tags/Language" style=color:#ffa2c4>
                 Language
             </a>
         </span>
@@ -617,15 +616,15 @@
         var supportedForPage = Boolean(routeMap[lang]);
 
         warning.style.display = supportedForPage || variantList.length === 0 ? 'none' : '';
-        if (!warning.style.display || warning.style.display === 'none') return;
+        if (warning.style.display === 'none') return;
 
         var links = warning.querySelector('[data-post-variant-links]');
         if (!links) return;
 
         links.innerHTML = variantList.map(function (variantLang) {
             var href = routeMap[variantLang];
-            return '<li><a href="' + href + '">' + (labels[variantLang] || variantLang) + '</a></li>';
-        }).join('');
+            return '<a href="' + href + '">' + (labels[variantLang] || variantLang) + '</a>';
+        }).join('<br>');
     }
 
     function applyLanguage(lang) {

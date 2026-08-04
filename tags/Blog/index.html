@@ -337,7 +337,7 @@
         
         
         <span>
-            <a href="/tags/Childhood/" style=background:#ff7d73>
+            <a href="/tags/Childhood/" style=background:#03a9f4>
                 <span class="icon">
                     <a-icon type="tag" theme="filled" />
                 </span>
@@ -381,7 +381,7 @@
         
         
         <span>
-            <a href="/tags/Study-Stuff/" style=background:#ffa2c4>
+            <a href="/tags/Study-Stuff/" style=background:#03a9f4>
                 <span class="icon">
                     <a-icon type="tag" theme="filled" />
                 </span>
@@ -392,7 +392,7 @@
         
         
         <span>
-            <a href="/tags/Music/" style=background:#ffa2c4>
+            <a href="/tags/Music/" style=background:#00a596>
                 <span class="icon">
                     <a-icon type="tag" theme="filled" />
                 </span>
@@ -403,7 +403,7 @@
         
         
         <span>
-            <a href="/tags/Procrastination/" style=background:#00bcd4>
+            <a href="/tags/Procrastination/" style=background:#00a596>
                 <span class="icon">
                     <a-icon type="tag" theme="filled" />
                 </span>
@@ -414,7 +414,7 @@
         
         
         <span>
-            <a href="/tags/Self/" style=background:#03a9f4>
+            <a href="/tags/Self/" style=background:#ffa2c4>
                 <span class="icon">
                     <a-icon type="tag" theme="filled" />
                 </span>
@@ -425,22 +425,22 @@
         
         
         <span>
-            <a href="/tags/Productivity/" style=background:#00a596>
+            <a href="/tags/Indonesian/" style=background:#00bcd4>
                 <span class="icon">
                     <a-icon type="tag" theme="filled" />
                 </span>
-                Productivity
+                Indonesian
             </a>
         </span>
         
         
         
         <span>
-            <a href="/tags/Indonesian/" style=background:#03a9f4>
+            <a href="/tags/Productivity/" style=background:#ff7d73>
                 <span class="icon">
                     <a-icon type="tag" theme="filled" />
                 </span>
-                Indonesian
+                Productivity
             </a>
         </span>
         
@@ -493,14 +493,14 @@
                             
                             <span class="tag">
                                 
-                                <a href="/tags/Blog" style=color:#ff7d73>
+                                <a href="/tags/Blog" style=color:#00a596>
                                     Blog
                                 </a>
                             </span>
                             
                             <span class="tag">
                                 
-                                <a href="/tags/Language" style=color:#00a596>
+                                <a href="/tags/Language" style=color:#ffa2c4>
                                     Language
                                 </a>
                             </span>
@@ -708,15 +708,15 @@
         var supportedForPage = Boolean(routeMap[lang]);
 
         warning.style.display = supportedForPage || variantList.length === 0 ? 'none' : '';
-        if (!warning.style.display || warning.style.display === 'none') return;
+        if (warning.style.display === 'none') return;
 
         var links = warning.querySelector('[data-post-variant-links]');
         if (!links) return;
 
         links.innerHTML = variantList.map(function (variantLang) {
             var href = routeMap[variantLang];
-            return '<li><a href="' + href + '">' + (labels[variantLang] || variantLang) + '</a></li>';
-        }).join('');
+            return '<a href="' + href + '">' + (labels[variantLang] || variantLang) + '</a>';
+        }).join('<br>');
     }
 
     function applyLanguage(lang) {

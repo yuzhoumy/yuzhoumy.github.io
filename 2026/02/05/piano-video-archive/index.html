@@ -362,6 +362,14 @@
 
     </div>
 
+    
+    
+    <div class="post-language-warning" data-post-unsupported-warning style="display:none">
+        <div class="warning-title" data-i18n="post.unsupportedTitle">This version is not available in your selected language.</div>
+        <p class="warning-description" data-i18n="post.unsupportedDescription">Try one of the available variants below.</p>
+        <div class="warning-links" data-post-variant-links></div>
+    </div>
+    
     <div class="content" v-pre>
         <p>Here is a list of videos of me playing the piano. I recorded most of them between 2021 and 2023.<br>The list is arranged according to the date each video was originally recorded.<br>Some videos are not included because the quality is poor, unclear or the recording is incomplete.</p>
 <hr>
@@ -385,15 +393,6 @@
 <h3 id="Canon-in-D"><a href="#Canon-in-D" class="headerlink" title="Canon in D"></a>Canon in D</h3><p><code>Johann Pachelbel : Kanon in D-Dur</code><br><code>Recorded 8/10/2022</code><br><video width="100%" height="300" src="/images/piano-video-archive/canon-in-d.mp4" controls></video></p>
 
     </div>
-
-    
-    
-    <div class="post-language-warning" data-post-unsupported-warning style="display:none">
-        <div class="warning-title" data-i18n="post.unsupportedTitle">This version is not available in your selected language.</div>
-        <p class="warning-description" data-i18n="post.unsupportedDescription">Try one of the available variants below.</p>
-        <ul class="warning-links" data-post-variant-links></ul>
-    </div>
-    
 
     <div class="post-tags">
         
@@ -619,15 +618,15 @@
         var supportedForPage = Boolean(routeMap[lang]);
 
         warning.style.display = supportedForPage || variantList.length === 0 ? 'none' : '';
-        if (!warning.style.display || warning.style.display === 'none') return;
+        if (warning.style.display === 'none') return;
 
         var links = warning.querySelector('[data-post-variant-links]');
         if (!links) return;
 
         links.innerHTML = variantList.map(function (variantLang) {
             var href = routeMap[variantLang];
-            return '<li><a href="' + href + '">' + (labels[variantLang] || variantLang) + '</a></li>';
-        }).join('');
+            return '<a href="' + href + '">' + (labels[variantLang] || variantLang) + '</a>';
+        }).join('<br>');
     }
 
     function applyLanguage(lang) {

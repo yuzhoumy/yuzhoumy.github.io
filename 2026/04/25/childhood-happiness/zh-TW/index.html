@@ -362,6 +362,14 @@
 
     </div>
 
+    
+    
+    <div class="post-language-warning" data-post-unsupported-warning style="display:none">
+        <div class="warning-title" data-i18n="post.unsupportedTitle">This version is not available in your selected language.</div>
+        <p class="warning-description" data-i18n="post.unsupportedDescription">Try one of the available variants below.</p>
+        <div class="warning-links" data-post-variant-links></div>
+    </div>
+    
     <div class="content" v-pre>
         <p>大約在我五歲的某個傍晚，老爸突然叫上我，説要到馬六甲的醫院，要留宿馬六甲三天兩夜。我蹦蹦跳跳地就走上車了，也許是開夜車的關係，路途上我並沒有什麽清晰的回憶。</p>
 <p>第一天晚上，天很暗了我們才去洗澡。小時候的我對部分電器很敏感（那時候好像最害怕洗衣機），一打開熱水器我就嚇哭了…… 那個花灑居然上面有五顔六色的LED燈，而且還像迪廳的氛圍燈一樣會一直變顔色！！！最後還是在我記得那是個雨夜，窗外的雨嘩啦啦地下，窗戶被濺得滿是水滴，但酒店裏很溫暖。後來第二天，我們才轉去另一家酒店，那裏的花灑終於能讓年幼的我安心洗澡了。</p>
@@ -370,15 +378,6 @@
 <p>我想同個時期，同個事件，老爸的回憶會很不一樣吧。</p>
 
     </div>
-
-    
-    
-    <div class="post-language-warning" data-post-unsupported-warning style="display:none">
-        <div class="warning-title" data-i18n="post.unsupportedTitle">This version is not available in your selected language.</div>
-        <p class="warning-description" data-i18n="post.unsupportedDescription">Try one of the available variants below.</p>
-        <ul class="warning-links" data-post-variant-links></ul>
-    </div>
-    
 
     <div class="post-tags">
         
@@ -389,14 +388,14 @@
         
         <span class="tag">
             
-            <a href="/tags/Childhood" style=color:#ff7d73>
+            <a href="/tags/Childhood" style=color:#03a9f4>
                 Childhood
             </a>
         </span>
         
         <span class="tag">
             
-            <a href="/tags/Happiness" style=color:#00a596>
+            <a href="/tags/Happiness" style=color:#ffa2c4>
                 Happiness
             </a>
         </span>
@@ -611,15 +610,15 @@
         var supportedForPage = Boolean(routeMap[lang]);
 
         warning.style.display = supportedForPage || variantList.length === 0 ? 'none' : '';
-        if (!warning.style.display || warning.style.display === 'none') return;
+        if (warning.style.display === 'none') return;
 
         var links = warning.querySelector('[data-post-variant-links]');
         if (!links) return;
 
         links.innerHTML = variantList.map(function (variantLang) {
             var href = routeMap[variantLang];
-            return '<li><a href="' + href + '">' + (labels[variantLang] || variantLang) + '</a></li>';
-        }).join('');
+            return '<a href="' + href + '">' + (labels[variantLang] || variantLang) + '</a>';
+        }).join('<br>');
     }
 
     function applyLanguage(lang) {

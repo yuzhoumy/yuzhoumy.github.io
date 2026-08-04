@@ -362,6 +362,14 @@
 
     </div>
 
+    
+    
+    <div class="post-language-warning" data-post-unsupported-warning style="display:none">
+        <div class="warning-title" data-i18n="post.unsupportedTitle">This version is not available in your selected language.</div>
+        <p class="warning-description" data-i18n="post.unsupportedDescription">Try one of the available variants below.</p>
+        <div class="warning-links" data-post-variant-links></div>
+    </div>
+    
     <div class="content" v-pre>
         <p>前段时间（大约是两三个星期之前吧）对这个网站进行了大翻修。现在网站所有内容都支持<strong>英文、马来文、繁体中文、简体中文</strong>了。</p>
 <p>这是一个相当大的工程，一下子把我整个月的token用光了。我现在用的Hexo主题是没有支援多语言的，我可以说是硬硬把这个功能加进网站。现在网站的原始码大家不用去Github看都可以想象到有多恐怖了吧？哼哼哼~<br>虽然<a target="_blank" rel="noopener" href="https://alexhsu.com/multilingual">架设多语言网站吃力不讨好</a>，但仔细想了想，我是马来西亚人，如果只使用一种语言的话，绝对没办法复盖到所有我认为有可能会读我的Blog的人。我当然不指望我的Blog会有读者，但我会不会因此错失了让别人认识我的机会呢？<br>复盖率，其实最最基本只需要繁体中文和英文就足够了。但……既然都已经要给网站动大刀了，直接加多几个语言不是更好？</p>
@@ -375,15 +383,6 @@
 
     </div>
 
-    
-    
-    <div class="post-language-warning" data-post-unsupported-warning style="display:none">
-        <div class="warning-title" data-i18n="post.unsupportedTitle">This version is not available in your selected language.</div>
-        <p class="warning-description" data-i18n="post.unsupportedDescription">Try one of the available variants below.</p>
-        <ul class="warning-links" data-post-variant-links></ul>
-    </div>
-    
-
     <div class="post-tags">
         
         <span class="icon">
@@ -393,14 +392,14 @@
         
         <span class="tag">
             
-            <a href="/tags/Blog" style=color:#ffa2c4>
+            <a href="/tags/Blog" style=color:#00a596>
                 Blog
             </a>
         </span>
         
         <span class="tag">
             
-            <a href="/tags/Language" style=color:#00bcd4>
+            <a href="/tags/Language" style=color:#00a596>
                 Language
             </a>
         </span>
@@ -615,15 +614,15 @@
         var supportedForPage = Boolean(routeMap[lang]);
 
         warning.style.display = supportedForPage || variantList.length === 0 ? 'none' : '';
-        if (!warning.style.display || warning.style.display === 'none') return;
+        if (warning.style.display === 'none') return;
 
         var links = warning.querySelector('[data-post-variant-links]');
         if (!links) return;
 
         links.innerHTML = variantList.map(function (variantLang) {
             var href = routeMap[variantLang];
-            return '<li><a href="' + href + '">' + (labels[variantLang] || variantLang) + '</a></li>';
-        }).join('');
+            return '<a href="' + href + '">' + (labels[variantLang] || variantLang) + '</a>';
+        }).join('<br>');
     }
 
     function applyLanguage(lang) {
