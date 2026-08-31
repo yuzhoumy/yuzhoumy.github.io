@@ -1,1 +1,2 @@
 source/images/post/jkkn-wau-bulan.mp4 filter=lfs diff=lfs merge=lfs -text
+source/images/post/*.mp4 filter=lfs diff=lfs merge=lfs -text
